@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. (Travail) Matériel en électrocinétique &#8212; TP Electrocinétique</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/fam_preliminaire.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. (Travail) Prépration des protocoles" href="fam_preliminaire_2.html" />
+    <link rel="prev" title="Introduction" href="../tp3_elec.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://pcsi3physiquestan.github.io/tp2_optique/notebook/fam_preliminaire.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="(Travail) Matériel en électrocinétique" />
+<meta property="og:description" content="(Travail) Matériel en électrocinétique  Position du problème.  On va se concentrer dans cette partie sur l’étude d’un dipôle en régime statique - on cherchera à" />
+
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tp3_elec.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Familiarisation avec le matériel
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. (Travail) Matériel en électrocinétique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_preliminaire_2.html">
+   2. (Travail) Prépration des protocoles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_manip.html">
+   3. (TP) Caractéristique d’une diode.
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Création d'un signal modulé en amplitude
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="modul_preliminaire.html">
+   1. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mod_manip.html">
+   2. (TP) Création du signal
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Démodulation d'un signal
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="demod_preliminaire.html">
+   1. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="demod_manip.html">
+   2. (TP) Démodulation
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Plus d'initiatives
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html">
+   1. Etude du régime transitoire (Ordre 2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html#etude-d-un-filtre-passe-bande">
+   2. Etude d’un filtre passe-bande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html#automatisation-de-l-etude-d-un-rc">
+   3. Automatisation de l’étude d’un RC.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="microcontrolleur.html">
+   4. (Complément) Fonctionnement d’un microcontrolleur
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/fam_preliminaire.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/fam_preliminaire.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/fam_preliminaire.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#position-du-probleme">
+   1.1. Position du problème.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrumentation-electrique">
+   1.2. Instrumentation électrique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instrumentation-diverse">
+     1.2.1. Instrumentation diverse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creer-un-signal-electrique">
+     1.2.2. Créer un signal électrique.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#le-gbf-etapes-de-reglage">
+       1.2.2.1. Le GBF : Etapes de réglage
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mesurer-une-valeur-unique-le-multimetre">
+     1.2.3. Mesurer une valeur unique : le multimètre
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#amperemetre-et-voltmetre">
+       1.2.3.1. Ampèremètre et voltmètre
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#calibre-ac-et-dc">
+       1.2.3.2. Calibre AC et DC
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-la-carte-d-acquisition">
+     1.2.4. Suivre l’évolution d’un signal : la carte d’acquisition
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reglage-des-cartes-d-acquisition">
+       1.2.4.1. Réglage des cartes d’acquisition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#choix-des-parametres">
+       1.2.4.2. Choix des paramètres
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-l-oscilloscope">
+     1.2.5. Suivre l’évolution d’un signal : l’oscilloscope
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#etapes-de-reglages">
+       1.2.5.1. Etapes de réglages.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p>Vous allez commencer par préparer la séance de familiarisation. L’étude préliminéaire est à réaliser par écrit au début du compte-rendu que vous rendrez à la fin des séances de TPs.</p>
+<div class="section" id="travail-materiel-en-electrocinetique">
+<h1><span class="section-number">1. </span>(Travail) Matériel en électrocinétique<a class="headerlink" href="#travail-materiel-en-electrocinetique" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="position-du-probleme">
+<h2><span class="section-number">1.1. </span>Position du problème.<a class="headerlink" href="#position-du-probleme" title="Permalink to this headline">¶</a></h2>
+<p>On va se concentrer dans cette partie sur l’étude d’un dipôle en régime statique - on cherchera à tracer sa caractéristique statique - puis en régime dynamique - en traçant <span class="math notranslate nohighlight">\((u(t); i(t))\)</span>. On pourra ainsi voir si son comportement est le même en régime indépendant du temps et en régime variable avant de l’utiliser dans des montages. Cette étude va amener à se poser plusieurs questions :</p>
+<ul class="simple">
+<li><p>Quel instrument utiliser pour étudier un point de fonctionnement d’un dipôle en régime statique ? Comment le régler et l’utiliser ?</p></li>
+<li><p>Quel instrument utiliser pour suivre l’évolution d’un point de fonctionnement d’un dipôle en régime dynamique ? Comment le régler et l’utiliser ?</p></li>
+<li><p>Comment créer un signal de tension fixe pour étudier le régime statique d’un dipôle ?</p></li>
+<li><p>Comment créer un signal de tension variable pour étudier le régime dynamique ? Comment régler la forme et les caractéristiques voulues pour le signal.</p></li>
+<li><p>Quelles sont les contraintes liées à une acquisition numérique d’un signal ?</p></li>
+</ul>
+</div>
+<div class="section" id="instrumentation-electrique">
+<h2><span class="section-number">1.2. </span>Instrumentation électrique<a class="headerlink" href="#instrumentation-electrique" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instrumentation-diverse">
+<h3><span class="section-number">1.2.1. </span>Instrumentation diverse<a class="headerlink" href="#instrumentation-diverse" title="Permalink to this headline">¶</a></h3>
+<!-- TODO : Ajouter ici une présentation des instruments divers. -->
+</div>
+<div class="section" id="creer-un-signal-electrique">
+<h3><span class="section-number">1.2.2. </span>Créer un signal électrique.<a class="headerlink" href="#creer-un-signal-electrique" title="Permalink to this headline">¶</a></h3>
+<p>On distingue trois types de sources :</p>
+<ul class="simple">
+<li><p>Les alimentations stabilisées. Elles permettent de créer une tension continue et délivrer une puissance assez importante. On les utilisera peu et le cas échéant, leur fonctionnement sera précisé.</p></li>
+<li><p>Les <em>alimentations symétriques</em>. Elles sont constituées de <em>trois</em> branchements correspondant à des potentiels : <span class="math notranslate nohighlight">\(-15V, 0V, 15V\)</span> (on remarquera que le constructeur nous impose alors le choix du point de masse). On les utilise surtout pour alimenter les ALI (les 3 bornes sont alors à brancher).</p></li>
+<li><p>Les <strong>générateurs basse fréquence</strong>. Ils permettent de générer des signaux de forment varier (possiblement continu mais aussi sinusoïdaux, créneaux ou plus complexe). Ils seront très utilisés et on va s’attarder sur leurs réglages.</p></li>
+</ul>
+<div class="section" id="le-gbf-etapes-de-reglage">
+<h4><span class="section-number">1.2.2.1. </span>Le GBF : Etapes de réglage<a class="headerlink" href="#le-gbf-etapes-de-reglage" title="Permalink to this headline">¶</a></h4>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Avant de commencer à toucher aux boutons du GBF, il est <strong>obligatoire</strong> de réfléchir aux caractéristiques du signal qu’on veut déliver…</p>
+</div>
+<p><em>Affichez les étapes de réglages grâce à la croix à droite.</em></p>
+<div class="toggle docutils container">
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Les réglages sont illustrés sur l’exemple du TG1000 utilisé en salle de TP. Mais vous pourrez être amenés à utiliser d’autres GBF en TP ou en concours. Il font donc bien dégager la méthode générale pour l’adapter à chaque GBF et ne pas trop s’accrocher aux dénominations des boutons qui peuvent changer.</p>
+</div>
+<div class="figure align-center" id="gbf-face">
+<img alt="../_images/gbf_tg1000_face.jpg" src="../_images/gbf_tg1000_face.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Face avant du GBF TG1000. Les numéros en vert font référence aux réglages présentés ci-dessous.</span><a class="headerlink" href="#gbf-face" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p>S’assurer que des réglages “parasites” ne vont pas perturber la mesure.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Sur les TG1000, le principal réglage “parasite” est le réglage <code class="docutils literal notranslate"><span class="pre">load</span></code>. Sans rentrer dans les détails, il faut toujours vérifier qu’il est sur <code class="docutils literal notranslate"><span class="pre">HiZ</span></code>.</p>
+</div>
+<ol class="simple">
+<li><p>Choisir la forme du signal <em>(Réglage 2)</em>.</p></li>
+<li><p>Choisir la fréquence du signal le cas échéant <em>(Réglage 3)</em>.</p></li>
+<li><p>Choisir l’amplitude du signal le cas échéant <em>(Réglage 4)</em>.</p></li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Suivant les GBF, on ne règle pas forcément l’amplitude mais une grandeur associée. Sur les TG1000, on règle par défaut la <strong>valeur crête-à-crête</strong> (notée Vpp).</p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Si le GBF affiche <code class="docutils literal notranslate"><span class="pre">clipping</span></code>, c’est que vous demandez une valeur de tension trop grande (les TG1000 sont limités à 10V maximum).</p>
+</div>
+<ol class="simple">
+<li><p>Choisir la valeur moyenne du signal (OFFSET) <em>(Réglage 5)</em>.</p></li>
+</ol>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Un signal qui n’a pas de valeur moyenne est un signal qui a une valeur moyenne nulle. Pensez à vérifier qu’elle est bien réglée à 0 !!</p>
+</div>
+<ol class="simple">
+<li><p>Choisir l’impédance de sortie du GBF le cas échéant <em>(Réglage 4 ou 5 - Option <code class="docutils literal notranslate"><span class="pre">src</span></code>)</em>.</p></li>
+</ol>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>On rappelle que sauf précision contraire, il est préférable de choisir la valeur la plus faible pour <span class="math notranslate nohighlight">\(R_S\)</span>.</p>
+<p>Tous les GBF ne permettant pas son réglage. Il faut par contre repérer sa valeur pour s’assurer qu’elle n’aura pas d’influence.</p>
+</div>
+<ol class="simple">
+<li><p>Vérifier que le signal n’est pas modifié par un autre réglage (modulation, fenêtrage…) non désiré ou, le cas échéant activer et réaliser le réglage supplémentaire qu’on veut appliquer (ces réglages seront expliqués dans les TPs où ils sont nécessaires). <em>(Réglage 6 - CONT permet une émission en continu, c’est le réglage le plus fréquent.)</em></p></li>
+</ol>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Même quand vous ne voulez pas appliquer un réglage particulier, pensez à vérifier qu’ils ne sont pas actifs. Toutes inscription suspectes sur l’affichage du GBF est une indication d’un réglage non désiré.</p>
+</div>
+<ol class="simple">
+<li><p>Brancher le reste du montage au GBF (généralement grâce à un câble BNC) <em>(Réglage 7)</em></p></li>
+<li><p>Activer la génération du signal <em>(Réglage 8)</em></p></li>
+</ol>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Certains GBF ne permettent pas de désactiver la génération du signal.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="mesurer-une-valeur-unique-le-multimetre">
+<h3><span class="section-number">1.2.3. </span>Mesurer une valeur unique : le multimètre<a class="headerlink" href="#mesurer-une-valeur-unique-le-multimetre" title="Permalink to this headline">¶</a></h3>
+<p>Un multimètre renvoie une valeur correspondant au type de mesure qu’on veut réaliser :</p>
+<ul class="simple">
+<li><p>ampèremètre : pour mesurer un courant</p></li>
+<li><p>voltmètre : pour mesurer une tension</p></li>
+<li><p>ohmètre : pour mesurer une résistance</p></li>
+</ul>
+<div class="section" id="amperemetre-et-voltmetre">
+<h4><span class="section-number">1.2.3.1. </span>Ampèremètre et voltmètre<a class="headerlink" href="#amperemetre-et-voltmetre" title="Permalink to this headline">¶</a></h4>
+<p>On rappelle :</p>
+<ul class="simple">
+<li><p>qu’un ampèremètre doit être <em>branché en série</em> avec le dipôle dont on veut mesurer l’intensité qui le traverse.</p></li>
+<li><p>qu’un voltmètre doit être <em>branché en parallèle</em> du dipôle dont on veut mesurer la tension à ses bornes.</p></li>
+<li><p>que dans les deux cas, la mesure est polarisée. La bornes <code class="docutils literal notranslate"><span class="pre">COM</span></code> correspond à la borne <code class="docutils literal notranslate"><span class="pre">-</span></code> des représentations : la queue de la flèche de tension (voltmètre) ou la sortie du dipôle en terme d’intensité (ampèremètre).</p></li>
+<li><p>que l’autre branchement est en général différent pour l’ampèremètre et le voltmètre.</p></li>
+</ul>
+</div>
+<div class="section" id="calibre-ac-et-dc">
+<h4><span class="section-number">1.2.3.2. </span>Calibre AC et DC<a class="headerlink" href="#calibre-ac-et-dc" title="Permalink to this headline">¶</a></h4>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>Le calibre DC permet de mesurer la valeur moyenne d’un signal.</p></li>
+<li><p>Le calibre AC permet de mesurer la valeur efficace d’un signal.</p></li>
+</ul>
+</div>
+<p>Ces calibres sont parfois représentés pas un <code class="docutils literal notranslate"><span class="pre">~</span></code> (AC) ou un <code class="docutils literal notranslate"><span class="pre">=</span></code> (DC, le trait inférieur peut-être en pointillés).</p>
+<div class="admonition-exercice-quel-calibre admonition">
+<p class="admonition-title">Exercice: quel calibre ?</p>
+<ol class="simple">
+<li><p>On veut étudier le point de fonctionnement de la diode en régime indépendant du temps.</p>
+<ol class="simple">
+<li><p>Pour une tension continue de valeur <span class="math notranslate nohighlight">\(U_0\)</span>. Que vaut sa valeur moyenne ?</p></li>
+<li><p>Pour une tension continue de valeur <span class="math notranslate nohighlight">\(U_0\)</span>. Que vaut sa valeur efficace ?</p></li>
+<li><p>Vaut-il mieux régler le multimètre en DC ou en AC ?</p></li>
+</ol>
+</li>
+<li><p>On veut étudier le gain entrée/sortie d’un système électrique en régime sinusoïdal.</p>
+<ol class="simple">
+<li><p>Pour une tension sinusoïdal d’amplitude <span class="math notranslate nohighlight">\(U_m\)</span>. Que vaut sa valeur moyenne ?</p></li>
+<li><p>Pour une tension sinusoïdal d’amplitude <span class="math notranslate nohighlight">\(U_m\)</span>. Que vaut sa valeur efficace ?</p></li>
+<li><p>Vaut-il mieux régler le multimètre sur DC ou AC pour mesurer le rapport des amplitudes de deux tensions sinusoidales ?</p></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="suivre-l-evolution-d-un-signal-la-carte-d-acquisition">
+<h3><span class="section-number">1.2.4. </span>Suivre l’évolution d’un signal : la carte d’acquisition<a class="headerlink" href="#suivre-l-evolution-d-un-signal-la-carte-d-acquisition" title="Permalink to this headline">¶</a></h3>
+<p>Une carte d’acquisition est un dispositif permettant de mesurer des <strong>tensions</strong> et envoyer des mesures à intervalles régulières à un ordinateur. Une logiciel récupère alors les données et affiche l’allure des signaux. L’interface graphique du logiciel (ici <code class="docutils literal notranslate"><span class="pre">Atelier</span> <span class="pre">scientifique</span></code>) permet de régler les paramètres d’acquisition de la carte pour obtenir les données voulues. L’affichage d’un suivi nécessite en effet un paramétrage adapté :</p>
+<ul class="simple">
+<li><p>l’acquisition doit suivre le signal voulu.</p></li>
+<li><p>l’acquisition doit démarrer au bout moment (crucial si le signal n’est pas périodique).</p></li>
+<li><p>l’acquisition doit durer un temps suffisant pour observer le phénomène voulu. Elle doit aussi ne pas être trop longue pour ne pas “écraser” l’observation du phénomène par des données inutiles.</p></li>
+<li><p>les mesures ne doivent pas “saturer”(en général, la carte est réglée pour mesurer des tensions entre 2 valeurs extrêmes)</p></li>
+<li><p>le nombre de points (d’échantillons) doit être suffisant pour pouvoir suivre les variations du signal.</p></li>
+</ul>
+<div class="section" id="reglage-des-cartes-d-acquisition">
+<h4><span class="section-number">1.2.4.1. </span>Réglage des cartes d’acquisition<a class="headerlink" href="#reglage-des-cartes-d-acquisition" title="Permalink to this headline">¶</a></h4>
+<p><em>Affichez les étapes de réglages grâce à la croix à droite.</em></p>
+<div class="toggle docutils container">
+<p>On se base sur la carte FOXY utilisée au laboratoire.</p>
+<ol class="simple">
+<li><p>Alimenter la carte et la brancher (USB) à l’ordinateur. Une interface se lance automatique. Choisir <strong>Généraliste</strong>.</p></li>
+<li><p>Réaliser les branchements au circuit.</p></li>
+<li><p>Choisir <code class="docutils literal notranslate"><span class="pre">Acquisition</span></code> dans les menus. Une fenêtre s’affiche à gauche pour les réglages.</p></li>
+<li><p><strong>Choisir la(les) voie(s) à étudier.</strong> Elles sont représentées par <img alt="Image voie" src="../_images/as_voies.png" />. Un glisser-déplacer vers l’axe des ordonnées du graphique pour choisir d’acquérir la voie voulue.</p></li>
+<li><p><strong>Régler les paramètres de chaque voie</strong> En cliquant sur la voie choisir un menu avec des onglets s’affiche. Visiter les onglets pour modifier les réglages. Le réglage <strong>indispensable</strong> est le <strong>calibre</strong>. Le reste correspond à des réglages de forme.</p></li>
+<li><p><strong>Choisir une abscisse temporelle</strong> Faire un glisser-déplacer de l’horloge vers l’axe des abscisses.</p></li>
+</ol>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Même si vous compter plus tard mettre en abscisses une autre grandeur (pour avoir <span class="math notranslate nohighlight">\((u(t), i(t))\)</span> par exemple), choisissez TOUJOURS le temps en abscisses pour pouvoir régler les paramètres d’acquisition.</p>
+</div>
+<ol class="simple">
+<li><p><strong>Régler les paramètres temporels.</strong> Il faut avoir réfléchi au phénomène que vous voulez observer. Il faut circuler dans les onglets généralement.</p>
+<ol class="simple">
+<li><p><strong>Durée d’acquisition</strong>.</p></li>
+<li><p><strong>Nombre de points</strong> On reviendra sur cette notion plus tard. Par défaut, le choisir au maximum (16000 points) <em>en pensant à sauvegarder régulièrement.</em></p></li>
+<li><p><strong>Acquisition continue</strong>. Il est souvent préférable de l’activer mais vous devrez déciser sur vous voulez une acquisition unique ou rafraichier régulièrement l’acquisition du signal.</p></li>
+<li><p><strong>Synchronisation</strong> Elle est indispensable en acquisition continue et vivement conseillée en acquisition unique. On précisera en TP son utilité.</p></li>
+<li><p><strong>Voie (pour la synchronisation), Valeur, Pente</strong> cf. TP</p></li>
+</ol>
+</li>
+<li><p>Lancer l’acquisition (bouton vert).</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="choix-des-parametres">
+<h4><span class="section-number">1.2.4.2. </span>Choix des paramètres<a class="headerlink" href="#choix-des-parametres" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-exercice-parametres-d-acquisition admonition">
+<p class="admonition-title">Exercice : Paramètres d’acquisition</p>
+<p>Par la suite, on voudra tester le comportement de la diode pour différents types de signaux :</p>
+<ol class="simple">
+<li><p>Un signal sinusoïdale de fréquence 1kHz, d’amplitude 10V et de valeur moyenne nulle</p></li>
+<li><p>Un signal sinusoïdale de fréquence 20kHz, d’amplitude 3V et de valeur moyenne 1V</p></li>
+<li><p>Un signal triangulaire de fréquence 3kHz, d’amplitude 3V, de valeur basse -2V</p></li>
+<li><p>Un signal créneau de fréquence 500Hz, d’amplitude 8V et de valeur moyenne nulle</p></li>
+<li><p>Un signal créneau de fréquence 30kHz, de valeur basse 0V et de valeur haute 6V.</p></li>
+<li><p>Un signal modulé en amplitude <span class="math notranslate nohighlight">\(s = k v \times e\)</span> avec e<span class="math notranslate nohighlight">\(,\)</span> un signal sinusoïdal de fréquence 10kHz modulé et d’amplitude 4V et <span class="math notranslate nohighlight">\(v\)</span> un signal sinusoïdal de fréquence 500Hz et d’amplitude 4V. On donne <span class="math notranslate nohighlight">\(k = 0.1\)</span>.</p></li>
+</ol>
+<p>On veut observer le signal délivré par le GBF dans chaque cas, on a brancher le GBF en parallèle de la voie 1 de la carte FOXY. Par chaque signal, préciser :</p>
+<ul class="simple">
+<li><p>le calibre de la voie 1 choisi</p></li>
+<li><p>la durée d’acquisition choisie</p></li>
+</ul>
+<p>Note : Les calibres possibles sont <code class="docutils literal notranslate"><span class="pre">-0.25V/+0.25V</span></code>, <code class="docutils literal notranslate"><span class="pre">-5V/+5V</span></code>, <code class="docutils literal notranslate"><span class="pre">-15V/+15V</span></code>, <code class="docutils literal notranslate"><span class="pre">-30V/+30V</span></code></p>
+</div>
+</div>
+</div>
+<div class="section" id="suivre-l-evolution-d-un-signal-l-oscilloscope">
+<h3><span class="section-number">1.2.5. </span>Suivre l’évolution d’un signal : l’oscilloscope<a class="headerlink" href="#suivre-l-evolution-d-un-signal-l-oscilloscope" title="Permalink to this headline">¶</a></h3>
+<p>Un oscilloscope est un instrument de suivi temporel de tension. Il embarque le système de mesure et l’affichage. Il existe deux types d’oscilloscopes :les oscilloscopes analogiques (la trace est obtenue par déviation d’un faisceau d’électron) et les oscilloscopes numériques (un écran - généralement LCD - affiche les données mesurées après traitement numérique). On travaillera principalement sur le second type d’oscilloscope.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Il existe aussi des oscilloscopes hybride analogique-numérique permettant de passer d’un fonctionnement à l’autre.</p>
+</div>
+<p>Le principe de réglage est à peu près le même que pour la carte d’acquisition à ceci près qu’on ne règle pas le nombre de points de mesure. La différence réside dans la position des boutons de réglages.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Un oscilloscope affiche sans s’arrêter ce qu’il est en train d’acquérir. Il peut alors être tentant de régler l’oscilloscope “au visuel” en se basant sur l’allure du signal observé. <strong>Ne le faites pas !</strong> car c’est souvent une source d’erreur (on croit avoir bien l’oscilloscope alors que non).</p>
+<p>Il faut toujours <strong>prévoir la durée d’acquisition nécessaire</strong> et le <strong>calibre vertical adpaté</strong> <strong>en fonction du phénomène qu’on veut observer.</strong></p>
+<p><em>On ne réglera visuellement le signal que dans un second quand on a déjà un signal à peu près propre (affiner la qualité d’affichage).</em></p>
+</div>
+<div class="section" id="etapes-de-reglages">
+<h4><span class="section-number">1.2.5.1. </span>Etapes de réglages.<a class="headerlink" href="#etapes-de-reglages" title="Permalink to this headline">¶</a></h4>
+<p>On présente les boutons pour le FI32052 utilisé en TP.</p>
+<p>Observer la vidéo ci-dessous pour voir les étapes de réglages.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><video src="https://github.com/pcsi3physiquestan/videos_physique/blob/main/instrument_oscilloscope.mp4?raw=true" controls  width="640" >
+      Your browser does not support the <code>video</code> element.
+    </video></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../tp3_elec.html" title="previous page">Introduction</a>
+    <a class='right-next' id="next-link" href="fam_preliminaire_2.html" title="next page"><span class="section-number">2. </span>(Travail) Prépration des protocoles</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

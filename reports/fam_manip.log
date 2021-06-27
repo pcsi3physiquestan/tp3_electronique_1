@@ -1,0 +1,73 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/miniconda3/envs/jupybook/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/ubuntu/miniconda3/envs/jupybook/lib/python3.9/site-packages/nbclient/client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/ubuntu/miniconda3/envs/jupybook/lib/python3.9/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/ubuntu/miniconda3/envs/jupybook/lib/python3.9/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/ubuntu/miniconda3/envs/jupybook/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/miniconda3/envs/jupybook/lib/python3.9/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/home/ubuntu/miniconda3/envs/jupybook/lib/python3.9/site-packages/nbclient/client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/ubuntu/miniconda3/envs/jupybook/lib/python3.9/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+def estim_ud(u, i, E0, RP):
+  """Fonction qui renvoie une estimation de Ud en calculant la moyenne des tensions pour lesquelles
+  i est supérieure ) E0/RP
+  u  : vecteur numpy contenant les valeurs de tension
+  i  : vecteur numpy contenant les valeurs d'intensité
+  E0 : Valeur de E0 (flottant)
+  RP : Valeur de RP (flottant)
+  """
+  imin = 0  # Ligne à modifier
+
+  u_verif = []  # Liste qui contiendra les valeurs acceptées.
+  N = 0  # Ligne à modifier
+  for j in range(N):
+    if i[j] >= imin:
+      u.append([])  # Ligne à modifier
+
+  u_verif = np.array(u_verif)  # Transformation en vecteur numpy pour calculer la moyenne simplement.
+  ud = np.mean(u_verif)
+  return ud
+
+"""Ecrire ci-dessous l'instruction qui va enregistrer dans la variable ud_estim l'estimatino de ud
+avec la méthode précdente"""
+
+
+
+"""Ajout du modèle sur le graphique.
+Vous devez maintenant ajouter sur le graphique précédent la droite $u = ud$ pour $0 \leq i \leq Imax$
+(Imax est la valeur maximale mesurée expérimentalement). Il faut :
+- créer deux vecteurs abscisses et ordonnées de deux points permettant de de tracer la droite précédente.
+- la tracé avec la fonction plot et la légender.
+- réafficher le graphiquea vec plt.show()
+
+C'est à vous
+"""
+
+
+
+"""La commande ci-après permettra de sauvegarder le graphique dans un fichier image
+(dans le répertoire où se trouve le notebook). Vous pourrez l'insérer dans votre compte-rendu.
+"""
+savefig("caracteristique_diode.png")
+
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-2-edec864d8bab>[0m in [0;36m<module>[0;34m[0m
+[1;32m     39[0m [0;34m([0m[0mdans[0m [0mle[0m [0mrépertoire[0m [0moù[0m [0mse[0m [0mtrouve[0m [0mle[0m [0mnotebook[0m[0;34m)[0m[0;34m.[0m [0mVous[0m [0mpourrez[0m [0ml[0m[0;31m'[0m[0minsérer[0m [0mdans[0m [0mvotre[0m [0mcompte[0m[0;34m-[0m[0mrendu[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     40[0m """
+[0;32m---> 41[0;31m [0msavefig[0m[0;34m([0m[0;34m"caracteristique_diode.png"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;31mNameError[0m: name 'savefig' is not defined
+NameError: name 'savefig' is not defined
+

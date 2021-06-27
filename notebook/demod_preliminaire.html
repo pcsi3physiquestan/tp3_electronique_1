@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. (Travail) Etude préliminaire &#8212; TP Electrocinétique</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/demod_preliminaire.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. (TP) Démodulation" href="demod_manip.html" />
+    <link rel="prev" title="2. (TP) Création du signal" href="mod_manip.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://pcsi3physiquestan.github.io/tp2_optique/notebook/demod_preliminaire.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="(Travail) Etude préliminaire" />
+<meta property="og:description" content="(Travail) Etude préliminaire  Détection d’enveloppe  La détection d’enveloppe est basé sur l’utilisation d’un dipôle non linéaire : la diode. Le circuit détecte" />
+
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tp3_elec.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Familiarisation avec le matériel
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_preliminaire.html">
+   1. (Travail) Matériel en électrocinétique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_preliminaire_2.html">
+   2. (Travail) Prépration des protocoles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_manip.html">
+   3. (TP) Caractéristique d’une diode.
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Création d'un signal modulé en amplitude
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="modul_preliminaire.html">
+   1. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mod_manip.html">
+   2. (TP) Création du signal
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Démodulation d'un signal
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="demod_manip.html">
+   2. (TP) Démodulation
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Plus d'initiatives
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html">
+   1. Etude du régime transitoire (Ordre 2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html#etude-d-un-filtre-passe-bande">
+   2. Etude d’un filtre passe-bande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html#automatisation-de-l-etude-d-un-rc">
+   3. Automatisation de l’étude d’un RC.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="microcontrolleur.html">
+   4. (Complément) Fonctionnement d’un microcontrolleur
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/demod_preliminaire.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/demod_preliminaire.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/demod_preliminaire.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#detection-d-enveloppe">
+   1.1. Détection d’enveloppe
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#detection-synchrone">
+   1.2. Détection synchrone
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiplication">
+     1.2.1. Multiplication
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filtre-passe-bas">
+     1.2.2. Filtre passe-bas
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p>Il arrive fréquemment qu’on cherche à obtenir le signal modulant à partir du signal modulé en amplitude (cas en radio AM par exemple). Nous allons voir dans ce TP deux méthodes permettant de le réaliser :</p>
+<ul class="simple">
+<li><p>la détection d’enveloppe</p></li>
+<li><p>la détection synchrone</p></li>
+</ul>
+<div class="section" id="travail-etude-preliminaire">
+<h1><span class="section-number">1. </span>(Travail) Etude préliminaire<a class="headerlink" href="#travail-etude-preliminaire" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="detection-d-enveloppe">
+<h2><span class="section-number">1.1. </span>Détection d’enveloppe<a class="headerlink" href="#detection-d-enveloppe" title="Permalink to this headline">¶</a></h2>
+<p>La détection d’enveloppe est basé sur l’utilisation d’un dipôle non linéaire : la diode. Le circuit détecteur d’enveloppe est le <a class="reference internal" href="#detecteur"><span class="std std-ref">suivant</span></a>.</p>
+<div class="figure align-center" id="detecteur">
+<img alt="../_images/detecteur_crete.jpg" src="../_images/detecteur_crete.jpg" />
+<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Montage détecteur d’enveloppe.</span><a class="headerlink" href="#detecteur" title="Permalink to this image">¶</a></p>
+</div>
+<div class="cell tag_remove-output tag_remove-input docutils container">
+</div>
+<p>Le signal en entrée <span class="math notranslate nohighlight">\(V_E(t)\)</span> est le signal modulé en amplitude. On donne son <a class="reference internal" href="#signal-module"><span class="std std-ref">allure</span></a></p>
+<div class="figure align-center" id="signal-module">
+<div class="cell_output docutils container">
+<img alt="../_images/demod_preliminaire_1_0.png" src="../_images/demod_preliminaire_1_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Allure temporelle de <span class="math notranslate nohighlight">\(V_E(t)\)</span> pour <span class="math notranslate nohighlight">\(f_p = 10 f_m\)</span></span><a class="headerlink" href="#signal-module" title="Permalink to this image">¶</a></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercice : Etude du circuit</p>
+<ol class="simple">
+<li><p>L’étude de la caractéristique dynamique de la diode aux différents signaux nous permet-elle d’utiliser la caractéristique statique de la diode pour analyser le circuit précédent ?</p></li>
+<li><p>On prendra pour l’instant <span class="math notranslate nohighlight">\(U_D = 0\)</span> sur la modélisation de la diode.</p></li>
+<li><p>On suppose que à <span class="math notranslate nohighlight">\(t=0\)</span> la diode est dans un état passant (<span class="math notranslate nohighlight">\(u_{diode} = U_D = 0\)</span>).</p>
+<ol class="simple">
+<li><p>A quoi est équivalente la diode dans ces conditions ?</p></li>
+<li><p>Comment va évoluer la tension <span class="math notranslate nohighlight">\(V_S(t)\)</span> aux bornes du générateur en fonction de <span class="math notranslate nohighlight">\(V_E(t)\)</span> ?</p></li>
+<li><p>A quelle moment <span class="math notranslate nohighlight">\(i_C\)</span> s’annule ? <em><span class="math notranslate nohighlight">\(i_R\)</span> étant relativement faible, on pourra faire comme si c’est aussi le moment où la diode se bloque.</em></p></li>
+<li><p>Reproduire le signal <span class="math notranslate nohighlight">\(V_E(t)\)</span> et représenter <span class="math notranslate nohighlight">\(V_S(t)\)</span> jusqu’au moment où la diode se bloque.</p></li>
+</ol>
+</li>
+<li><p>La diode est maintenant bloquée (<span class="math notranslate nohighlight">\(i=0\)</span>). Elle le restera tant que <span class="math notranslate nohighlight">\(u_{diode} &lt; U_D = 0\)</span>.</p>
+<ol class="simple">
+<li><p>Dans quel régime est alors le condensateur ? En déduire sans calcul l’allure temporelle de <span class="math notranslate nohighlight">\(V_S(t)\)</span> et le temps caractéristique <span class="math notranslate nohighlight">\(\tau\)</span> associé à sa variation.</p></li>
+<li><p>Donner une première condition sur <span class="math notranslate nohighlight">\(\tau\)</span> pour que le détecteur d’enveloppe ne suive pas les variations rapides du signal.</p></li>
+<li><p>Quand la diode va-t-elle redevenir passante ?</p></li>
+</ol>
+</li>
+<li><p>Avec la condition suivante, poursuivre le tracé de <span class="math notranslate nohighlight">\(V_S(t)\)</span> jusqu’à ce que le signal d’entrée soit au sommet de son enveloppe.</p></li>
+<li><p>Justifier que pour que le signal de sortie suive l’enveloppe du signal à partir de ce point là, il faut imposer une deuxième condition sur <span class="math notranslate nohighlight">\(\tau\)</span>.</p></li>
+</ol>
+</div>
+<p><strong>Dans le cas précédente <span class="math notranslate nohighlight">\(f_p = 10 f_m\)</span>, il est difficile d’imposer les deux conditions de manière acceptable (c’est d’ailleurs difficile de dessiner un signal qui suit bien l’enveloppe). En TP, on aura un rapport 100 entre les fréquences ce qui permettra de réaliser les deux conditions.</strong></p>
+<div class="figure align-center" id="signal-module2">
+<div class="cell_output docutils container">
+<img alt="../_images/demod_preliminaire_1_1.png" src="../_images/demod_preliminaire_1_1.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 1.6 </span><span class="caption-text">Allure temporelle de <span class="math notranslate nohighlight">\(V_E(t)\)</span> pour <span class="math notranslate nohighlight">\(f_p = 100 f_m\)</span></span><a class="headerlink" href="#signal-module2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercice : Surmodulation</p>
+<ol class="simple">
+<li><p>Dessiner l’allure de <span class="math notranslate nohighlight">\(V_E(t)\)</span> pour <span class="math notranslate nohighlight">\(m &gt; 1\)</span>.</p></li>
+<li><p>Quelle va être l’allure du signal à la sortie du détecteur d’enveloppe (les deux conditions précédentes ayant été réalisées). Quel problème observe-t-on ?</p></li>
+</ol>
+</div>
+<p><strong>C’est une des limites de la détection de crête. L’utilisation d’une détection synchrone permet de s’affranchir de cette limite.</strong></p>
+</div>
+<div class="section" id="detection-synchrone">
+<h2><span class="section-number">1.2. </span>Détection synchrone<a class="headerlink" href="#detection-synchrone" title="Permalink to this headline">¶</a></h2>
+<p>La détection synchrone consiste à :</p>
+<ol class="simple">
+<li><p>multiplier le signal modulé par un signal sinuoïdal de fréquence <span class="math notranslate nohighlight">\(f_p\)</span> accordé avec la porteuse.</p></li>
+<li><p>faire passer ce signal par un filtre passe-bas de fréquence de coupure judicieusement choisie.</p></li>
+<li><p>Si nécessaire couper la composante continue restante avec un filtre passe-haut (pas réalisé en TP).</p></li>
+</ol>
+<div class="section" id="multiplication">
+<h3><span class="section-number">1.2.1. </span>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">¶</a></h3>
+<p>On multiplie donc <span class="math notranslate nohighlight">\(V_E(t)\)</span> par un signal de fréquence <span class="math notranslate nohighlight">\(f_p\)</span>. On note le signal obtenu <span class="math notranslate nohighlight">\(V_{s1}\)</span></p>
+<div class="tip admonition">
+<p class="admonition-title">Exercice : Etude spectrale</p>
+<ol class="simple">
+<li><p>Déterminer le spectre du signal <span class="math notranslate nohighlight">\(V_{s1}\)</span>.</p></li>
+<li><p>Pourquoi un filtre passe-bas permet (à la composante continue près et à un facteur près) de retrouver le signal modulant ? Comment choisir (approximativement) la fréquence de coupure du filtre.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="filtre-passe-bas">
+<h3><span class="section-number">1.2.2. </span>Filtre passe-bas<a class="headerlink" href="#filtre-passe-bas" title="Permalink to this headline">¶</a></h3>
+<p>Nous allons utiliser un <a class="reference internal" href="#pbas"><span class="std std-ref">filtre passe-bas actif</span></a>.</p>
+<div class="figure align-center" id="pbas">
+<img alt="../_images/pbas_actif.png" src="../_images/pbas_actif.png" />
+<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">Filtre passe-bas actif du second ordre.</span><a class="headerlink" href="#pbas" title="Permalink to this image">¶</a></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercice : Dimensionnement du filtre.</p>
+<ol class="simple">
+<li><p>Justifier rapidement que ce filtre est un passe-bas puis exprimer sa fonction de transfert. On montrera que <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{2}RC}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{\sqrt{2}}\)</span>.</p></li>
+<li><p>Observe-t-on une résonance ? La fréquence de coupure est ici <span class="math notranslate nohighlight">\(\omega_c = \omega_0\)</span> (on pourra s’entraîner à le démontrer).</p></li>
+<li><p>On veut que le gain à <span class="math notranslate nohighlight">\(f_p\)</span> soit de <span class="math notranslate nohighlight">\(10^{-2}\)</span>, en déduire le choix de la fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span> en fonction de <span class="math notranslate nohighlight">\(f_p\)</span>.</p></li>
+<li><p>Que vaut alors le gain pour la fréquence <span class="math notranslate nohighlight">\(f_m\)</span> sachant que <span class="math notranslate nohighlight">\(f_p = 100 f_m\)</span>. En déduire que ce filtre devrait remplir sa fonction en choisissant <span class="math notranslate nohighlight">\(f_c\)</span> comme décidé précédemment. Quelle sera alors l’allure du signal de sortie ? Quelle est la différence avec la détection d’enveloppe ?</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="mod_manip.html" title="previous page"><span class="section-number">2. </span>(TP) Création du signal</a>
+    <a class='right-next' id="next-link" href="demod_manip.html" title="next page"><span class="section-number">2. </span>(TP) Démodulation</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

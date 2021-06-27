@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. (TP) Création du signal &#8212; TP Electrocinétique</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/mod_manip.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. (Travail) Etude préliminaire" href="demod_preliminaire.html" />
+    <link rel="prev" title="1. (Travail) Etude préliminaire" href="modul_preliminaire.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://pcsi3physiquestan.github.io/tp2_optique/notebook/mod_manip.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="(TP) Création du signal" />
+<meta property="og:description" content="(TP) Création du signal  Nous n’allons pas réaliser le montage complet directement mais nous allons étudié séparément chaque étage du montage au préalable. Cela" />
+
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tp3_elec.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Familiarisation avec le matériel
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_preliminaire.html">
+   1. (Travail) Matériel en électrocinétique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_preliminaire_2.html">
+   2. (Travail) Prépration des protocoles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_manip.html">
+   3. (TP) Caractéristique d’une diode.
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Création d'un signal modulé en amplitude
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="modul_preliminaire.html">
+   1. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. (TP) Création du signal
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Démodulation d'un signal
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="demod_preliminaire.html">
+   1. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="demod_manip.html">
+   2. (TP) Démodulation
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Plus d'initiatives
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html">
+   1. Etude du régime transitoire (Ordre 2)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html#etude-d-un-filtre-passe-bande">
+   2. Etude d’un filtre passe-bande
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html#automatisation-de-l-etude-d-un-rc">
+   3. Automatisation de l’étude d’un RC.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="microcontrolleur.html">
+   4. (Complément) Fonctionnement d’un microcontrolleur
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/mod_manip.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/mod_manip.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/mod_manip.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-multiplieur-30-minutes">
+   2.1. Le multiplieur (30 minutes)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#le-sommateur-2h">
+   2.2. Le sommateur (2h)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sommateur-seul">
+     2.2.1. Sommateur seul.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ajout-du-montage-avec-ali">
+     2.2.2. Ajout du montage avec ALI
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#etude-prelimineaire-sur-l-ali">
+       2.2.2.1. Etude préliminéaire sur l’ALI
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#association-au-sommateur">
+       2.2.2.2. Association au sommateur
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#montage-complet-1h">
+   2.3. Montage complet. (1h)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analyse-temporelle-et-frequentielle">
+     2.3.1. Analyse temporelle et fréquentielle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utilisation-de-l-oscilloscope">
+     2.3.2. Utilisation de l’oscilloscope
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signal-module-au-gbf-30-minutes">
+   2.4. Signal modulé au GBF (30 minutes)
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
+<div class="section" id="tp-creation-du-signal">
+<h1><span class="section-number">2. </span>(TP) Création du signal<a class="headerlink" href="#tp-creation-du-signal" title="Permalink to this headline">¶</a></h1>
+<p>Nous n’allons pas réaliser le montage complet directement mais nous allons étudié séparément chaque étage du montage au préalable. Cela permettra de mieux comprendre le fonctionnement de chaque élément et de mettre en lumière certaines pratiques en électrocinétique. C’est de plus une pratique <strong>vivement</strong> conseillée quand on doit construire un système complexe de tester chaque partie avant de les assembler.</p>
+<p>Pour le compte-rendu, vous devrez rendre compte de l’analyse de chaque étage avant de présenter l’étude complète.</p>
+<p>Dimensionnement pour les tests :</p>
+<ul class="simple">
+<li><p>Fréquence du signal porteur : <span class="math notranslate nohighlight">\(f_p = 10kHz\)</span></p></li>
+<li><p>Fréquence du signal modulant : <span class="math notranslate nohighlight">\(f_m = 500Hz\)</span></p></li>
+<li><p>Amplitude des deux signaux : 10V initialement. On modifiera par la suite l’amplitude des signaux.</p></li>
+</ul>
+<div class="section" id="le-multiplieur-30-minutes">
+<h2><span class="section-number">2.1. </span>Le multiplieur (30 minutes)<a class="headerlink" href="#le-multiplieur-30-minutes" title="Permalink to this headline">¶</a></h2>
+<p>Nous allons :</p>
+<ul class="simple">
+<li><p>Tester son fonctionnement</p></li>
+<li><p>Utiliser le tracé temporel de la sortie pour retrouver les fréquences des signaux d’entrée.</p></li>
+<li><p>Utiliser FOXY et l’Atelier scientifique pour tracé le spectre du signal de sortie et observer la non linéarité du dispositif.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Manipulation</p>
+<ol class="simple">
+<li><p>Alimenter le multiplieur et lui envoyer les deux signaux porteur et modulant. Observer avec la carte d’acquisition FOXY le signal sortant (quels réglages pour l’Atelier scientifique ?)</p></li>
+<li><p>Utiliser le tracé temporel pour déterminer la fréquence des signaux porteur et modulant. Estimer l’incertitude sur les deux fréquences. Vérifier la cohérence avec les valeurs réglées sur les GBF.</p></li>
+<li><p>Obtenir le tracé du spectre (Modélisation, Analyse de Fourier) du signal et analyser les valeurs des fréquences. On vérifiera sommairement la cohérence avec les valeurs attendues sans chercher à estimer un écart normalisé.</p></li>
+<li><p>Expliquer pourquoi l’analyse seule du spectre permet de savoir que le système est non linéaire.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="le-sommateur-2h">
+<h2><span class="section-number">2.2. </span>Le sommateur (2h)<a class="headerlink" href="#le-sommateur-2h" title="Permalink to this headline">¶</a></h2>
+<p>On prendra <span class="math notranslate nohighlight">\(R_1 = 8k \Omega\)</span> et <span class="math notranslate nohighlight">\(R_2 = 1k \Omega\)</span></p>
+<div class="section" id="sommateur-seul">
+<h3><span class="section-number">2.2.1. </span>Sommateur seul.<a class="headerlink" href="#sommateur-seul" title="Permalink to this headline">¶</a></h3>
+<p>On veut vérifier :</p>
+<ul class="simple">
+<li><p>visuellement que le signal sortie correspond bien à la somme des signaux d’entrée.</p></li>
+<li><p>Estimer la valeur expérimentale de <span class="math notranslate nohighlight">\(\alpha\)</span> grâce plusieurs mesures des tensions d’entrée et de sortie.</p></li>
+</ul>
+<p>Pour tester le montage, on prendra comme signaux d’entrée les signaux porteur et modulant, même si ce ne sont pas les signaux qui entreront réellement dans le système complet.</p>
+<div class="tip admonition">
+<p class="admonition-title">Manipulation</p>
+<ol class="simple">
+<li><p>Réaliser le montage pour obtenir les deux tensions d’entrée et la tension de sortie sur FOXY. Vérifier alors visuellement que le signal de sortie est bien la somme des deux signaux d’entrée.</p></li>
+<li><p>Comment mesurer expérimentalement <span class="math notranslate nohighlight">\(\alpha\)</span> à partir des signaux précédents ?</p></li>
+<li><p>Réaliser des mesures de <span class="math notranslate nohighlight">\(\alpha\)</span> pour plusieurs valeurs d’amplitude des tensions d’entrée (on fera 5 mesures).</p></li>
+</ol>
+</div>
+<p>Vous aller utiliser la cellule ci-dessous pour estimer l’incertitude sur <span class="math notranslate nohighlight">\(\alpha\)</span> à partir des mesures précédentes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Importation les bibliothèques scientifiques nécessaires :  numpy, matplotlib.pyplot, numpy.random&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">rd</span>
+
+
+<span class="sd">&quot;&quot;&quot;Simulation des valeurs. On a 5 jeux de mesures, on va donc utiliser un tableau numpy. Vous devez :</span>
+<span class="sd">- Créer trois vecteurs numpy contenant les 5 résultats de mesurage des tensions d&#39;entrée et de sortie</span>
+<span class="sd">- Créer trois vecteurs numpy contenant les 5 incertitudes associées aux tensions d&#39;entrée et de sortie</span>
+<span class="sd">(il faudra peut-être plus de trois vecteurs s&#39;il y a plusieurs sources d&#39;incertitudes)</span>
+<span class="sd">- Utiliser les vecteurs précédents pour créer 3 tableaux contenant N échantillons des tensions d&#39;entrée et</span>
+<span class="sd">de sortie associées aux distributionx choisies pour décrire la dispersion des résultats de mesurage.</span>
+<span class="sd">Rappel de syntaxe : rd.normal(x_mes, ux_mes, (N, k)) ou rd.uniform(x_mes, ux_mes, (N, k))</span>
+<span class="sd">où x_mes et ux_mes sont les vecteurs associées aux résultats de mesurage et incertitudes</span>
+<span class="sd">et k la taille des deux vecteurs.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">v1_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">v2_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">vs_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">v1_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">v2_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">vs_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1_m</span><span class="p">)</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span> <span class="c1"># Nombre de simulations</span>
+
+<span class="n">v1_sim</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">v1_m</span><span class="p">,</span> <span class="n">v1_u</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>  <span class="c1"># Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d&#39;incertitude</span>
+<span class="n">v2_sim</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">v1_m</span><span class="p">,</span> <span class="n">v1_u</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>  <span class="c1"># Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d&#39;incertitude</span>
+<span class="n">vs_sim</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">v1_m</span><span class="p">,</span> <span class="n">v1_u</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>  <span class="c1"># Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d&#39;incertitude</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Obtenir le tableau des valeurs simulées  de alpha</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">alpha_sim</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Déterminer la moyenne et l&#39;écart-type pour chaque jeux de mesure sur les N échantillons.</span>
+<span class="sd">On rappelle :</span>
+<span class="sd">mean(tableau, axis = 0) pour moyenner par colonne</span>
+<span class="sd">std(tableau, ddof=1,  axis = 0) pour calculer l&#39;écart-type par colonne</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">alpha_sim_m</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alpha_sim_u</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Calculer la moyenne des valeurs de alpha et son incertitude.</span>
+<span class="sd">On rappelle que l&#39;incertitude sur la moyenne s&#39;écrit : Ecartype des 5 valeurs / sqrt(5)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">alpha_m</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alpha_u</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+<span class="sd">&quot;&quot;&quot;Calculer les écarts normalisées pour chaque jeu de mesure&quot;&quot;&quot;</span>
+<span class="n">alpha_en</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Analyse des différents résultats. On donne ici le tracé à analyser.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  <span class="c1"># On va tracer les barres d&#39;incertitude et la comparer la valeur moyenne.</span>
+<span class="n">f</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>  <span class="c1"># Titrer le graphique</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>  <span class="c1"># Titrer les ordonnées</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">alpha_sim_m</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">alpha_sim_u</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Représentation des valeurs</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">],</span> <span class="p">[</span><span class="n">alpha_m</span><span class="p">,</span> <span class="n">alpha_m</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>  <span class="c1"># Valeur mesurée de alpha</span>
+
+
+<span class="n">f1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  <span class="c1"># On va tracer les écarts normalisés</span>
+<span class="n">f1</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>  <span class="c1"># Titrer le graphique</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">alpha_en</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;+&#39;</span><span class="p">)</span>  <span class="c1"># Ecarts normalisés</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/mod_manip_1_0.png" src="../_images/mod_manip_1_0.png" />
+<img alt="../_images/mod_manip_1_1.png" src="../_images/mod_manip_1_1.png" />
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exploitation</p>
+<p>Utiliser les résulats précédents pour comparer la valeur mesurée de <span class="math notranslate nohighlight">\(\alpha\)</span> avec sa valeur théorique. On se limitera, pour gagner du temps en TP, à associer à <span class="math notranslate nohighlight">\(\alpha_{attendu}\)</span> la même incertitude <strong>relative</strong> que pour les résistances du sommateur pour calculer l’écart normalisé.</p>
+<p><em>On pourra chez soi s’entraîner à réaliser une simulation de Monte-Carlo à partir des données des incertitudes sur les résistances pour déterminer l’incertitude sur <span class="math notranslate nohighlight">\(\alpha_{attendu}\)</span>.</em></p>
+</div>
+</div>
+<div class="section" id="ajout-du-montage-avec-ali">
+<h3><span class="section-number">2.2.2. </span>Ajout du montage avec ALI<a class="headerlink" href="#ajout-du-montage-avec-ali" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="etude-prelimineaire-sur-l-ali">
+<h4><span class="section-number">2.2.2.1. </span>Etude préliminéaire sur l’ALI<a class="headerlink" href="#etude-prelimineaire-sur-l-ali" title="Permalink to this headline">¶</a></h4>
+<p>Avant d’utilise le montage choisi, nous allons observer quelques caractéristiques du montage <strong>amplificateur non inverseur</strong>. On choisira les résistances du montage pour avoir un gain de 10. (Prendre une résistance variable pour la résistance réalisant la rétroaction).</p>
+<div class="tip admonition">
+<p class="admonition-title">Manipulation</p>
+<ol class="simple">
+<li><p>Vérifier <strong>sommairement</strong> que le montage réalise bien un amplificateur non inverseur dont le gain est proche de celui attendu.</p></li>
+<li><p>Que se passe-t-il lorsqu’on augmente trop la tension d’entrée (en valeur positive ou négative) ? On parle de <strong>saturation en tension</strong>. Si l’on observe par la suite une saturation en tension, quelle méthode pour la faire disparaître ?</p></li>
+<li><p>Réaliser le même montage mais en inversant les bornes <code class="docutils literal notranslate"><span class="pre">+</span></code> et <code class="docutils literal notranslate"><span class="pre">-</span></code> de l’ALI. Qu’observe-t-on ? Conclure quant à la nécessite d’une boucle de rétroaction <strong>négative</strong> pour observer un fonctionnement linéaire.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="association-au-sommateur">
+<h4><span class="section-number">2.2.2.2. </span>Association au sommateur<a class="headerlink" href="#association-au-sommateur" title="Permalink to this headline">¶</a></h4>
+<div class="tip admonition">
+<p class="admonition-title">Manipulation</p>
+<ol class="simple">
+<li><p>Réaliser maintenant le montage avec ALI choisi dans l’étude préliminaire. Choisir des résistances (dont une variable) aux valeurs adaptées en fonction de votre étude préliminaire. L’associer au montage sommateur.</p></li>
+<li><p>Ajuster la valeur de la résistance variable de manière à avoir la relation <span class="math notranslate nohighlight">\(v_s = v_1 + v_2\)</span>. On pensera à rendre compte de la réalisation de ce montage en précisant les valeurs des résistances choisies.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="montage-complet-1h">
+<h2><span class="section-number">2.3. </span>Montage complet. (1h)<a class="headerlink" href="#montage-complet-1h" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="analyse-temporelle-et-frequentielle">
+<h3><span class="section-number">2.3.1. </span>Analyse temporelle et fréquentielle<a class="headerlink" href="#analyse-temporelle-et-frequentielle" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Manipulation</p>
+<ol class="simple">
+<li><p>Réaliser le montage complet pour obtenir le signal modulé en amplitude complet. L’observer avec la carte d’acquisition FOXY.</p></li>
+<li><p>Mesurer expérimentalement le taux de modulation <span class="math notranslate nohighlight">\(m\)</span> et le comparer à sa valeur attendue.</p></li>
+<li><p>Tracer le spectre signal. Vérifier la présence des fréquences attendues (on ne demande pas de calcul d’écart normalisé mais on se demandera quelle est l’incertitude de mesure sur les fréquences du signal).</p></li>
+<li><p>Modifier la durée d’acquistion et observer son effet sur l’incertitude de mesure des fréquences.</p></li>
+<li><p>Rendre compte de la réalisation du montage complet et de l’analyse du signal modulé.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="utilisation-de-l-oscilloscope">
+<h3><span class="section-number">2.3.2. </span>Utilisation de l’oscilloscope<a class="headerlink" href="#utilisation-de-l-oscilloscope" title="Permalink to this headline">¶</a></h3>
+<p>Vous allez vous entrainer à utiliser l’oscilloscope pour observer un signal plus complexe.</p>
+<div class="tip admonition">
+<p class="admonition-title">Manipulation</p>
+<ol class="simple">
+<li><p>Vérifier qu’il n’y a pas de problème de Terre pour pouvoir observer le signal de sortie à l’oscilloscope.</p></li>
+<li><p>Méthode 1 - Observation du signal seul : Réfléchir aux réglages de base de temps et de synchronisation le plus adapté pour observer le signal de manière à peu près stable.</p></li>
+<li><p>Méthode 2 - Synchronisation sur un signal annexe : Sur quel autre signal peut-on synchroniser pour observer l’enveloppe du signal modulé de manière stable. Réaliser la manipulation. Mesurer à nouveau le taux de modulation (sans calcul d’incertitude cette fois).</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="signal-module-au-gbf-30-minutes">
+<h2><span class="section-number">2.4. </span>Signal modulé au GBF (30 minutes)<a class="headerlink" href="#signal-module-au-gbf-30-minutes" title="Permalink to this headline">¶</a></h2>
+<p>On peut utiliser les fonctions des GBF (certains) pour réaliser directement un signal modulé en amplitude. Vous allez apprendre à utiliser ce système pour ne pas avoir à refaire le montage précédent pour étudier la démodulation.</p>
+<div class="tip admonition">
+<p class="admonition-title">Manipulation</p>
+<ol class="simple">
+<li><p>Réaliser le signal modulant à l’aide du GBF (FIXXXXX). Prendre une amplitude de 3V et lui ajouter une valeur moyenne (1V par exemple).</p></li>
+<li><p>Brancher ce signal sur l’autre GBF (TTIXXXX) sur l’entrée AM (comme modulation d’amplitude).</p></li>
+<li><p>Activer la modulation d’amplitude avec une modulation externe. Régler le TTIXXXX pour délivrer une fréquence égale à celle de la porteuse.</p></li>
+<li><p>La sortie principale du TTIXXXX délivre alors une tension modulée en amplitude (produit du signal modulé par la porteuse, la valeur moyenne joue le rôle de sommation). L’observer à l’oscilloscope et mesurer sommairement son taux de modulation.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="modul_preliminaire.html" title="previous page"><span class="section-number">1. </span>(Travail) Etude préliminaire</a>
+    <a class='right-next' id="next-link" href="demod_preliminaire.html" title="next page"><span class="section-number">1. </span>(Travail) Etude préliminaire</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
