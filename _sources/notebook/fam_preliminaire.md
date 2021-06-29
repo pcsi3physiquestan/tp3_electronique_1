@@ -35,8 +35,16 @@ On va se concentrer dans cette partie sur l'étude d'un dipôle en régime stati
 ## Instrumentation électrique
 
 ### Instrumentation diverse
+Sans être exhaustif, citons :
+* les câbles simples qui matérialisent un fil de connection.
+* les cables BNC qui contiennent __deux câbles__. A leur extrémité, soit les deux câbles sont séparés en deux branchements simples, soit un reste sur une connectique BNC et un branchement permet le raccordement __des deux bornes du dipôles__. C'est le cas des GBF et oscilloscope. En général, un des bornes est alors reliées à la Terre.
+* les plaquettes de montage. Certaines inclus un ALI ou un multiplieur
+* les composants R, L, C, Diode de valeur fixe.
+* les composants R, L, C, Diode de valeur réglable. On parle de __boite à décades__.
 
-<!-- TODO : Ajouter ici une présentation des instruments divers. -->
+````{attention} 
+Les boites à décade ne peuvent être utilisées que comme un seul composant. __Vous ne pouvez utiliser la même boite pour créer deux composants.__
+````
 
 ### Créer un signal électrique.
 On distingue trois types de sources :

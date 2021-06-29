@@ -100,7 +100,7 @@ def estim_ud(u, i, E0, RP):
   ud = np.mean(u_verif)
   return ud
 
-"""Ecrire ci-dessous l'instruction qui va enregistrer dans la variable ud_estim l'estimatino de ud
+"""Ecrire ci-dessous l'instruction qui va enregistrer dans la variable ud_estim l'estimation de ud
 avec la méthode précdente"""
 
 
@@ -130,7 +130,7 @@ Vous devez maintenant analyser sur votre compte-rendu votre caractéristique sta
 ```
 
 ## Acquisition numérique d'un signal. (30 minutes)
-Avant de chercher à obtenir la caractéristique dynamique d'une diode grâce à une carte d'acquisition, il est important de comprendre certains points clés d'une acquisition numérique en lien avec les paramètres d'acquisition. La partie sur la _synchronisatino_ sera encore valable quand on utilise un oscilloscope.
+Avant de chercher à obtenir la caractéristique dynamique d'une diode grâce à une carte d'acquisition, il est important de comprendre certains points clés d'une acquisition numérique en lien avec les paramètres d'acquisition. La partie sur la _synchronisation_ sera encore valable quand on utilise un oscilloscope.
 
 ### Réglages généraux.
 * On commencera par brancher directement le GBF sur la carte d'acquisition FOXY. Sélectionner alors la voie à acquérir en ordonnée en fonction de vos branchements et l'horloge (base de temps) en abscisse.

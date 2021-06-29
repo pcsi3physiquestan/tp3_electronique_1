@@ -16,7 +16,7 @@ kernelspec:
 
 Avant de commencer le TP, vous aller préparer les protocoles. Vous allez apprendre les spécificités des protocoles en électrocinétique.
 
-# (Travail) Prépration des protocoles
+# (Travail) Préparation des protocoles
 
 +++
 

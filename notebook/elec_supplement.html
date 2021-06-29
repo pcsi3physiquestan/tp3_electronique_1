@@ -57,7 +57,6 @@
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/elec_supplement.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. (Complément) Fonctionnement d’un microcontrolleur" href="microcontrolleur.html" />
     <link rel="prev" title="2. (TP) Démodulation" href="demod_manip.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -115,7 +114,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="fam_preliminaire_2.html">
-   2. (Travail) Prépration des protocoles
+   2. (Travail) Préparation des protocoles
   </a>
  </li>
  <li class="toctree-l1">
@@ -172,16 +171,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="#etude-d-un-filtre-passe-bande">
    2. Etude d’un filtre passe-bande
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#automatisation-de-l-etude-d-un-rc">
-   3. Automatisation de l’étude d’un RC.
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="microcontrolleur.html">
-   4. (Complément) Fonctionnement d’un microcontrolleur
   </a>
  </li>
 </ul>
@@ -305,33 +294,6 @@
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#etude-frequentielle">
      2.2. Etude fréquentielle
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#automatisation-de-l-etude-d-un-rc">
-   3. Automatisation de l’étude d’un RC.
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#realisation-du-montage">
-     3.1. Réalisation du montage.
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#programmation-du-microcontrolleur">
-     3.2. Programmation du microcontrolleur.
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acquisition-des-mesures">
-     3.3. Acquisition des mesures.
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#traitement-des-donnees">
-     3.4. Traitement des données.
     </a>
    </li>
   </ul>
@@ -462,53 +424,6 @@
 </div>
 </div>
 </div>
-<div class="section" id="automatisation-de-l-etude-d-un-rc">
-<h1><span class="section-number">3. </span>Automatisation de l’étude d’un RC.<a class="headerlink" href="#automatisation-de-l-etude-d-un-rc" title="Permalink to this headline">¶</a></h1>
-<p>Le but de cette manipulation est d’utiliser un microcontrolleur pour automatiser l’étude d’un circuit RC et mesurer un grand nombre de fois sa constante de temps.</p>
-<p>Pour comprendre l’utilisation du microcontrolleur Arduino. Commencez par lire <a class="reference internal" href="microcontrolleur.html#microcon"><span class="std std-ref">cette présentation</span></a>.</p>
-<div class="section" id="realisation-du-montage">
-<h2><span class="section-number">3.1. </span>Réalisation du montage.<a class="headerlink" href="#realisation-du-montage" title="Permalink to this headline">¶</a></h2>
-<p>Le microcontrolleur Arduino étant relativement lent (fréquence de mesure analogique faible), on va devoir travailler sur un RC avec une grande constante de temps et utiliser un condensateur chimique. Ce dernier est <strong>polarisé et ne doit surtout pas être branché sur une tension négative</strong>. On fera donc bien attention au sens de branchement du système.</p>
-<p>On va réaliser le montage suivant.</p>
-<div class="tip admonition">
-<p class="admonition-title">Montage</p>
-<ol class="simple">
-<li><p>Réaliser le montage et repérer bien la broche d’Arduino à laquelle est reliée la résistance. Ce sera l’alimentation du RC pour passer d’un échelon de tension à un régime libre. Repérer aussi la borne de mesure (A0), elle permettra de mesure la tension entre le point de branchement et la masse. On pourra vérifier qu’on mesurer effectivement <span class="math notranslate nohighlight">\(u_C\)</span>.</p></li>
-</ol>
-</div>
-</div>
-<div class="section" id="programmation-du-microcontrolleur">
-<h2><span class="section-number">3.2. </span>Programmation du microcontrolleur.<a class="headerlink" href="#programmation-du-microcontrolleur" title="Permalink to this headline">¶</a></h2>
-<p>Le programme a été partiellement écrit. Télécharger le fichier ici et l’ouvrier dans le logiciel Arduino. Il n’est pas nécessaire de comprendre le langage C, il suffit de bien lire les commentaires pour comprendre le programme.</p>
-<div class="tip admonition">
-<p class="admonition-title">Modification du programme</p>
-<ol class="simple">
-<li><p>Trouver la ligne qui définit le PIN d’alimentation de la cellule RC et entrer le numéro de la broche choisie.</p></li>
-<li><p>Trouver la ligne qui définit la durée d’une charge et d’une décharge et choisir une durée permettant d’atteindre le régime permanent à chaque fois.</p></li>
-<li><p>Trouver la ligne qui définit le nombre de mesures à réaliser et choisir 1000 mesures.</p></li>
-<li><p>Téléverser le programme dans la carte Arduino. Celle-ci est maintenant prête à lancer les mesures.</p></li>
-</ol>
-</div>
-</div>
-<div class="section" id="acquisition-des-mesures">
-<h2><span class="section-number">3.3. </span>Acquisition des mesures.<a class="headerlink" href="#acquisition-des-mesures" title="Permalink to this headline">¶</a></h2>
-<p>Pour récupérer et traiter les données plus facilement, nous allons utiliser un script Python qui va se charger de déclencher le début de la mesure puis récupérer les mesures et les enregistrer dans un fichier. Télécharger le fichier ici et l’ouvrir avec Pyzo.</p>
-<div class="tip admonition">
-<p class="admonition-title">Lancement de l’acquisition</p>
-<ol class="simple">
-<li><p>Vérifier que le nom du branchement correspondant à Arduino est correct puis lancer l’acquisition en exécutant le programme. Un fichier <code class="docutils literal notranslate"><span class="pre">data_rc.dat</span></code> sera créé avec les données de mesures.</p></li>
-</ol>
-</div>
-</div>
-<div class="section" id="traitement-des-donnees">
-<h2><span class="section-number">3.4. </span>Traitement des données.<a class="headerlink" href="#traitement-des-donnees" title="Permalink to this headline">¶</a></h2>
-<p>Télécharger et ouvrir avec Pyzo le script prévu pour l’analyse des données. Vous trouverez simplement quelques lignes qui charges les mesures des temps tau dans un vecteur numpy. A vous d’écrire la suite du programme pour :</p>
-<ol class="simple">
-<li><p>Tracer l’histogramme des valeurs de <span class="math notranslate nohighlight">\(\tau\)</span> et vérifier qu’il n’y a pas de mesure aberrantes. Si c’est le cas, il faudra une série d’instructions pour les supprimer.</p></li>
-<li><p>Obtenir la moyenne et l’écart-type des mesures puis la comparer avec la valeur attendues connaissant les valeurs de R et C.</p></li>
-</ol>
-</div>
-</div>
 
     <script type="text/x-thebe-config">
     {
@@ -536,7 +451,6 @@
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="demod_manip.html" title="previous page"><span class="section-number">2. </span>(TP) Démodulation</a>
-    <a class='right-next' id="next-link" href="microcontrolleur.html" title="next page"><span class="section-number">4. </span>(Complément) Fonctionnement d’un microcontrolleur</a>
 
         </div>
         

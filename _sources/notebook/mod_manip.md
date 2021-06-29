@@ -187,10 +187,19 @@ Vous allez vous entrainer à utiliser l'oscilloscope pour observer un signal plu
 ## Signal modulé au GBF (30 minutes)
 On peut utiliser les fonctions des GBF (certains) pour réaliser directement un signal modulé en amplitude. Vous allez apprendre à utiliser ce système pour ne pas avoir à refaire le montage précédent pour étudier la démodulation.
 
+Nous allons ici vous montrer comment créer un signal modulé en amplitude sur le GBF FIXXXXX.
+
+```{note} 
+* Les __inscriptions en bleu__ au dessus des boutons correspondent à réglages accessibles avec la touche `SHIFT` en bleu.
+* Le bouton `Output` sert à activer ou désactiver la sortie. S'il n'est pas allumé, aucun signal n'est délivré.
+```
+
 ````{admonition} Manipulation
 :class: tip
-1. Réaliser le signal modulant à l'aide du GBF (FIXXXXX). Prendre une amplitude de 3V et lui ajouter une valeur moyenne (1V par exemple).
-2. Brancher ce signal sur l'autre GBF (TTIXXXX) sur l'entrée AM (comme modulation d'amplitude).
-3. Activer la modulation d'amplitude avec une modulation externe. Régler le TTIXXXX pour délivrer une fréquence égale à celle de la porteuse.
-4. La sortie principale du TTIXXXX délivre alors une tension modulée en amplitude (produit du signal modulé par la porteuse, la valeur moyenne joue le rôle de sommation). L'observer à l'oscilloscope et mesurer sommairement son taux de modulation.
+1. Réaliser le signal porteur à l'aide des réglages classiques du GBF (FIXXXXX) (forme, fréquence, amplitude, offset).
+2. Activer la modulation d'amplitude avec le bouton `AM`. Des réglages en bleu s'affichent en plus sur l'écran.
+3. Régler la fréquence avec le réglage `Rate` (en bleu). La fréquence de la porteuse est remplacée sur l'écran par la fréquence de la modulante.
+4. Régler le taux de modulation (directement) avec le réglage `DEV/DEP` (en bleu). L'offset est remplacé par le réglage de $m$ en pourcentage (vous pouvez monter au dessus de 100% pour réaliser une surmodulation).
+5. Observer le signal modulé en amplitude à l'oscilloscope.
+6. Pour mieux synchroniser, vous pouvez observer le signal modulant (plus précisément l'enveloppe) avec la sortie `OUT MOD` situé __à l'arrière du GBF.
 ````
