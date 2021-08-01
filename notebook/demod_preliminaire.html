@@ -5,9 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. (Travail) Etude préliminaire &#8212; TP Electrocinétique</title>
+    <title>6. (Travail) Etude préliminaire &#8212; TP Electrocinétique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,25 +54,16 @@
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/demod_preliminaire.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. (TP) Démodulation" href="demod_manip.html" />
-    <link rel="prev" title="2. (TP) Création du signal" href="mod_manip.html" />
-
+    <link rel="next" title="7. (TP) Démodulation" href="demod_manip.html" />
+    <link rel="prev" title="5. (TP) Création du signal" href="mod_manip.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://pcsi3physiquestan.github.io/tp2_optique/notebook/demod_preliminaire.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="(Travail) Etude préliminaire" />
-<meta property="og:description" content="(Travail) Etude préliminaire  Détection d’enveloppe  La détection d’enveloppe est basé sur l’utilisation d’un dipôle non linéaire : la diode. Le circuit détecte" />
-
-
-<meta name="twitter:card" content="summary" />
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -84,30 +72,30 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  
-  <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../tp3_elec.html">
    Introduction
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="fam_preliminaire.html">
    1. (Travail) Matériel en électrocinétique
@@ -124,58 +112,54 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="modul_preliminaire.html">
-   1. (Travail) Etude préliminaire
+   4. (Travail) Etude préliminaire
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mod_manip.html">
-   2. (TP) Création du signal
+   5. (TP) Création du signal
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. (Travail) Etude préliminaire
+   6. (Travail) Etude préliminaire
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="demod_manip.html">
-   2. (TP) Démodulation
+   7. (TP) Démodulation
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Plus d'initiatives
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="elec_supplement.html">
-   1. Etude du régime transitoire (Ordre 2)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="elec_supplement.html#etude-d-un-filtre-passe-bande">
-   2. Etude d’un filtre passe-bande
+   8. Etude du régime transitoire (Ordre 2)
   </a>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -228,12 +212,12 @@
 
             <!-- Source interaction buttons -->
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -259,38 +243,36 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#detection-d-enveloppe">
-   1.1. Détection d’enveloppe
+   6.1. Détection d’enveloppe
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#detection-synchrone">
-   1.2. Détection synchrone
+   6.2. Détection synchrone
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#multiplication">
-     1.2.1. Multiplication
+     6.2.1. Multiplication
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#filtre-passe-bas">
-     1.2.2. Filtre passe-bas
+     6.2.2. Filtre passe-bas
     </a>
    </li>
   </ul>
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -305,13 +287,13 @@
 <li><p>la détection synchrone</p></li>
 </ul>
 <div class="section" id="travail-etude-preliminaire">
-<h1><span class="section-number">1. </span>(Travail) Etude préliminaire<a class="headerlink" href="#travail-etude-preliminaire" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>(Travail) Etude préliminaire<a class="headerlink" href="#travail-etude-preliminaire" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="detection-d-enveloppe">
-<h2><span class="section-number">1.1. </span>Détection d’enveloppe<a class="headerlink" href="#detection-d-enveloppe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Détection d’enveloppe<a class="headerlink" href="#detection-d-enveloppe" title="Permalink to this headline">¶</a></h2>
 <p>La détection d’enveloppe est basé sur l’utilisation d’un dipôle non linéaire : la diode. Le circuit détecteur d’enveloppe est le <a class="reference internal" href="#detecteur"><span class="std std-ref">suivant</span></a>.</p>
 <div class="figure align-center" id="detecteur">
 <img alt="../_images/detecteur_crete.jpg" src="../_images/detecteur_crete.jpg" />
-<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Montage détecteur d’enveloppe.</span><a class="headerlink" href="#detecteur" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Montage détecteur d’enveloppe.</span><a class="headerlink" href="#detecteur" title="Permalink to this image">¶</a></p>
 </div>
 <div class="cell tag_remove-output tag_remove-input docutils container">
 </div>
@@ -320,7 +302,7 @@
 <div class="cell_output docutils container">
 <img alt="../_images/demod_preliminaire_1_0.png" src="../_images/demod_preliminaire_1_0.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Allure temporelle de <span class="math notranslate nohighlight">\(V_E(t)\)</span> pour <span class="math notranslate nohighlight">\(f_p = 10 f_m\)</span></span><a class="headerlink" href="#signal-module" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Allure temporelle de <span class="math notranslate nohighlight">\(V_E(t)\)</span> pour <span class="math notranslate nohighlight">\(f_p = 10 f_m\)</span></span><a class="headerlink" href="#signal-module" title="Permalink to this image">¶</a></p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercice : Etude du circuit</p>
@@ -351,7 +333,7 @@
 <div class="cell_output docutils container">
 <img alt="../_images/demod_preliminaire_1_1.png" src="../_images/demod_preliminaire_1_1.png" />
 </div>
-<p class="caption"><span class="caption-number">Fig. 1.6 </span><span class="caption-text">Allure temporelle de <span class="math notranslate nohighlight">\(V_E(t)\)</span> pour <span class="math notranslate nohighlight">\(f_p = 100 f_m\)</span></span><a class="headerlink" href="#signal-module2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Allure temporelle de <span class="math notranslate nohighlight">\(V_E(t)\)</span> pour <span class="math notranslate nohighlight">\(f_p = 100 f_m\)</span></span><a class="headerlink" href="#signal-module2" title="Permalink to this image">¶</a></p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercice : Surmodulation</p>
@@ -363,7 +345,7 @@
 <p><strong>C’est une des limites de la détection de crête. L’utilisation d’une détection synchrone permet de s’affranchir de cette limite.</strong></p>
 </div>
 <div class="section" id="detection-synchrone">
-<h2><span class="section-number">1.2. </span>Détection synchrone<a class="headerlink" href="#detection-synchrone" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Détection synchrone<a class="headerlink" href="#detection-synchrone" title="Permalink to this headline">¶</a></h2>
 <p>La détection synchrone consiste à :</p>
 <ol class="simple">
 <li><p>multiplier le signal modulé par un signal sinuoïdal de fréquence <span class="math notranslate nohighlight">\(f_p\)</span> accordé avec la porteuse.</p></li>
@@ -371,7 +353,7 @@
 <li><p>Si nécessaire couper la composante continue restante avec un filtre passe-haut (pas réalisé en TP).</p></li>
 </ol>
 <div class="section" id="multiplication">
-<h3><span class="section-number">1.2.1. </span>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.1. </span>Multiplication<a class="headerlink" href="#multiplication" title="Permalink to this headline">¶</a></h3>
 <p>On multiplie donc <span class="math notranslate nohighlight">\(V_E(t)\)</span> par un signal de fréquence <span class="math notranslate nohighlight">\(f_p\)</span>. On note le signal obtenu <span class="math notranslate nohighlight">\(V_{s1}\)</span></p>
 <div class="tip admonition">
 <p class="admonition-title">Exercice : Etude spectrale</p>
@@ -382,11 +364,11 @@
 </div>
 </div>
 <div class="section" id="filtre-passe-bas">
-<h3><span class="section-number">1.2.2. </span>Filtre passe-bas<a class="headerlink" href="#filtre-passe-bas" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.2. </span>Filtre passe-bas<a class="headerlink" href="#filtre-passe-bas" title="Permalink to this headline">¶</a></h3>
 <p>Nous allons utiliser un <a class="reference internal" href="#pbas"><span class="std std-ref">filtre passe-bas actif</span></a>.</p>
 <div class="figure align-center" id="pbas">
 <img alt="../_images/pbas_actif.png" src="../_images/pbas_actif.png" />
-<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">Filtre passe-bas actif du second ordre.</span><a class="headerlink" href="#pbas" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text">Filtre passe-bas actif du second ordre.</span><a class="headerlink" href="#pbas" title="Permalink to this image">¶</a></p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercice : Dimensionnement du filtre.</p>
@@ -426,8 +408,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="mod_manip.html" title="previous page"><span class="section-number">2. </span>(TP) Création du signal</a>
-    <a class='right-next' id="next-link" href="demod_manip.html" title="next page"><span class="section-number">2. </span>(TP) Démodulation</a>
+    <a class='left-prev' id="prev-link" href="mod_manip.html" title="previous page"><span class="section-number">5. </span>(TP) Création du signal</a>
+    <a class='right-next' id="next-link" href="demod_manip.html" title="next page"><span class="section-number">7. </span>(TP) Démodulation</a>
 
         </div>
         
@@ -448,11 +430,9 @@
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

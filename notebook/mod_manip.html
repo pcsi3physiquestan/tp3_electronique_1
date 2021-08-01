@@ -5,9 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. (TP) Création du signal &#8212; TP Electrocinétique</title>
+    <title>5. (TP) Création du signal &#8212; TP Electrocinétique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,25 +54,16 @@
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/mod_manip.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. (Travail) Etude préliminaire" href="demod_preliminaire.html" />
-    <link rel="prev" title="1. (Travail) Etude préliminaire" href="modul_preliminaire.html" />
-
+    <link rel="next" title="6. (Travail) Etude préliminaire" href="demod_preliminaire.html" />
+    <link rel="prev" title="4. (Travail) Etude préliminaire" href="modul_preliminaire.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://pcsi3physiquestan.github.io/tp2_optique/notebook/mod_manip.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="(TP) Création du signal" />
-<meta property="og:description" content="(TP) Création du signal  Nous n’allons pas réaliser le montage complet directement mais nous allons étudié séparément chaque étage du montage au préalable. Cela" />
-
-
-<meta name="twitter:card" content="summary" />
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -84,30 +72,30 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  
-  <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../tp3_elec.html">
    Introduction
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="fam_preliminaire.html">
    1. (Travail) Matériel en électrocinétique
@@ -124,58 +112,54 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="modul_preliminaire.html">
-   1. (Travail) Etude préliminaire
+   4. (Travail) Etude préliminaire
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. (TP) Création du signal
+   5. (TP) Création du signal
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="demod_preliminaire.html">
-   1. (Travail) Etude préliminaire
+   6. (Travail) Etude préliminaire
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="demod_manip.html">
-   2. (TP) Démodulation
+   7. (TP) Démodulation
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Plus d'initiatives
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="elec_supplement.html">
-   1. Etude du régime transitoire (Ordre 2)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="elec_supplement.html#etude-d-un-filtre-passe-bande">
-   2. Etude d’un filtre passe-bande
+   8. Etude du régime transitoire (Ordre 2)
   </a>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -228,12 +212,12 @@
 
             <!-- Source interaction buttons -->
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -259,40 +243,39 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#le-multiplieur-30-minutes">
-   2.1. Le multiplieur (30 minutes)
+   5.1. Le multiplieur (30 minutes)
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#le-sommateur-2h">
-   2.2. Le sommateur (2h)
+   5.2. Le sommateur (2h)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sommateur-seul">
-     2.2.1. Sommateur seul.
+     5.2.1. Sommateur seul.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#ajout-du-montage-avec-ali">
-     2.2.2. Ajout du montage avec ALI
+     5.2.2. Ajout du montage avec ALI
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#etude-prelimineaire-sur-l-ali">
-       2.2.2.1. Etude préliminéaire sur l’ALI
+       5.2.2.1. Etude préliminéaire sur l’ALI
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#association-au-sommateur">
-       2.2.2.2. Association au sommateur
+       5.2.2.2. Association au sommateur
       </a>
      </li>
     </ul>
@@ -301,30 +284,29 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#montage-complet-1h">
-   2.3. Montage complet. (1h)
+   5.3. Montage complet. (1h)
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#analyse-temporelle-et-frequentielle">
-     2.3.1. Analyse temporelle et fréquentielle
+     5.3.1. Analyse temporelle et fréquentielle
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#utilisation-de-l-oscilloscope">
-     2.3.2. Utilisation de l’oscilloscope
+     5.3.2. Utilisation de l’oscilloscope
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#signal-module-au-gbf-30-minutes">
-   2.4. Signal modulé au GBF (30 minutes)
+   5.4. Signal modulé au GBF (30 minutes)
   </a>
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -335,7 +317,7 @@
                 
   <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
 <div class="section" id="tp-creation-du-signal">
-<h1><span class="section-number">2. </span>(TP) Création du signal<a class="headerlink" href="#tp-creation-du-signal" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>(TP) Création du signal<a class="headerlink" href="#tp-creation-du-signal" title="Permalink to this headline">¶</a></h1>
 <p>Nous n’allons pas réaliser le montage complet directement mais nous allons étudié séparément chaque étage du montage au préalable. Cela permettra de mieux comprendre le fonctionnement de chaque élément et de mettre en lumière certaines pratiques en électrocinétique. C’est de plus une pratique <strong>vivement</strong> conseillée quand on doit construire un système complexe de tester chaque partie avant de les assembler.</p>
 <p>Pour le compte-rendu, vous devrez rendre compte de l’analyse de chaque étage avant de présenter l’étude complète.</p>
 <p>Dimensionnement pour les tests :</p>
@@ -345,7 +327,7 @@
 <li><p>Amplitude des deux signaux : 10V initialement. On modifiera par la suite l’amplitude des signaux.</p></li>
 </ul>
 <div class="section" id="le-multiplieur-30-minutes">
-<h2><span class="section-number">2.1. </span>Le multiplieur (30 minutes)<a class="headerlink" href="#le-multiplieur-30-minutes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Le multiplieur (30 minutes)<a class="headerlink" href="#le-multiplieur-30-minutes" title="Permalink to this headline">¶</a></h2>
 <p>Nous allons :</p>
 <ul class="simple">
 <li><p>Tester son fonctionnement</p></li>
@@ -363,10 +345,10 @@
 </div>
 </div>
 <div class="section" id="le-sommateur-2h">
-<h2><span class="section-number">2.2. </span>Le sommateur (2h)<a class="headerlink" href="#le-sommateur-2h" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>Le sommateur (2h)<a class="headerlink" href="#le-sommateur-2h" title="Permalink to this headline">¶</a></h2>
 <p>On prendra <span class="math notranslate nohighlight">\(R_1 = 8k \Omega\)</span> et <span class="math notranslate nohighlight">\(R_2 = 1k \Omega\)</span></p>
 <div class="section" id="sommateur-seul">
-<h3><span class="section-number">2.2.1. </span>Sommateur seul.<a class="headerlink" href="#sommateur-seul" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.1. </span>Sommateur seul.<a class="headerlink" href="#sommateur-seul" title="Permalink to this headline">¶</a></h3>
 <p>On veut vérifier :</p>
 <ul class="simple">
 <li><p>visuellement que le signal sortie correspond bien à la somme des signaux d’entrée.</p></li>
@@ -473,9 +455,9 @@
 </div>
 </div>
 <div class="section" id="ajout-du-montage-avec-ali">
-<h3><span class="section-number">2.2.2. </span>Ajout du montage avec ALI<a class="headerlink" href="#ajout-du-montage-avec-ali" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.2. </span>Ajout du montage avec ALI<a class="headerlink" href="#ajout-du-montage-avec-ali" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="etude-prelimineaire-sur-l-ali">
-<h4><span class="section-number">2.2.2.1. </span>Etude préliminéaire sur l’ALI<a class="headerlink" href="#etude-prelimineaire-sur-l-ali" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.1. </span>Etude préliminéaire sur l’ALI<a class="headerlink" href="#etude-prelimineaire-sur-l-ali" title="Permalink to this headline">¶</a></h4>
 <p>Avant d’utilise le montage choisi, nous allons observer quelques caractéristiques du montage <strong>amplificateur non inverseur</strong>. On choisira les résistances du montage pour avoir un gain de 10. (Prendre une résistance variable pour la résistance réalisant la rétroaction).</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
@@ -487,7 +469,7 @@
 </div>
 </div>
 <div class="section" id="association-au-sommateur">
-<h4><span class="section-number">2.2.2.2. </span>Association au sommateur<a class="headerlink" href="#association-au-sommateur" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.2. </span>Association au sommateur<a class="headerlink" href="#association-au-sommateur" title="Permalink to this headline">¶</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
 <ol class="simple">
@@ -499,9 +481,9 @@
 </div>
 </div>
 <div class="section" id="montage-complet-1h">
-<h2><span class="section-number">2.3. </span>Montage complet. (1h)<a class="headerlink" href="#montage-complet-1h" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>Montage complet. (1h)<a class="headerlink" href="#montage-complet-1h" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="analyse-temporelle-et-frequentielle">
-<h3><span class="section-number">2.3.1. </span>Analyse temporelle et fréquentielle<a class="headerlink" href="#analyse-temporelle-et-frequentielle" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.1. </span>Analyse temporelle et fréquentielle<a class="headerlink" href="#analyse-temporelle-et-frequentielle" title="Permalink to this headline">¶</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
 <ol class="simple">
@@ -514,7 +496,7 @@
 </div>
 </div>
 <div class="section" id="utilisation-de-l-oscilloscope">
-<h3><span class="section-number">2.3.2. </span>Utilisation de l’oscilloscope<a class="headerlink" href="#utilisation-de-l-oscilloscope" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.2. </span>Utilisation de l’oscilloscope<a class="headerlink" href="#utilisation-de-l-oscilloscope" title="Permalink to this headline">¶</a></h3>
 <p>Vous allez vous entrainer à utiliser l’oscilloscope pour observer un signal plus complexe.</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
@@ -527,7 +509,7 @@
 </div>
 </div>
 <div class="section" id="signal-module-au-gbf-30-minutes">
-<h2><span class="section-number">2.4. </span>Signal modulé au GBF (30 minutes)<a class="headerlink" href="#signal-module-au-gbf-30-minutes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>Signal modulé au GBF (30 minutes)<a class="headerlink" href="#signal-module-au-gbf-30-minutes" title="Permalink to this headline">¶</a></h2>
 <p>On peut utiliser les fonctions des GBF (certains) pour réaliser directement un signal modulé en amplitude. Vous allez apprendre à utiliser ce système pour ne pas avoir à refaire le montage précédent pour étudier la démodulation.</p>
 <p>Nous allons ici vous montrer comment créer un signal modulé en amplitude sur le GBF FIXXXXX.</p>
 <div class="admonition note">
@@ -576,8 +558,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="modul_preliminaire.html" title="previous page"><span class="section-number">1. </span>(Travail) Etude préliminaire</a>
-    <a class='right-next' id="next-link" href="demod_preliminaire.html" title="next page"><span class="section-number">1. </span>(Travail) Etude préliminaire</a>
+    <a class='left-prev' id="prev-link" href="modul_preliminaire.html" title="previous page"><span class="section-number">4. </span>(Travail) Etude préliminaire</a>
+    <a class='right-next' id="next-link" href="demod_preliminaire.html" title="next page"><span class="section-number">6. </span>(Travail) Etude préliminaire</a>
 
         </div>
         
@@ -598,11 +580,9 @@
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>

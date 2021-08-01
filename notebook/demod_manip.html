@@ -5,9 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. (TP) Démodulation &#8212; TP Electrocinétique</title>
+    <title>7. (TP) Démodulation &#8212; TP Electrocinétique</title>
     
-  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -19,14 +20,10 @@
 
     
       
-  <link rel="stylesheet"
-    href="../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -34,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -44,7 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -57,25 +54,16 @@
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/demod_manip.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Etude du régime transitoire (Ordre 2)" href="elec_supplement.html" />
-    <link rel="prev" title="1. (Travail) Etude préliminaire" href="demod_preliminaire.html" />
-
+    <link rel="next" title="8. Etude du régime transitoire (Ordre 2)" href="elec_supplement.html" />
+    <link rel="prev" title="6. (Travail) Etude préliminaire" href="demod_preliminaire.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
-
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://pcsi3physiquestan.github.io/tp2_optique/notebook/demod_manip.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="(TP) Démodulation" />
-<meta property="og:description" content="(TP) Démodulation  Nous allons maintenant réaliser la démodulation d’un signal modulé en amplitude, c’est-à-dire l’obtention du signal modulé (avec une valeur m" />
-
-
-<meta name="twitter:card" content="summary" />
-
-
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -84,30 +72,30 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../index.html">
-  
-  
-  <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../tp3_elec.html">
    Introduction
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="fam_preliminaire.html">
    1. (Travail) Matériel en électrocinétique
@@ -124,58 +112,54 @@
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="modul_preliminaire.html">
-   1. (Travail) Etude préliminaire
+   4. (Travail) Etude préliminaire
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="mod_manip.html">
-   2. (TP) Création du signal
+   5. (TP) Création du signal
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="demod_preliminaire.html">
-   1. (Travail) Etude préliminaire
+   6. (Travail) Etude préliminaire
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   2. (TP) Démodulation
+   7. (TP) Démodulation
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
   Plus d'initiatives
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="elec_supplement.html">
-   1. Etude du régime transitoire (Ordre 2)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="elec_supplement.html#etude-d-un-filtre-passe-bande">
-   2. Etude d’un filtre passe-bande
+   8. Etude du régime transitoire (Ordre 2)
   </a>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -228,12 +212,12 @@
 
             <!-- Source interaction buttons -->
 
-
             <!-- Full screen (wrap in <a> to have style consistency -->
-            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                    title="Fullscreen mode"><i
-                        class="fas fa-expand"></i></button></a>
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
 
@@ -259,62 +243,60 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i>
-            Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#detection-d-enveloppe">
-   2.1. Détection d’enveloppe.
+   7.1. Détection d’enveloppe.
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#etude-de-la-cellule-rc-1h30">
-     2.1.1. Etude de la cellule RC (1h30)
+     7.1.1. Etude de la cellule RC (1h30)
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#acquisition-unique">
-       2.1.1.1. Acquisition unique
+       7.1.1.1. Acquisition unique
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#charges-et-decharges-successives">
-       2.1.1.2. Charges et décharges successives
+       7.1.1.2. Charges et décharges successives
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#etude-de-la-detection-d-enveloppe-30-minutes">
-     2.1.2. Etude de la détection d’enveloppe. (30 minutes)
+     7.1.2. Etude de la détection d’enveloppe. (30 minutes)
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#detection-synchrone">
-   2.2. Détection synchrone
+   7.2. Détection synchrone
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#etude-du-filtre-1h30">
-     2.2.1. Etude du filtre (1h30)
+     7.2.1. Etude du filtre (1h30)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#montage-de-detection-synchrone-30-minutes">
-     2.2.2. Montage de détection synchrone. (30 minutes)
+     7.2.2. Montage de détection synchrone. (30 minutes)
     </a>
    </li>
   </ul>
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
         </div>
     </div>
 </div>
@@ -325,7 +307,7 @@
                 
   <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
 <div class="section" id="tp-demodulation">
-<h1><span class="section-number">2. </span>(TP) Démodulation<a class="headerlink" href="#tp-demodulation" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">7. </span>(TP) Démodulation<a class="headerlink" href="#tp-demodulation" title="Permalink to this headline">¶</a></h1>
 <p>Nous allons maintenant réaliser la démodulation d’un signal modulé en amplitude, c’est-à-dire l’obtention du signal modulé (avec une valeur moyenne supplémentaire). On veut donc passer de :</p>
 <div class="math notranslate nohighlight">
 \[
@@ -351,17 +333,17 @@ s(t) = s_m \sin \omega_m t + s_0
 <p>On simulera le signal modulé en amplitude directement grâce au GBF pour des raisons de temps et de place. Si le temps le permetn vous pourrez recréer le montage de la précédente séance et tester votre étage de démodulation sur ce signal.</p>
 </div>
 <div class="section" id="detection-d-enveloppe">
-<h2><span class="section-number">2.1. </span>Détection d’enveloppe.<a class="headerlink" href="#detection-d-enveloppe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>Détection d’enveloppe.<a class="headerlink" href="#detection-d-enveloppe" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="etude-de-la-cellule-rc-1h30">
-<h3><span class="section-number">2.1.1. </span>Etude de la cellule RC (1h30)<a class="headerlink" href="#etude-de-la-cellule-rc-1h30" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.1. </span>Etude de la cellule RC (1h30)<a class="headerlink" href="#etude-de-la-cellule-rc-1h30" title="Permalink to this headline">¶</a></h3>
 <p>L’étude préliminaire a montré que lorsque la diode est bloqué, le condensateur est en régime libre. Nous allons donc étudier ce régime libre séparément de la diode. Ce sera l’occasion d’étudier un régime transitoire.</p>
 <p>On étudie un circuit RC série avec <span class="math notranslate nohighlight">\(R = 1 k\Omega\)</span> et <span class="math notranslate nohighlight">\(C = 1 \mu F\)</span>. On réalise le <a class="reference internal" href="#rc-libre"><span class="std std-ref">montage suivant</span></a>. Le basculement de l’interrupteur permettra de charge et décharger l’interrupteur.</p>
 <div class="figure align-center" id="rc-libre">
 <img alt="../_images/rc_libre.jpg" src="../_images/rc_libre.jpg" />
-<p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Etude d’un circuit RC.</span><a class="headerlink" href="#rc-libre" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Etude d’un circuit RC.</span><a class="headerlink" href="#rc-libre" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="acquisition-unique">
-<h4><span class="section-number">2.1.1.1. </span>Acquisition unique<a class="headerlink" href="#acquisition-unique" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">7.1.1.1. </span>Acquisition unique<a class="headerlink" href="#acquisition-unique" title="Permalink to this headline">¶</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Etude avec FOXY</p>
 <ol class="simple">
@@ -389,7 +371,7 @@ s(t) = s_m \sin \omega_m t + s_0
 </div>
 </div>
 <div class="section" id="charges-et-decharges-successives">
-<h4><span class="section-number">2.1.1.2. </span>Charges et décharges successives<a class="headerlink" href="#charges-et-decharges-successives" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">7.1.1.2. </span>Charges et décharges successives<a class="headerlink" href="#charges-et-decharges-successives" title="Permalink to this headline">¶</a></h4>
 <p>On peut s’affranchir du mode <code class="docutils literal notranslate"><span class="pre">SINGLE</span></code> en chargeant et déchargeant périodique C. Remplacer la pile et l’interrupteur par un GBF qu’on règlera sur un créneau entre 0 et 5V.</p>
 <div class="tip admonition">
 <p class="admonition-title">Etude avec l’oscilloscope</p>
@@ -402,7 +384,7 @@ s(t) = s_m \sin \omega_m t + s_0
 </div>
 </div>
 <div class="section" id="etude-de-la-detection-d-enveloppe-30-minutes">
-<h3><span class="section-number">2.1.2. </span>Etude de la détection d’enveloppe. (30 minutes)<a class="headerlink" href="#etude-de-la-detection-d-enveloppe-30-minutes" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.1.2. </span>Etude de la détection d’enveloppe. (30 minutes)<a class="headerlink" href="#etude-de-la-detection-d-enveloppe-30-minutes" title="Permalink to this headline">¶</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Détection d’enveloppe</p>
 <ol class="simple">
@@ -415,9 +397,9 @@ s(t) = s_m \sin \omega_m t + s_0
 </div>
 </div>
 <div class="section" id="detection-synchrone">
-<h2><span class="section-number">2.2. </span>Détection synchrone<a class="headerlink" href="#detection-synchrone" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Détection synchrone<a class="headerlink" href="#detection-synchrone" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="etude-du-filtre-1h30">
-<h3><span class="section-number">2.2.1. </span>Etude du filtre (1h30)<a class="headerlink" href="#etude-du-filtre-1h30" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.2.1. </span>Etude du filtre (1h30)<a class="headerlink" href="#etude-du-filtre-1h30" title="Permalink to this headline">¶</a></h3>
 <p>On prend <span class="math notranslate nohighlight">\(R = 1k \Omega\)</span>. Proposer une valeur de <span class="math notranslate nohighlight">\(C\)</span> cohérente avec l’étude préliminaire et réaliser le filtre actif choisi dans l’étude préliminaire.
 <strong>N’oubliez pas d’alimenter l’ALI avec l’alimentation symétrique.</strong></p>
 <div class="tip admonition">
@@ -535,7 +517,7 @@ s(t) = s_m \sin \omega_m t + s_0
 </div>
 </div>
 <div class="section" id="montage-de-detection-synchrone-30-minutes">
-<h3><span class="section-number">2.2.2. </span>Montage de détection synchrone. (30 minutes)<a class="headerlink" href="#montage-de-detection-synchrone-30-minutes" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">7.2.2. </span>Montage de détection synchrone. (30 minutes)<a class="headerlink" href="#montage-de-detection-synchrone-30-minutes" title="Permalink to this headline">¶</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Réalisation du montage</p>
 <ol class="simple">
@@ -575,8 +557,8 @@ s(t) = s_m \sin \omega_m t + s_0
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="demod_preliminaire.html" title="previous page"><span class="section-number">1. </span>(Travail) Etude préliminaire</a>
-    <a class='right-next' id="next-link" href="elec_supplement.html" title="next page"><span class="section-number">1. </span>Etude du régime transitoire (Ordre 2)</a>
+    <a class='left-prev' id="prev-link" href="demod_preliminaire.html" title="previous page"><span class="section-number">6. </span>(Travail) Etude préliminaire</a>
+    <a class='right-next' id="next-link" href="elec_supplement.html" title="next page"><span class="section-number">8. </span>Etude du régime transitoire (Ordre 2)</a>
 
         </div>
         
@@ -597,11 +579,9 @@ s(t) = s_m \sin \omega_m t + s_0
 
       </div>
     </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
-    
-  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
-
-
-    
+  
   </body>
 </html>
