@@ -24,7 +24,7 @@ Avant de commencer le TP, vous aller préparer les protocoles. Vous allez appren
 
 ### Généralités
 
-On va étudier un dipôle non linéaire : la diode. Un diode classique est composés de matériaux semi-conducteur (de deux types, l’un appelé N et l’autre appelé P). Leur association (on parle de jonction... P-N) permet de créer un dipôle (la diode donc... ) qui ne laisse passer le courant que dans un sens. La diode est un dipôle polarisé.
+On va étudier un dipôle non linéaire : la diode. Un diode classique est composée de matériaux semi-conducteur (de deux types, l’un appelé N et l’autre appelé P). Leur association (on parle de jonction... P-N) permet de créer un dipôle (la diode donc... ) qui ne laisse passer le courant que dans un sens. La diode est un dipôle polarisé.
 
 +++
 

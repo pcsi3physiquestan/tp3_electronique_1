@@ -184,6 +184,15 @@ Vous allez vous entrainer à utiliser l'oscilloscope pour observer un signal plu
 3. Méthode 2 - Synchronisation sur un signal annexe : Sur quel autre signal peut-on synchroniser pour observer l'enveloppe du signal modulé de manière stable. Réaliser la manipulation. Mesurer à nouveau le taux de modulation (sans calcul d'incertitude cette fois).
 ````
 
+````{admonition} Compte-rendu
+:class: tip
+Rendre-compte :
+1. Du montage complet choisi pour la création du signal modulé
+2. De l'étude du multiplieur
+3. De l'étude du sommateur puis de son association avec l'ALI
+4. Des observations réalisées sur le montage complet
+````
+
 ## Signal modulé au GBF (30 minutes)
 On peut utiliser les fonctions des GBF (certains) pour réaliser directement un signal modulé en amplitude. Vous allez apprendre à utiliser ce système pour ne pas avoir à refaire le montage précédent pour étudier la démodulation.
 

@@ -67,17 +67,8 @@ f,ax = plt.subplots()
 ```
 
 ### Estimation de la tension seuil
-On va estimer la tension seuil par une méthode (très approchée) : ce sera la moyenne des valeurs de la tension aux bornes de la diode quand l'intensité qui y circule est non nulle. On prendra comme critère __arbitraire__ d'intensité non nulle $i \geq {E_0 \over R_p}$ avec $E_0 = 0.5V$ (c'est un critère arbitraire qui a ses limites). La cellule ci-dessous permet d'estimer $U_d$. Essayer de comprendre le programme et modifier les lignes de code suivantes pour faire fonctionner le code :
+On va estimer la tension seuil par une méthode (très approchée) : ce sera la moyenne des valeurs de la tension aux bornes de la diode quand l'intensité qui y circule est non nulle. On prendra comme critère __arbitraire__ d'intensité non nulle $i \geq {E_0 \over R_p}$ avec $E_0 = 0.5V$ (c'est un critère arbitraire qui a ses limites). La cellule ci-dessous permet d'estimer $U_d$. Essayer de comprendre le programme et modifier les lignes de code demandées pour faire fonctionner le code :
 
-```
-...
-imin = 0
-...
-N = 0
-...
-u.append([])
-
-```
 
 ```{code-cell}
 def estim_ud(u, i, E0, RP):
@@ -88,13 +79,13 @@ def estim_ud(u, i, E0, RP):
   E0 : Valeur de E0 (flottant)
   RP : Valeur de RP (flottant)
   """
-  imin = 0  # Ligne à modifier
+  imin = 0  # LIGNE A MODIFIER
 
   u_verif = []  # Liste qui contiendra les valeurs acceptées.
-  N = 0  # Ligne à modifier
+  N = 0  # LIGNE A MODIFIER
   for j in range(N):
     if i[j] >= imin:
-      u.append([])  # Ligne à modifier
+      u.append([])  # LIGNE A MODIFIER
 
   u_verif = np.array(u_verif)  # Transformation en vecteur numpy pour calculer la moyenne simplement.
   ud = np.mean(u_verif)
@@ -244,7 +235,7 @@ Schéma d'un transformateur
 
 Deux bornes sont reliées à un circuit d'entrée (circuit primaire, gauche sur le schéma) qui reçoit une tension $u_1$. Par un phénomène d'induction qui sera étudié en fin d'année, il nait alors une tension $u_2$ aux bornes de la seconde bobine (circuit secondaire, droite sur le schéma) qui va donc alimenter le second circuit. Le rapport $m = {u_2 \over u1}$ est appelé __rapport de transformation en tension__. Il existe des transformateurs réhausseur (augmentation de tension, en sortie des centrale électrique), abaisseurs (diminution de tension, dans les adaptateurs (d'ordinateur par exemple)).
 
-Dans les transformateurs, les deux bobines __ne sont pa reliées électriquement__ donc les bornes du circuit primaire ne sont pas à priori reliées aux bornes du circuit secondaire. Donc si il y a un GBF avec une borne reliées à la Terre dans le circuit primaire, __il n'impose pas de borne de Terre dans le circuit secondaire__ : on peut la placer où on veut. On parle de rôle __d'isolement__ du transformateur.
+Dans les transformateurs, les deux bobines __ne sont pas reliées électriquement__ donc les bornes du circuit primaire ne sont pas à priori reliées aux bornes du circuit secondaire. Donc si il y a un GBF avec une borne reliées à la Terre dans le circuit primaire, __il n'impose pas de borne de Terre dans le circuit secondaire__ : on peut la placer où on veut. On parle de rôle __d'isolement__ du transformateur.
 
 Certains transformateurs ont un rôle uniquement d'isolement (d'où le nom de __transformateur d'isolement__) et possède alors un rapport $m=1$. C'est le cas du transformateur utilisé en TP.
 
@@ -263,7 +254,7 @@ Réaliser le montage ci-dessous.
 :align: center
 Etude du transformateur
 ```
-1. Mesurer le rapport de transformation en tension pour une tension d'entrée sinusoïdale de fréquence 1kHz puis pour une tension continue. _On utilisera l'oscilloscope dans les deux cas et on reproduira le schéma du montage dans le compte-rendu en précisant les branchements de l'oscilloscope.
+1. Mesurer le rapport de transformation en tension pour une tension d'entrée sinusoïdale de fréquence 1kHz puis pour une tension continue. _On utilisera l'oscilloscope dans les deux cas et on reproduira le schéma du montage dans le compte-rendu en précisant les branchements de l'oscilloscope._
 2. Expliquer quelle contrainte doit avoir le signal d'entrée pour que le transformateur fonctionne.
 ````
 

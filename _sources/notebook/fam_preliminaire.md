@@ -165,7 +165,7 @@ Ces calibres sont parfois représentés pas un `~` (AC) ou un `=` (DC, le trait 
 
 Une carte d'acquisition est un dispositif permettant de mesurer des __tensions__ et envoyer des mesures à intervalles régulières à un ordinateur. Une logiciel récupère alors les données et affiche l'allure des signaux. L'interface graphique du logiciel (ici `Atelier scientifique`) permet de régler les paramètres d'acquisition de la carte pour obtenir les données voulues. L'affichage d'un suivi nécessite en effet un paramétrage adapté :
 * l'acquisition doit suivre le signal voulu.
-* l'acquisition doit démarrer au bout moment (crucial si le signal n'est pas périodique).
+* l'acquisition doit démarrer au bon moment (crucial si le signal n'est pas périodique).
 * l'acquisition doit durer un temps suffisant pour observer le phénomène voulu. Elle doit aussi ne pas être trop longue pour ne pas "écraser" l'observation du phénomène par des données inutiles.
 * les mesures ne doivent pas "saturer"(en général, la carte est réglée pour mesurer des tensions entre 2 valeurs extrêmes)
 * le nombre de points (d'échantillons) doit être suffisant pour pouvoir suivre les variations du signal.
@@ -179,11 +179,11 @@ _Affichez les étapes de réglages grâce à la croix à droite._
 
 ````{toggle}
 On se base sur la carte FOXY utilisée au laboratoire.
-1. Alimenter la carte et la brancher (USB) à l'ordinateur. Une interface se lance automatique. Choisir __Généraliste__.
+1. Alimenter la carte et la brancher (USB) à l'ordinateur. Une interface se lance automatiquement. Choisir __Généraliste__.
 2. Réaliser les branchements au circuit.
 3. Choisir `Acquisition` dans les menus. Une fenêtre s'affiche à gauche pour les réglages.
 4. __Choisir la(les) voie(s) à étudier.__ Elles sont représentées par ![Image voie](./images/as_voies.png). Un glisser-déplacer vers l'axe des ordonnées du graphique pour choisir d'acquérir la voie voulue.
-5. __Régler les paramètres de chaque voie__ En cliquant sur la voie choisir un menu avec des onglets s'affiche. Visiter les onglets pour modifier les réglages. Le réglage __indispensable__ est le __calibre__. Le reste correspond à des réglages de forme.
+5. __Régler les paramètres de chaque voie__ En cliquant sur la voie choisie, un menu avec des onglets s'affiche. Visiter les onglets pour modifier les réglages. Le réglage __indispensable__ est le __calibre__. Le reste correspond à des réglages de forme.
 6. __Choisir une abscisse temporelle__ Faire un glisser-déplacer de l'horloge vers l'axe des abscisses.
 
 ```{margin}
@@ -223,7 +223,7 @@ Note : Les calibres possibles sont `-0.25V/+0.25V`, `-5V/+5V`, `-15V/+15V`, `-30
 +++
 
 ### Suivre l'évolution d'un signal : l'oscilloscope
-Un oscilloscope est un instrument de suivi temporel de tension. Il embarque le système de mesure et l'affichage. Il existe deux types d'oscilloscopes :les oscilloscopes analogiques (la trace est obtenue par déviation d'un faisceau d'électron) et les oscilloscopes numériques (un écran - généralement LCD - affiche les données mesurées après traitement numérique). On travaillera principalement sur le second type d'oscilloscope.
+Un oscilloscope est un instrument de suivi temporel de tension. Il embarque le système de mesure et l'affichage. Il existe deux types d'oscilloscopes : les oscilloscopes analogiques (la trace est obtenue par déviation d'un faisceau d'électron) et les oscilloscopes numériques (un écran - généralement LCD - affiche les données mesurées après traitement numérique). On travaillera principalement sur le second type d'oscilloscope.
 
 ```{margin}
 Il existe aussi des oscilloscopes hybride analogique-numérique permettant de passer d'un fonctionnement à l'autre.
@@ -236,7 +236,7 @@ Un oscilloscope affiche sans s'arrêter ce qu'il est en train d'acquérir. Il pe
 
 Il faut toujours __prévoir la durée d'acquisition nécessaire__ et le __calibre vertical adpaté__ __en fonction du phénomène qu'on veut observer.__
 
-_On ne réglera visuellement le signal que dans un second quand on a déjà un signal à peu près propre (affiner la qualité d'affichage)._
+_On ne réglera visuellement le signal que dans un second temps quand on a déjà un signal à peu près propre (affiner la qualité d'affichage)._
 ```
 
 +++

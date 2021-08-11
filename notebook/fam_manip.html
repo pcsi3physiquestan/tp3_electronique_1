@@ -424,16 +424,7 @@
 </div>
 <div class="section" id="estimation-de-la-tension-seuil">
 <h3><span class="section-number">3.1.3. </span>Estimation de la tension seuil<a class="headerlink" href="#estimation-de-la-tension-seuil" title="Permalink to this headline">¶</a></h3>
-<p>On va estimer la tension seuil par une méthode (très approchée) : ce sera la moyenne des valeurs de la tension aux bornes de la diode quand l’intensité qui y circule est non nulle. On prendra comme critère <strong>arbitraire</strong> d’intensité non nulle <span class="math notranslate nohighlight">\(i \geq {E_0 \over R_p}\)</span> avec <span class="math notranslate nohighlight">\(E_0 = 0.5V\)</span> (c’est un critère arbitraire qui a ses limites). La cellule ci-dessous permet d’estimer <span class="math notranslate nohighlight">\(U_d\)</span>. Essayer de comprendre le programme et modifier les lignes de code suivantes pour faire fonctionner le code :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
-<span class="n">imin</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">...</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="o">...</span>
-<span class="n">u</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
-
-</pre></div>
-</div>
+<p>On va estimer la tension seuil par une méthode (très approchée) : ce sera la moyenne des valeurs de la tension aux bornes de la diode quand l’intensité qui y circule est non nulle. On prendra comme critère <strong>arbitraire</strong> d’intensité non nulle <span class="math notranslate nohighlight">\(i \geq {E_0 \over R_p}\)</span> avec <span class="math notranslate nohighlight">\(E_0 = 0.5V\)</span> (c’est un critère arbitraire qui a ses limites). La cellule ci-dessous permet d’estimer <span class="math notranslate nohighlight">\(U_d\)</span>. Essayer de comprendre le programme et modifier les lignes de code demandées pour faire fonctionner le code :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">estim_ud</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">E0</span><span class="p">,</span> <span class="n">RP</span><span class="p">):</span>
@@ -444,13 +435,13 @@
 <span class="sd">  E0 : Valeur de E0 (flottant)</span>
 <span class="sd">  RP : Valeur de RP (flottant)</span>
 <span class="sd">  &quot;&quot;&quot;</span>
-  <span class="n">imin</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Ligne à modifier</span>
+  <span class="n">imin</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
 
   <span class="n">u_verif</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Liste qui contiendra les valeurs acceptées.</span>
-  <span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Ligne à modifier</span>
+  <span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
   <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">imin</span><span class="p">:</span>
-      <span class="n">u</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>  <span class="c1"># Ligne à modifier</span>
+      <span class="n">u</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>  <span class="c1"># LIGNE A MODIFIER</span>
 
   <span class="n">u_verif</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">u_verif</span><span class="p">)</span>  <span class="c1"># Transformation en vecteur numpy pour calculer la moyenne simplement.</span>
   <span class="n">ud</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">u_verif</span><span class="p">)</span>
@@ -627,7 +618,7 @@ f_e &gt; 2 f_{\max}
 <p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Schéma d’un transformateur</span><a class="headerlink" href="#label-image" title="Permalink to this image">¶</a></p>
 </div>
 <p>Deux bornes sont reliées à un circuit d’entrée (circuit primaire, gauche sur le schéma) qui reçoit une tension <span class="math notranslate nohighlight">\(u_1\)</span>. Par un phénomène d’induction qui sera étudié en fin d’année, il nait alors une tension <span class="math notranslate nohighlight">\(u_2\)</span> aux bornes de la seconde bobine (circuit secondaire, droite sur le schéma) qui va donc alimenter le second circuit. Le rapport <span class="math notranslate nohighlight">\(m = {u_2 \over u1}\)</span> est appelé <strong>rapport de transformation en tension</strong>. Il existe des transformateurs réhausseur (augmentation de tension, en sortie des centrale électrique), abaisseurs (diminution de tension, dans les adaptateurs (d’ordinateur par exemple)).</p>
-<p>Dans les transformateurs, les deux bobines <strong>ne sont pa reliées électriquement</strong> donc les bornes du circuit primaire ne sont pas à priori reliées aux bornes du circuit secondaire. Donc si il y a un GBF avec une borne reliées à la Terre dans le circuit primaire, <strong>il n’impose pas de borne de Terre dans le circuit secondaire</strong> : on peut la placer où on veut. On parle de rôle <strong>d’isolement</strong> du transformateur.</p>
+<p>Dans les transformateurs, les deux bobines <strong>ne sont pas reliées électriquement</strong> donc les bornes du circuit primaire ne sont pas à priori reliées aux bornes du circuit secondaire. Donc si il y a un GBF avec une borne reliées à la Terre dans le circuit primaire, <strong>il n’impose pas de borne de Terre dans le circuit secondaire</strong> : on peut la placer où on veut. On parle de rôle <strong>d’isolement</strong> du transformateur.</p>
 <p>Certains transformateurs ont un rôle uniquement d’isolement (d’où le nom de <strong>transformateur d’isolement</strong>) et possède alors un rapport <span class="math notranslate nohighlight">\(m=1\)</span>. C’est le cas du transformateur utilisé en TP.</p>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
@@ -645,7 +636,7 @@ f_e &gt; 2 f_{\max}
 <p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Etude du transformateur</span><a class="headerlink" href="#transfo-etude" title="Permalink to this image">¶</a></p>
 </div>
 <ol class="simple">
-<li><p>Mesurer le rapport de transformation en tension pour une tension d’entrée sinusoïdale de fréquence 1kHz puis pour une tension continue. _On utilisera l’oscilloscope dans les deux cas et on reproduira le schéma du montage dans le compte-rendu en précisant les branchements de l’oscilloscope.</p></li>
+<li><p>Mesurer le rapport de transformation en tension pour une tension d’entrée sinusoïdale de fréquence 1kHz puis pour une tension continue. <em>On utilisera l’oscilloscope dans les deux cas et on reproduira le schéma du montage dans le compte-rendu en précisant les branchements de l’oscilloscope.</em></p></li>
 <li><p>Expliquer quelle contrainte doit avoir le signal d’entrée pour que le transformateur fonctionne.</p></li>
 </ol>
 </div>

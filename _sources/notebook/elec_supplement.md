@@ -21,7 +21,6 @@ Cette partie n'est à faire qu'après avoir bien compris les premières parties.
 * réfléchir aux problèmes de terre et temps caractéristiques pour observer les régimes transitoires successifs d'un système d'ordre 2.
 * dimensionner un filtre passe-bande d'ordre 2 et automatiser sont étude fréquentielle.
 
-Le dernier propose d'apprendre à utiliser un microcontrolleur (Arduino) pour étudier un système électrique lent.
 
 ```{margin}
 Vous n'aurez probablement pas le temps de faire les trois manipulations (compter 2h par manipulations). Il est conseillé de faire l'une des deux premières et celle utilisant un microcontrolleur.
