@@ -154,9 +154,9 @@ A vous de créer les simulation des grandeurs utiles à partir de chaque mesuran
 Vous devez avoir des vecteurs de taille k.
 Le log décimal est la fonction np.log10()
 """
-phi_sim = 0
-g_sim = 0
-gdb_sim = 0
+phi_sim = np.array([])
+g_sim = np.array([])
+gdb_sim = np.array([])
 
 
 

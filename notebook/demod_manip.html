@@ -454,9 +454,9 @@ s(t) = s_m \sin \omega_m t + s_0
 <span class="sd">Vous devez avoir des vecteurs de taille k.</span>
 <span class="sd">Le log décimal est la fonction np.log10()</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="n">phi_sim</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">g_sim</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">gdb_sim</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">phi_sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">g_sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">gdb_sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 
 
 
@@ -513,41 +513,87 @@ s(t) = s_m \sin \omega_m t + s_0
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AxisError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mf">3e34234</span><span class="n">f01dd</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">gb_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">55</span><span class="s2"> phi_m = np.mean(phi_sim, axis=0)</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span><span class="s2"> gdb_m = np.mean(gdb_sim, axis=0)</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="s2"> phi_u = np.std(phi_sim, ddof=1, axis=0)</span>
-
-<span class="nn">&lt;__array_function__ internals&gt;</span> in <span class="ni">mean</span><span class="nt">(*args, **kwargs)</span>
-
-<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/fromnumeric.py</span> in <span class="ni">mean</span><span class="nt">(a, axis, dtype, out, keepdims)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3370</span><span class="s2">             return mean(axis=axis, dtype=dtype, out=out, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3371</span><span class="s2"> </span>
-<span class="ne">-&gt; </span><span class="mi">3372</span><span class="s2">     return _methods._mean(a, axis=axis, dtype=dtype,</span>
-<span class="g g-Whitespace">   </span><span class="mi">3373</span><span class="s2">                           out=out, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3374</span><span class="s2"> </span>
-
-<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py</span> in <span class="ni">_mean</span><span class="nt">(a, axis, dtype, out, keepdims)</span>
-<span class="g g-Whitespace">    </span><span class="mi">145</span><span class="s2"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">146</span><span class="s2">     is_float16_result = False</span>
-<span class="ne">--&gt; </span><span class="mi">147</span><span class="s2">     rcount = _count_reduce_items(arr, axis)</span>
-<span class="g g-Whitespace">    </span><span class="mi">148</span><span class="s2">     # Make this warning show up first</span>
-<span class="g g-Whitespace">    </span><span class="mi">149</span><span class="s2">     if rcount == 0:</span>
-
-<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py</span> in <span class="ni">_count_reduce_items</span><span class="nt">(arr, axis)</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="s2">     items = 1</span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="s2">     for ax in axis:</span>
-<span class="ne">---&gt; </span><span class="mi">66</span><span class="s2">         items *= arr.shape[mu.normalize_axis_index(ax, arr.ndim)]</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span><span class="s2">     return items</span>
-<span class="g g-Whitespace">     </span><span class="mi">68</span><span class="s2"> </span>
-
-<span class="ne">AxisError</span>: axis 0 is out of bounds for array of dimension 0
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3372: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:170: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:233: RuntimeWarning: Degrees of freedom &lt;= 0 for slice
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:194: RuntimeWarning: invalid value encountered in true_divide
+  arrmean = um.true_divide(
+/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:226: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
 </pre></div>
 </div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">414</span><span class="n">d058044ce</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">77</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">79</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">gdb_m</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">gdb_u</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Légende&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">80</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/__init__.py</span> in <span class="ni">inner</span><span class="nt">(ax, data, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1445</span>     <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1446</span>         <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1447</span>             <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="nb">map</span><span class="p">(</span><span class="n">sanitize_sequence</span><span class="p">,</span> <span class="n">args</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1448</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1449</span>         <span class="n">bound</span> <span class="o">=</span> <span class="n">new_sig</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/axes/_axes.py</span> in <span class="ni">errorbar</span><span class="nt">(self, x, y, yerr, xerr, fmt, ecolor, elinewidth, capsize, barsabove, lolims, uplims, xlolims, xuplims, errorevery, capthick, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3356</span>         <span class="k">if</span> <span class="n">plot_line</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3357</span>             <span class="n">data_line</span> <span class="o">=</span> <span class="n">mlines</span><span class="o">.</span><span class="n">Line2D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="o">**</span><span class="n">plot_line_style</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3358</span>             <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">data_line</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3359</span> 
+<span class="g g-Whitespace">   </span><span class="mi">3360</span>         <span class="n">barcols</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">add_line</span><span class="nt">(self, line)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1962</span>             <span class="n">line</span><span class="o">.</span><span class="n">set_clip_path</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1963</span> 
+<span class="ne">-&gt; </span><span class="mi">1964</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_update_line_limits</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1965</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">get_label</span><span class="p">():</span>
+<span class="g g-Whitespace">   </span><span class="mi">1966</span>             <span class="n">line</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;_line</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lines</span><span class="p">))</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/axes/_base.py</span> in <span class="ni">_update_line_limits</span><span class="nt">(self, line)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1984</span>         <span class="n">Figures</span> <span class="n">out</span> <span class="n">the</span> <span class="n">data</span> <span class="n">limit</span> <span class="n">of</span> <span class="n">the</span> <span class="n">given</span> <span class="n">line</span><span class="p">,</span> <span class="n">updating</span> <span class="bp">self</span><span class="o">.</span><span class="n">dataLim</span><span class="o">.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1985</span>         <span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1986</span><span class="sd">         path = line.get_path()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1987</span><span class="sd">         if path.vertices.size == 0:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1988</span><span class="sd">             return</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/lines.py</span> in <span class="ni">get_path</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1009</span><span class="sd">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1010</span>         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalidy</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalidx</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1011</span>             <span class="bp">self</span><span class="o">.</span><span class="n">recache</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1012</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_path</span>
+<span class="g g-Whitespace">   </span><span class="mi">1013</span> 
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/lines.py</span> in <span class="ni">recache</span><span class="nt">(self, always)</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="k">if</span> <span class="n">always</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_invalidx</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">652</span>             <span class="n">xconv</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_xunits</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_xorig</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">653</span>             <span class="n">x</span> <span class="o">=</span> <span class="n">_to_unmasked_float_array</span><span class="p">(</span><span class="n">xconv</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>             <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_x</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/cbook/__init__.py</span> in <span class="ni">_to_unmasked_float_array</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1287</span>         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">filled</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1288</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1289</span>         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1290</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1291</span> 
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_asarray.py</span> in <span class="ni">asarray</span><span class="nt">(a, dtype, order)</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span> 
+<span class="g g-Whitespace">     </span><span class="mi">82</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">83</span><span class="s2">     return array(a, dtype, copy=False, order=order)</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span><span class="s2"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span><span class="s2"> </span>
+
+<span class="ne">TypeError</span>: float() argument must be a string or a number, not &#39;Figure&#39;
+</pre></div>
+</div>
+<img alt="../_images/demod_manip_1_2.png" src="../_images/demod_manip_1_2.png" />
 </div>
 </div>
 <div class="tip admonition">
