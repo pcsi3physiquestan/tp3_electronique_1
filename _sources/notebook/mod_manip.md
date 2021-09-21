@@ -87,15 +87,15 @@ vs_u = np.array([0])
 k = len(v1_m)
 N = 1000000 # Nombre de simulations
 
-v1_sim = rd.uniform(v1_m, v1_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
-v2_sim = rd.uniform(v1_m, v1_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
-vs_sim = rd.uniform(v1_m, v1_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
+v1_sim = v1_m + rd.uniform(-v1_u, v1_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
+v2_sim = v2_m + rd.uniform(-v2_u, v2_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
+vs_sim = vs_m + rd.uniform(-vs_u, vs_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
 
 
 """
 Obtenir le tableau des valeurs simulées  de alpha
 """
-alpha_sim = 0  # LIGNE A MODIFIER
+alpha_sim = np.array([])  # LIGNE A MODIFIER
 
 
 """

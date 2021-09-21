@@ -127,7 +127,7 @@ S'il y a plusieurs sources, entrer un vecteur par source et les sommer.
 """
 
 freqs = np.array([])  # Fréquences. On pourra considérer qu'il n'y a pas d'incertitude sur les fréquences.
-k = len(f)  # Nombre de mesures réalisées.
+k = len(freqs)  # Nombre de mesures réalisées.
 
 
 """Entrez les valeurs des mesures et incertitudes"""
