@@ -130,43 +130,33 @@ f = np.array([])  # Fréquences. On pourra considérer qu'il n'y a pas d'incerti
 k = len(f)  # Nombre de mesures réalisées.
 
 
-""" Il faut aussi créer des vecteurs pour les incertitudes : 
-soit vous avez l'incertitude de mesure (distribution normale), 
-soit avez les valeurs extrêmes (distribution uniforme).
-A vous de créer les vecteurs utiles pour chaque mesurande directe ue, us, deltat.
-Vous devez avoir des vecteurs de taille k.
-"""
+"""Entrez les valeurs des mesures et incertitudes"""
+ue_m = np.array([])
+ue_u1 = np.array([])
+ue_u2 = np.array([])
 
+us_m = np.array([])
+us_u1 = np.array([])
+us_u2 = np.array([])
 
+deltat_m = np.array([])
+deltat_u1 = np.array([])
+deltat_u2 = np.array([])
 
-
-
-
-
-
-
-
-
-
-
-"""Réaliser les simulations des N échantillons pour chaque grandeurs. On rappelle la création des valeurs simulées quand on a plusieurs mesures :
-ue_sim = np.uniform(a, b, N)
-ou
-ue_sim = np.normal(m, s, N)
-"""
+"""Grandeurs simulées"""
 N = 1000000
+ue_sim = ue_m + rd.uniform(-ue_u1, ue_u1, (N, k))
+us_sim = us_m + rd.uniform(-us_u1, us_u1, (N, k))
+deltat_sim = deltat_m + rd.uniform(-deltat_u1, deltat_u1, (N, k))
 
-
-
-
-
-
-
-
-
-""" Calculer le gain puis le gain en décibel et la phase en fonction des tableaux précédents.
+""" Il faut aussi créer des vecteurs pour les incertitudes.
+A vous de créer les simulation des grandeurs utiles à partir de chaque mesurande directe ue, us, deltat.
+Vous devez avoir des vecteurs de taille k.
 Le log décimal est la fonction np.log10()
 """
+phi_sim = 0
+g_sim = 0
+gdb_sim = 0
 
 
 
@@ -181,7 +171,10 @@ np.mean(gb_sim, axis=0)
 On rappelle la formule pour des écart-type uniquement par colonne :
 np.std(gb_sim, ddof=1, axis=0)
 """
-
+phi_m = np.mean(phi_sim, axis=0)
+gdb_m = np.mean(gdb_sim, axis=0)
+phi_u = np.std(phi_sim, ddof=1, axis=0)
+gdb_u = np.std(gdb_sim, ddof=1, axis=0)
 
 
 
@@ -198,7 +191,24 @@ ax.set_xscale("log")
 - Pensez à légender vos deux graphiques.
 - Utiliser f.savefig("nom_dufichier.png") pour sauvegarder la figure f et l'intégrer dans votre compte-rendu.
 """
+f, ax = plt.subplots(2, 1, sharex='col')  # Forcer la même abscisse
+f.suptitle("Titre")
+ax[0].set_xlabel("Légende")
+ax[0].set_ylabel("Légende")
+ax[0].errorbar(f, gdb_m, yerr=gdb_u, label="Légende", linestyle="")
+ax[0].legend()
+ax[0].grid()
+ax[0].set_xscale("log")
 
+ax[1].set_xlabel("Légende")
+ax[1].set_ylabel("Légende")
+ax[1].errorbar(f, phi_m, yerr=phi_u, label="Légende", linestyle="")
+ax[1].legend()
+ax[1].grid()
+ax[1].set_xscale("log")
+
+f.tight_layout()  # Amélioration de l'apparence
+plt.show()
 
 
 ```

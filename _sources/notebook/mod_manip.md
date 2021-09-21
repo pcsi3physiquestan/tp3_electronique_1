@@ -95,7 +95,7 @@ vs_sim = rd.uniform(v1_m, v1_u, (N, k))  # Il faudra peut-être plusieurs tablea
 """
 Obtenir le tableau des valeurs simulées  de alpha
 """
-alpha_sim = 0
+alpha_sim = 0  # LIGNE A MODIFIER
 
 
 """
@@ -104,19 +104,19 @@ On rappelle :
 mean(tableau, axis = 0) pour moyenner par colonne
 std(tableau, ddof=1,  axis = 0) pour calculer l'écart-type par colonne
 """
-alpha_sim_m = 0
-alpha_sim_u = 0
+alpha_sim_m = np.mean(alpha_sim, axis=0)  # Moyenne des N simulations pour chaque mesure
+alpha_sim_u = std(alpha_sim, ddof=1,  axis = 0)  # Ecart-type des N simulations pour chaque mesure
 
 """
 Calculer la moyenne des valeurs de alpha et son incertitude.
 On rappelle que l'incertitude sur la moyenne s'écrit : Ecartype des 5 valeurs / sqrt(5)
 """
-alpha_m = 0
-alpha_u = 0
+alpha_m = np.mean(alpha_sim_m)
+alpha_u = np.std(alpha_sim_m) / np.sqrt(k)
 
 
 """Calculer les écarts normalisées pour chaque jeu de mesure"""
-alpha_en = 0
+alpha_en = 0  # LIGNE A MODIFIER
 
 """
 Analyse des différents résultats. On donne ici le tracé à analyser.

@@ -17,91 +17,110 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-"""Importation les bibliothèques scientifiques nécessaires :  numpy, matplotlib.pyplot, numpy.random"""
+"""Importation des bibliothèques utiles"""
 import numpy as np
 import matplotlib.pyplot as plt
 import numpy.random as rd
 
-
-"""Simulation des valeurs. On a 5 jeux de mesures, on va donc utiliser un tableau numpy. Vous devez :
-- Créer trois vecteurs numpy contenant les 5 résultats de mesurage des tensions d'entrée et de sortie
-- Créer trois vecteurs numpy contenant les 5 incertitudes associées aux tensions d'entrée et de sortie
-(il faudra peut-être plus de trois vecteurs s'il y a plusieurs sources d'incertitudes)
-- Utiliser les vecteurs précédents pour créer 3 tableaux contenant N échantillons des tensions d'entrée et
-de sortie associées aux distributionx choisies pour décrire la dispersion des résultats de mesurage.
-Rappel de syntaxe : rd.normal(x_mes, ux_mes, (N, k)) ou rd.uniform(x_mes, ux_mes, (N, k))
-où x_mes et ux_mes sont les vecteurs associées aux résultats de mesurage et incertitudes
-et k la taille des deux vecteurs.
+"""Entrer les mesures des mesurandes directes ainsi que leurs incertitudes. 
+S'il y a plusieurs sources, entrer un vecteur par source et les sommer.
 """
-v1_m = np.array([0])
-v2_m = np.array([0])
-vs_m = np.array([0])
-v1_u = np.array([0])
-v2_u = np.array([0])
-vs_u = np.array([0])
 
-k = len(v1_m)
-N = 1000000 # Nombre de simulations
-
-v1_sim = rd.uniform(v1_m, v1_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
-v2_sim = rd.uniform(v1_m, v1_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
-vs_sim = rd.uniform(v1_m, v1_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
+f = np.array([])  # Fréquences. On pourra considérer qu'il n'y a pas d'incertitude sur les fréquences.
+k = len(f)  # Nombre de mesures réalisées.
 
 
+"""Entrez les valeurs des mesures et incertitudes"""
+ue_m = np.array([])
+ue_u1 = np.array([])
+ue_u2 = np.array([])
+
+us_m = np.array([])
+us_u1 = np.array([])
+us_u2 = np.array([])
+
+deltat_m = np.array([])
+deltat_u1 = np.array([])
+deltat_u2 = np.array([])
+
+"""Grandeurs simulées"""
+N = 1000000
+ue_sim = ue_m + rd.uniform(-ue_u1, ue_u1, (N, k))
+us_sim = us_m + rd.uniform(-us_u1, us_u1, (N, k))
+deltat_sim = deltat_m + rd.uniform(-deltat_u1, deltat_u1, (N, k))
+
+""" Il faut aussi créer des vecteurs pour les incertitudes.
+A vous de créer les simulation des grandeurs utiles à partir de chaque mesurande directe ue, us, deltat.
+Vous devez avoir des vecteurs de taille k.
+Le log décimal est la fonction np.log10()
 """
-Obtenir le tableau des valeurs simulées  de alpha
-"""
-alpha_sim = 0  # LIGNE A MODIFIER
+phi_sim = 0
+g_sim = 0
+gdb_sim = 0
 
 
-"""
-Déterminer la moyenne et l'écart-type pour chaque jeux de mesure sur les N échantillons.
-On rappelle :
-mean(tableau, axis = 0) pour moyenner par colonne
-std(tableau, ddof=1,  axis = 0) pour calculer l'écart-type par colonne
-"""
-alpha_sim_m = np.mean(alpha_sim, axis=0)  # Moyenne des N simulations pour chaque mesure
-alpha_sim_u = std(alpha_sim, ddof=1,  axis = 0)  # Ecart-type des N simulations pour chaque mesure
-
-"""
-Calculer la moyenne des valeurs de alpha et son incertitude.
-On rappelle que l'incertitude sur la moyenne s'écrit : Ecartype des 5 valeurs / sqrt(5)
-"""
-alpha_m = np.mean(alpha_sim_m)
-alpha_u = np.std(alpha_sim_m) / np.sqrt(k)
 
 
-"""Calculer les écarts normalisées pour chaque jeu de mesure"""
-alpha_en = 0  # LIGNE A MODIFIER
 
 """
-Analyse des différents résultats. On donne ici le tracé à analyser.
+- Prendre la moyenne des gains en décibel et des phases pour obtenir les grandeurs mesurées.
+On rappelle la formule pour des moyennes uniquement par colonne :
+np.mean(gb_sim, axis=0)
+
+- Prendre l'écart-type des gains en décibel et des phases pour obtenir les incertitudes de mesures.
+On rappelle la formule pour des écart-type uniquement par colonne :
+np.std(gb_sim, ddof=1, axis=0)
 """
-f, ax = plt.subplots()  # On va tracer les barres d'incertitude et la comparer la valeur moyenne.
-f.suptitle("")  # Titrer le graphique
-ax.set_ylabel("")  # Titrer les ordonnées
-
-ax.errorbar(np.arange(k), alpha_sim_m, yerr=alpha_sim_u, capsize=2)  # Représentation des valeurs
-ax.plot([-1, k], [alpha_m, alpha_m], color='b')  # Valeur mesurée de alpha
+phi_m = np.mean(phi_sim, axis=0)
+gdb_m = np.mean(gdb_sim, axis=0)
+phi_u = np.std(phi_sim, ddof=1, axis=0)
+gdb_u = np.std(gdb_sim, ddof=1, axis=0)
 
 
-f1, ax1 = plt.subplots()  # On va tracer les écarts normalisés
-f1.suptitle("")  # Titrer le graphique
 
-ax1.plot(np.arange(k), alpha_en, marker='+')  # Ecarts normalisés
 
-plt.show() 
+
+
+"""
+Tracer le diagramme de Bode en gain et en phase du filtre.
+Il n'est pas utile de calculer log(f). Pour passer en échelle des abscisses logarithmiques,
+on utilisera la fonction :
+ax.set_xscale("log")
+(si la zone de tracé s'appelle ax)
+
+- Pensez à légender vos deux graphiques.
+- Utiliser f.savefig("nom_dufichier.png") pour sauvegarder la figure f et l'intégrer dans votre compte-rendu.
+"""
+f, ax = plt.subplots(2, 1, sharex='col')  # Forcer la même abscisse
+f.suptitle("Titre")
+ax[0].set_xlabel("Légende")
+ax[0].set_ylabel("Légende")
+ax[0].errorbar(f, gdb_m, yerr=gdb_u, label="Légende", linestyle="")
+ax[0].legend()
+ax[0].grid()
+ax[0].set_xscale("log")
+
+ax[1].set_xlabel("Légende")
+ax[1].set_ylabel("Légende")
+ax[1].errorbar(f, phi_m, yerr=phi_u, label="Légende", linestyle="")
+ax[1].legend()
+ax[1].grid()
+ax[1].set_xscale("log")
+
+f.tight_layout()  # Amélioration de l'apparence
+plt.show()
+
 
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mAxisError[0m                                 Traceback (most recent call last)
-[0;32m<ipython-input-1-9dc0fe754681>[0m in [0;36m<module>[0;34m[0m
-[1;32m     42[0m [0mstd[0m[0;34m([0m[0mtableau[0m[0;34m,[0m [0mddof[0m[0;34m=[0m[0;36m1[0m[0;34m,[0m  [0maxis[0m [0;34m=[0m [0;36m0[0m[0;34m)[0m [0mpour[0m [0mcalculer[0m [0ml[0m[0;31m'[0m[0mécart[0m[0;34m-[0m[0mtype[0m [0mpar[0m [0mcolonne[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     43[0m """
-[0;32m---> 44[0;31m [0malpha_sim_m[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mmean[0m[0;34m([0m[0malpha_sim[0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0;36m0[0m[0;34m)[0m  [0;31m# Moyenne des N simulations pour chaque mesure[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     45[0m [0malpha_sim_u[0m [0;34m=[0m [0mstd[0m[0;34m([0m[0malpha_sim[0m[0;34m,[0m [0mddof[0m[0;34m=[0m[0;36m1[0m[0;34m,[0m  [0maxis[0m [0;34m=[0m [0;36m0[0m[0;34m)[0m  [0;31m# Ecart-type des N simulations pour chaque mesure[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     46[0m [0;34m[0m[0m
+[0;32m<ipython-input-1-3e34234f01dd>[0m in [0;36m<module>[0;34m[0m
+[1;32m     53[0m [0mnp[0m[0;34m.[0m[0mstd[0m[0;34m([0m[0mgb_sim[0m[0;34m,[0m [0mddof[0m[0;34m=[0m[0;36m1[0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0;36m0[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     54[0m """
+[0;32m---> 55[0;31m [0mphi_m[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mmean[0m[0;34m([0m[0mphi_sim[0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0;36m0[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     56[0m [0mgdb_m[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mmean[0m[0;34m([0m[0mgdb_sim[0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0;36m0[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     57[0m [0mphi_u[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0mstd[0m[0;34m([0m[0mphi_sim[0m[0;34m,[0m [0mddof[0m[0;34m=[0m[0;36m1[0m[0;34m,[0m [0maxis[0m[0;34m=[0m[0;36m0[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 
 [0;32m<__array_function__ internals>[0m in [0;36mmean[0;34m(*args, **kwargs)[0m
 

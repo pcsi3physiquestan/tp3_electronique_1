@@ -50,9 +50,10 @@ u = np.array([])  # Valeurs de tensions
 i = np.array([])  # Valeurs d'intensité
 
 # Mettre ici vos intermédiaires de calcul pour les calculs d'incertitude.
+# NOTE : IL EST POSSIBLE QUE VOUS UTILISIEZ DES FORMULES
 
-uu = 0  # Incertitudes sur les tensions (ce sera un vecteur numpy)
-ui = 0  # Incertitudes sur les intensités (ce sera un vecteur numpy)
+uu = np.array([])  # Incertitudes sur les tensions (ce sera un vecteur numpy)
+ui = np.array([])  # Incertitudes sur les intensités (ce sera un vecteur numpy)
 
 """Vous devez maintenant tracer le graphique. On rappelle :
 - plt.subplots() crée la fenêtre graphique et  les axes (penser à utiliser les variables)
@@ -62,12 +63,17 @@ ui = 0  # Incertitudes sur les intensités (ce sera un vecteur numpy)
 - afficher la courbe avec plt.show() à la fin
 """
 f,ax = plt.subplots()
-
-
+f.suptitle("Mettre un titre")
+ax.set_xlabel("Légender les X")
+ax.set_ylabel("Légender les Y")
+ax.errorbar(u, i, xerr=uu, yerr=ui, legend="Légender la courbe", linestyle="",)
+ax.grid()
+ax.legend()
+plt.show()
 ```
 
 ### Estimation de la tension seuil
-On va estimer la tension seuil par une méthode (très approchée) : ce sera la moyenne des valeurs de la tension aux bornes de la diode quand l'intensité qui y circule est non nulle. On prendra comme critère __arbitraire__ d'intensité non nulle $i \geq {E_0 \over R_p}$ avec $E_0 = 0.5V$ (c'est un critère arbitraire qui a ses limites). La cellule ci-dessous permet d'estimer $U_d$. Essayer de comprendre le programme et modifier les lignes de code demandées pour faire fonctionner le code :
+On va estimer la tension seuil par une méthode (très approchée) : ce sera la moyenne des valeurs de la tension aux bornes de la diode quand l'intensité qui y circule est non nulle. On prendra comme critère __arbitraire__ d'intensité non nulle $i \geq \frac{E_0}{R_p}$ avec $E_0 = 0.5V$ (c'est un critère arbitraire qui a ses limites). La cellule ci-dessous permet d'estimer $U_d$. Essayer de comprendre le programme et modifier les lignes de code demandées pour faire fonctionner le code :
 
 
 ```{code-cell}
@@ -93,19 +99,20 @@ def estim_ud(u, i, E0, RP):
 
 """Ecrire ci-dessous l'instruction qui va enregistrer dans la variable ud_estim l'estimation de ud
 avec la méthode précdente"""
-
+ud_estim = 0  # LIGNE A MODIFIER
 
 
 """Ajout du modèle sur le graphique.
-Vous devez maintenant ajouter sur le graphique précédent la droite $u = ud$ pour $0 \leq i \leq Imax$
-(Imax est la valeur maximale mesurée expérimentalement). Il faut :
-- créer deux vecteurs abscisses et ordonnées de deux points permettant de de tracer la droite précédente.
-- la tracé avec la fonction plot et la légender.
-- réafficher le graphiquea vec plt.show()
-
-C'est à vous
 """
-
+f,ax = plt.subplots()
+f.suptitle("Mettre un titre")
+ax.set_xlabel("Légender les X")
+ax.set_ylabel("Légender les Y")
+ax.errorbar(u, i, xerr=uu, yerr=ui, legend="Légender la courbe", linestyle="", color="black")
+ax.plot([-5, ud_estim, ud_estim], [0, 0, 5]legend="Légender la courbe", linestyle="-",color="red")
+ax.grid()
+ax.legend()
+plt.show()
 
 
 """La commande ci-après permettra de sauvegarder le graphique dans un fichier image
@@ -233,7 +240,7 @@ Un transformateur est un _quadripole_ composé de deux bobines qui influent l'un
 Schéma d'un transformateur
 ``` 
 
-Deux bornes sont reliées à un circuit d'entrée (circuit primaire, gauche sur le schéma) qui reçoit une tension $u_1$. Par un phénomène d'induction qui sera étudié en fin d'année, il nait alors une tension $u_2$ aux bornes de la seconde bobine (circuit secondaire, droite sur le schéma) qui va donc alimenter le second circuit. Le rapport $m = {u_2 \over u1}$ est appelé __rapport de transformation en tension__. Il existe des transformateurs réhausseur (augmentation de tension, en sortie des centrale électrique), abaisseurs (diminution de tension, dans les adaptateurs (d'ordinateur par exemple)).
+Deux bornes sont reliées à un circuit d'entrée (circuit primaire, gauche sur le schéma) qui reçoit une tension $u_1$. Par un phénomène d'induction qui sera étudié en fin d'année, il nait alors une tension $u_2$ aux bornes de la seconde bobine (circuit secondaire, droite sur le schéma) qui va donc alimenter le second circuit. Le rapport $m = \frac{u_2}{u_1}$ est appelé __rapport de transformation en tension__. Il existe des transformateurs réhausseur (augmentation de tension, en sortie des centrale électrique), abaisseurs (diminution de tension, dans les adaptateurs (d'ordinateur par exemple)).
 
 Dans les transformateurs, les deux bobines __ne sont pas reliées électriquement__ donc les bornes du circuit primaire ne sont pas à priori reliées aux bornes du circuit secondaire. Donc si il y a un GBF avec une borne reliées à la Terre dans le circuit primaire, __il n'impose pas de borne de Terre dans le circuit secondaire__ : on peut la placer où on veut. On parle de rôle __d'isolement__ du transformateur.
 

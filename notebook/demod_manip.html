@@ -430,43 +430,33 @@ s(t) = s_m \sin \omega_m t + s_0
 <span class="n">k</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>  <span class="c1"># Nombre de mesures réalisées.</span>
 
 
-<span class="sd">&quot;&quot;&quot; Il faut aussi créer des vecteurs pour les incertitudes : </span>
-<span class="sd">soit vous avez l&#39;incertitude de mesure (distribution normale), </span>
-<span class="sd">soit avez les valeurs extrêmes (distribution uniforme).</span>
-<span class="sd">A vous de créer les vecteurs utiles pour chaque mesurande directe ue, us, deltat.</span>
-<span class="sd">Vous devez avoir des vecteurs de taille k.</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;Entrez les valeurs des mesures et incertitudes&quot;&quot;&quot;</span>
+<span class="n">ue_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">ue_u1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">ue_u2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 
+<span class="n">us_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">us_u1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">us_u2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 
+<span class="n">deltat_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">deltat_u1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">deltat_u2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 
-
-
-
-
-
-
-
-
-
-
-<span class="sd">&quot;&quot;&quot;Réaliser les simulations des N échantillons pour chaque grandeurs. On rappelle la création des valeurs simulées quand on a plusieurs mesures :</span>
-<span class="sd">ue_sim = np.uniform(a, b, N)</span>
-<span class="sd">ou</span>
-<span class="sd">ue_sim = np.normal(m, s, N)</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;Grandeurs simulées&quot;&quot;&quot;</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>
+<span class="n">ue_sim</span> <span class="o">=</span> <span class="n">ue_m</span> <span class="o">+</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">ue_u1</span><span class="p">,</span> <span class="n">ue_u1</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+<span class="n">us_sim</span> <span class="o">=</span> <span class="n">us_m</span> <span class="o">+</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">us_u1</span><span class="p">,</span> <span class="n">us_u1</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
+<span class="n">deltat_sim</span> <span class="o">=</span> <span class="n">deltat_m</span> <span class="o">+</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">deltat_u1</span><span class="p">,</span> <span class="n">deltat_u1</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
 
-
-
-
-
-
-
-
-
-<span class="sd">&quot;&quot;&quot; Calculer le gain puis le gain en décibel et la phase en fonction des tableaux précédents.</span>
+<span class="sd">&quot;&quot;&quot; Il faut aussi créer des vecteurs pour les incertitudes.</span>
+<span class="sd">A vous de créer les simulation des grandeurs utiles à partir de chaque mesurande directe ue, us, deltat.</span>
+<span class="sd">Vous devez avoir des vecteurs de taille k.</span>
 <span class="sd">Le log décimal est la fonction np.log10()</span>
 <span class="sd">&quot;&quot;&quot;</span>
+<span class="n">phi_sim</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">g_sim</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">gdb_sim</span> <span class="o">=</span> <span class="mi">0</span>
 
 
 
@@ -481,7 +471,10 @@ s(t) = s_m \sin \omega_m t + s_0
 <span class="sd">On rappelle la formule pour des écart-type uniquement par colonne :</span>
 <span class="sd">np.std(gb_sim, ddof=1, axis=0)</span>
 <span class="sd">&quot;&quot;&quot;</span>
-
+<span class="n">phi_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">phi_sim</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">gdb_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">gdb_sim</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">phi_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">phi_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">gdb_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">gdb_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
 
 
@@ -498,11 +491,61 @@ s(t) = s_m \sin \omega_m t + s_0
 <span class="sd">- Pensez à légender vos deux graphiques.</span>
 <span class="sd">- Utiliser f.savefig(&quot;nom_dufichier.png&quot;) pour sauvegarder la figure f et l&#39;intégrer dans votre compte-rendu.</span>
 <span class="sd">&quot;&quot;&quot;</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="s1">&#39;col&#39;</span><span class="p">)</span>  <span class="c1"># Forcer la même abscisse</span>
+<span class="n">f</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Titre&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">gdb_m</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">gdb_u</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Légende&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">phi_m</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">phi_u</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Légende&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+
+<span class="n">f</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  <span class="c1"># Amélioration de l&#39;apparence</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\nTracer le diagramme de Bode en gain et en phase du filtre.\nIl n\&#39;est pas utile de calculer log(f). Pour passer en échelle des abscisses logarithmiques,\non utilisera la fonction :\nax.set_xscale(&quot;log&quot;)\n(si la zone de tracé s\&#39;appelle ax)\n\n- Pensez à légender vos deux graphiques.\n- Utiliser f.savefig(&quot;nom_dufichier.png&quot;) pour sauvegarder la figure f et l\&#39;intégrer dans votre compte-rendu.\n&#39;
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AxisError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mf">3e34234</span><span class="n">f01dd</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">gb_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">55</span><span class="s2"> phi_m = np.mean(phi_sim, axis=0)</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span><span class="s2"> gdb_m = np.mean(gdb_sim, axis=0)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span><span class="s2"> phi_u = np.std(phi_sim, ddof=1, axis=0)</span>
+
+<span class="nn">&lt;__array_function__ internals&gt;</span> in <span class="ni">mean</span><span class="nt">(*args, **kwargs)</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/fromnumeric.py</span> in <span class="ni">mean</span><span class="nt">(a, axis, dtype, out, keepdims)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3370</span><span class="s2">             return mean(axis=axis, dtype=dtype, out=out, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3371</span><span class="s2"> </span>
+<span class="ne">-&gt; </span><span class="mi">3372</span><span class="s2">     return _methods._mean(a, axis=axis, dtype=dtype,</span>
+<span class="g g-Whitespace">   </span><span class="mi">3373</span><span class="s2">                           out=out, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3374</span><span class="s2"> </span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py</span> in <span class="ni">_mean</span><span class="nt">(a, axis, dtype, out, keepdims)</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span><span class="s2">     is_float16_result = False</span>
+<span class="ne">--&gt; </span><span class="mi">147</span><span class="s2">     rcount = _count_reduce_items(arr, axis)</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span><span class="s2">     # Make this warning show up first</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span><span class="s2">     if rcount == 0:</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py</span> in <span class="ni">_count_reduce_items</span><span class="nt">(arr, axis)</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="s2">     items = 1</span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="s2">     for ax in axis:</span>
+<span class="ne">---&gt; </span><span class="mi">66</span><span class="s2">         items *= arr.shape[mu.normalize_axis_index(ax, arr.ndim)]</span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span><span class="s2">     return items</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span><span class="s2"> </span>
+
+<span class="ne">AxisError</span>: axis 0 is out of bounds for array of dimension 0
 </pre></div>
 </div>
 </div>

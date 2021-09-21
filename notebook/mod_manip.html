@@ -400,7 +400,7 @@
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Obtenir le tableau des valeurs simulées  de alpha</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="n">alpha_sim</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alpha_sim</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
 
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -409,19 +409,19 @@
 <span class="sd">mean(tableau, axis = 0) pour moyenner par colonne</span>
 <span class="sd">std(tableau, ddof=1,  axis = 0) pour calculer l&#39;écart-type par colonne</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="n">alpha_sim_m</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">alpha_sim_u</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alpha_sim_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">alpha_sim</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Moyenne des N simulations pour chaque mesure</span>
+<span class="n">alpha_sim_u</span> <span class="o">=</span> <span class="n">std</span><span class="p">(</span><span class="n">alpha_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Ecart-type des N simulations pour chaque mesure</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Calculer la moyenne des valeurs de alpha et son incertitude.</span>
 <span class="sd">On rappelle que l&#39;incertitude sur la moyenne s&#39;écrit : Ecartype des 5 valeurs / sqrt(5)</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="n">alpha_m</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">alpha_u</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alpha_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">alpha_sim_m</span><span class="p">)</span>
+<span class="n">alpha_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">alpha_sim_m</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 
 
 <span class="sd">&quot;&quot;&quot;Calculer les écarts normalisées pour chaque jeu de mesure&quot;&quot;&quot;</span>
-<span class="n">alpha_en</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">alpha_en</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Analyse des différents résultats. On donne ici le tracé à analyser.</span>
@@ -444,8 +444,41 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/mod_manip_1_0.png" src="../_images/mod_manip_1_0.png" />
-<img alt="../_images/mod_manip_1_1.png" src="../_images/mod_manip_1_1.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AxisError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">9</span><span class="n">dc0fe754681</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="n">std</span><span class="p">(</span><span class="n">tableau</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="n">pour</span> <span class="n">calculer</span> <span class="n">l</span><span class="s1">&#39;écart-type par colonne</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">44</span><span class="s2"> alpha_sim_m = np.mean(alpha_sim, axis=0)  # Moyenne des N simulations pour chaque mesure</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span><span class="s2"> alpha_sim_u = std(alpha_sim, ddof=1,  axis = 0)  # Ecart-type des N simulations pour chaque mesure</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span><span class="s2"> </span>
+
+<span class="nn">&lt;__array_function__ internals&gt;</span> in <span class="ni">mean</span><span class="nt">(*args, **kwargs)</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/fromnumeric.py</span> in <span class="ni">mean</span><span class="nt">(a, axis, dtype, out, keepdims)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3370</span><span class="s2">             return mean(axis=axis, dtype=dtype, out=out, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3371</span><span class="s2"> </span>
+<span class="ne">-&gt; </span><span class="mi">3372</span><span class="s2">     return _methods._mean(a, axis=axis, dtype=dtype,</span>
+<span class="g g-Whitespace">   </span><span class="mi">3373</span><span class="s2">                           out=out, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3374</span><span class="s2"> </span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py</span> in <span class="ni">_mean</span><span class="nt">(a, axis, dtype, out, keepdims)</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span><span class="s2">     is_float16_result = False</span>
+<span class="ne">--&gt; </span><span class="mi">147</span><span class="s2">     rcount = _count_reduce_items(arr, axis)</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span><span class="s2">     # Make this warning show up first</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span><span class="s2">     if rcount == 0:</span>
+
+<span class="nn">~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py</span> in <span class="ni">_count_reduce_items</span><span class="nt">(arr, axis)</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="s2">     items = 1</span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="s2">     for ax in axis:</span>
+<span class="ne">---&gt; </span><span class="mi">66</span><span class="s2">         items *= arr.shape[mu.normalize_axis_index(ax, arr.ndim)]</span>
+<span class="g g-Whitespace">     </span><span class="mi">67</span><span class="s2">     return items</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span><span class="s2"> </span>
+
+<span class="ne">AxisError</span>: axis 0 is out of bounds for array of dimension 0
+</pre></div>
+</div>
 </div>
 </div>
 <div class="tip admonition">
