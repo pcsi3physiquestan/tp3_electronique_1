@@ -105,7 +105,7 @@ mean(tableau, axis = 0) pour moyenner par colonne
 std(tableau, ddof=1,  axis = 0) pour calculer l'écart-type par colonne
 """
 alpha_sim_m = np.mean(alpha_sim, axis=0)  # Moyenne des N simulations pour chaque mesure
-alpha_sim_u = std(alpha_sim, ddof=1,  axis = 0)  # Ecart-type des N simulations pour chaque mesure
+alpha_sim_u = np.std(alpha_sim, ddof=1,  axis = 0)  # Ecart-type des N simulations pour chaque mesure
 
 """
 Calculer la moyenne des valeurs de alpha et son incertitude.

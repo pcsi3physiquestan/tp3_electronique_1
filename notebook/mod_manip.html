@@ -410,7 +410,7 @@
 <span class="sd">std(tableau, ddof=1,  axis = 0) pour calculer l&#39;écart-type par colonne</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="n">alpha_sim_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">alpha_sim</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Moyenne des N simulations pour chaque mesure</span>
-<span class="n">alpha_sim_u</span> <span class="o">=</span> <span class="n">std</span><span class="p">(</span><span class="n">alpha_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Ecart-type des N simulations pour chaque mesure</span>
+<span class="n">alpha_sim_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">alpha_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Ecart-type des N simulations pour chaque mesure</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Calculer la moyenne des valeurs de alpha et son incertitude.</span>
@@ -448,20 +448,18 @@
   return _methods._mean(a, axis=axis, dtype=dtype,
 /home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:170: RuntimeWarning: invalid value encountered in double_scalars
   ret = ret.dtype.type(ret / rcount)
+/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:233: RuntimeWarning: Degrees of freedom &lt;= 0 for slice
+  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:194: RuntimeWarning: invalid value encountered in true_divide
+  arrmean = um.true_divide(
+/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:226: RuntimeWarning: invalid value encountered in double_scalars
+  ret = ret.dtype.type(ret / rcount)
+/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_asarray.py:83: UserWarning: Warning: converting a masked element to nan.
+  return array(a, dtype, copy=False, order=order)
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">23231</span><span class="n">f79ec99</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">43</span> <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">44</span><span class="sd"> alpha_sim_m = np.mean(alpha_sim, axis=0)  # Moyenne des N simulations pour chaque mesure</span>
-<span class="ne">---&gt; </span><span class="mi">45</span><span class="sd"> alpha_sim_u = std(alpha_sim, ddof=1,  axis = 0)  # Ecart-type des N simulations pour chaque mesure</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">47</span><span class="sd"> &quot;&quot;&quot;</span>
-
-<span class="ne">NameError</span>: name &#39;std&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/mod_manip_1_1.png" src="../_images/mod_manip_1_1.png" />
+<img alt="../_images/mod_manip_1_2.png" src="../_images/mod_manip_1_2.png" />
 </div>
 </div>
 <div class="tip admonition">

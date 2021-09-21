@@ -195,7 +195,7 @@ f, ax = plt.subplots(2, 1, sharex='col')  # Forcer la même abscisse
 f.suptitle("Titre")
 ax[0].set_xlabel("Légende")
 ax[0].set_ylabel("Légende")
-ax[0].errorbar(f, gdb_m, yerr=gdb_u, label="Légende", linestyle="")
+ax[0].errorbar(freqs, gdb_m, yerr=gdb_u, label="Légende", linestyle="")
 ax[0].legend()
 ax[0].grid()
 ax[0].set_xscale("log")
