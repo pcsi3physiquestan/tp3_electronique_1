@@ -26,7 +26,7 @@ import numpy.random as rd
 S'il y a plusieurs sources, entrer un vecteur par source et les sommer.
 """
 
-f = np.array([])  # Fréquences. On pourra considérer qu'il n'y a pas d'incertitude sur les fréquences.
+freqs = np.array([])  # Fréquences. On pourra considérer qu'il n'y a pas d'incertitude sur les fréquences.
 k = len(f)  # Nombre de mesures réalisées.
 
 
@@ -102,7 +102,7 @@ ax[0].set_xscale("log")
 
 ax[1].set_xlabel("Légende")
 ax[1].set_ylabel("Légende")
-ax[1].errorbar(f, phi_m, yerr=phi_u, label="Légende", linestyle="")
+ax[1].errorbar(freqs, phi_m, yerr=phi_u, label="Légende", linestyle="")
 ax[1].legend()
 ax[1].grid()
 ax[1].set_xscale("log")
@@ -114,70 +114,14 @@ plt.show()
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m<ipython-input-1-414d058044ce>[0m in [0;36m<module>[0;34m[0m
-[1;32m     77[0m [0max[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m.[0m[0mset_xlabel[0m[0;34m([0m[0;34m"Légende"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     78[0m [0max[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m.[0m[0mset_ylabel[0m[0;34m([0m[0;34m"Légende"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m---> 79[0;31m [0max[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m.[0m[0merrorbar[0m[0;34m([0m[0mf[0m[0;34m,[0m [0mgdb_m[0m[0;34m,[0m [0myerr[0m[0;34m=[0m[0mgdb_u[0m[0;34m,[0m [0mlabel[0m[0;34m=[0m[0;34m"Légende"[0m[0;34m,[0m [0mlinestyle[0m[0;34m=[0m[0;34m""[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     80[0m [0max[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m.[0m[0mlegend[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     81[0m [0max[0m[0;34m[[0m[0;36m0[0m[0;34m][0m[0;34m.[0m[0mgrid[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-1-4d13d7288da8>[0m in [0;36m<module>[0;34m[0m
+[1;32m      9[0m [0;34m[0m[0m
+[1;32m     10[0m [0mfreqs[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0marray[0m[0;34m([0m[0;34m[[0m[0;34m][0m[0;34m)[0m  [0;31m# Fréquences. On pourra considérer qu'il n'y a pas d'incertitude sur les fréquences.[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 11[0;31m [0mk[0m [0;34m=[0m [0mlen[0m[0;34m([0m[0mf[0m[0;34m)[0m  [0;31m# Nombre de mesures réalisées.[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     12[0m [0;34m[0m[0m
+[1;32m     13[0m [0;34m[0m[0m
 
-[0;32m~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/__init__.py[0m in [0;36minner[0;34m(ax, data, *args, **kwargs)[0m
-[1;32m   1445[0m     [0;32mdef[0m [0minner[0m[0;34m([0m[0max[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0mdata[0m[0;34m=[0m[0;32mNone[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1446[0m         [0;32mif[0m [0mdata[0m [0;32mis[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1447[0;31m             [0;32mreturn[0m [0mfunc[0m[0;34m([0m[0max[0m[0;34m,[0m [0;34m*[0m[0mmap[0m[0;34m([0m[0msanitize_sequence[0m[0;34m,[0m [0margs[0m[0;34m)[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1448[0m [0;34m[0m[0m
-[1;32m   1449[0m         [0mbound[0m [0;34m=[0m [0mnew_sig[0m[0;34m.[0m[0mbind[0m[0;34m([0m[0max[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/axes/_axes.py[0m in [0;36merrorbar[0;34m(self, x, y, yerr, xerr, fmt, ecolor, elinewidth, capsize, barsabove, lolims, uplims, xlolims, xuplims, errorevery, capthick, **kwargs)[0m
-[1;32m   3356[0m         [0;32mif[0m [0mplot_line[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   3357[0m             [0mdata_line[0m [0;34m=[0m [0mmlines[0m[0;34m.[0m[0mLine2D[0m[0;34m([0m[0mx[0m[0;34m,[0m [0my[0m[0;34m,[0m [0;34m**[0m[0mplot_line_style[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 3358[0;31m             [0mself[0m[0;34m.[0m[0madd_line[0m[0;34m([0m[0mdata_line[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   3359[0m [0;34m[0m[0m
-[1;32m   3360[0m         [0mbarcols[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/axes/_base.py[0m in [0;36madd_line[0;34m(self, line)[0m
-[1;32m   1962[0m             [0mline[0m[0;34m.[0m[0mset_clip_path[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mpatch[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1963[0m [0;34m[0m[0m
-[0;32m-> 1964[0;31m         [0mself[0m[0;34m.[0m[0m_update_line_limits[0m[0;34m([0m[0mline[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1965[0m         [0;32mif[0m [0;32mnot[0m [0mline[0m[0;34m.[0m[0mget_label[0m[0;34m([0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1966[0m             [0mline[0m[0;34m.[0m[0mset_label[0m[0;34m([0m[0;34m'_line%d'[0m [0;34m%[0m [0mlen[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mlines[0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/axes/_base.py[0m in [0;36m_update_line_limits[0;34m(self, line)[0m
-[1;32m   1984[0m         [0mFigures[0m [0mout[0m [0mthe[0m [0mdata[0m [0mlimit[0m [0mof[0m [0mthe[0m [0mgiven[0m [0mline[0m[0;34m,[0m [0mupdating[0m [0mself[0m[0;34m.[0m[0mdataLim[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1985[0m         """
-[0;32m-> 1986[0;31m         [0mpath[0m [0;34m=[0m [0mline[0m[0;34m.[0m[0mget_path[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1987[0m         [0;32mif[0m [0mpath[0m[0;34m.[0m[0mvertices[0m[0;34m.[0m[0msize[0m [0;34m==[0m [0;36m0[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1988[0m             [0;32mreturn[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/lines.py[0m in [0;36mget_path[0;34m(self)[0m
-[1;32m   1009[0m         """
-[1;32m   1010[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0m_invalidy[0m [0;32mor[0m [0mself[0m[0;34m.[0m[0m_invalidx[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1011[0;31m             [0mself[0m[0;34m.[0m[0mrecache[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1012[0m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_path[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1013[0m [0;34m[0m[0m
-
-[0;32m~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/lines.py[0m in [0;36mrecache[0;34m(self, always)[0m
-[1;32m    651[0m         [0;32mif[0m [0malways[0m [0;32mor[0m [0mself[0m[0;34m.[0m[0m_invalidx[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    652[0m             [0mxconv[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mconvert_xunits[0m[0;34m([0m[0mself[0m[0;34m.[0m[0m_xorig[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 653[0;31m             [0mx[0m [0;34m=[0m [0m_to_unmasked_float_array[0m[0;34m([0m[0mxconv[0m[0;34m)[0m[0;34m.[0m[0mravel[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m    654[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    655[0m             [0mx[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0m_x[0m[0;34m[0m[0;34m[0m[0m
-
-[0;32m~/miniconda3/envs/prepa/lib/python3.9/site-packages/matplotlib/cbook/__init__.py[0m in [0;36m_to_unmasked_float_array[0;34m(x)[0m
-[1;32m   1287[0m         [0;32mreturn[0m [0mnp[0m[0;34m.[0m[0mma[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mx[0m[0;34m,[0m [0mfloat[0m[0;34m)[0m[0;34m.[0m[0mfilled[0m[0;34m([0m[0mnp[0m[0;34m.[0m[0mnan[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1288[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1289[0;31m         [0;32mreturn[0m [0mnp[0m[0;34m.[0m[0masarray[0m[0;34m([0m[0mx[0m[0;34m,[0m [0mfloat[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1290[0m [0;34m[0m[0m
-[1;32m   1291[0m [0;34m[0m[0m
-
-[0;32m~/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_asarray.py[0m in [0;36masarray[0;34m(a, dtype, order)[0m
-[1;32m     81[0m [0;34m[0m[0m
-[1;32m     82[0m     """
-[0;32m---> 83[0;31m     [0;32mreturn[0m [0marray[0m[0;34m([0m[0ma[0m[0;34m,[0m [0mdtype[0m[0;34m,[0m [0mcopy[0m[0;34m=[0m[0;32mFalse[0m[0;34m,[0m [0morder[0m[0;34m=[0m[0morder[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     84[0m [0;34m[0m[0m
-[1;32m     85[0m [0;34m[0m[0m
-
-[0;31mTypeError[0m: float() argument must be a string or a number, not 'Figure'
-TypeError: float() argument must be a string or a number, not 'Figure'
+[0;31mNameError[0m: name 'f' is not defined
+NameError: name 'f' is not defined
 

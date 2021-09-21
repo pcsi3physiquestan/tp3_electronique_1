@@ -126,7 +126,7 @@ import numpy.random as rd
 S'il y a plusieurs sources, entrer un vecteur par source et les sommer.
 """
 
-f = np.array([])  # Fréquences. On pourra considérer qu'il n'y a pas d'incertitude sur les fréquences.
+freqs = np.array([])  # Fréquences. On pourra considérer qu'il n'y a pas d'incertitude sur les fréquences.
 k = len(f)  # Nombre de mesures réalisées.
 
 
@@ -202,7 +202,7 @@ ax[0].set_xscale("log")
 
 ax[1].set_xlabel("Légende")
 ax[1].set_ylabel("Légende")
-ax[1].errorbar(f, phi_m, yerr=phi_u, label="Légende", linestyle="")
+ax[1].errorbar(freqs, phi_m, yerr=phi_u, label="Légende", linestyle="")
 ax[1].legend()
 ax[1].grid()
 ax[1].set_xscale("log")
