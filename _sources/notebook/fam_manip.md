@@ -201,10 +201,10 @@ Utiliser le second GBF à disposition pour délivrée un signal sinusoïdal de f
     2. Du niveau de synchronisation
     3. De la pente de synchronisation
 
+````
 ```{margin}
 Avec un oscilloscope, la synchronisation est toujours nécessaire. Souvent les réglages automatiques suffisent mais si le signal n'est pas stable, il faut penser à la régler.
 ```
-````
 
 +++
 
@@ -230,10 +230,10 @@ On pensera bien à réfléchir aux paramètres d'acquisition __avant de lancer l
 ````{admonition} Exploitation
 Comparer les caractéristiques dynamiques à la caractéristique statique et préciser dans quels cas on pourra analyser le comportement de la diode grâce à sa caractéristique statique, même quand le régime est variable.
 
+````
 ```{margin}
 Ce n'est pas vrai pour tous les dipôles. La caractéristiques dynamique d'un condensateur sera toujours très différente de sa caractéristique statique.
 ```
-````
 
 ### Utilisation d'un oscilloscope
 On a vu que les bornes des voies d'acquisition reliées à la Terre, combinées à la borne du GBF reliée à la Terre posait des problèmes de court-circuit. Nous allons introduire un dispositif permettant d'isoler les bornes du GBF du reste du circuit : le __transformateur d'isolement__.
