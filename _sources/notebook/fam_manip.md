@@ -35,7 +35,7 @@ Les données sur les incertitudes de mesure associées aux mesures données par 
 
 ### Tracé de la courbe
 
-```{code-cell}
+```{code-cell} ipython3
 """ On importe pour vous les bibliothèques scientifiques utiles."""
 import numpy as np
 import matplotlib.pyplot as plt
@@ -54,6 +54,7 @@ i = np.array([])  # Valeurs d'intensité
 
 uu = np.array([])  # Incertitudes sur les tensions (ce sera un vecteur numpy)
 ui = np.array([])  # Incertitudes sur les intensités (ce sera un vecteur numpy)
+
 
 """Vous devez maintenant tracer le graphique. On rappelle :
 - plt.subplots() crée la fenêtre graphique et  les axes (penser à utiliser les variables)
@@ -75,8 +76,7 @@ plt.show()
 ### Estimation de la tension seuil
 On va estimer la tension seuil par une méthode (très approchée) : ce sera la moyenne des valeurs de la tension aux bornes de la diode quand l'intensité qui y circule est non nulle. On prendra comme critère __arbitraire__ d'intensité non nulle $i \geq \frac{E_0}{R_p}$ avec $E_0 = 0.5V$ (c'est un critère arbitraire qui a ses limites). La cellule ci-dessous permet d'estimer $U_d$. Essayer de comprendre le programme et modifier les lignes de code demandées pour faire fonctionner le code :
 
-
-```{code-cell}
+```{code-cell} ipython3
 def estim_ud(u, i, E0, RP):
   """Fonction qui renvoie une estimation de Ud en calculant la moyenne des tensions pour lesquelles
   i est supérieure ) E0/RP
@@ -119,7 +119,6 @@ plt.show()
 (dans le répertoire où se trouve le notebook). Vous pourrez l'insérer dans votre compte-rendu.
 """
 f.savefig("caracteristique_diode.png")
-
 ```
 
 ```{admonition} Exploitation
@@ -314,7 +313,7 @@ Quelle solution pour la rendre négligeable ?
 2. La tension de commande est, dans une modélisation de Thévenin du GBF, la tension de la source idéale de tension. En déduire une méthode pour calculer $R_S$ grâce aux mesures précédentes. Utiliser la cellule ci-dessous pour estimer $R_S$ et son incertitude-type grâce à une méthode de Monte-Carlo.
 ````
 
-```{code-cell}
+```{code-cell} ipython3
 """On importe pour vous la bibliothèque numpy.random"""
 import numpy.random as rd
 
@@ -337,7 +336,6 @@ std(vec, ddof=1) de la bibliothèque numpy pour calculer l'écart-type
 
 
 """Calculer l'écart normalisé avec la valeur constructeur (qu'on supposera connu à $1 Ohm$)"""
-
 ```
 
 ````{admonition} Compte-rendu
