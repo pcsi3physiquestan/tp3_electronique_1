@@ -254,7 +254,7 @@ Dans les transformateurs, les deux bobines __ne sont pas reliées électriquemen
 Certains transformateurs ont un rôle uniquement d'isolement (d'où le nom de __transformateur d'isolement__) et possède alors un rapport $m=1$. C'est le cas du transformateur utilisé en TP.
 
 ```{margin}
-Vous observez peut-être un rapport légèrement différent de 1 car, comme nous le verront en fin d'année, $m$ dépend de la fréquence des signaux.
+Vous observez peut-être un rapport légèrement différent de 1 car, comme nous le verrons en fin d'année, $m$ dépend de la fréquence des signaux.
 ```
 
 #### Contraintes d'utilisation
