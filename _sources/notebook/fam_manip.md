@@ -28,7 +28,7 @@ La page ci-présente existe en version notebook téléchargeable grâce au bouto
 :class: tip
 Réaliser le montage proposé dans votre protocole et tracer la caractéristique statique de la diode. Vous utiliserez la cellule de code ci-dessous pour tracer la caractéristique statique.
 
-Les données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles [ici](http://www.cedriclacpatia.fr/pluginfile.php/1470/mod_resource/content/0/fluke_287_289.pdf) (connexion au site nécessaire).
+Les données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles [ici](https://stanislas.edunao.com/pluginfile.php/24681/mod_resource/content/0/fluke_287_289.pdf) (connexion au site nécessaire). Une explication de l'utilisation de ces domaines se trouve [ici](https://stanislas.edunao.com/mod/page/view.php?id=13269).
 ```
 
 +++

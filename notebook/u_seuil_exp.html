@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Complément : Détermination de la tension seuil &#8212; TP Electrocinétique</title>
+    <title>8. Complément : Détermination de la tension seuil &#8212; TP Electrocinétique</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -54,6 +54,8 @@
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/u_seuil_exp.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9. Etude du régime transitoire (Ordre 2)" href="elec_supplement.html" />
+    <link rel="prev" title="7. (TP) Démodulation" href="demod_manip.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -149,10 +151,15 @@
   Plus d'initiatives
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   8. Complément : Détermination de la tension seuil
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="elec_supplement.html">
-   8. Etude du régime transitoire (Ordre 2)
+   9. Etude du régime transitoire (Ordre 2)
   </a>
  </li>
 </ul>
@@ -248,17 +255,17 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#principe">
-   Principe
+   8.1. Principe
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#implementation">
-   Implémentation
+   8.2. Implémentation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#ameliorations-possibles">
-   Améliorations possibles
+   8.3. Améliorations possibles
   </a>
  </li>
 </ul>
@@ -273,21 +280,21 @@
               <div>
                 
   <div class="section" id="complement-determination-de-la-tension-seuil">
-<span id="u-seuil"></span><h1>Complément : Détermination de la tension seuil<a class="headerlink" href="#complement-determination-de-la-tension-seuil" title="Permalink to this headline">¶</a></h1>
+<span id="u-seuil"></span><h1><span class="section-number">8. </span>Complément : Détermination de la tension seuil<a class="headerlink" href="#complement-determination-de-la-tension-seuil" title="Permalink to this headline">¶</a></h1>
 <p>On explique ici la méthode utilisée pour déterminer la tension seuil. Il ne s’agit pas forcément de la méthode la plus efficace mais elle donne des résultats relativement corrects et est assez simple à expliquer.</p>
 <div class="section" id="principe">
-<h2>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Principe<a class="headerlink" href="#principe" title="Permalink to this headline">¶</a></h2>
 <p>Le principe de la méthode est similaire à la méthode des moindres carrés :</p>
 <ol class="simple">
 <li><p>On choisit une valeur de <span class="math notranslate nohighlight">\(U_d\)</span> arbitraire. On a alors une caractéristique modèle <span class="math notranslate nohighlight">\((i=0; u \leq U_D); (i\geq 0; u=U_D)\)</span></p></li>
-<li><p>On calcule pour chaque point de mesure la distance <span class="math notranslate nohighlight">\(d_i\)</span> entre chaque point de mesure <span class="math notranslate nohighlight">\((u_i, i_i)\)</span> et la caractéristique modèle. Cette dernière étant composée de deux demi-droite (<span class="math notranslate nohighlight">\(i=0\)</span> et <span class="math notranslate nohighlight">\(u=U_D\)</span>), il s’agit de calculer pour chaque point le minimum entre les deux distances à ces deux droites soit <span class="math notranslate nohighlight">\(d_i = \min(\abs(i_i), \abs(u_i-U_D))\)</span></p></li>
-<li><p>On somme toutes les distances au carré pour obtenir une grandeur dépendant du jeu de donnée et de la valeur <span class="math notranslate nohighlight">\(U_D choisie : \)</span>\Gamma_{exp}(U_D) = \sum_i d_i^2$.</p></li>
+<li><p>On calcule pour chaque point de mesure la distance <span class="math notranslate nohighlight">\(d_i\)</span> entre chaque point de mesure <span class="math notranslate nohighlight">\((u_i, i_i)\)</span> et la caractéristique modèle. Cette dernière étant composée de deux demi-droite (<span class="math notranslate nohighlight">\(i=0\)</span> et <span class="math notranslate nohighlight">\(u=U_D\)</span>), il s’agit de calculer pour chaque point le minimum entre les deux distances à ces deux droites soit <span class="math notranslate nohighlight">\(d_i = \min(abs(i_i), abs(u_i-U_D))\)</span></p></li>
+<li><p>On somme toutes les distances au carré pour obtenir une grandeur dépendant du jeu de donnée et de la valeur <span class="math notranslate nohighlight">\(U_D\)</span> choisie : <span class="math notranslate nohighlight">\(\Gamma_{exp}(U_D) = \sum_i d_i^2\)</span>.</p></li>
 <li><p>On réalise ce calcul pour un grand nombre de valeur de <span class="math notranslate nohighlight">\(U_D\)</span> dans un intervalle où on pense que la tension seuil se situe.</p></li>
 <li><p>On détermine le minimum de cette fonction : la valeur de <span class="math notranslate nohighlight">\(U_D\)</span> correspondante sera l’estimation de la tension seuil.</p></li>
 </ol>
 </div>
 <div class="section" id="implementation">
-<h2>Implémentation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>Implémentation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
 <p>L’implémentation est donnée ci-dessous avec un exemple avec un jeu de données expérimentales.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -341,7 +348,7 @@
 </div>
 </div>
 <div class="section" id="ameliorations-possibles">
-<h2>Améliorations possibles<a class="headerlink" href="#ameliorations-possibles" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>Améliorations possibles<a class="headerlink" href="#ameliorations-possibles" title="Permalink to this headline">¶</a></h2>
 <p>On peut imaginer deux améliorations :</p>
 <ul class="simple">
 <li><p>Cette méthode ne tient pas compte des incertitudes. On pourrait facilement en tenir compte avec une simulations de Monte-Carlo. Il suffirait de créer N fois un jeu de données à partir des estimations de <span class="math notranslate nohighlight">\(u, i, u(i), u(u)\)</span>, d’estimer à chaque fois la tension seuil associée. Les données statistiques moyenne et écart-type donnerait la valeur mesurée et l’incertitude-type.</p></li>
@@ -402,6 +409,8 @@
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="demod_manip.html" title="previous page"><span class="section-number">7. </span>(TP) Démodulation</a>
+    <a class='right-next' id="next-link" href="elec_supplement.html" title="next page"><span class="section-number">9. </span>Etude du régime transitoire (Ordre 2)</a>
 
         </div>
         

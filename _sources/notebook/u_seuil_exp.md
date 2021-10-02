@@ -21,8 +21,8 @@ On explique ici la méthode utilisée pour déterminer la tension seuil. Il ne s
 ## Principe
 Le principe de la méthode est similaire à la méthode des moindres carrés :
 1. On choisit une valeur de $U_d$ arbitraire. On a alors une caractéristique modèle $(i=0; u \leq U_D); (i\geq 0; u=U_D)$
-2. On calcule pour chaque point de mesure la distance $d_i$ entre chaque point de mesure $(u_i, i_i)$ et la caractéristique modèle. Cette dernière étant composée de deux demi-droite ($i=0$ et $u=U_D$), il s'agit de calculer pour chaque point le minimum entre les deux distances à ces deux droites soit $d_i = \min(\abs(i_i), \abs(u_i-U_D))$
-3. On somme toutes les distances au carré pour obtenir une grandeur dépendant du jeu de donnée et de la valeur $U_D choisie : $\Gamma_{exp}(U_D) = \sum_i d_i^2$.
+2. On calcule pour chaque point de mesure la distance $d_i$ entre chaque point de mesure $(u_i, i_i)$ et la caractéristique modèle. Cette dernière étant composée de deux demi-droite ($i=0$ et $u=U_D$), il s'agit de calculer pour chaque point le minimum entre les deux distances à ces deux droites soit $d_i = \min(abs(i_i), abs(u_i-U_D))$
+3. On somme toutes les distances au carré pour obtenir une grandeur dépendant du jeu de donnée et de la valeur $U_D$ choisie : $\Gamma_{exp}(U_D) = \sum_i d_i^2$.
 4. On réalise ce calcul pour un grand nombre de valeur de $U_D$ dans un intervalle où on pense que la tension seuil se situe.
 5. On détermine le minimum de cette fonction : la valeur de $U_D$ correspondante sera l'estimation de la tension seuil.
 
