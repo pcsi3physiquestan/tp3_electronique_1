@@ -153,11 +153,11 @@ On va voir l'influence du nombre de points de sur le signal obtenu ou plus préc
 2. Comment obtenir la fréquence d'échantillonnage à partir de la durée d'acquisition et du nombre de points de mesure ? En déduire le nombre de points nécessaire pour obtenir une fréquence d'échantillonnage de 100kHz puis de 10kHz.
 3. Régler le nombre de points adéquats puis observer le signal acquis pour les deux fréquence d'échantillonnage précédentes. Mesurer alors (rapidement) la période du signal et la comparer à la valeur attendue.
 4. Choisir maintenant 100 points de mesure et modifier la durée d'acquisition pour avoir une fréquence d'échantillonnage de 1kHz. Observer le signal et mesurer la fréquence. Commenter.
+````
 
 ```{margin}
 Un clic-droit sur le graphique permet d'obtenir un menu où vous pouvez choisir de mesurer des valeurs.
 ```
-````
 
 ````{admonition} Critère de Shannon-Nyqvist
 :class: important
@@ -168,12 +168,14 @@ f_e > 2 f_{\max}
 $$
 
 En pratique, __on se placera à une fréquence d'échantillonnage bien plus grande que la limite du critère de Shannon-Nyqvist__ pour obtenir un visuel acceptable.
+````
+
 ```{margin}
 * Les consoles FOXY en TP sont limités à 16000 points et une fréquence d'échantillonage de 10MHz. Ce sera suffisant pour nous.
 * Un oscilloscope règle lui même sa fréquence d'échantillonnage en fonction de ses limites. On ne peut jouer que sur la durée d'acquisition pour éviter d'acquérir sur un temps trop long.
 
 Des explications plus visuelles sur des simulations seront données lors du traitement des capacités numériques.
-````
+```
 
 ### Acquisition unique ou continue ?
 ```{admonition} Question
