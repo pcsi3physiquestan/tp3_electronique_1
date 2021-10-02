@@ -433,28 +433,31 @@
 </div>
 <div class="section" id="estimation-de-la-tension-seuil">
 <h3><span class="section-number">3.1.3. </span>Estimation de la tension seuil<a class="headerlink" href="#estimation-de-la-tension-seuil" title="Permalink to this headline">¶</a></h3>
-<p>On va estimer la tension seuil par une méthode (très approchée) : ce sera la moyenne des valeurs de la tension aux bornes de la diode quand l’intensité qui y circule est non nulle. On prendra comme critère <strong>arbitraire</strong> d’intensité non nulle <span class="math notranslate nohighlight">\(i \geq \frac{E_0}{R_p}\)</span> avec <span class="math notranslate nohighlight">\(E_0 = 0.5V\)</span> (c’est un critère arbitraire qui a ses limites). La cellule ci-dessous permet d’estimer <span class="math notranslate nohighlight">\(U_d\)</span>. Essayer de comprendre le programme et modifier les lignes de code demandées pour faire fonctionner le code :</p>
+<p>On va estimer la tension seuil par une méthode d’optimisation basée sur la minimisation des écarts entre les points de mesure et la courbe (droites par morceaux ici) pour une valeur de <span class="math notranslate nohighlight">\(U_d\)</span>. Vous pouvez <a class="reference internal" href="u_seuil_exp.html#u-seuil"><span class="std std-ref">des explications sur la méthode d’optimisation</span></a>.</p>
+<p>Vous devez estimer un intervalle dans lequel la tension seuil et entrer ces valeurs pour <code class="docutils literal notranslate"><span class="pre">ud_min,</span> <span class="pre">ud_max</span></code>. La fonction <code class="docutils literal notranslate"><span class="pre">eval_ud</span></code> cherchera la tension dans cet intervalle. Pensez aussi à modifier la ligne qui va estimer la tension seuil ainsi que les caractéristiques du graphique.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">estim_ud</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">E0</span><span class="p">,</span> <span class="n">RP</span><span class="p">):</span>
-  <span class="sd">&quot;&quot;&quot;Fonction qui renvoie une estimation de Ud en calculant la moyenne des tensions pour lesquelles</span>
-<span class="sd">  i est supérieure ) E0/RP</span>
-<span class="sd">  u  : vecteur numpy contenant les valeurs de tension</span>
-<span class="sd">  i  : vecteur numpy contenant les valeurs d&#39;intensité</span>
-<span class="sd">  E0 : Valeur de E0 (flottant)</span>
-<span class="sd">  RP : Valeur de RP (flottant)</span>
-<span class="sd">  &quot;&quot;&quot;</span>
-  <span class="n">imin</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
 
-  <span class="n">u_verif</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Liste qui contiendra les valeurs acceptées.</span>
-  <span class="n">N</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
-  <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">i</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">imin</span><span class="p">:</span>
-      <span class="n">u</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>  <span class="c1"># LIGNE A MODIFIER</span>
+<span class="k">def</span> <span class="nf">eval_ud</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental</span>
+<span class="sd">    u : Vecteur contenu les mesures de tension</span>
+<span class="sd">    i : Vecteur contenu les mesures d&#39;intensité</span>
+<span class="sd">    ud_min, ud_max : Flottant délimitant l&#39;intervalle dans lequel on recherche UD</span>
 
-  <span class="n">u_verif</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">u_verif</span><span class="p">)</span>  <span class="c1"># Transformation en vecteur numpy pour calculer la moyenne simplement.</span>
-  <span class="n">ud</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">u_verif</span><span class="p">)</span>
-  <span class="k">return</span> <span class="n">ud</span>
+<span class="sd">    Renvoie : un flottant correspondant à la valeur de ud optimale</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>  <span class="c1"># Nombre de valeur de ud qui seront testée entre 0 et 1 V</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+    <span class="n">ud</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>  <span class="c1"># Valeurs de ud testées</span>
+    <span class="n">dud</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>  <span class="c1"># On stocke l&#39;estimateur qui permettra de décider quelle valeur de ud est la meilleure</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>  <span class="c1"># Calcul de l&#39;estimateur</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">u</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="n">ud</span><span class="p">[</span><span class="n">k</span><span class="p">]),</span> <span class="n">i</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span> <span class="o">+</span> <span class="n">d</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="n">dud</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span>
+    <span class="k">return</span> <span class="n">ud</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">dud</span><span class="p">)]</span>
 
 <span class="sd">&quot;&quot;&quot;Ecrire ci-dessous l&#39;instruction qui va enregistrer dans la variable ud_estim l&#39;estimation de ud</span>
 <span class="sd">avec la méthode précdente&quot;&quot;&quot;</span>

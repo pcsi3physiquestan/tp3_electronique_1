@@ -74,28 +74,32 @@ plt.show()
 ```
 
 ### Estimation de la tension seuil
-On va estimer la tension seuil par une méthode (très approchée) : ce sera la moyenne des valeurs de la tension aux bornes de la diode quand l'intensité qui y circule est non nulle. On prendra comme critère __arbitraire__ d'intensité non nulle $i \geq \frac{E_0}{R_p}$ avec $E_0 = 0.5V$ (c'est un critère arbitraire qui a ses limites). La cellule ci-dessous permet d'estimer $U_d$. Essayer de comprendre le programme et modifier les lignes de code demandées pour faire fonctionner le code :
+On va estimer la tension seuil par une méthode d'optimisation basée sur la minimisation des écarts entre les points de mesure et la courbe (droites par morceaux ici) pour une valeur de $U_d$. Vous pouvez [des explications sur la méthode d'optimisation](u_seuil).
+
+Vous devez estimer un intervalle dans lequel la tension seuil et entrer ces valeurs pour `ud_min, ud_max`. La fonction `eval_ud` cherchera la tension dans cet intervalle. Pensez aussi à modifier la ligne qui va estimer la tension seuil ainsi que les caractéristiques du graphique.
 
 ```{code-cell} ipython3
-def estim_ud(u, i, E0, RP):
-  """Fonction qui renvoie une estimation de Ud en calculant la moyenne des tensions pour lesquelles
-  i est supérieure ) E0/RP
-  u  : vecteur numpy contenant les valeurs de tension
-  i  : vecteur numpy contenant les valeurs d'intensité
-  E0 : Valeur de E0 (flottant)
-  RP : Valeur de RP (flottant)
-  """
-  imin = 0  # LIGNE A MODIFIER
+ud_min, ud_max = -1, 0  # LIGNE A MODIFIER
 
-  u_verif = []  # Liste qui contiendra les valeurs acceptées.
-  N = 0  # LIGNE A MODIFIER
-  for j in range(N):
-    if i[j] >= imin:
-      u.append([])  # LIGNE A MODIFIER
+def eval_ud(u, i, ud_min, ud_max):
+    """Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental
+    u : Vecteur contenu les mesures de tension
+    i : Vecteur contenu les mesures d'intensité
+    ud_min, ud_max : Flottant délimitant l'intervalle dans lequel on recherche UD
 
-  u_verif = np.array(u_verif)  # Transformation en vecteur numpy pour calculer la moyenne simplement.
-  ud = np.mean(u_verif)
-  return ud
+    Renvoie : un flottant correspondant à la valeur de ud optimale
+    """
+    N = 1000  # Nombre de valeur de ud qui seront testée entre 0 et 1 V
+    n = len(u)
+    ud = np.linspace(ud_min, ud_max, N)  # Valeurs de ud testées
+    dud = np.zeros(N)  # On stocke l'estimateur qui permettra de décider quelle valeur de ud est la meilleure
+    for k in range(N):  # Calcul de l'estimateur
+        ds = 0
+        for j in range(n):
+            d = min(abs(u[j]-ud[k]), i[j])
+            ds = ds + d ** 2
+        dud[k] = ds
+    return ud[np.argmin(dud)]
 
 """Ecrire ci-dessous l'instruction qui va enregistrer dans la variable ud_estim l'estimation de ud
 avec la méthode précdente"""

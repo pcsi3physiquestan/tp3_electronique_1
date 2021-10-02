@@ -1,0 +1,71 @@
+Traceback (most recent call last):
+  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+""" On importe pour vous les bibliothèques scientifiques utiles."""
+import numpy as np
+import matplotlib.pyplot as plt
+
+# On a mesuré des valeurs fluctuantes donc on rentre les vecteurs correspondant aux valeurs extrêmes
+# Il serviront à calculer les valeurs mesurées et incertitudes.
+umax = np.array([-10.77, -6.871, -0.8418, 0.6576, 0.7396, 0.7822, 0.8683, 0.8179, 0.8613])  # Valeurs de tensions
+umin = np.array([-10.769, -6.87, -0.8414, 0.6575, 0.7394, 0.7816, 0.8683, 0.8177, 0.8608])  # Valeurs de tensions
+imax = np.array([0, 0, 0, 2.243, 8.28, 14.349, 35.485, 21.513, 33.134])  # Valeurs d'intensité
+imin = np.array([0.001, 0.001, 0.002, 2.244, 8.281, 14.352, 35.487, 21.515, 33.137, ])  # Valeurs d'intensité
+
+u = (umax + umin) / 2  # Valeurs de tensions
+i = (imax + imin) / 2  # Valeurs d'intensité
+
+uu = (umax - umin) / 2  # Incertitudes sur les tensions (ce sera un vecteur numpy)
+ui = (imax - imin) / 2  # Incertitudes sur les intensités (ce sera un vecteur numpy)
+
+
+def eval_ud(u, i, ud_min, ud_max):
+    """Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental
+    u : Vecteur contenu les mesures de tension
+    i : Vecteur contenu les mesures d'intensité
+    ud_min, ud_max : Flottant délimitant l'intervalle dans lequel on recherche UD
+
+    Renvoie : un flottant correspondant à la valeur de ud optimale
+    """
+    N = 1000  # Nombre de valeur de ud qui seront testée entre 0 et 1 V
+    n = len(u)
+    ud = np.linspace(ud_min, ud_max, N)  # Valeurs de ud testées
+    dud = np.zeros(N)  # On stocke l'estimateur qui permettra de décider quelle valeur de ud est la meilleure
+    for k in range(N):  # Calcul de l'estimateur
+        ds = 0
+        for j in range(n):
+            d = min(abs(u[j]-ud[k]), i[j])
+            ds = ds + d ** 2
+        dud[k] = ds
+    return ud[np.argmin(dud)]
+
+print(eval_ud(u, i))  # A titre d'exemple
+
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mTypeError[0m                                 Traceback (most recent call last)
+[0;32m<ipython-input-1-95b03fb69b7b>[0m in [0;36m<module>[0;34m[0m
+[1;32m     37[0m     [0;32mreturn[0m [0mud[0m[0;34m[[0m[0mnp[0m[0;34m.[0m[0margmin[0m[0;34m([0m[0mdud[0m[0;34m)[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[1;32m     38[0m [0;34m[0m[0m
+[0;32m---> 39[0;31m [0mprint[0m[0;34m([0m[0meval_ud[0m[0;34m([0m[0mu[0m[0;34m,[0m [0mi[0m[0;34m)[0m[0;34m)[0m  [0;31m# A titre d'exemple[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;31mTypeError[0m: eval_ud() missing 2 required positional arguments: 'ud_min' and 'ud_max'
+TypeError: eval_ud() missing 2 required positional arguments: 'ud_min' and 'ud_max'
+
