@@ -41,7 +41,7 @@ On reprend les caractéristiques précédentes :
 * On prendra les amplitudes les plus fortes possibles et on les diminuera si l'ALI sature.
 
 ````{important}
-On simulera le signal modulé en amplitude directement grâce au GBF pour des raisons de temps et de place. Si le temps le permetn vous pourrez recréer le montage de la précédente séance et tester votre étage de démodulation sur ce signal.
+On simulera le signal modulé en amplitude directement grâce au GBF pour des raisons de temps et de place. Si le temps le permet, vous pourrez recréer le montage de la précédente séance et tester votre étage de démodulation sur ce signal.
 ````
 
 ## Détection d'enveloppe.
@@ -61,7 +61,7 @@ Etude d'un circuit RC.
 ````{admonition} Etude avec FOXY
 :class: tip
 1. Réaliser le montage et brancher la console FOXY. 
-2. Le régime étant unique, il est __impératif de bien régler les paramètres d'acquisition (durée et synchronisation notamment). Régler les paramètres d'acquisition pour observer le régime libre quand on basculera l'interrupteur (il y a un onglet `Mesure` dans le menu de la voie d'acquisition qui montre la valeur actuelle de la tension, cette information peut-être utile pour les réglage de synchronisation.)
+2. Le régime étant unique, il est __impératif de bien régler les paramètres d'acquisition (durée et synchronisation notamment)__. Régler les paramètres d'acquisition pour observer le régime libre quand on basculera l'interrupteur (il y a un onglet `Mesure` dans le menu de la voie d'acquisition qui montre la valeur actuelle de la tension, cette information peut-être utile pour les réglage de synchronisation.)
 3. Obtenir une estimation du temps caractéristique de trois manières :
 	* Ordonnée à l'origine
 	* Temps de réponse à 63%

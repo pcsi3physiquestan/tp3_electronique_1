@@ -210,5 +210,5 @@ Nous allons ici vous montrer comment créer un signal modulé en amplitude sur l
 3. Régler la fréquence avec le réglage `Rate` (en bleu). La fréquence de la porteuse est remplacée sur l'écran par la fréquence de la modulante.
 4. Régler le taux de modulation (directement) avec le réglage `DEV/DEP` (en bleu). L'offset est remplacé par le réglage de $m$ en pourcentage (vous pouvez monter au dessus de 100% pour réaliser une surmodulation).
 5. Observer le signal modulé en amplitude à l'oscilloscope.
-6. Pour mieux synchroniser, vous pouvez observer le signal modulant (plus précisément l'enveloppe) avec la sortie `OUT MOD` situé __à l'arrière du GBF.
+6. Pour mieux synchroniser, vous pouvez observer le signal modulant (plus précisément l'enveloppe) avec la sortie `OUT MOD` situé __à l'arrière du GBF__.
 ````
