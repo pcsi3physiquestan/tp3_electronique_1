@@ -68,7 +68,7 @@ def eval_ud(u, i, ud_min, ud_max):
         dud[k] = ds
     return ud[np.argmin(dud)]
 
-print(eval_ud(u, i))  # A titre d'exemple
+print(eval_ud(u, i, 0, 1))  # A titre d'exemple
 
 ```
 

@@ -329,19 +329,12 @@
         <span class="n">dud</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">ds</span>
     <span class="k">return</span> <span class="n">ud</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">dud</span><span class="p">)]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">eval_ud</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>  <span class="c1"># A titre d&#39;exemple</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eval_ud</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>  <span class="c1"># A titre d&#39;exemple</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">95</span><span class="n">b03fb69b7b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="k">return</span> <span class="n">ud</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">dud</span><span class="p">)]</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span> 
-<span class="ne">---&gt; </span><span class="mi">39</span> <span class="nb">print</span><span class="p">(</span><span class="n">eval_ud</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>  <span class="c1"># A titre d&#39;exemple</span>
-
-<span class="ne">TypeError</span>: eval_ud() missing 2 required positional arguments: &#39;ud_min&#39; and &#39;ud_max&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.7877877877877878
 </pre></div>
 </div>
 </div>
@@ -376,6 +369,9 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/u_seuil_exp_3_0.png" src="../_images/u_seuil_exp_3_0.png" />
 </div>
 </div>
 </div>
