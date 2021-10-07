@@ -36,7 +36,7 @@ Nous allons :
 :class: tip
 1. Alimenter le multiplieur et lui envoyer les deux signaux porteur et modulant. Observer avec la carte d'acquisition FOXY le signal sortant (quels réglages pour l'Atelier scientifique ?)
 2. Utiliser le tracé temporel pour déterminer la fréquence des signaux porteur et modulant. Estimer l'incertitude sur les deux fréquences. Vérifier la cohérence avec les valeurs réglées sur les GBF.
-3. Obtenir le tracé du spectre (Modélisation, Analyse de Fourier) du signal et analyser les valeurs des fréquences. On vérifiera sommairement la cohérence avec les valeurs attendues sans chercher à estimer un écart normalisé.
+3. Obtenir le tracé du spectre (Traitement des données, Transformée de Fourier) du signal et analyser les valeurs des fréquences. On vérifiera sommairement la cohérence avec les valeurs attendues sans chercher à estimer un écart normalisé.
 4. Expliquer pourquoi l'analyse seule du spectre permet de savoir que le système est non linéaire.
 ````
 

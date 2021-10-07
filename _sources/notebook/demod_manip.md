@@ -221,12 +221,15 @@ Vous devez analyser le diagramme de Bode.
 ````
 
 ### Montage de détection synchrone. (30 minutes)
+En pratique, on ne va pas prendre un signal de fréquence $f_p$ quelconque depuis un GBF car il faut qu'il soit synchronisé au signal porteur.
+
+Pour ne pas alourdir le TP, on ne construit pas le système (boucle à vérouillage de phase) qui le permet mais __on va utiliser la sortie `Sync` du GBF réaliser la modulation d'amplitude.__ L'inconvénient est que c'est un signal créneau et non sinusoïdal.
 
 ````{admonition} Réalisation du montage
 :class: tip
-1. Proposer une succession de montage permettant de réaliser une détection synchrone à partir de deux signaux, l'un modulé en amplitude, l'autre sinusoïdal de fréquence $f_p$. Le filtre ayant été testé précédemment, il n'est pas nécessaire d'étudier l'autre étage (déjà étudié dans un TP précédent). On ne réalisera pas le filtre passe-bas.
-2. Réaliser alors le montage complet et vérifier qu'on réalise la démodulation à l'oscilloscope. On pourra ajuster les valeurs de R et C du filtre si nécessaire.
-3. Vérifier que la détection synchrone fonctionne encore quand il y a surmodulation
+1. Théoriquement, le fait que ce soit un créneau pose-t-il des problèmes ? Peut-on quand même observer un signal proche du signal modulant en sortie ?
+1. Proposer une succession de montage permettant de réaliser une détection synchrone à partir de deux signaux, l'un modulé en amplitude, l'autre de fréquence $f_p$ (sortie `Sync`). Le filtre ayant été testé précédemment, il n'est pas nécessaire d'étudier l'autre étage (déjà étudié dans un TP précédent).
+2. Réaliser alors le montage complet et vérifier qu'on réalise la démodulation à l'oscilloscope. On pourra ajuster les valeurs de C du filtre si nécessaire.
 4. Réaliser l'acquisition sur FOXY et vérifier que le spectre du signal ne contient bien qu'une seule fréquence.
 5. Rendre compte de votre manipulation et de vos observations.
 

@@ -63,6 +63,7 @@ Montage sommateur
 ````{admonition} Analyse du sommateur
 :class: tip
 1. En utilisant une loi des noeuds en terme de potentiel, montrer que la tension en sortie du sommateur est bien égale à $v_s = \alpha (v_1 + v_2)$
+2. Proposer un protocole permettant de mesurer $\alpha$ (les tensions seront sinusoïdales)
 2. Si l'on veut au final $v_{s1} = v_1 + v_2$, quel montage faut-il placer après le sommateur ? Préciser la relation entre $R_1, R_2$ et les valeurs des résistances du montage à placer ensuite.
 3. On relie $v_2$ à la masse. Justifier alors que $v_1$ semble branché à une résistance équivalente $R_e$ qu'on déterminera. Cette résistance est un ordre de grandeur de la résistance d'entrée du montage sommateur pour $v_1$ et $v_2$.
 ````
@@ -76,6 +77,8 @@ Montage sommateur
 2. Dans le cas signaux sinusoïdaux, préciser l'expression explicite de $s(t)$ sous la forme : $s(t) = A_p (1 + m \cos \omega_m t) \cos \omega_p t$ où $m$ est appelé taux de modulation.
 3. Représenter l'allure théorique de $s(t)$ lorsque $m > 1$ puis lorsque $m < 1$. Sur quel paramètre du montage doit-on jouer pour modifier la valeur de m ?
 ````
+
+_Note : En pratique $k = 0.1$ et $A_s < 10V$ il ne sera donc pas possible d'obtenir une surmodulation de cette manière.
 
 ### Association d'impédances.
 ````{admonition} Question
