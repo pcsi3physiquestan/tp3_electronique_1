@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2. (Travail) Préparation des protocoles &#8212; TP Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,33 +31,36 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/fam_preliminaire_2.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. (TP) Caractéristique d’une diode." href="fam_manip.html" />
     <link rel="prev" title="1. (Travail) Matériel en électrocinétique" href="fam_preliminaire.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -75,13 +78,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +94,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
@@ -112,7 +116,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
@@ -129,7 +133,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
@@ -146,7 +150,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Plus d'initiatives
  </span>
@@ -251,7 +255,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dipole-etudie">
@@ -326,7 +330,7 @@
               <div>
                 
   <p>Avant de commencer le TP, vous aller préparer les protocoles. Vous allez apprendre les spécificités des protocoles en électrocinétique.</p>
-<div class="section" id="travail-preparation-des-protocoles">
+<div class="tex2jax_ignore mathjax_ignore section" id="travail-preparation-des-protocoles">
 <h1><span class="section-number">2. </span>(Travail) Préparation des protocoles<a class="headerlink" href="#travail-preparation-des-protocoles" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="dipole-etudie">
 <h2><span class="section-number">2.1. </span>Dipôle étudié.<a class="headerlink" href="#dipole-etudie" title="Permalink to this headline">¶</a></h2>
@@ -361,7 +365,7 @@
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
 <div class="figure align-center" id="diode-symbole">
-<a class="reference internal image-reference" href="../_images/diode_symbole.png"><img alt="../_images/diode_symbole.png" src="../_images/diode_symbole.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/diode_symbole.png"><img alt="../_images/diode_symbole.png" src="../_images/diode_symbole.png" style="width: 25%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Symbole d’une diode</span><a class="headerlink" href="#diode-symbole" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -434,6 +438,11 @@
 <li><p>Représenter sur le graphique de la caractéristique statique de la diode, la caractéristique statique du dipôle <span class="math notranslate nohighlight">\(V + R_p\)</span>. Où est le point de fonctionnement du circuit ?</p></li>
 <li><p>Expliquer précisément comment faire pour obtenir plusieurs points de fonctionnement du circuit et retracer ainsi la caractéristique de la diode.</p></li>
 <li><p>Préparer <em>intelligemment</em> un tableau de valeurs (10) de <span class="math notranslate nohighlight">\(V(t)\)</span> pour lesquelles vous déterminerez le point de fonctionnement.</p></li>
+<li><p>Que signifie le symbole au dessous de la source idéale de tension ?</p>
+<ul class="simple">
+<li><p>C’est une caractéristique fréquente des oscilloscopes et des GBF, l’une des bornes est reliée à la Terre.</p></li>
+</ul>
+</li>
 </ol>
 </div>
 </div>
@@ -557,7 +566,7 @@ Squelette de protocole<div class="summary-down docutils">
 <li><p>Puisque les deux voies ont une borne commune, où faut-il la placer si on veut mesurer les deux tensions aux bornes de la diode et de la résistance sur le <a class="reference internal" href="#montage-diode"><span class="std std-ref">schéma</span></a> ? Représenter alors le schéma (GBF+résistance+diode) avec les branchements nécessaires de l’oscilloscope. Sachant que le GBF a aussi <strong>une borne reliée à la Terre</strong> (visible sur le <a class="reference internal" href="#montage-diode"><span class="std std-ref">schéma</span></a>), quelle problème va-t-il se poser ?</p></li>
 </ol>
 </div>
-<p>Nous verrons comment s’affranchir de ce problème en TP en utilisation un transformateur d’isolement.</p>
+<p>Pour s’affranchir de ce problème, il faut utiliser <em>un transformateur d’isolement</em>.</p>
 </div>
 </div>
 </div>
@@ -585,16 +594,27 @@ Squelette de protocole<div class="summary-down docutils">
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="fam_preliminaire.html" title="previous page"><span class="section-number">1. </span>(Travail) Matériel en électrocinétique</a>
-    <a class='right-next' id="next-link" href="fam_manip.html" title="next page"><span class="section-number">3. </span>(TP) Caractéristique d’une diode.</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="fam_preliminaire.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>(Travail) Matériel en électrocinétique</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="fam_manip.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>(TP) Caractéristique d’une diode.</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -610,8 +630,7 @@ Squelette de protocole<div class="summary-down docutils">
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

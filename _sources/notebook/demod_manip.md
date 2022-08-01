@@ -89,7 +89,7 @@ On peut s'affranchir du mode `SINGLE` en chargeant et déchargeant périodique C
 ````
 
 ### Etude de la détection d'enveloppe. (30 minutes)
-````{admonition} Détection d'enveloppe
+````{admonition} Détection d'enveloppe (oscilloscope)
 :class: tip
 1. Régler le GBF pour qu'il délivre le signal modulé en amplitude et choisir des valeurs de R et C réalisant la condition établie dans l'étude préliminaire.
 2. Observer le signal de sortie et le signal modulé en amplitude. Ajuster les valeurs de R et C pour bien observer uniquement l'enveloppe.
@@ -105,113 +105,15 @@ __N'oubliez pas d'alimenter l'ALI avec l'alimentation symétrique.__
 
 ````{admonition} Etude du filtre
 :class: tip
-1. Vérifier rapidement que le filtre est un filtre passe-bas.
-2. On veut tracer le diagramme de Bode en phase et en gain du filtre. Choisir les fréquences du signal de sorte qu'elles soient réparties régulièrement sur 4 décades autour de la fréquence de coupure. On pourra s'aider d'un papier semi-log pour faire le choix des fréquences. On demande une vingtaine de mesures.
-3. Réfléchir à la méthode pour mesurer le gain et la phase du filtre. Réaliser les branchement nécessaire (on fera les mesure à l'oscilloscope) et mesurer le gain et la phase du filtre pour les fréquences choisies. __On n'oubliera pas les incertitudes de mesures pour les grandeurs choisies.__
+1. Réaliser les branchement nécessaire aux mesures du gain et de la phase (on fera les mesure à l'oscilloscope).
+2. Vérifier rapidement que le filtre est un filtre passe-bas.
+3. Mesurer le gain et la phase du filtre pour les fréquences choisies.
+    * Utiliser la feuille Excel/Libre Office Calc créée dans l'étude préliminaire pour tracer le diagramme de Bode en gain et en phase. _On ne cherchera pas ici à tracer les incertitudes de mesure._
 
 ```{margin}
 La méthode de mesure du déphasage ainsi obtenue est à retenir.
 ```
 ````
-
-La cellule ci-dessous va vous permettre de calculer les incertitudes sur le gain et la phase avant de tracer le diagramme de Bode.
-
-```{code-cell}
-"""Importation des bibliothèques utiles"""
-import numpy as np
-import matplotlib.pyplot as plt
-import numpy.random as rd
-
-"""Entrer les mesures des mesurandes directes ainsi que leurs incertitudes. 
-S'il y a plusieurs sources, entrer un vecteur par source et les sommer.
-"""
-
-freqs = np.array([])  # Fréquences. On pourra considérer qu'il n'y a pas d'incertitude sur les fréquences.
-k = len(freqs)  # Nombre de mesures réalisées.
-
-
-"""Entrez les valeurs des mesures et incertitudes"""
-ue_m = np.array([])
-ue_u1 = np.array([])
-ue_u2 = np.array([])
-
-us_m = np.array([])
-us_u1 = np.array([])
-us_u2 = np.array([])
-
-deltat_m = np.array([])
-deltat_u1 = np.array([])
-deltat_u2 = np.array([])
-
-"""Grandeurs simulées"""
-N = 1000000
-ue_sim = ue_m + rd.uniform(-ue_u1, ue_u1, (N, k))
-us_sim = us_m + rd.uniform(-us_u1, us_u1, (N, k))
-deltat_sim = deltat_m + rd.uniform(-deltat_u1, deltat_u1, (N, k))
-
-""" Il faut aussi créer des vecteurs pour les incertitudes.
-A vous de créer les simulation des grandeurs utiles à partir de chaque mesurande directe ue, us, deltat.
-Vous devez avoir des vecteurs de taille k.
-Le log décimal est la fonction np.log10()
-"""
-phi_sim = np.array([])
-g_sim = np.array([])
-gdb_sim = np.array([])
-
-
-
-
-
-"""
-- Prendre la moyenne des gains en décibel et des phases pour obtenir les grandeurs mesurées.
-On rappelle la formule pour des moyennes uniquement par colonne :
-np.mean(gb_sim, axis=0)
-
-- Prendre l'écart-type des gains en décibel et des phases pour obtenir les incertitudes de mesures.
-On rappelle la formule pour des écart-type uniquement par colonne :
-np.std(gb_sim, ddof=1, axis=0)
-"""
-phi_m = np.mean(phi_sim, axis=0)
-gdb_m = np.mean(gdb_sim, axis=0)
-phi_u = np.std(phi_sim, ddof=1, axis=0)
-gdb_u = np.std(gdb_sim, ddof=1, axis=0)
-
-
-
-
-
-
-"""
-Tracer le diagramme de Bode en gain et en phase du filtre.
-Il n'est pas utile de calculer log(f). Pour passer en échelle des abscisses logarithmiques,
-on utilisera la fonction :
-ax.set_xscale("log")
-(si la zone de tracé s'appelle ax)
-
-- Pensez à légender vos deux graphiques.
-- Utiliser f.savefig("nom_dufichier.png") pour sauvegarder la figure f et l'intégrer dans votre compte-rendu.
-"""
-f, ax = plt.subplots(2, 1, sharex='col')  # Forcer la même abscisse
-f.suptitle("Titre")
-ax[0].set_xlabel("Légende")
-ax[0].set_ylabel("Légende")
-#ax[0].errorbar(freqs, gdb_m, yerr=gdb_u, label="Légende", linestyle="")
-ax[0].legend()
-ax[0].grid()
-ax[0].set_xscale("log")
-
-ax[1].set_xlabel("Légende")
-ax[1].set_ylabel("Légende")
-#ax[1].errorbar(freqs, phi_m, yerr=phi_u, label="Légende", linestyle="")
-ax[1].legend()
-ax[1].grid()
-ax[1].set_xscale("log")
-
-f.tight_layout()  # Amélioration de l'apparence
-plt.show()
-
-
-```
 
 ````{admonition} Analyse du diagramme de Bode
 :class: tip
@@ -227,7 +129,7 @@ Pour ne pas alourdir le TP, on ne construit pas le système (boucle à vérouill
 
 ````{admonition} Réalisation du montage
 :class: tip
-1. Théoriquement, le fait que ce soit un créneau pose-t-il des problèmes ? Peut-on quand même observer un signal proche du signal modulant en sortie ?
+1. *Théoriquement, le fait que ce soit un créneau pose-t-il des problèmes ? Peut-on quand même observer un signal proche du signal modulant en sortie ?
 1. Proposer une succession de montage permettant de réaliser une détection synchrone à partir de deux signaux, l'un modulé en amplitude, l'autre de fréquence $f_p$ (sortie `Sync`). Le filtre ayant été testé précédemment, il n'est pas nécessaire d'étudier l'autre étage (déjà étudié dans un TP précédent).
 2. Réaliser alors le montage complet et vérifier qu'on réalise la démodulation à l'oscilloscope. On pourra ajuster les valeurs de C du filtre si nécessaire.
 4. Réaliser l'acquisition sur FOXY et vérifier que le spectre du signal ne contient bien qu'une seule fréquence.

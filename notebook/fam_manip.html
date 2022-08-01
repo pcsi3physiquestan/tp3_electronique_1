@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3. (TP) Caractéristique d’une diode. &#8212; TP Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,33 +31,36 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/fam_manip.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. (Travail) Etude préliminaire" href="modul_preliminaire.html" />
     <link rel="prev" title="2. (Travail) Préparation des protocoles" href="fam_preliminaire_2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -75,13 +78,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +94,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
@@ -112,7 +116,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
@@ -129,7 +133,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
@@ -146,7 +150,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Plus d'initiatives
  </span>
@@ -251,7 +255,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#caracteristique-statique-d-une-diode-1h30">
@@ -259,8 +263,8 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#manipulation">
-     3.1.1. Manipulation
+    <a class="reference internal nav-link" href="#manipulations">
+     3.1.1. Manipulations
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -313,35 +317,13 @@
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
+      <a class="reference internal nav-link" href="#manipulation">
        3.3.1.1. Manipulation
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#exploitation">
        3.3.1.2. Exploitation
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#utilisation-d-un-oscilloscope">
-     3.3.2. Utilisation d’un oscilloscope
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#principe-et-schematisation">
-       3.3.2.1. Principe et schématisation.
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#contraintes-d-utilisation">
-       3.3.2.2. Contraintes d’utilisation
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#role-d-isolement">
-       3.3.2.3. Rôle d’isolement
       </a>
      </li>
     </ul>
@@ -377,16 +359,24 @@
               <div>
                 
   <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
-<div class="section" id="tp-caracteristique-d-une-diode">
+<div class="tex2jax_ignore mathjax_ignore section" id="tp-caracteristique-d-une-diode">
 <h1><span class="section-number">3. </span>(TP) Caractéristique d’une diode.<a class="headerlink" href="#tp-caracteristique-d-une-diode" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="caracteristique-statique-d-une-diode-1h30">
 <h2><span class="section-number">3.1. </span>Caractéristique statique d’une diode. (1h30)<a class="headerlink" href="#caracteristique-statique-d-une-diode-1h30" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="manipulation">
-<h3><span class="section-number">3.1.1. </span>Manipulation<a class="headerlink" href="#manipulation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="manipulations">
+<h3><span class="section-number">3.1.1. </span>Manipulations<a class="headerlink" href="#manipulations" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Mesure unique et incertitude</p>
+<ul class="simple">
+<li><p>Réaliser le montage proposé dans votre protocole et réaliser les mesures de tension et d’intensité voulue pour une tension du GBF de 5V.</p></li>
+<li><p>Faire un bilan des incertitudes et les estimer pour chaque source. Commenter le caractère prépondérant ou non de chaque source.</p></li>
+</ul>
+<p>Les données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles <a class="reference external" href="https://stanislas.edunao.com/pluginfile.php/24681/mod_resource/content/0/fluke_287_289.pdf">ici</a> (connexion au site nécessaire). Une explication de l’utilisation de ces domaines se trouve <a class="reference external" href="https://stanislas.edunao.com/mod/page/view.php?id=13269">ici</a>.</p>
+</div>
+<p><strong>Par la suite, et <em>pour simplifier l’étude</em>, on considèrera qu’il n’y a qu’une seule source d’incertitude pour chaque mesurande : celle qui est la plus importante par les précédentes.</strong> Attention, en réalité, ça n’est pas vrai pour toutes les mesures à venir.</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
 <p>Réaliser le montage proposé dans votre protocole et tracer la caractéristique statique de la diode. Vous utiliserez la cellule de code ci-dessous pour tracer la caractéristique statique.</p>
-<p>Les données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles <a class="reference external" href="https://stanislas.edunao.com/pluginfile.php/24681/mod_resource/content/0/fluke_287_289.pdf">ici</a> (connexion au site nécessaire). Une explication de l’utilisation de ces domaines se trouve <a class="reference external" href="https://stanislas.edunao.com/mod/page/view.php?id=13269">ici</a>.</p>
 </div>
 </div>
 <div class="section" id="trace-de-la-courbe">
@@ -400,25 +390,18 @@
 <span class="sd">&quot;&quot;&quot;Entrer ci-dessous les quatre vecteurs numpy correspondant :</span>
 <span class="sd">- aux mesures de tensions</span>
 <span class="sd">- aux mesures d&#39;intensité</span>
-<span class="sd">- aux estimations d&#39;inceritude sur U (vous pouvez utiliser des variables intermédiaires et des opérations sur les vecteurs numpy)</span>
-<span class="sd">- aux estimations d&#39;inceritude sur I (vous pouvez utiliser des variables intermédiaires et des opérations sur les vecteurs numpy)</span>
+<span class="sd">- aux estimations d&#39;inceritude sur U (on rappelle que vous n&#39;estimez que la plus importante)</span>
+<span class="sd">- aux estimations d&#39;inceritude sur I (on rappelle que vous n&#39;estimez que la plus importante)</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="n">u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>  <span class="c1"># Valeurs de tensions</span>
 <span class="n">i</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>  <span class="c1"># Valeurs d&#39;intensité</span>
-
-<span class="c1"># Mettre ici vos intermédiaires de calcul pour les calculs d&#39;incertitude.</span>
-<span class="c1"># NOTE : IL EST POSSIBLE QUE VOUS UTILISIEZ DES FORMULES</span>
 
 <span class="n">uu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>  <span class="c1"># Incertitudes sur les tensions (ce sera un vecteur numpy)</span>
 <span class="n">ui</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>  <span class="c1"># Incertitudes sur les intensités (ce sera un vecteur numpy)</span>
 
 
-<span class="sd">&quot;&quot;&quot;Vous devez maintenant tracer le graphique. On rappelle :</span>
-<span class="sd">- plt.subplots() crée la fenêtre graphique et  les axes (penser à utiliser les variables)</span>
-<span class="sd">- penser à légender les abscisses et les ordonnées (avec les unités)</span>
-<span class="sd">- Titrer votre graphique</span>
-<span class="sd">- tracer les points de mesures non reliés avec les croix d&#39;incertitude et légender votre courbe.</span>
-<span class="sd">- afficher la courbe avec plt.show() à la fin</span>
+<span class="sd">&quot;&quot;&quot;Vous allez maintenant tracer le graphique. Le script étant écrit,</span>
+<span class="sd">il ne reste qu&#39;à modifier les légendes.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="n">f</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">f</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Mettre un titre&quot;</span><span class="p">)</span>
@@ -438,11 +421,11 @@
 </div>
 <div class="section" id="estimation-de-la-tension-seuil">
 <h3><span class="section-number">3.1.3. </span>Estimation de la tension seuil<a class="headerlink" href="#estimation-de-la-tension-seuil" title="Permalink to this headline">¶</a></h3>
-<p>On va estimer la tension seuil par une méthode d’optimisation basée sur la minimisation des écarts entre les points de mesure et la courbe (droites par morceaux ici) pour une valeur de <span class="math notranslate nohighlight">\(U_d\)</span>. Vous pouvez <a class="reference internal" href="u_seuil_exp.html#u-seuil"><span class="std std-ref">des explications sur la méthode d’optimisation</span></a>.</p>
-<p>Vous devez estimer un intervalle dans lequel la tension seuil et entrer ces valeurs pour <code class="docutils literal notranslate"><span class="pre">ud_min,</span> <span class="pre">ud_max</span></code>. La fonction <code class="docutils literal notranslate"><span class="pre">eval_ud</span></code> cherchera la tension dans cet intervalle. Pensez aussi à modifier la ligne qui va estimer la tension seuil ainsi que les caractéristiques du graphique.</p>
+<p>On va estimer la tension seuil par une méthode d’optimisation basée sur la minimisation des écarts entre les points de mesure et la courbe (droites par morceaux ici) pour une valeur de <span class="math notranslate nohighlight">\(U_d\)</span>. Vous pouvez obtenir <a class="reference internal" href="u_seuil_exp.html#u-seuil"><span class="std std-ref">des explications sur la méthode d’optimisation</span></a> mais la méthode n’est pas à connaître.</p>
+<p>Vous devez estimer un intervalle dans lequel la tension seuil va se trouver et entrer ces valeurs pour <code class="docutils literal notranslate"><span class="pre">ud_min,</span> <span class="pre">ud_max</span></code>. La fonction <code class="docutils literal notranslate"><span class="pre">eval_ud</span></code> cherchera la tension dans cet intervalle. Les seules lignes à modifier sont précisées dans le code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER. Le programme cherchera la valeur seuil dans l&#39;intervale.</span>
 
 <span class="k">def</span> <span class="nf">eval_ud</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental</span>
@@ -466,7 +449,7 @@
 
 <span class="sd">&quot;&quot;&quot;Ecrire ci-dessous l&#39;instruction qui va enregistrer dans la variable ud_estim l&#39;estimation de ud</span>
 <span class="sd">avec la méthode précdente&quot;&quot;&quot;</span>
-<span class="n">ud_estim</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
+<span class="n">ud_estim</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER en appelant eval_ud</span>
 
 
 <span class="sd">&quot;&quot;&quot;Ajout du modèle sur le graphique.</span>
@@ -529,14 +512,49 @@
 <p class="admonition-title">Influence de la fréquence d’échantillonnage</p>
 <ol class="simple">
 <li><p>Pensez à régler le GBF pour qu’il délivre la tension voulue (<em>ne pas oublier d’activer le GBF avec le bouton <code class="docutils literal notranslate"><span class="pre">ON</span></code></em>)</p></li>
-<li><p>Comment obtenir la fréquence d’échantillonnage à partir de la durée d’acquisition et du nombre de points de mesure ? En déduire le nombre de points nécessaire pour obtenir une fréquence d’échantillonnage de 100kHz puis de 10kHz.</p></li>
+<li><p>Comment obtenir la fréquence d’échantillonnage à partir de la durée d’acquisition et du nombre de points de mesure ? En déduire le nombre de points nécessaire pour obtenir une fréquence d’échantillonnage de 100kHz puis de 10kHz pour une durée d’acquisition de 10ms.</p></li>
 <li><p>Régler le nombre de points adéquats puis observer le signal acquis pour les deux fréquence d’échantillonnage précédentes. Mesurer alors (rapidement) la période du signal et la comparer à la valeur attendue.</p></li>
 <li><p>Choisir maintenant 100 points de mesure et modifier la durée d’acquisition pour avoir une fréquence d’échantillonnage de 1kHz. Observer le signal et mesurer la fréquence. Commenter.</p></li>
 </ol>
 </div>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Un clic-droit sur le graphique permet d’obtenir un menu où vous pouvez choisir de mesurer des valeurs.</p>
+</div>
+<p>Vous rendrez compte de vos observations dans un tableau comme ci-dessous:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Fréquence d’échantillonnage</p></th>
+<th class="text-align:center head"><p>100kHz</p></th>
+<th class="text-align:center head"><p>10kHz</p></th>
+<th class="text-align:center head"><p>1kHz</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Durée d’acquisition</p></td>
+<td class="text-align:center"><p>10ms</p></td>
+<td class="text-align:center"><p>10ms</p></td>
+<td class="text-align:center"><p>?</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Fréquence du signal attendue</p></td>
+<td class="text-align:center"><p>960Hz</p></td>
+<td class="text-align:center"><p>960Hz</p></td>
+<td class="text-align:center"><p>960Hz</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Fréquence du signal mesurée</p></td>
+<td class="text-align:center"><p>?</p></td>
+<td class="text-align:center"><p>?</p></td>
+<td class="text-align:center"><p>?</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sidebar">
+<p class="sidebar-title">En pratique</p>
+<ul class="simple">
+<li><p>Les consoles FOXY en TP sont limités à 16000 points et une fréquence d’échantillonage de 10MHz. Ce sera suffisant pour nous.</p></li>
+<li><p>Un oscilloscope règle lui même sa fréquence d’échantillonnage en fonction de ses limites. On ne peut jouer que sur la durée d’acquisition pour éviter d’acquérir sur un temps trop long.</p></li>
+</ul>
+<p>Des explications plus visuelles sur des simulations seront données lors du traitement des capacités numériques.</p>
 </div>
 <div class="important admonition">
 <p class="admonition-title">Critère de Shannon-Nyqvist</p>
@@ -546,14 +564,6 @@
 f_e &gt; 2 f_{\max}
 \]</div>
 <p>En pratique, <strong>on se placera à une fréquence d’échantillonnage bien plus grande que la limite du critère de Shannon-Nyqvist</strong> pour obtenir un visuel acceptable.</p>
-</div>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
-<ul class="simple">
-<li><p>Les consoles FOXY en TP sont limités à 16000 points et une fréquence d’échantillonage de 10MHz. Ce sera suffisant pour nous.</p></li>
-<li><p>Un oscilloscope règle lui même sa fréquence d’échantillonnage en fonction de ses limites. On ne peut jouer que sur la durée d’acquisition pour éviter d’acquérir sur un temps trop long.</p></li>
-</ul>
-<p>Des explications plus visuelles sur des simulations seront données lors du traitement des capacités numériques.</p>
 </div>
 </div>
 <div class="section" id="acquisition-unique-ou-continue">
@@ -601,8 +611,8 @@ f_e &gt; 2 f_{\max}
 <h2><span class="section-number">3.3. </span>Caractéristique dynamique d’une diode (1h)<a class="headerlink" href="#caracteristique-dynamique-d-une-diode-1h" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="utilisation-de-foxy">
 <h3><span class="section-number">3.3.1. </span>Utilisation de FOXY<a class="headerlink" href="#utilisation-de-foxy" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="id1">
-<h4><span class="section-number">3.3.1.1. </span>Manipulation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="manipulation">
+<h4><span class="section-number">3.3.1.1. </span>Manipulation<a class="headerlink" href="#manipulation" title="Permalink to this headline">¶</a></h4>
 <p>Réaliser le montage proposé dans votre protocole pour visualiser la caractéristique dynamique de la diode. Observer alors les caractéristiques de la diode pour les tensions suivantes :</p>
 <ol class="simple">
 <li><p>Un signal sinusoïdale de fréquence 1kHz, d’amplitude 10V et de valeur moyenne nulle</p></li>
@@ -627,61 +637,9 @@ f_e &gt; 2 f_{\max}
 <p class="sidebar-title"></p>
 <p>Ce n’est pas vrai pour tous les dipôles. La caractéristiques dynamique d’un condensateur sera toujours très différente de sa caractéristique statique.</p>
 </div>
-</div>
-</div>
-<div class="section" id="utilisation-d-un-oscilloscope">
-<h3><span class="section-number">3.3.2. </span>Utilisation d’un oscilloscope<a class="headerlink" href="#utilisation-d-un-oscilloscope" title="Permalink to this headline">¶</a></h3>
-<p>On a vu que les bornes des voies d’acquisition reliées à la Terre, combinées à la borne du GBF reliée à la Terre posait des problèmes de court-circuit. Nous allons introduire un dispositif permettant d’isoler les bornes du GBF du reste du circuit : le <strong>transformateur d’isolement</strong>.</p>
-<div class="section" id="principe-et-schematisation">
-<h4><span class="section-number">3.3.2.1. </span>Principe et schématisation.<a class="headerlink" href="#principe-et-schematisation" title="Permalink to this headline">¶</a></h4>
-<p>Un transformateur est un <em>quadripole</em> composé de deux bobines qui influent l’une sur l’autre. Le schéma est donné ci-après</p>
-<div class="figure align-center" id="label-image">
-<img alt="../_images/transfo_schema.png" src="../_images/transfo_schema.png" />
-<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Schéma d’un transformateur</span><a class="headerlink" href="#label-image" title="Permalink to this image">¶</a></p>
-</div>
-<p>Deux bornes sont reliées à un circuit d’entrée (circuit primaire, gauche sur le schéma) qui reçoit une tension <span class="math notranslate nohighlight">\(u_1\)</span>. Par un phénomène d’induction qui sera étudié en fin d’année, il nait alors une tension <span class="math notranslate nohighlight">\(u_2\)</span> aux bornes de la seconde bobine (circuit secondaire, droite sur le schéma) qui va donc alimenter le second circuit. Le rapport <span class="math notranslate nohighlight">\(m = \frac{u_2}{u_1}\)</span> est appelé <strong>rapport de transformation en tension</strong>. Il existe des transformateurs réhausseur (augmentation de tension, en sortie des centrale électrique), abaisseurs (diminution de tension, dans les adaptateurs (d’ordinateur par exemple)).</p>
-<p>Dans les transformateurs, les deux bobines <strong>ne sont pas reliées électriquement</strong> donc les bornes du circuit primaire ne sont pas à priori reliées aux bornes du circuit secondaire. Donc si il y a un GBF avec une borne reliées à la Terre dans le circuit primaire, <strong>il n’impose pas de borne de Terre dans le circuit secondaire</strong> : on peut la placer où on veut. On parle de rôle <strong>d’isolement</strong> du transformateur.</p>
-<p>Certains transformateurs ont un rôle uniquement d’isolement (d’où le nom de <strong>transformateur d’isolement</strong>) et possède alors un rapport <span class="math notranslate nohighlight">\(m=1\)</span>. C’est le cas du transformateur utilisé en TP.</p>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
-<p>Vous observez peut-être un rapport légèrement différent de 1 car, comme nous le verrons en fin d’année, <span class="math notranslate nohighlight">\(m\)</span> dépend de la fréquence des signaux.</p>
-</div>
-</div>
-<div class="section" id="contraintes-d-utilisation">
-<h4><span class="section-number">3.3.2.2. </span>Contraintes d’utilisation<a class="headerlink" href="#contraintes-d-utilisation" title="Permalink to this headline">¶</a></h4>
-<p>Le phénomène d’induction n’a lieu que sous certaines hypothèses qu’on va illustrer par une manipulation simple (prendre <span class="math notranslate nohighlight">\(R_p = 1k\Omega\)</span>).</p>
-<div class="tip admonition">
-<p class="admonition-title">Manipulation</p>
-<p>Réaliser le montage ci-dessous.</p>
-<div class="figure align-center" id="transfo-etude">
-<img alt="../_images/transfo_etude.jpg" src="../_images/transfo_etude.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Etude du transformateur</span><a class="headerlink" href="#transfo-etude" title="Permalink to this image">¶</a></p>
-</div>
-<ol class="simple">
-<li><p>Mesurer le rapport de transformation en tension pour une tension d’entrée sinusoïdale de fréquence 1kHz puis pour une tension continue. <em>On utilisera l’oscilloscope dans les deux cas et on reproduira le schéma du montage dans le compte-rendu en précisant les branchements de l’oscilloscope.</em></p></li>
-<li><p>Expliquer quelle contrainte doit avoir le signal d’entrée pour que le transformateur fonctionne.</p></li>
-</ol>
-</div>
-</div>
-<div class="section" id="role-d-isolement">
-<h4><span class="section-number">3.3.2.3. </span>Rôle d’isolement<a class="headerlink" href="#role-d-isolement" title="Permalink to this headline">¶</a></h4>
-<p>On va donc utiliser le rôle d’isolement du transformateur pour pouvoir brancher la Terre où l’on veut dans le secondaire et donc observer les tensions aux bornes de la résistances et de la diode dans le circuit suivant.</p>
-<div class="figure align-center" id="transfo-diode">
-<img alt="../_images/transfo_diode.jpg" src="../_images/transfo_diode.jpg" />
-<p class="caption"><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Etude de la caractéristique dynamique d’une diode.</span><a class="headerlink" href="#transfo-diode" title="Permalink to this image">¶</a></p>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Manipulation</p>
-<ol class="simple">
-<li><p>Réaliser le montage précédent.</p></li>
-</ol>
-<ul class="simple">
-<li><p>Le <strong>Mode XY</strong> permet d’observer la voie 2 en fonction de la voie 1.</p></li>
-<li><p>Il est possible de multiplier le signal mesurée par <span class="math notranslate nohighlight">\(-1\)</span> : (Dans le menu de la voie à modifier)</p></li>
-</ul>
-<ol class="simple">
-<li><p>Utiliser ces deux informations pour  observer la caractéristique de la diode pour les différents signaux déjà étudiés précédemment. Représenter dans votre compte-rendu l’allure des courbe observées et préciser pourquoi il est nécessaire de multiplier l’un des signaux par <span class="math notranslate nohighlight">\(-1\)</span>.</p></li>
-</ol>
+<div class="topic">
+<p class="topic-title first">Utilisation d’un oscilloscope</p>
+<p>On a vu que les bornes des voies d’acquisition reliées à la Terre, combinées à la borne du GBF reliée à la Terre posait des problèmes de court-circuit. Une telle étude dynamique serait possible en itnercalant un dispositif appelé <strong>transformateur d’isolement</strong>. Son fonctionnement sera expliqué plus tard.</p>
 </div>
 </div>
 </div>
@@ -728,12 +686,16 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
 <span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>  <span class="c1"># Ce sera le nombre de simulations à réaliser.</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Créer les vecteurs numpy correspondant aux distributions associées aux mesures de U et de I aux multimètres.</span>
+<span class="sd">Créer les vecteurs numpy correspondant aux distributions associées aux mesures de U et de I aux multimètres ainsi qu&#39;à leurs incertitudes. S&#39;inspirer de ce qui a été fait en optique. U et I sont ici des valeurs uniques et non des vecteurs.</span>
 <span class="sd">Sans plus d&#39;information, on considèrera que les distribution associées aux valeurs données par le multimètre</span>
 <span class="sd">sont des distributions uniformes (fonction uniform(start, stop, N) dans numpy.random).</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="sd">&quot;&quot;&quot;En déduire dans la variable RS les N valeurs simulées de la résistance de sortie.&quot;&quot;&quot;</span>
+
+
+<span class="sd">&quot;&quot;&quot;En déduire dans la variable RS les N valeurs simulées de la résistance de sortie. Si vous avez bien créé des VECTEURS, vous pouvez utiliser directement les opérations mathématiques classiques pour calculer RS.&quot;&quot;&quot;</span>
+
+
 
 
 <span class="sd">&quot;&quot;&quot;Calculer puis afficher la moyenne et l&#39;écart-type du vecteur On rappelle :</span>
@@ -788,16 +750,27 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="fam_preliminaire_2.html" title="previous page"><span class="section-number">2. </span>(Travail) Préparation des protocoles</a>
-    <a class='right-next' id="next-link" href="modul_preliminaire.html" title="next page"><span class="section-number">4. </span>(Travail) Etude préliminaire</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="fam_preliminaire_2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2. </span>(Travail) Préparation des protocoles</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="modul_preliminaire.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>(Travail) Etude préliminaire</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -813,8 +786,7 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

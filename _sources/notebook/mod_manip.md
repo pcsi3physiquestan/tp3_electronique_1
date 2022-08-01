@@ -54,11 +54,11 @@ Pour tester le montage, on prendra comme signaux d'entrée les signaux porteur e
 ````{admonition} Manipulation
 :class: tip
 1. Réaliser le montage pour obtenir les deux tensions d'entrée et la tension de sortie sur FOXY. Vérifier alors visuellement que le signal de sortie est bien la somme des deux signaux d'entrée.
-2. Comment mesurer expérimentalement $\alpha$ à partir des signaux précédents ?
-3. Réaliser des mesures de $\alpha$ pour plusieurs valeurs d'amplitude des tensions d'entrée (on fera 5 mesures).
+2. Les signaux sont sinusoïdaux. Quelles grandeurs mesurer pour mesurer expérimentalement $\alpha$ à partir des signaux précédents ?
+3. Réaliser des mesures de $\alpha$ pour plusieurs valeurs d'amplitude des tensions d'entrée (on fera 5 mesures). __Pensez à estimer les incertitudes pour chaque mesure__ (Vous êtes autorisésà ne conservé que la plus grande incertitude de mesure pour chaque mesure pour simplifier l'étude).
+4. Utiliser la cellule ci-dessous pour estimer l'incertitude sur $\alpha$ à partir des mesures précédentes. Les parties à modifier sont précisées.
 ````
 
-Vous aller utiliser la cellule ci-dessous pour estimer l'incertitude sur $\alpha$ à partir des mesures précédentes.
 
 ```{code-cell}
 """Importation les bibliothèques scientifiques nécessaires :  numpy, matplotlib.pyplot, numpy.random"""
@@ -67,15 +67,10 @@ import matplotlib.pyplot as plt
 import numpy.random as rd
 
 
-"""Simulation des valeurs. On a 5 jeux de mesures, on va donc utiliser un tableau numpy. Vous devez :
+""" ------------ PARTIE A MODIFIER
+Simulation des valeurs. On a 5 jeux de mesures, on va donc utiliser un tableau numpy. Vous devez :
 - Créer trois vecteurs numpy contenant les 5 résultats de mesurage des tensions d'entrée et de sortie
-- Créer trois vecteurs numpy contenant les 5 incertitudes associées aux tensions d'entrée et de sortie
-(il faudra peut-être plus de trois vecteurs s'il y a plusieurs sources d'incertitudes)
-- Utiliser les vecteurs précédents pour créer 3 tableaux contenant N échantillons des tensions d'entrée et
-de sortie associées aux distributionx choisies pour décrire la dispersion des résultats de mesurage.
-Rappel de syntaxe : rd.normal(x_mes, ux_mes, (N, k)) ou rd.uniform(x_mes, ux_mes, (N, k))
-où x_mes et ux_mes sont les vecteurs associées aux résultats de mesurage et incertitudes
-et k la taille des deux vecteurs.
+- Créer trois vecteurs numpy contenant les 5 incertitudes associées aux tensions d'entrée et de sortie (vous pouvez vous limiter pour simplifier à l'incertitude la plus importante pour chaque mesure).
 """
 v1_m = np.array([0])
 v2_m = np.array([0])
@@ -84,6 +79,15 @@ v1_u = np.array([0])
 v2_u = np.array([0])
 vs_u = np.array([0])
 
+
+""" ---------------- PARTIE DEJA ECRITE
+Ici on va:
+- Utiliser les vecteurs précédents pour créer 3 tableaux contenant N échantillons des tensions d'entrée et
+de sortie associées aux distributionx choisies pour décrire la dispersion des résultats de mesurage.
+Rappel de syntaxe : rd.normal(x_mes, ux_mes, (N, k)) ou rd.uniform(x_mes, ux_mes, (N, k))
+où x_mes et ux_mes sont les vecteurs associées aux résultats de mesurage et incertitudes
+et k la taille des deux vecteurs.
+"""
 k = len(v1_m)
 N = 1000000 # Nombre de simulations
 
@@ -92,42 +96,55 @@ v2_sim = v2_m + rd.uniform(-v2_u, v2_u, (N, k))  # Il faudra peut-être plusieur
 vs_sim = vs_m + rd.uniform(-vs_u, vs_u, (N, k))  # Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d'incertitude
 
 
-"""
-Obtenir le tableau des valeurs simulées  de alpha
+""" ------------ PARTIE A MODIFIER
+Obtenir le tableau des valeurs simulées  de alpha. On rappelle que
+les tableaux numpy permettent la vectorialisation (application
+  des opérations termes à termes entre deux tableaux
+  de même taille).
 """
 alpha_sim = np.array([])  # LIGNE A MODIFIER
 
 
-"""
-Déterminer la moyenne et l'écart-type pour chaque jeux de mesure sur les N échantillons.
-On rappelle :
+""" ---------------- PARTIE DEJA ECRITE
+On va :
+- Déterminer la moyenne et l'écart-type pour chaque jeux de mesure sur les N échantillons.
+Rappel :
 mean(tableau, axis = 0) pour moyenner par colonne
 std(tableau, ddof=1,  axis = 0) pour calculer l'écart-type par colonne
+
+Puis:
+- Calculer la moyenne des valeurs de alpha et son incertitude.
+On rappelle que l'incertitude sur la moyenne s'écrit : Ecartype des 5 valeurs / sqrt(5) (ici k = 5)
 """
+
 alpha_sim_m = np.mean(alpha_sim, axis=0)  # Moyenne des N simulations pour chaque mesure
 alpha_sim_u = np.std(alpha_sim, ddof=1,  axis = 0)  # Ecart-type des N simulations pour chaque mesure
 
-"""
-Calculer la moyenne des valeurs de alpha et son incertitude.
-On rappelle que l'incertitude sur la moyenne s'écrit : Ecartype des 5 valeurs / sqrt(5)
-"""
 alpha_m = np.mean(alpha_sim_m)
 alpha_u = np.std(alpha_sim_m) / np.sqrt(k)
 
 
-"""Calculer les écarts normalisées pour chaque jeu de mesure"""
-alpha_en = 0  # LIGNE A MODIFIER
-
+""" VERIFICATION DE LA COHERENCE DES MESURES
+On va vérifier:
+- la cohérence des mesures avec la moyenne en calculant les écarts normalisés entre chaque valeur de alpha et la valeur moyenne
+- la cohérence entre la valeur moyenne et la valeur théorique
 """
+
+""" COHERENCE AVEC LA VALEUR MOYENNE """
+""" ------------ PARTIE A MODIFIER
+Ecarts normalisés entre cahque valeur et la moyenne
+"""
+alpha_en = 0  # LIGNE A MODIFIER (penser à la vectorialisation)
+
+""" ---------------- PARTIE DEJA ECRITE
 Analyse des différents résultats. On donne ici le tracé à analyser.
 """
 f, ax = plt.subplots()  # On va tracer les barres d'incertitude et la comparer la valeur moyenne.
-f.suptitle("")  # Titrer le graphique
+f.suptitle("Cohérence des résultats entre eux")  # Titrer le graphique
 ax.set_ylabel("")  # Titrer les ordonnées
 
 ax.errorbar(np.arange(k), alpha_sim_m, yerr=alpha_sim_u, capsize=2)  # Représentation des valeurs
 ax.plot([-1, k], [alpha_m, alpha_m], color='b')  # Valeur mesurée de alpha
-
 
 f1, ax1 = plt.subplots()  # On va tracer les écarts normalisés
 f1.suptitle("")  # Titrer le graphique
@@ -136,19 +153,44 @@ ax1.plot(np.arange(k), alpha_en, marker='+')  # Ecarts normalisés
 
 plt.show() 
 
+""" COHERENCE AVEC LA VALEUR ATTENDUE """
+""" ---------------- PARTIE DEJA ECRITE
+On doit calculer l'incertitude sur alpha_attendu par simulation de Monte-Carlo"""
+R1 = 8
+R2 = 1
+uR1 = 0.01 * R1  # Incertitude obtenue grâce au code couleur
+uR2 = 0.01 * R2  # Incertitude obtenue grâce au code couleur
+
+N = 1000000
+R1_sim = rd.uniform(R1-uR1, R1+uR1, N)
+R2_sim = rd.uniform(R2-uR2, R2+uR2, N)
+alpha_th_sim = R2_sim / (2 * R2_sim + R1_sim)  # Valeurs simulées de alpha
+
+alpha_th_m = np.mean(alpha_th_sim)
+alpha_th_u = np.std(alpha_th_sim, ddof=1)
+
+# Les chiffres significatifs ne sont pas corrects:
+print("La valeur attendue est alpha_th = {} +/- {}".format(alpha_th_m, alpha_th_u))
+print("La valeur experimentale alpha_exp = {} +/- {}".format(alpha_m, alpha_u))
+
+
+""" ------------ PARTIE A MODIFIER
+Ecarts normalisés entre la moyenne et la valeur attendue
+"""
+alpha_m_en = 0  # A MODIFIER
+
+print("Ecart normalisé : {}".format(alpha_m_en))
 ```
 
 ````{admonition} Exploitation
 :class: tip
-Utiliser les résulats précédents pour comparer la valeur mesurée de $\alpha$ avec sa valeur théorique. On se limitera, pour gagner du temps en TP, à associer à $\alpha_{attendu}$ la même incertitude __relative__ que pour les résistances du sommateur pour calculer l'écart normalisé.
-
-_On pourra chez soi s'entraîner à réaliser une simulation de Monte-Carlo à partir des données des incertitudes sur les résistances pour déterminer l'incertitude sur $\alpha_{attendu}$._
+Utiliser les résulats précédents pour comparer la valeur mesurée de $\alpha$ avec sa valeur théorique.
 ````
 
 ### Ajout du montage avec ALI
 
 #### Etude préliminéaire sur l'ALI
-Avant d'utilise le montage choisi, nous allons observer quelques caractéristiques du montage __amplificateur non inverseur__. On choisira les résistances du montage pour avoir un gain de 10. (Prendre une résistance variable pour la résistance réalisant la rétroaction).
+Avant d'utilise le montage choisi, nous allons observer quelques caractéristiques du montage __amplificateur non inverseur__. On choisira les résistances du montage pour avoir un gain de 10. (__Prendre une résistance variable pour la résistance réalisant la rétroaction__).
 
 ````{admonition} Manipulation
 :class: tip

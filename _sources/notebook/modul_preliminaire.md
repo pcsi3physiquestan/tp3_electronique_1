@@ -78,7 +78,7 @@ Montage sommateur
 3. Représenter l'allure théorique de $s(t)$ lorsque $m > 1$ puis lorsque $m < 1$. Sur quel paramètre du montage doit-on jouer pour modifier la valeur de m ?
 ````
 
-_Note : En pratique $k = 0.1$ et $A_s < 10V$ il ne sera donc pas possible d'obtenir une surmodulation de cette manière.
+_Note : En pratique $k = 0.1$ et $A_s < 10V$ il ne sera donc pas possible d'obtenir une surmodulation de cette manière._
 
 ### Association d'impédances.
 ````{admonition} Question
@@ -91,6 +91,7 @@ En utilisant les valeurs des impédances d'entrée et sortie des différents ét
 :class: tip
 Vous devez maintenant rédiger le protocole général de l'ensemble du TP. Vous devrez :
 1. Préciser le but du TP
-2. Préciser le montage à réaliser pour le réaliser.
+2. __Dessiner le montage à réaliser.__
 3. Expliquer théoriquement (le principe donc) comment ce montage permet de réaliser le but du TP et justifier la nécessité ou la non nécessité des montages suiveur.
+4. Expliquer, __schéma de montage à l'appui__, les protocoles à réaliser pour vérifier le bon fonctionnement de chaque étage séparément ainsi que pour régler le gain de l'amplificateur pour avoir $v_{s1} = v_1 + v_2$.
 ````

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5. (TP) Création du signal &#8212; TP Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,33 +31,36 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/mod_manip.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. (Travail) Etude préliminaire" href="demod_preliminaire.html" />
     <link rel="prev" title="4. (Travail) Etude préliminaire" href="modul_preliminaire.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -75,13 +78,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +94,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
@@ -112,7 +116,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
@@ -129,7 +133,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
@@ -146,7 +150,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Plus d'initiatives
  </span>
@@ -251,7 +255,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#le-multiplieur-30-minutes">
@@ -321,7 +325,7 @@
               <div>
                 
   <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
-<div class="section" id="tp-creation-du-signal">
+<div class="tex2jax_ignore mathjax_ignore section" id="tp-creation-du-signal">
 <h1><span class="section-number">5. </span>(TP) Création du signal<a class="headerlink" href="#tp-creation-du-signal" title="Permalink to this headline">¶</a></h1>
 <p>Nous n’allons pas réaliser le montage complet directement mais nous allons étudié séparément chaque étage du montage au préalable. Cela permettra de mieux comprendre le fonctionnement de chaque élément et de mettre en lumière certaines pratiques en électrocinétique. C’est de plus une pratique <strong>vivement</strong> conseillée quand on doit construire un système complexe de tester chaque partie avant de les assembler.</p>
 <p>Pour le compte-rendu, vous devrez rendre compte de l’analyse de chaque étage avant de présenter l’étude complète.</p>
@@ -364,11 +368,11 @@
 <p class="admonition-title">Manipulation</p>
 <ol class="simple">
 <li><p>Réaliser le montage pour obtenir les deux tensions d’entrée et la tension de sortie sur FOXY. Vérifier alors visuellement que le signal de sortie est bien la somme des deux signaux d’entrée.</p></li>
-<li><p>Comment mesurer expérimentalement <span class="math notranslate nohighlight">\(\alpha\)</span> à partir des signaux précédents ?</p></li>
-<li><p>Réaliser des mesures de <span class="math notranslate nohighlight">\(\alpha\)</span> pour plusieurs valeurs d’amplitude des tensions d’entrée (on fera 5 mesures).</p></li>
+<li><p>Les signaux sont sinusoïdaux. Quelles grandeurs mesurer pour mesurer expérimentalement <span class="math notranslate nohighlight">\(\alpha\)</span> à partir des signaux précédents ?</p></li>
+<li><p>Réaliser des mesures de <span class="math notranslate nohighlight">\(\alpha\)</span> pour plusieurs valeurs d’amplitude des tensions d’entrée (on fera 5 mesures). <strong>Pensez à estimer les incertitudes pour chaque mesure</strong> (Vous êtes autorisésà ne conservé que la plus grande incertitude de mesure pour chaque mesure pour simplifier l’étude).</p></li>
+<li><p>Utiliser la cellule ci-dessous pour estimer l’incertitude sur <span class="math notranslate nohighlight">\(\alpha\)</span> à partir des mesures précédentes. Les parties à modifier sont précisées.</p></li>
 </ol>
 </div>
-<p>Vous aller utiliser la cellule ci-dessous pour estimer l’incertitude sur <span class="math notranslate nohighlight">\(\alpha\)</span> à partir des mesures précédentes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Importation les bibliothèques scientifiques nécessaires :  numpy, matplotlib.pyplot, numpy.random&quot;&quot;&quot;</span>
@@ -377,15 +381,10 @@
 <span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">rd</span>
 
 
-<span class="sd">&quot;&quot;&quot;Simulation des valeurs. On a 5 jeux de mesures, on va donc utiliser un tableau numpy. Vous devez :</span>
+<span class="sd">&quot;&quot;&quot; ------------ PARTIE A MODIFIER</span>
+<span class="sd">Simulation des valeurs. On a 5 jeux de mesures, on va donc utiliser un tableau numpy. Vous devez :</span>
 <span class="sd">- Créer trois vecteurs numpy contenant les 5 résultats de mesurage des tensions d&#39;entrée et de sortie</span>
-<span class="sd">- Créer trois vecteurs numpy contenant les 5 incertitudes associées aux tensions d&#39;entrée et de sortie</span>
-<span class="sd">(il faudra peut-être plus de trois vecteurs s&#39;il y a plusieurs sources d&#39;incertitudes)</span>
-<span class="sd">- Utiliser les vecteurs précédents pour créer 3 tableaux contenant N échantillons des tensions d&#39;entrée et</span>
-<span class="sd">de sortie associées aux distributionx choisies pour décrire la dispersion des résultats de mesurage.</span>
-<span class="sd">Rappel de syntaxe : rd.normal(x_mes, ux_mes, (N, k)) ou rd.uniform(x_mes, ux_mes, (N, k))</span>
-<span class="sd">où x_mes et ux_mes sont les vecteurs associées aux résultats de mesurage et incertitudes</span>
-<span class="sd">et k la taille des deux vecteurs.</span>
+<span class="sd">- Créer trois vecteurs numpy contenant les 5 incertitudes associées aux tensions d&#39;entrée et de sortie (vous pouvez vous limiter pour simplifier à l&#39;incertitude la plus importante pour chaque mesure).</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="n">v1_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">v2_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
@@ -394,6 +393,15 @@
 <span class="n">v2_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">vs_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">])</span>
 
+
+<span class="sd">&quot;&quot;&quot; ---------------- PARTIE DEJA ECRITE</span>
+<span class="sd">Ici on va:</span>
+<span class="sd">- Utiliser les vecteurs précédents pour créer 3 tableaux contenant N échantillons des tensions d&#39;entrée et</span>
+<span class="sd">de sortie associées aux distributionx choisies pour décrire la dispersion des résultats de mesurage.</span>
+<span class="sd">Rappel de syntaxe : rd.normal(x_mes, ux_mes, (N, k)) ou rd.uniform(x_mes, ux_mes, (N, k))</span>
+<span class="sd">où x_mes et ux_mes sont les vecteurs associées aux résultats de mesurage et incertitudes</span>
+<span class="sd">et k la taille des deux vecteurs.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 <span class="n">k</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1_m</span><span class="p">)</span>
 <span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span> <span class="c1"># Nombre de simulations</span>
 
@@ -402,42 +410,55 @@
 <span class="n">vs_sim</span> <span class="o">=</span> <span class="n">vs_m</span> <span class="o">+</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">vs_u</span><span class="p">,</span> <span class="n">vs_u</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>  <span class="c1"># Il faudra peut-être plusieurs tableaux si vous avez plusieurs sources d&#39;incertitude</span>
 
 
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Obtenir le tableau des valeurs simulées  de alpha</span>
+<span class="sd">&quot;&quot;&quot; ------------ PARTIE A MODIFIER</span>
+<span class="sd">Obtenir le tableau des valeurs simulées  de alpha. On rappelle que</span>
+<span class="sd">les tableaux numpy permettent la vectorialisation (application</span>
+<span class="sd">  des opérations termes à termes entre deux tableaux</span>
+<span class="sd">  de même taille).</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="n">alpha_sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>  <span class="c1"># LIGNE A MODIFIER</span>
 
 
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Déterminer la moyenne et l&#39;écart-type pour chaque jeux de mesure sur les N échantillons.</span>
-<span class="sd">On rappelle :</span>
+<span class="sd">&quot;&quot;&quot; ---------------- PARTIE DEJA ECRITE</span>
+<span class="sd">On va :</span>
+<span class="sd">- Déterminer la moyenne et l&#39;écart-type pour chaque jeux de mesure sur les N échantillons.</span>
+<span class="sd">Rappel :</span>
 <span class="sd">mean(tableau, axis = 0) pour moyenner par colonne</span>
 <span class="sd">std(tableau, ddof=1,  axis = 0) pour calculer l&#39;écart-type par colonne</span>
+
+<span class="sd">Puis:</span>
+<span class="sd">- Calculer la moyenne des valeurs de alpha et son incertitude.</span>
+<span class="sd">On rappelle que l&#39;incertitude sur la moyenne s&#39;écrit : Ecartype des 5 valeurs / sqrt(5) (ici k = 5)</span>
 <span class="sd">&quot;&quot;&quot;</span>
+
 <span class="n">alpha_sim_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">alpha_sim</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># Moyenne des N simulations pour chaque mesure</span>
 <span class="n">alpha_sim_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">alpha_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Ecart-type des N simulations pour chaque mesure</span>
 
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Calculer la moyenne des valeurs de alpha et son incertitude.</span>
-<span class="sd">On rappelle que l&#39;incertitude sur la moyenne s&#39;écrit : Ecartype des 5 valeurs / sqrt(5)</span>
-<span class="sd">&quot;&quot;&quot;</span>
 <span class="n">alpha_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">alpha_sim_m</span><span class="p">)</span>
 <span class="n">alpha_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">alpha_sim_m</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 
 
-<span class="sd">&quot;&quot;&quot;Calculer les écarts normalisées pour chaque jeu de mesure&quot;&quot;&quot;</span>
-<span class="n">alpha_en</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER</span>
-
+<span class="sd">&quot;&quot;&quot; VERIFICATION DE LA COHERENCE DES MESURES</span>
+<span class="sd">On va vérifier:</span>
+<span class="sd">- la cohérence des mesures avec la moyenne en calculant les écarts normalisés entre chaque valeur de alpha et la valeur moyenne</span>
+<span class="sd">- la cohérence entre la valeur moyenne et la valeur théorique</span>
 <span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">&quot;&quot;&quot; COHERENCE AVEC LA VALEUR MOYENNE &quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot; ------------ PARTIE A MODIFIER</span>
+<span class="sd">Ecarts normalisés entre cahque valeur et la moyenne</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">alpha_en</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER (penser à la vectorialisation)</span>
+
+<span class="sd">&quot;&quot;&quot; ---------------- PARTIE DEJA ECRITE</span>
 <span class="sd">Analyse des différents résultats. On donne ici le tracé à analyser.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  <span class="c1"># On va tracer les barres d&#39;incertitude et la comparer la valeur moyenne.</span>
-<span class="n">f</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>  <span class="c1"># Titrer le graphique</span>
+<span class="n">f</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Cohérence des résultats entre eux&quot;</span><span class="p">)</span>  <span class="c1"># Titrer le graphique</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>  <span class="c1"># Titrer les ordonnées</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">alpha_sim_m</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">alpha_sim_u</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Représentation des valeurs</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">],</span> <span class="p">[</span><span class="n">alpha_m</span><span class="p">,</span> <span class="n">alpha_m</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>  <span class="c1"># Valeur mesurée de alpha</span>
-
 
 <span class="n">f1</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  <span class="c1"># On va tracer les écarts normalisés</span>
 <span class="n">f1</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>  <span class="c1"># Titrer le graphique</span>
@@ -445,39 +466,69 @@
 <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">k</span><span class="p">),</span> <span class="n">alpha_en</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;+&#39;</span><span class="p">)</span>  <span class="c1"># Ecarts normalisés</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
+
+<span class="sd">&quot;&quot;&quot; COHERENCE AVEC LA VALEUR ATTENDUE &quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot; ---------------- PARTIE DEJA ECRITE</span>
+<span class="sd">On doit calculer l&#39;incertitude sur alpha_attendu par simulation de Monte-Carlo&quot;&quot;&quot;</span>
+<span class="n">R1</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="n">R2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">uR1</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">R1</span>  <span class="c1"># Incertitude obtenue grâce au code couleur</span>
+<span class="n">uR2</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="n">R2</span>  <span class="c1"># Incertitude obtenue grâce au code couleur</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>
+<span class="n">R1_sim</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">R1</span><span class="o">-</span><span class="n">uR1</span><span class="p">,</span> <span class="n">R1</span><span class="o">+</span><span class="n">uR1</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">R2_sim</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">R2</span><span class="o">-</span><span class="n">uR2</span><span class="p">,</span> <span class="n">R2</span><span class="o">+</span><span class="n">uR2</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">alpha_th_sim</span> <span class="o">=</span> <span class="n">R2_sim</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">R2_sim</span> <span class="o">+</span> <span class="n">R1_sim</span><span class="p">)</span>  <span class="c1"># Valeurs simulées de alpha</span>
+
+<span class="n">alpha_th_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">alpha_th_sim</span><span class="p">)</span>
+<span class="n">alpha_th_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">alpha_th_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Les chiffres significatifs ne sont pas corrects:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La valeur attendue est alpha_th = </span><span class="si">{}</span><span class="s2"> +/- </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">alpha_th_m</span><span class="p">,</span> <span class="n">alpha_th_u</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La valeur experimentale alpha_exp = </span><span class="si">{}</span><span class="s2"> +/- </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">alpha_m</span><span class="p">,</span> <span class="n">alpha_u</span><span class="p">))</span>
+
+
+<span class="sd">&quot;&quot;&quot; ------------ PARTIE A MODIFIER</span>
+<span class="sd">Ecarts normalisés entre la moyenne et la valeur attendue</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">alpha_m_en</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># A MODIFIER</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ecart normalisé : </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">alpha_m_en</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3372: RuntimeWarning: Mean of empty slice.
-  return _methods._mean(a, axis=axis, dtype=dtype,
-/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:170: RuntimeWarning: invalid value encountered in double_scalars
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>D:\cedri\anaconda3\envs\prepa\lib\site-packages\numpy\core\fromnumeric.py:3441: RuntimeWarning: Mean of empty slice.
+  out=out, **kwargs)
+D:\cedri\anaconda3\envs\prepa\lib\site-packages\numpy\core\_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
   ret = ret.dtype.type(ret / rcount)
-/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:233: RuntimeWarning: Degrees of freedom &lt;= 0 for slice
-  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
-/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:194: RuntimeWarning: invalid value encountered in true_divide
-  arrmean = um.true_divide(
-/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:226: RuntimeWarning: invalid value encountered in double_scalars
+D:\cedri\anaconda3\envs\prepa\lib\site-packages\numpy\core\_methods.py:263: RuntimeWarning: Degrees of freedom &lt;= 0 for slice
+  keepdims=keepdims, where=where)
+D:\cedri\anaconda3\envs\prepa\lib\site-packages\numpy\core\_methods.py:223: RuntimeWarning: invalid value encountered in true_divide
+  subok=False)
+D:\cedri\anaconda3\envs\prepa\lib\site-packages\numpy\core\_methods.py:254: RuntimeWarning: invalid value encountered in double_scalars
   ret = ret.dtype.type(ret / rcount)
-/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_asarray.py:83: UserWarning: Warning: converting a masked element to nan.
-  return array(a, dtype, copy=False, order=order)
 </pre></div>
 </div>
 <img alt="../_images/mod_manip_1_1.png" src="../_images/mod_manip_1_1.png" />
 <img alt="../_images/mod_manip_1_2.png" src="../_images/mod_manip_1_2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La valeur attendue est alpha_th = 0.1000003918949402 +/- 0.0006529664497554177
+La valeur experimentale alpha_exp = nan +/- nan
+Ecart normalisé : 0
+</pre></div>
+</div>
 </div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exploitation</p>
-<p>Utiliser les résulats précédents pour comparer la valeur mesurée de <span class="math notranslate nohighlight">\(\alpha\)</span> avec sa valeur théorique. On se limitera, pour gagner du temps en TP, à associer à <span class="math notranslate nohighlight">\(\alpha_{attendu}\)</span> la même incertitude <strong>relative</strong> que pour les résistances du sommateur pour calculer l’écart normalisé.</p>
-<p><em>On pourra chez soi s’entraîner à réaliser une simulation de Monte-Carlo à partir des données des incertitudes sur les résistances pour déterminer l’incertitude sur <span class="math notranslate nohighlight">\(\alpha_{attendu}\)</span>.</em></p>
+<p>Utiliser les résulats précédents pour comparer la valeur mesurée de <span class="math notranslate nohighlight">\(\alpha\)</span> avec sa valeur théorique.</p>
 </div>
 </div>
 <div class="section" id="ajout-du-montage-avec-ali">
 <h3><span class="section-number">5.2.2. </span>Ajout du montage avec ALI<a class="headerlink" href="#ajout-du-montage-avec-ali" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="etude-prelimineaire-sur-l-ali">
 <h4><span class="section-number">5.2.2.1. </span>Etude préliminéaire sur l’ALI<a class="headerlink" href="#etude-prelimineaire-sur-l-ali" title="Permalink to this headline">¶</a></h4>
-<p>Avant d’utilise le montage choisi, nous allons observer quelques caractéristiques du montage <strong>amplificateur non inverseur</strong>. On choisira les résistances du montage pour avoir un gain de 10. (Prendre une résistance variable pour la résistance réalisant la rétroaction).</p>
+<p>Avant d’utilise le montage choisi, nous allons observer quelques caractéristiques du montage <strong>amplificateur non inverseur</strong>. On choisira les résistances du montage pour avoir un gain de 10. (<strong>Prendre une résistance variable pour la résistance réalisant la rétroaction</strong>).</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
 <ol class="simple">
@@ -585,16 +636,27 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="modul_preliminaire.html" title="previous page"><span class="section-number">4. </span>(Travail) Etude préliminaire</a>
-    <a class='right-next' id="next-link" href="demod_preliminaire.html" title="next page"><span class="section-number">6. </span>(Travail) Etude préliminaire</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="modul_preliminaire.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>(Travail) Etude préliminaire</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="demod_preliminaire.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>(Travail) Etude préliminaire</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -610,8 +672,7 @@
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

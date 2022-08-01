@@ -46,10 +46,13 @@ Sans être exhaustif, citons :
 Les boites à décade ne peuvent être utilisées que comme un seul composant. __Vous ne pouvez utiliser la même boite pour créer deux composants.__
 ````
 
+### Les câbles BNC
+
 ### Créer un signal électrique.
 On distingue trois types de sources :
 * Les alimentations stabilisées. Elles permettent de créer une tension continue et délivrer une puissance assez importante. On les utilisera peu et le cas échéant, leur fonctionnement sera précisé.
-* Les _alimentations symétriques_. Elles sont constituées de _trois_ branchements correspondant à des potentiels : $-15V, 0V, 15V$ (on remarquera que le constructeur nous impose alors le choix du point de masse). On les utilise surtout pour alimenter les ALI (les 3 bornes sont alors à brancher).
+```{margin} On remarquera que le constructeur nous impose alors le choix du point de masse```
+* Les _alimentations symétriques_. Elles sont constituées de _trois_ branchements correspondant à des potentiels : $-15V, 0V, 15V$. On les utilise surtout pour alimenter les ALI (les 3 bornes sont alors à brancher).
 * Les __générateurs basse fréquence__. Ils permettent de générer des signaux de forment varier (possiblement continu mais aussi sinusoïdaux, créneaux ou plus complexe). Ils seront très utilisés et on va s'attarder sur leurs réglages.
 
 +++
@@ -59,66 +62,7 @@ On distingue trois types de sources :
 Avant de commencer à toucher aux boutons du GBF, il est __obligatoire__ de réfléchir aux caractéristiques du signal qu'on veut déliver...
 ```
 
-_Affichez les étapes de réglages grâce à la croix à droite._
-
-````{toggle}
-```{attention}
-Les réglages sont illustrés sur l'exemple du TG1000 utilisé en salle de TP. Mais vous pourrez être amenés à utiliser d'autres GBF en TP ou en concours. Il font donc bien dégager la méthode générale pour l'adapter à chaque GBF et ne pas trop s'accrocher aux dénominations des boutons qui peuvent changer.
-```
-
-```{figure} ./images/gbf_tg1000_face.jpg
----
-name: gbf_face
-align: center
----
-Face avant du GBF TG1000. Les numéros en vert font référence aux réglages présentés ci-dessous.
-```
-
-
-1. S'assurer que des réglages "parasites" ne vont pas perturber la mesure.
-
-```{important}
-Sur les TG1000, le principal réglage "parasite" est le réglage `load`. Sans rentrer dans les détails, il faut toujours vérifier qu'il est sur `HiZ`.
-```
-
-2. Choisir la forme du signal _(Réglage 2)_.
-3. Choisir la fréquence du signal le cas échéant _(Réglage 3)_.
-4. Choisir l'amplitude du signal le cas échéant _(Réglage 4)_.
-
-```{attention}
-Suivant les GBF, on ne règle pas forcément l'amplitude mais une grandeur associée. Sur les TG1000, on règle par défaut la __valeur crête-à-crête__ (notée Vpp).
-```
-
-```{margin}
-Si le GBF affiche `clipping`, c'est que vous demandez une valeur de tension trop grande (les TG1000 sont limités à 10V maximum).
-```
-
-5. Choisir la valeur moyenne du signal (OFFSET) _(Réglage 5)_.
-
-```{margin}
-Un signal qui n'a pas de valeur moyenne est un signal qui a une valeur moyenne nulle. Pensez à vérifier qu'elle est bien réglée à 0 !!
-```
-
-6. Choisir l'impédance de sortie du GBF le cas échéant _(Réglage 4 ou 5 - Option `src`)_.
-
-```{margin}
-On rappelle que sauf précision contraire, il est préférable de choisir la valeur la plus faible pour $R_S$.
-
-Tous les GBF ne permettant pas son réglage. Il faut par contre repérer sa valeur pour s'assurer qu'elle n'aura pas d'influence.
-```
-
-7. Vérifier que le signal n'est pas modifié par un autre réglage (modulation, fenêtrage...) non désiré ou, le cas échéant activer et réaliser le réglage supplémentaire qu'on veut appliquer (ces réglages seront expliqués dans les TPs où ils sont nécessaires). _(Réglage 6 - CONT permet une émission en continu, c'est le réglage le plus fréquent.)_
-
-```{margin}
-Même quand vous ne voulez pas appliquer un réglage particulier, pensez à vérifier qu'ils ne sont pas actifs. Toutes inscription suspectes sur l'affichage du GBF est une indication d'un réglage non désiré.
-```
-
-8. Brancher le reste du montage au GBF (généralement grâce à un câble BNC) _(Réglage 7)_
-9. Activer la génération du signal _(Réglage 8)_
-
-```{margin}
-Certains GBF ne permettent pas de désactiver la génération du signal.
-````
+La présentation du premier GBF utilisé et le protocole de réglage est présenté [ici](https://stanislas.edunao.com/mod/resource/view.php?id=15160). Attention, le protocole est __général__ mais les boutons sont spécifiques au GBF présenté.
 
 +++
 
@@ -159,6 +103,9 @@ Ces calibres sont parfois représentés pas un `~` (AC) ou un `=` (DC, le trait 
     3. Vaut-il mieux régler le multimètre sur DC ou AC pour mesurer le rapport des amplitudes de deux tensions sinusoidales ?
 ```
 
+
+#### Incertitudes et multimètre
+Une présentation des sources d'incertitude avec les multimètre est données [ici](https://stanislas.edunao.com/mod/page/view.php?id=13269).
 +++
 
 ### Suivre l'évolution d'un signal : la carte d'acquisition
@@ -242,7 +189,7 @@ _On ne réglera visuellement le signal que dans un second temps quand on a déj�
 +++
 
 #### Etapes de réglages.
-On présente les boutons pour le FI32052 utilisé en TP.
+La vidéo ci-après présente les boutons pour le FI32052 utilisé en TP et un poster regroupant la méthode de mesure est donné [ici](https://stanislas.edunao.com/mod/resource/view.php?id=15161).
 
 Observer la vidéo ci-dessous pour voir les étapes de réglages.
 

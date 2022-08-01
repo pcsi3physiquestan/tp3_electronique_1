@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>6. (Travail) Etude préliminaire &#8212; TP Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,33 +31,36 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/demod_preliminaire.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="7. (TP) Démodulation" href="demod_manip.html" />
     <link rel="prev" title="5. (TP) Création du signal" href="mod_manip.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -75,13 +78,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +94,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
@@ -112,7 +116,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
@@ -129,7 +133,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
@@ -146,7 +150,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Plus d'initiatives
  </span>
@@ -251,7 +255,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#detection-d-enveloppe">
@@ -291,7 +295,7 @@
 <li><p>la détection d’enveloppe</p></li>
 <li><p>la détection synchrone</p></li>
 </ul>
-<div class="section" id="travail-etude-preliminaire">
+<div class="tex2jax_ignore mathjax_ignore section" id="travail-etude-preliminaire">
 <h1><span class="section-number">6. </span>(Travail) Etude préliminaire<a class="headerlink" href="#travail-etude-preliminaire" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="detection-d-enveloppe">
 <h2><span class="section-number">6.1. </span>Détection d’enveloppe<a class="headerlink" href="#detection-d-enveloppe" title="Permalink to this headline">¶</a></h2>
@@ -378,11 +382,39 @@
 <div class="tip admonition">
 <p class="admonition-title">Exercice : Dimensionnement du filtre.</p>
 <ol class="simple">
-<li><p>Justifier rapidement que ce filtre est un passe-bas puis exprimer sa fonction de transfert. On montrera que <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{\sqrt{2}RC}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{\sqrt{2}}\)</span>.</p></li>
-<li><p>Observe-t-on une résonance ? La fréquence de coupure est ici <span class="math notranslate nohighlight">\(\omega_c = \omega_0\)</span> (on pourra s’entraîner à le démontrer).</p></li>
-<li><p>On veut que le gain à <span class="math notranslate nohighlight">\(f_p\)</span> soit de <span class="math notranslate nohighlight">\(10^{-2}\)</span>, en déduire le choix de la fréquence de coupure <span class="math notranslate nohighlight">\(f_c\)</span> en fonction de <span class="math notranslate nohighlight">\(f_p\)</span>.</p></li>
+<li><p>Justifier rapidement que ce filtre est un passe-bas puis exprimer sa fonction de transfert. On montrera que <span class="math notranslate nohighlight">\(\omega_0 = \frac{1}{RC}\)</span> et <span class="math notranslate nohighlight">\(Q = \frac{1}{2}\)</span>.</p></li>
+<li><p>Observe-t-on une résonance ? La fréquence de coupure est ici <span class="math notranslate nohighlight">\(\omega_c = \sqrt{\sqrt{2}-1} \omega_0\)</span> (on pourra s’entraîner à le démontrer).</p></li>
+<li><p>On veut que le gain à <span class="math notranslate nohighlight">\(f_p\)</span> soit de <span class="math notranslate nohighlight">\(10^{-2}\)</span>, en déduire le choix de la fréquence de coupure <span class="math notranslate nohighlight">\(f_c \approx 3 f_0\)</span>.</p></li>
 <li><p>Que vaut alors le gain pour la fréquence <span class="math notranslate nohighlight">\(f_m\)</span> sachant que <span class="math notranslate nohighlight">\(f_p = 100 f_m\)</span>. En déduire que ce filtre devrait remplir sa fonction en choisissant <span class="math notranslate nohighlight">\(f_c\)</span> comme décidé précédemment. Quelle sera alors l’allure du signal de sortie ? Quelle est la différence avec la détection d’enveloppe ?</p></li>
 </ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercice : Mesure et Préparation du tableur</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Le tableur utilisé dans les salles de TP est Excel mais on utiliser les fichier LibreOffice sous Excel sans problème.</p>
+</div>
+<p>Pour rendre compte et exploiter les données, nous n’allons pas utiliser Python mais un tableur. Cela permet d’avoir un tracé en temps réel si l’on préparer la feuille de calcul.</p>
+<p>Vous pouvez utiliser au choix Excel ou LibreOffice Calc. Vous allez devoir préparer à l’avance la feuille que vous utiliserez en TP (sur votre ordinateur ou ceux du laboratoire).</p>
+<p>Dans cette feuille, chaque colonne doit correspondre à une grandeur et chaque ligne (après la ligne titre) sera un point de mesure pour une fréquence choisie. <em>On n’estimera pas les incertitudes de mesure pour cette étude.</em></p>
+<ol class="simple">
+<li><p>On veut tracer le diagramme de Bode en phase et en gain du filtre. Choisir les fréquences du signal de sorte qu’elles soient réparties régulièrement sur 4 décades autour de la fréquence de coupure. On pourra s’aider d’<a class="reference external" href="https://stanislas.edunao.com/mod/resource/view.php?id=15159">un papier semi-log</a> pour faire le choix des fréquences (connexion nécessaire). On demande une vingtaine de mesures.</p></li>
+<li><p>Réfléchir à la méthode pour mesurer le gain et la phase du filtre. Quels sont les mesurandes directes qu’il va falloir faire (indice : il y en a 3 en plus de la fréquence)</p></li>
+<li><p>Sur une feuille Excel, titrer (avec unités) quatre colonnes correspondant à la fréquence et aux trois mesurandes directs. Ne remplir que celle des fréquences.</p></li>
+<li><p>Utiliser les formules pour obtenir le gain en décibel et la phase du filtre dans les colonnes suivantes. (Une formule se crée en commence par =). <em>Vous obtiendrez des messages d’erreur car les cellules des mesurandes directs sont pour l’instant vide. Ce n’est pas grave.</em></p></li>
+<li><p>Sélectionner les valeurs des fréquences et celles du gain correspondant (Maintenir CTRL pour sélectionner deux colonnes non adjacentes) et créer un graphique (<strong>XY</strong>) à partir de ces grandeurs. <em>Vous pouvez au passage titrer le graphique et les axes.</em></p></li>
+<li><p>Procéder de même pour tracer la phase en fonction de la fréquence</p></li>
+</ol>
+<ul class="simple">
+<li><p>Pour l’instant, le graphique est vide car les case sont vides ou erronées mais si vous remplisser une case, vous voyer que le point de mesure s’affiche en temps réel sur le graphique. <strong>Cette préparation est très utile car:</strong></p>
+<ul>
+<li><p>Vous gagnez du temps en TP</p></li>
+<li><p>L’affichage du point sur la courbe vous montre tout de suite si la mesure est cohérente avec les autres ou non.</p></li>
+</ul>
+</li>
+<li><p>Ce n’est pour l’instant pas un diagramme semilog. On verra en TP comment passer les abscisses en échelle logarithmique.</p></li>
+</ul>
+<p><strong>Pensez à sauvegarder vos feuille et à la stocker en ligne/ vous l’envoyer pour pouvoir l’utiliser en TP.</strong></p>
 </div>
 </div>
 </div>
@@ -411,16 +443,27 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="mod_manip.html" title="previous page"><span class="section-number">5. </span>(TP) Création du signal</a>
-    <a class='right-next' id="next-link" href="demod_manip.html" title="next page"><span class="section-number">7. </span>(TP) Démodulation</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="mod_manip.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>(TP) Création du signal</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="demod_manip.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>(TP) Démodulation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -436,8 +479,7 @@
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

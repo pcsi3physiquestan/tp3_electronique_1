@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>7. (TP) Démodulation &#8212; TP Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet" />
-  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,33 +31,36 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/demod_manip.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="8. Complément : Détermination de la tension seuil" href="u_seuil_exp.html" />
     <link rel="prev" title="6. (Travail) Etude préliminaire" href="demod_preliminaire.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -75,13 +78,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -90,7 +94,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
@@ -112,7 +116,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
@@ -129,7 +133,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
@@ -146,7 +150,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Plus d'initiatives
  </span>
@@ -251,7 +255,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#detection-d-enveloppe">
@@ -311,7 +315,7 @@
               <div>
                 
   <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
-<div class="section" id="tp-demodulation">
+<div class="tex2jax_ignore mathjax_ignore section" id="tp-demodulation">
 <h1><span class="section-number">7. </span>(TP) Démodulation<a class="headerlink" href="#tp-demodulation" title="Permalink to this headline">¶</a></h1>
 <p>Nous allons maintenant réaliser la démodulation d’un signal modulé en amplitude, c’est-à-dire l’obtention du signal modulé (avec une valeur moyenne supplémentaire). On veut donc passer de :</p>
 <div class="math notranslate nohighlight">
@@ -391,7 +395,7 @@ s(t) = s_m \sin \omega_m t + s_0
 <div class="section" id="etude-de-la-detection-d-enveloppe-30-minutes">
 <h3><span class="section-number">7.1.2. </span>Etude de la détection d’enveloppe. (30 minutes)<a class="headerlink" href="#etude-de-la-detection-d-enveloppe-30-minutes" title="Permalink to this headline">¶</a></h3>
 <div class="tip admonition">
-<p class="admonition-title">Détection d’enveloppe</p>
+<p class="admonition-title">Détection d’enveloppe (oscilloscope)</p>
 <ol class="simple">
 <li><p>Régler le GBF pour qu’il délivre le signal modulé en amplitude et choisir des valeurs de R et C réalisant la condition établie dans l’étude préliminaire.</p></li>
 <li><p>Observer le signal de sortie et le signal modulé en amplitude. Ajuster les valeurs de R et C pour bien observer uniquement l’enveloppe.</p></li>
@@ -410,131 +414,17 @@ s(t) = s_m \sin \omega_m t + s_0
 <div class="tip admonition">
 <p class="admonition-title">Etude du filtre</p>
 <ol class="simple">
+<li><p>Réaliser les branchement nécessaire aux mesures du gain et de la phase (on fera les mesure à l’oscilloscope).</p></li>
 <li><p>Vérifier rapidement que le filtre est un filtre passe-bas.</p></li>
-<li><p>On veut tracer le diagramme de Bode en phase et en gain du filtre. Choisir les fréquences du signal de sorte qu’elles soient réparties régulièrement sur 4 décades autour de la fréquence de coupure. On pourra s’aider d’un papier semi-log pour faire le choix des fréquences. On demande une vingtaine de mesures.</p></li>
-<li><p>Réfléchir à la méthode pour mesurer le gain et la phase du filtre. Réaliser les branchement nécessaire (on fera les mesure à l’oscilloscope) et mesurer le gain et la phase du filtre pour les fréquences choisies. <strong>On n’oubliera pas les incertitudes de mesures pour les grandeurs choisies.</strong></p></li>
+<li><p>Mesurer le gain et la phase du filtre pour les fréquences choisies.</p>
+<ul class="simple">
+<li><p>Utiliser la feuille Excel/Libre Office Calc créée dans l’étude préliminaire pour tracer le diagramme de Bode en gain et en phase. <em>On ne cherchera pas ici à tracer les incertitudes de mesure.</em></p></li>
+</ul>
+</li>
 </ol>
 <div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>La méthode de mesure du déphasage ainsi obtenue est à retenir.</p>
-</div>
-</div>
-<p>La cellule ci-dessous va vous permettre de calculer les incertitudes sur le gain et la phase avant de tracer le diagramme de Bode.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Importation des bibliothèques utiles&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">rd</span>
-
-<span class="sd">&quot;&quot;&quot;Entrer les mesures des mesurandes directes ainsi que leurs incertitudes. </span>
-<span class="sd">S&#39;il y a plusieurs sources, entrer un vecteur par source et les sommer.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-
-<span class="n">freqs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>  <span class="c1"># Fréquences. On pourra considérer qu&#39;il n&#39;y a pas d&#39;incertitude sur les fréquences.</span>
-<span class="n">k</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">freqs</span><span class="p">)</span>  <span class="c1"># Nombre de mesures réalisées.</span>
-
-
-<span class="sd">&quot;&quot;&quot;Entrez les valeurs des mesures et incertitudes&quot;&quot;&quot;</span>
-<span class="n">ue_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="n">ue_u1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="n">ue_u2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-
-<span class="n">us_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="n">us_u1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="n">us_u2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-
-<span class="n">deltat_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="n">deltat_u1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="n">deltat_u2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-
-<span class="sd">&quot;&quot;&quot;Grandeurs simulées&quot;&quot;&quot;</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">1000000</span>
-<span class="n">ue_sim</span> <span class="o">=</span> <span class="n">ue_m</span> <span class="o">+</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">ue_u1</span><span class="p">,</span> <span class="n">ue_u1</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
-<span class="n">us_sim</span> <span class="o">=</span> <span class="n">us_m</span> <span class="o">+</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">us_u1</span><span class="p">,</span> <span class="n">us_u1</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
-<span class="n">deltat_sim</span> <span class="o">=</span> <span class="n">deltat_m</span> <span class="o">+</span> <span class="n">rd</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">deltat_u1</span><span class="p">,</span> <span class="n">deltat_u1</span><span class="p">,</span> <span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">k</span><span class="p">))</span>
-
-<span class="sd">&quot;&quot;&quot; Il faut aussi créer des vecteurs pour les incertitudes.</span>
-<span class="sd">A vous de créer les simulation des grandeurs utiles à partir de chaque mesurande directe ue, us, deltat.</span>
-<span class="sd">Vous devez avoir des vecteurs de taille k.</span>
-<span class="sd">Le log décimal est la fonction np.log10()</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">phi_sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="n">g_sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-<span class="n">gdb_sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
-
-
-
-
-
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">- Prendre la moyenne des gains en décibel et des phases pour obtenir les grandeurs mesurées.</span>
-<span class="sd">On rappelle la formule pour des moyennes uniquement par colonne :</span>
-<span class="sd">np.mean(gb_sim, axis=0)</span>
-
-<span class="sd">- Prendre l&#39;écart-type des gains en décibel et des phases pour obtenir les incertitudes de mesures.</span>
-<span class="sd">On rappelle la formule pour des écart-type uniquement par colonne :</span>
-<span class="sd">np.std(gb_sim, ddof=1, axis=0)</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">phi_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">phi_sim</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">gdb_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">gdb_sim</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">phi_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">phi_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">gdb_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">gdb_sim</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-
-
-
-
-
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Tracer le diagramme de Bode en gain et en phase du filtre.</span>
-<span class="sd">Il n&#39;est pas utile de calculer log(f). Pour passer en échelle des abscisses logarithmiques,</span>
-<span class="sd">on utilisera la fonction :</span>
-<span class="sd">ax.set_xscale(&quot;log&quot;)</span>
-<span class="sd">(si la zone de tracé s&#39;appelle ax)</span>
-
-<span class="sd">- Pensez à légender vos deux graphiques.</span>
-<span class="sd">- Utiliser f.savefig(&quot;nom_dufichier.png&quot;) pour sauvegarder la figure f et l&#39;intégrer dans votre compte-rendu.</span>
-<span class="sd">&quot;&quot;&quot;</span>
-<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="s1">&#39;col&#39;</span><span class="p">)</span>  <span class="c1"># Forcer la même abscisse</span>
-<span class="n">f</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Titre&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
-<span class="c1">#ax[0].errorbar(freqs, gdb_m, yerr=gdb_u, label=&quot;Légende&quot;, linestyle=&quot;&quot;)</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Légende&quot;</span><span class="p">)</span>
-<span class="c1">#ax[1].errorbar(freqs, phi_m, yerr=phi_u, label=&quot;Légende&quot;, linestyle=&quot;&quot;)</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
-
-<span class="n">f</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>  <span class="c1"># Amélioration de l&#39;apparence</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3372: RuntimeWarning: Mean of empty slice.
-  return _methods._mean(a, axis=axis, dtype=dtype,
-/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:170: RuntimeWarning: invalid value encountered in double_scalars
-  ret = ret.dtype.type(ret / rcount)
-/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:233: RuntimeWarning: Degrees of freedom &lt;= 0 for slice
-  ret = _var(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
-/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:194: RuntimeWarning: invalid value encountered in true_divide
-  arrmean = um.true_divide(
-/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/numpy/core/_methods.py:226: RuntimeWarning: invalid value encountered in double_scalars
-  ret = ret.dtype.type(ret / rcount)
-No handles with labels found to put in legend.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No handles with labels found to put in legend.
-</pre></div>
-</div>
-<img alt="../_images/demod_manip_1_2.png" src="../_images/demod_manip_1_2.png" />
 </div>
 </div>
 <div class="tip admonition">
@@ -553,7 +443,7 @@ No handles with labels found to put in legend.
 <div class="tip admonition">
 <p class="admonition-title">Réalisation du montage</p>
 <ol class="simple">
-<li><p>Théoriquement, le fait que ce soit un créneau pose-t-il des problèmes ? Peut-on quand même observer un signal proche du signal modulant en sortie ?</p></li>
+<li><p>*Théoriquement, le fait que ce soit un créneau pose-t-il des problèmes ? Peut-on quand même observer un signal proche du signal modulant en sortie ?</p></li>
 <li><p>Proposer une succession de montage permettant de réaliser une détection synchrone à partir de deux signaux, l’un modulé en amplitude, l’autre de fréquence <span class="math notranslate nohighlight">\(f_p\)</span> (sortie <code class="docutils literal notranslate"><span class="pre">Sync</span></code>). Le filtre ayant été testé précédemment, il n’est pas nécessaire d’étudier l’autre étage (déjà étudié dans un TP précédent).</p></li>
 <li><p>Réaliser alors le montage complet et vérifier qu’on réalise la démodulation à l’oscilloscope. On pourra ajuster les valeurs de C du filtre si nécessaire.</p></li>
 <li><p>Réaliser l’acquisition sur FOXY et vérifier que le spectre du signal ne contient bien qu’une seule fréquence.</p></li>
@@ -595,16 +485,27 @@ No handles with labels found to put in legend.
               </div>
               
         
-        <div class='prev-next-bottom'>
-            
-    <a class='left-prev' id="prev-link" href="demod_preliminaire.html" title="previous page"><span class="section-number">6. </span>(Travail) Etude préliminaire</a>
-    <a class='right-next' id="next-link" href="u_seuil_exp.html" title="next page"><span class="section-number">8. </span>Complément : Détermination de la tension seuil</a>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="demod_preliminaire.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>(Travail) Etude préliminaire</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="u_seuil_exp.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Complément : Détermination de la tension seuil</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -620,8 +521,7 @@ No handles with labels found to put in legend.
       </div>
     </div>
   
-  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
