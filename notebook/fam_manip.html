@@ -381,7 +381,7 @@
 </div>
 <div class="section" id="trace-de-la-courbe">
 <h3><span class="section-number">3.1.2. </span>Tracé de la courbe<a class="headerlink" href="#trace-de-la-courbe" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
+<div class="cell tag_remove-output tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; On importe pour vous les bibliothèques scientifiques utiles.&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -414,16 +414,13 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/fam_manip_3_0.png" src="../_images/fam_manip_3_0.png" />
-</div>
 </div>
 </div>
 <div class="section" id="estimation-de-la-tension-seuil">
 <h3><span class="section-number">3.1.3. </span>Estimation de la tension seuil<a class="headerlink" href="#estimation-de-la-tension-seuil" title="Permalink to this headline">¶</a></h3>
 <p>On va estimer la tension seuil par une méthode d’optimisation basée sur la minimisation des écarts entre les points de mesure et la courbe (droites par morceaux ici) pour une valeur de <span class="math notranslate nohighlight">\(U_d\)</span>. Vous pouvez obtenir <a class="reference internal" href="u_seuil_exp.html#u-seuil"><span class="std std-ref">des explications sur la méthode d’optimisation</span></a> mais la méthode n’est pas à connaître.</p>
 <p>Vous devez estimer un intervalle dans lequel la tension seuil va se trouver et entrer ces valeurs pour <code class="docutils literal notranslate"><span class="pre">ud_min,</span> <span class="pre">ud_max</span></code>. La fonction <code class="docutils literal notranslate"><span class="pre">eval_ud</span></code> cherchera la tension dans cet intervalle. Les seules lignes à modifier sont précisées dans le code.</p>
-<div class="cell docutils container">
+<div class="cell tag_remove-output tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER. Le programme cherchera la valeur seuil dans l&#39;intervale.</span>
 
@@ -471,9 +468,6 @@
 <span class="n">f</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;caracteristique_diode.png&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/fam_manip_5_0.png" src="../_images/fam_manip_5_0.png" />
 </div>
 </div>
 <div class="tip admonition">
@@ -678,7 +672,7 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
 <li><p>La tension de commande est, dans une modélisation de Thévenin du GBF, la tension de la source idéale de tension. En déduire une méthode pour calculer <span class="math notranslate nohighlight">\(R_S\)</span> grâce aux mesures précédentes. Utiliser la cellule ci-dessous pour estimer <span class="math notranslate nohighlight">\(R_S\)</span> et son incertitude-type grâce à une méthode de Monte-Carlo.</p></li>
 </ol>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_remove-output tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;On importe pour vous la bibliothèque numpy.random&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">rd</span>
@@ -706,11 +700,6 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
 
 
 <span class="sd">&quot;&quot;&quot;Calculer l&#39;écart normalisé avec la valeur constructeur (qu&#39;on supposera connu à $1 Ohm$)&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;Calculer l&#39;écart normalisé avec la valeur constructeur (qu&#39;on supposera connu à $1 Ohm$)&quot;
 </pre></div>
 </div>
 </div>

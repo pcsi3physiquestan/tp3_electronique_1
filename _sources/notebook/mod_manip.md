@@ -61,6 +61,7 @@ Pour tester le montage, on prendra comme signaux d'entrée les signaux porteur e
 
 
 ```{code-cell}
+:tags: [remove-output,hide-input]
 """Importation les bibliothèques scientifiques nécessaires :  numpy, matplotlib.pyplot, numpy.random"""
 import numpy as np
 import matplotlib.pyplot as plt

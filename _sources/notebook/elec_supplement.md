@@ -51,6 +51,7 @@ Dans les deux cas, on utilisera des charges et décharges successives grâce à 
 ````
 
 ```{code-cell}
+:tags: [remove-output,remove-input]
 """Il y aura sans doute beaucoup à coder. Servez-vous de ce que vous avez fait précédemment."""
 
 
@@ -79,6 +80,7 @@ On veut :
 ````
 
 ```{code-cell}
+:tags: [remove-output,remove-input]
 """Utilisez cette cellule pour faire vos calculs."""
 
 

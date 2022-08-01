@@ -44,6 +44,7 @@ Réaliser le montage proposé dans votre protocole et tracer la caractéristique
 ### Tracé de la courbe
 
 ```{code-cell} ipython3
+:tags: [remove-output,hide-input]
 """ On importe pour vous les bibliothèques scientifiques utiles."""
 import numpy as np
 import matplotlib.pyplot as plt
@@ -80,6 +81,7 @@ On va estimer la tension seuil par une méthode d'optimisation basée sur la min
 Vous devez estimer un intervalle dans lequel la tension seuil va se trouver et entrer ces valeurs pour `ud_min, ud_max`. La fonction `eval_ud` cherchera la tension dans cet intervalle. Les seules lignes à modifier sont précisées dans le code.
 
 ```{code-cell} ipython3
+:tags: [remove-output,hide-input]
 ud_min, ud_max = -1, 0  # LIGNE A MODIFIER. Le programme cherchera la valeur seuil dans l'intervale.
 
 def eval_ud(u, i, ud_min, ud_max):
@@ -279,6 +281,7 @@ Quelle solution pour la rendre négligeable ?
 ````
 
 ```{code-cell} ipython3
+:tags: [remove-output,hide-input]
 """On importe pour vous la bibliothèque numpy.random"""
 import numpy.random as rd
 
