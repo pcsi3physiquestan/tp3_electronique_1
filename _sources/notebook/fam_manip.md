@@ -152,6 +152,7 @@ _Pour l'instant, décocher l'option `Acquisition continue` et désactiver la Syn
 On va voir l'influence du nombre de points de sur le signal obtenu ou plus précisément de la __fréquence d'échantillonnage__ c'est-à-dire le nombre de points de mesure réalisés par seconde.
 
 ````{admonition} Influence de la fréquence d'échantillonnage
+:class: tip
 1. Pensez à régler le GBF pour qu'il délivre la tension voulue (_ne pas oublier d'activer le GBF avec le bouton `ON`_)
 2. Comment obtenir la fréquence d'échantillonnage à partir de la durée d'acquisition et du nombre de points de mesure ? En déduire le nombre de points nécessaire pour obtenir une fréquence d'échantillonnage de 100kHz puis de 10kHz pour une durée d'acquisition de 10ms.
 3. Régler le nombre de points adéquats puis observer le signal acquis pour les deux fréquence d'échantillonnage précédentes. Mesurer alors (rapidement) la période du signal et la comparer à la valeur attendue.
@@ -239,6 +240,7 @@ On pensera bien à réfléchir aux paramètres d'acquisition __avant de lancer l
 
 #### Exploitation
 ````{admonition} Exploitation
+:class: tip
 Comparer les caractéristiques dynamiques à la caractéristique statique et préciser dans quels cas on pourra analyser le comportement de la diode grâce à sa caractéristique statique, même quand le régime est variable.
 
 ````

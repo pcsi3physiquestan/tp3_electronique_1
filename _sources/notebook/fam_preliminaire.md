@@ -62,7 +62,7 @@ On distingue trois types de sources :
 Avant de commencer à toucher aux boutons du GBF, il est __obligatoire__ de réfléchir aux caractéristiques du signal qu'on veut déliver...
 ```
 
-La présentation du premier GBF utilisé et le protocole de réglage est présenté [ici](https://stanislas.edunao.com/mod/resource/view.php?id=15160). Attention, le protocole est __général__ mais les boutons sont spécifiques au GBF présenté.
+La présentation du premier GBF utilisé et le protocole de réglage est présenté [ici](https://github.com/pcsi3physiquestan/donnees_exp/blob/main/poster_gbf.pdf?raw=true). Attention, le protocole est __général__ mais les boutons sont spécifiques au GBF présenté.
 
 +++
 
@@ -93,6 +93,7 @@ On rappelle :
 Ces calibres sont parfois représentés pas un `~` (AC) ou un `=` (DC, le trait inférieur peut-être en pointillés).
 
 ```{admonition} Exercice: quel calibre ?
+:class: tip
 1. On veut étudier le point de fonctionnement de la diode en régime indépendant du temps.
     1. Pour une tension continue de valeur $U_0$. Que vaut sa valeur moyenne ?
     2. Pour une tension continue de valeur $U_0$. Que vaut sa valeur efficace ?
@@ -151,6 +152,7 @@ Même si vous compter plus tard mettre en abscisses une autre grandeur (pour avo
 #### Choix des paramètres
 
 ```{admonition} Exercice : Paramètres d'acquisition
+:class: tip
 
 Par la suite, on voudra tester le comportement de la diode pour différents types de signaux :
 1. Un signal sinusoïdale de fréquence 1kHz, d’amplitude 10V et de valeur moyenne nulle
@@ -158,7 +160,7 @@ Par la suite, on voudra tester le comportement de la diode pour différents type
 3. Un signal triangulaire de fréquence 3kHz, d’amplitude 3V, de valeur basse -2V
 4. Un signal créneau de fréquence 500Hz, d’amplitude 8V et de valeur moyenne nulle
 5. Un signal créneau de fréquence 30kHz, de valeur basse 0V et de valeur haute 6V.
-6. Un signal modulé en amplitude $s = k v \times e$ avec e$,$ un signal sinusoïdal de fréquence 10kHz modulé et d'amplitude 4V et $v$ un signal sinusoïdal de fréquence 500Hz et d'amplitude 4V. On donne $k = 0.1$.
+6. Un signal modulé en amplitude $s = k v \times e$ avec e$,$ un signal sinusoïdal de fréquence 10kHz et d'amplitude 4V et $v$ un signal sinusoïdal de fréquence 500Hz et d'amplitude 4V. On donne $k = 0.1$.
 
 On veut observer le signal délivré par le GBF dans chaque cas, on a brancher le GBF en parallèle de la voie 1 de la carte FOXY. Par chaque signal, préciser :
 * le calibre de la voie 1 choisi
@@ -189,7 +191,7 @@ _On ne réglera visuellement le signal que dans un second temps quand on a déj�
 +++
 
 #### Etapes de réglages.
-La vidéo ci-après présente les boutons pour le FI32052 utilisé en TP et un poster regroupant la méthode de mesure est donné [ici](https://stanislas.edunao.com/mod/resource/view.php?id=15161).
+La vidéo ci-après présente les boutons pour le FI32052 utilisé en TP et un poster regroupant la méthode de mesure est donné [ici](https://github.com/pcsi3physiquestan/donnees_exp/blob/main/poster_oscillo.pdf?raw=true).
 
 Observer la vidéo ci-dessous pour voir les étapes de réglages.
 

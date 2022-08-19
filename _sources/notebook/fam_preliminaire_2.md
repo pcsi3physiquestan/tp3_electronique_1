@@ -67,6 +67,7 @@ On distingue deux modélisations :
     * __Un état passant__ pour lequel le courant peut passer mais ne _peut qu'être positif_. La tension est alors quasi-constante et vaut la tension seuil $U_D$ : on assimile alors la diode à une __source idéale de tension de f.e.m. $U_D$__.
 
 ````{admonition} Exercice : Tension seuil
+:class: tip
 Utiliser l'[extrait de la fiche technique](diode_extrait_1) de la diode 1N4148 ci-après pour obtenir un ordre de grandeur de la tension $U_D$.
 
 ```{figure} ./images/diode_sheet_2.jpg
@@ -83,6 +84,7 @@ Extrait n°1 de la fiche technique d'une diode 1N4148
 La [caractéristique](diode_carac) montre qu'imposer une tension supérieure à $U_D$ aux bornes de la diodes va dramatiquement augmenter l'intensité qui y circule et _risquer de détériorer la diode._ Pour protéger la diode, on utilise __une résistance qu'on place en série avec la diode__ et qui va servir à limiter le courant qui circule dans la diode.
 
 ````{admonition} Exercice : Protection d'une diode
+:class: tip
 1. On considère une diode de tension seuil $U_D$ protégée par une résistance $R_P$, l'ensemble étant soumis à une tension $E$. Estimer l'intensité $I$ qui circule dans la branche (résistance + diode).
 2. Utiliser l'extrait suivant pour obtenir l'intensité maximale qu'on peut faire passer dans la diode en régime indépendant du temps. Choisir, avec une marge, la résistance $R_P$ de protection sachant que les tensions ne dépasseront pas 10V en TP.
 
@@ -120,7 +122,7 @@ Montage à réaliser
 ```
 
 
-```{admonition} Exercice.
+```{admonition} Préparation
 :class: tip
 1. Rappeler la valeur de $R_p$
 2. Pour étudier la caractéristiques statiques, quelle forme choisir pour la tension $V(t)$.
@@ -160,12 +162,13 @@ Le schéma que vous obtenez est le schéma qui doit apparaître dans la présent
 ```
 
 ### Rédaction du protocole
-```{admonition} Exercice.
+```{admonition} Mise en place du protocole
 :class: tip
-A vous de rédiger le protocole. Pour vous aider pour cette première fois, un squelette est donné dans la cellule suivante (cliquez sur la croix).
+A vous de rédiger le protocole. Pour vous aider pour cette première fois, un squelette est donné dans la ci-après.
 ```
 
-```{dropdown} Squelette de protocole
+#### Squelette de protocole
+
 __But :__ ............
 
 __Principe théorique :__ _...S'aider du raisonnement sur le point de fonctionnement..._
@@ -175,7 +178,6 @@ __Mode opératoire :__
 2. _...Préciser les valeurs des composants et le type de tension qu'on va envoyer..._
 3. _...Préciser les mesures directes réalisées et ce que vous allez en faire..._
 
-```
 
 
 ## Caractéristique dynamique de la diode.
@@ -196,10 +198,10 @@ On va utiliser la carte d'acquisition FOXY déjà utilisée au premier TP. Chaqu
 :class: tip
 1. Sachant qu'on ne peut mesurer que des tensions, proposer une méthode permettant d'obtenir l'intensité (ou presque) circulant dans le circuit. Proposer un schéma de montage à intégrer dans le protocole expérimental.
 
-2. Rédiger alors le protocole expérimental (on ne détaillera pas les types de signaux à envoyer mais simplement leur caractère variable.
+2. Rédiger alors le protocole expérimental (on ne détaillera pas les types de signaux à envoyer mais simplement leur caractère variable).
 ```
 
-### Problème de masse
+### Problème de Terre
 On voudrait faire la même étude avec un oscilloscope. Le but de cette étude préliminaire est de comprendre pourquoi ce n'est pas possible. Un oscilloscope (ceux des TPs) possède deux voies d'acquisition (Voie 1 et Voie 2). Donc la représentation est donnée [ci-dessous](oscillo) :
 
 ```{figure} ./images/oscillo.png
@@ -217,7 +219,7 @@ Schématisation des branchements de l'oscilloscope.
 :align: center
 ```
 
-```{dropdown}
+```{dropdown} Important
 C'est une caractéristique générale des oscilloscopes. Les deux voies ont une borne commune : la Terre !
 ```
 
