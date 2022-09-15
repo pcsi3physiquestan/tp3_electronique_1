@@ -276,6 +276,18 @@
     <a class="reference internal nav-link" href="#les-cables-bnc">
      1.2.2. Les câbles BNC
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#presentation-et-branchement">
+       1.2.2.1. Présentation et branchement
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bnc-et-terre">
+       1.2.2.2. BNC et Terre
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creer-un-signal-electrique">
@@ -386,6 +398,45 @@
 </div>
 <div class="section" id="les-cables-bnc">
 <h3><span class="section-number">1.2.2. </span>Les câbles BNC<a class="headerlink" href="#les-cables-bnc" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="presentation-et-branchement">
+<h4><span class="section-number">1.2.2.1. </span>Présentation et branchement<a class="headerlink" href="#presentation-et-branchement" title="Permalink to this headline">¶</a></h4>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>C’est le même principe sur les écouteurs et casque (prise Jack): un seul cable contenant 2 ou 3 fils.</p>
+</div>
+<p>Les câbles BNC sont des câbles particuliers car contrairement aux câbles simples, assimilables à des fils de connection, les câbles BNC contiennent <strong>2 fils de connection</strong>: un fil au milieu du câble (l’âme) et un tressage autour (la gaine), les deux fils étant isolés l’un de l’autre par un isolant plastique. Ces fils ont ne nombreux avantages en terme de proection du bruit. Leur utilisation est un peu particulière.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Il existe un autre type de BNC-simple où le câble se sépare en deux connections rouge et noire.</p>
+</div>
+<p>On distingue deux cas:</p>
+<ul class="simple">
+<li><p>Les câbles dits BNC-BNC où les deux connection sont des entrées/sorties BNC (cas du haut). Elles servent principalement pour nous à relier directement le GBF et l’oscilloscope. <strong>Comme sur la photo, un seul câble suffit brancher les DEUX bornes du GBF aux DEUX bornes de l’oscilloscope.</strong></p></li>
+<li><p>Les câbles BNC-simples qui permettent de brancher un GBF/Oscilloscope sur un instruments ne possédant pas de voie BNC (<em>Résistance, condensateur, bobine, multimètre…</em>). Comme sur la figure du bas, le BNC est séparé en deux connectinos simples correspondant aux deux fils (et donc aux deux bornes du GBF/Oscilloscope).</p>
+<ul>
+<li><p>Sur le fil présenté, l’embout sortant métallique est relié à l’âme (flèche rouge) et l’orifice dans l’excroissance (flèche verte) est reliée à la gaine. Il faut alors brancher un fil noir sur la gaine et on obtient deux connection à brancher dans le circuit.</p></li>
+</ul>
+</li>
+</ul>
+<div class="figure align-center" id="branch-bnc">
+<img alt="../_images/branchement_bnc.png" src="../_images/branchement_bnc.png" />
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Types de branchement des BNC</span><a class="headerlink" href="#branch-bnc" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="bnc-et-terre">
+<h4><span class="section-number">1.2.2.2. </span>BNC et Terre<a class="headerlink" href="#bnc-et-terre" title="Permalink to this headline">¶</a></h4>
+<p><strong>La majorité des GBF et oscilloscopes possèdent une de leur borne reliée à la Terre.</strong></p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Ou la connectique noire pour les câbles séparés en rouge et noir.</p>
+</div>
+<p>Lorsqu’on branche un BNC-simple, il est important de savoir où elle se trouve car on va imposer un point de Terre dans le circuit. <strong>La borne de Terre est toujours reliée à la gaine du BNC (branché à un GBF ou un oscilloscope) soit en sortie d’un BNC-simple l’excroissance du câble.</strong></p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Unicité de la Terre
+La borne de Terre est une borne physique dont le potentiel est imposé. Il ne peut donc y en avoir qu’une seule dans un circuit. <strong>CELA SIGNIFIE que toutes les bornes de Terre des GBF et oscilloscope doivent être reliés <em>au même point de potentiel dans un circuit</em>.</strong> Cela peut entrainer des contraintes dans la réalisation d’un circuit.</p>
+</div>
+</div>
 </div>
 <div class="section" id="creer-un-signal-electrique">
 <h3><span class="section-number">1.2.3. </span>Créer un signal électrique.<a class="headerlink" href="#creer-un-signal-electrique" title="Permalink to this headline">¶</a></h3>

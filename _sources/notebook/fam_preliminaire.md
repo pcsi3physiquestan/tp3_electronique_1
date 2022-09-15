@@ -47,6 +47,37 @@ Les boites à décade ne peuvent être utilisées que comme un seul composant. _
 ````
 
 ### Les câbles BNC
+#### Présentation et branchement
+````{margin}
+C'est le même principe sur les écouteurs et casque (prise Jack): un seul cable contenant 2 ou 3 fils.
+````
+Les câbles BNC sont des câbles particuliers car contrairement aux câbles simples, assimilables à des fils de connection, les câbles BNC contiennent __2 fils de connection__: un fil au milieu du câble (l'âme) et un tressage autour (la gaine), les deux fils étant isolés l'un de l'autre par un isolant plastique. Ces fils ont ne nombreux avantages en terme de proection du bruit. Leur utilisation est un peu particulière.
+
+````{margin}
+Il existe un autre type de BNC-simple où le câble se sépare en deux connections rouge et noire.
+````
+On distingue deux cas:
+* Les câbles dits BNC-BNC où les deux connection sont des entrées/sorties BNC (cas du haut). Elles servent principalement pour nous à relier directement le GBF et l'oscilloscope. __Comme sur la photo, un seul câble suffit brancher les DEUX bornes du GBF aux DEUX bornes de l'oscilloscope.__
+* Les câbles BNC-simples qui permettent de brancher un GBF/Oscilloscope sur un instruments ne possédant pas de voie BNC (_Résistance, condensateur, bobine, multimètre..._). Comme sur la figure du bas, le BNC est séparé en deux connectinos simples correspondant aux deux fils (et donc aux deux bornes du GBF/Oscilloscope).
+    * Sur le fil présenté, l'embout sortant métallique est relié à l'âme (flèche rouge) et l'orifice dans l'excroissance (flèche verte) est reliée à la gaine. Il faut alors brancher un fil noir sur la gaine et on obtient deux connection à brancher dans le circuit.
+
+```{figure} ./images/branchement_bnc.png
+:name: branch_bnc
+:align: center
+Types de branchement des BNC
+```
+
+#### BNC et Terre
+__La majorité des GBF et oscilloscopes possèdent une de leur borne reliée à la Terre.__
+
+````{margin}
+Ou la connectique noire pour les câbles séparés en rouge et noir.
+````
+Lorsqu'on branche un BNC-simple, il est important de savoir où elle se trouve car on va imposer un point de Terre dans le circuit. __La borne de Terre est toujours reliée à la gaine du BNC (branché à un GBF ou un oscilloscope) soit en sortie d'un BNC-simple l'excroissance du câble.__
+
+```{attention} Unicité de la Terre
+La borne de Terre est une borne physique dont le potentiel est imposé. Il ne peut donc y en avoir qu'une seule dans un circuit. __CELA SIGNIFIE que toutes les bornes de Terre des GBF et oscilloscope doivent être reliés _au même point de potentiel dans un circuit_.__ Cela peut entrainer des contraintes dans la réalisation d'un circuit.
+```
 
 ### Créer un signal électrique.
 On distingue trois types de sources :
