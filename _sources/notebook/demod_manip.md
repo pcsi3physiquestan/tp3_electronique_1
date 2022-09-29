@@ -125,7 +125,7 @@ Vous devez analyser le diagramme de Bode.
 ### Montage de détection synchrone. (30 minutes)
 En pratique, on ne va pas prendre un signal de fréquence $f_p$ quelconque depuis un deuxième GBF car il faut qu'il soit synchronisé au signal porteur.
 
-Pour ne pas alourdir le TP, on ne construit pas le système (boucle à vérouillage de phase) qui le permet mais __on va utiliser la deuxième sortie du GBF utilisé pour la modulation d'amplitude.__ Il va falloir, avant tout, forcer la seconde voie a être synchrone avec la première au moyen des menus du GBF.
+Pour ne pas alourdir le TP, on ne construit pas le système (boucle à vérouillage de phase) qui le permet mais __on va utiliser la deuxième sortie du GBF utilisé pour la modulation d'amplitude.__
 
 ````{admonition} Réalisation du montage
 :class: tip

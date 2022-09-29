@@ -574,14 +574,17 @@
 <li><p>Activer la modulation d’amplitude avec le bouton <code class="docutils literal notranslate"><span class="pre">Mod</span></code> (<em>il doit s’éclairer - un deuxième appui permet de désactiver la modulation</em>).</p></li>
 <li><p>Les boutons sous l’écran permettent de régler le signal modulant:</p>
 <ul class="simple">
-<li><p>‘’ permet de régler la fréquence du signal modulant (<em>pavé numérique + unité sous l’écran ou molette</em>).</p></li>
-<li><p>‘’ permet de régler <em>directement</em> le taux de modulation: on règle <span class="math notranslate nohighlight">\(m\)</span> en pourcentage (<span class="math notranslate nohighlight">\(m=1\)</span> correspond à 100%, vous pouvez monter au dessus de 100% pour observer une surmodulation).</p></li>
+<li><p>‘Type’ : ‘AM’</p></li>
+<li><p>‘Source’ : ‘Internal’</p></li>
+<li><p>‘Shape’ : Forme du signal modulant</p></li>
+<li><p>‘AM Freq’ permet de régler la fréquence du signal modulant (<em>pavé numérique + unité sous l’écran ou molette</em>).</p></li>
+<li><p>‘AM Depth’ permet de régler <em>directement</em> le taux de modulation: on règle <span class="math notranslate nohighlight">\(m\)</span> en pourcentage (<span class="math notranslate nohighlight">\(m=1\)</span> correspond à 100%, vous pouvez monter au dessus de 100% pour observer une surmodulation).</p></li>
 <li><p>une forme du signal s’affiche à l’écran, mais <strong>vérifier toujours les caractéristiques du signal par acquisition sur l’oscilloscope ou FOXY</strong>. Pour ce TP, on privilégiera l’oscilloscope pour s’entraîner à son utilisation.</p></li>
 </ul>
 </li>
 <li><p>Observer le signal modulé en amplitude à l’oscilloscope.</p></li>
+<li><p>Note : Pour mieux synchroniser, vous pouvez observer un signal de même fréquence que le signal modulant composé de “Pulse” avec la sortie <code class="docutils literal notranslate"><span class="pre">Aux</span> <span class="pre">In/Out</span></code> situé <strong>à l’arrière du GBF</strong>. Il faut l’activer dans le menu ‘Utility &gt; Sync &gt; State : On’ + ‘Channel : CH1-MOD’.</p></li>
 </ol>
-<!-- 6. Pour mieux synchroniser, vous pouvez observer le signal modulant (plus précisément l'enveloppe) avec la sortie `OUT MOD` situé __à l'arrière du GBF__. -->
 </div>
 </div>
 </div>

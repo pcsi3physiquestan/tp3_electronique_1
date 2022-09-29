@@ -247,9 +247,12 @@ __La présentation des réglages est propre aux GBF utilisés dans cette salle (
 1. Réaliser le signal porteur à l'aide des réglages classiques sur la sortie voulue (1 ou  2) (forme, fréquence, amplitude, offset).
 2. Activer la modulation d'amplitude avec le bouton `Mod` (_il doit s'éclairer - un deuxième appui permet de désactiver la modulation_).
 3. Les boutons sous l'écran permettent de régler le signal modulant:
-    * '' permet de régler la fréquence du signal modulant (_pavé numérique + unité sous l'écran ou molette_).
-    * '' permet de régler _directement_ le taux de modulation: on règle $m$ en pourcentage ($m=1$ correspond à 100%, vous pouvez monter au dessus de 100% pour observer une surmodulation).
+    * 'Type' : 'AM'
+    * 'Source' : 'Internal'
+    * 'Shape' : Forme du signal modulant
+    * 'AM Freq' permet de régler la fréquence du signal modulant (_pavé numérique + unité sous l'écran ou molette_).
+    * 'AM Depth' permet de régler _directement_ le taux de modulation: on règle $m$ en pourcentage ($m=1$ correspond à 100%, vous pouvez monter au dessus de 100% pour observer une surmodulation).
     * une forme du signal s'affiche à l'écran, mais __vérifier toujours les caractéristiques du signal par acquisition sur l'oscilloscope ou FOXY__. Pour ce TP, on privilégiera l'oscilloscope pour s'entraîner à son utilisation.
 5. Observer le signal modulé en amplitude à l'oscilloscope.
-<!-- 6. Pour mieux synchroniser, vous pouvez observer le signal modulant (plus précisément l'enveloppe) avec la sortie `OUT MOD` situé __à l'arrière du GBF__. -->
+6. Note : Pour mieux synchroniser, vous pouvez observer un signal de même fréquence que le signal modulant composé de "Pulse" avec la sortie `Aux In/Out` situé __à l'arrière du GBF__. Il faut l'activer dans le menu 'Utility > Sync > State : On' + 'Channel : CH1-MOD'.
 ````
