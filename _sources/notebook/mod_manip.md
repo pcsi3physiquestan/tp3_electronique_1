@@ -239,19 +239,17 @@ Rendre-compte :
 ## Signal modulé au GBF (30 minutes)
 On peut utiliser les fonctions des GBF (certains) pour réaliser directement un signal modulé en amplitude. Vous allez apprendre à utiliser ce système pour ne pas avoir à refaire le montage précédent pour étudier la démodulation.
 
-Nous allons ici vous montrer comment créer un signal modulé en amplitude sur le GBF FIXXXXX.
+__La présentation des réglages est propre aux GBF utilisés dans cette salle (SDGXXXXX). Elled evra être adaptée à l'utilisation d'un autre GBF.__
 
-```{note} 
-* Les __inscriptions en bleu__ au dessus des boutons correspondent à réglages accessibles avec la touche `SHIFT` en bleu.
-* Le bouton `Output` sert à activer ou désactiver la sortie. S'il n'est pas allumé, aucun signal n'est délivré.
-```
 
 ````{admonition} Manipulation
 :class: tip
-1. Réaliser le signal porteur à l'aide des réglages classiques du GBF (FIXXXXX) (forme, fréquence, amplitude, offset).
-2. Activer la modulation d'amplitude avec le bouton `AM`. Des réglages en bleu s'affichent en plus sur l'écran.
-3. Régler la fréquence avec le réglage `Rate` (en bleu). La fréquence de la porteuse est remplacée sur l'écran par la fréquence de la modulante.
-4. Régler le taux de modulation (directement) avec le réglage `DEV/DEP` (en bleu). L'offset est remplacé par le réglage de $m$ en pourcentage (vous pouvez monter au dessus de 100% pour réaliser une surmodulation).
+1. Réaliser le signal porteur à l'aide des réglages classiques sur la sortie voulue (1 ou  2) (forme, fréquence, amplitude, offset).
+2. Activer la modulation d'amplitude avec le bouton `Mod` (_il doit s'éclairer - un deuxième appui permet de désactiver la modulation_).
+3. Les boutons sous l'écran permettent de régler le signal modulant:
+    * '' permet de régler la fréquence du signal modulant (_pavé numérique + unité sous l'écran ou molette_).
+    * '' permet de régler _directement_ le taux de modulation: on règle $m$ en pourcentage ($m=1$ correspond à 100%, vous pouvez monter au dessus de 100% pour observer une surmodulation).
+    * une forme du signal s'affiche à l'écran, mais __vérifier toujours les caractéristiques du signal par acquisition sur l'oscilloscope ou FOXY__. Pour ce TP, on privilégiera l'oscilloscope pour s'entraîner à son utilisation.
 5. Observer le signal modulé en amplitude à l'oscilloscope.
-6. Pour mieux synchroniser, vous pouvez observer le signal modulant (plus précisément l'enveloppe) avec la sortie `OUT MOD` situé __à l'arrière du GBF__.
+<!-- 6. Pour mieux synchroniser, vous pouvez observer le signal modulant (plus précisément l'enveloppe) avec la sortie `OUT MOD` situé __à l'arrière du GBF__. -->
 ````

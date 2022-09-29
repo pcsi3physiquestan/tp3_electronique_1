@@ -198,16 +198,16 @@ En pratique, __on se placera à une fréquence d'échantillonnage bien plus gran
 ```
 
 ### Synchronisation
-Utiliser le second GBF à disposition pour délivrée un signal sinusoïdal de fréquence 1960Hz et d'amplitude 3V et le brancher sur une autre voie de la carte d'acquisition.
+Utiliser la seconde sortie du GBF à disposition pour délivrée un signal sinusoïdal de fréquence 1960Hz et d'amplitude 3V et le brancher sur une autre voie de la carte d'acquisition.
 
 ````{admonition} Manipulation
 :class: tip
 1. Activer l'acquisition continue et lancer l'acquistion des deux signaux simultanément (vérifier que la durée d'acquisition et la fréquence d'échantillonnage permettent de visualiser les deux signaux correctement).
 2. Activer la synchronisation (Onglet synchronisation dans le menu associé à l'horloge) et choisir :
-    1. Une synchronisation sur la voie du premier GBF avec une pente montante et une tension de 1V.
-    2. Une synchronisation sur la voie du premier GBF avec une pente descendante et une tension de 1V.
-    3. Une synchronisation sur la voie du premier GBF avec une pente montante et une tension de 4V.
-    4. Une synchronisation sur la voie du second GBF avec une pente montante et une tension de 1V.
+    1. Une synchronisation sur la première voie du GBF avec une pente montante et une tension de 1V.
+    2. Une synchronisation sur la première voie du GBF avec une pente descendante et une tension de 1V.
+    3. Une synchronisation sur la première voie du GBF avec une pente montante et une tension de 4V.
+    4. Une synchronisation sur la seconde voie du GBF avec une pente montante et une tension de 1V.
 3. Commenter ce que vous observez à chaque fois et en déduire une explication du rôle :
     1. De la voie de synchronisation
     2. Du niveau de synchronisation
@@ -249,7 +249,7 @@ Ce n'est pas vrai pour tous les dipôles. La caractéristiques dynamique d'un co
 ```
 
 ````{topic} Utilisation d'un oscilloscope
-On a vu que les bornes des voies d'acquisition reliées à la Terre, combinées à la borne du GBF reliée à la Terre posait des problèmes de court-circuit. Une telle étude dynamique serait possible en itnercalant un dispositif appelé __transformateur d'isolement__. Son fonctionnement sera expliqué plus tard.
+On a vu que les bornes des voies d'acquisition reliées à la Terre, combinées à la borne du GBF reliée à la Terre posait des problèmes de court-circuit. Une telle étude dynamique serait possible en intercalant un dispositif appelé __transformateur d'isolement__. Son fonctionnement sera expliqué plus tard.
 ````
 
 ## Impédance de sortie du GBF (1h)

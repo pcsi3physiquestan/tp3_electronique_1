@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5. (TP) Création du signal &#8212; TP Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,36 +31,33 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/mod_manip.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. (Travail) Etude préliminaire" href="demod_preliminaire.html" />
     <link rel="prev" title="4. (Travail) Etude préliminaire" href="modul_preliminaire.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -78,14 +75,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -94,7 +90,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
@@ -116,7 +112,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
@@ -133,7 +129,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
@@ -150,7 +146,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Plus d'initiatives
  </span>
@@ -255,7 +251,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#le-multiplieur-30-minutes">
@@ -325,7 +321,7 @@
               <div>
                 
   <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
-<div class="tex2jax_ignore mathjax_ignore section" id="tp-creation-du-signal">
+<div class="section" id="tp-creation-du-signal">
 <h1><span class="section-number">5. </span>(TP) Création du signal<a class="headerlink" href="#tp-creation-du-signal" title="Permalink to this headline">¶</a></h1>
 <p>Nous n’allons pas réaliser le montage complet directement mais nous allons étudié séparément chaque étage du montage au préalable. Cela permettra de mieux comprendre le fonctionnement de chaque élément et de mettre en lumière certaines pratiques en électrocinétique. C’est de plus une pratique <strong>vivement</strong> conseillée quand on doit construire un système complexe de tester chaque partie avant de les assembler.</p>
 <p>Pour le compte-rendu, vous devrez rendre compte de l’analyse de chaque étage avant de présenter l’étude complète.</p>
@@ -570,24 +566,22 @@
 <div class="section" id="signal-module-au-gbf-30-minutes">
 <h2><span class="section-number">5.4. </span>Signal modulé au GBF (30 minutes)<a class="headerlink" href="#signal-module-au-gbf-30-minutes" title="Permalink to this headline">¶</a></h2>
 <p>On peut utiliser les fonctions des GBF (certains) pour réaliser directement un signal modulé en amplitude. Vous allez apprendre à utiliser ce système pour ne pas avoir à refaire le montage précédent pour étudier la démodulation.</p>
-<p>Nous allons ici vous montrer comment créer un signal modulé en amplitude sur le GBF FIXXXXX.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul class="simple">
-<li><p>Les <strong>inscriptions en bleu</strong> au dessus des boutons correspondent à réglages accessibles avec la touche <code class="docutils literal notranslate"><span class="pre">SHIFT</span></code> en bleu.</p></li>
-<li><p>Le bouton <code class="docutils literal notranslate"><span class="pre">Output</span></code> sert à activer ou désactiver la sortie. S’il n’est pas allumé, aucun signal n’est délivré.</p></li>
-</ul>
-</div>
+<p><strong>La présentation des réglages est propre aux GBF utilisés dans cette salle (SDGXXXXX). Elled evra être adaptée à l’utilisation d’un autre GBF.</strong></p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
 <ol class="simple">
-<li><p>Réaliser le signal porteur à l’aide des réglages classiques du GBF (FIXXXXX) (forme, fréquence, amplitude, offset).</p></li>
-<li><p>Activer la modulation d’amplitude avec le bouton <code class="docutils literal notranslate"><span class="pre">AM</span></code>. Des réglages en bleu s’affichent en plus sur l’écran.</p></li>
-<li><p>Régler la fréquence avec le réglage <code class="docutils literal notranslate"><span class="pre">Rate</span></code> (en bleu). La fréquence de la porteuse est remplacée sur l’écran par la fréquence de la modulante.</p></li>
-<li><p>Régler le taux de modulation (directement) avec le réglage <code class="docutils literal notranslate"><span class="pre">DEV/DEP</span></code> (en bleu). L’offset est remplacé par le réglage de <span class="math notranslate nohighlight">\(m\)</span> en pourcentage (vous pouvez monter au dessus de 100% pour réaliser une surmodulation).</p></li>
+<li><p>Réaliser le signal porteur à l’aide des réglages classiques sur la sortie voulue (1 ou  2) (forme, fréquence, amplitude, offset).</p></li>
+<li><p>Activer la modulation d’amplitude avec le bouton <code class="docutils literal notranslate"><span class="pre">Mod</span></code> (<em>il doit s’éclairer - un deuxième appui permet de désactiver la modulation</em>).</p></li>
+<li><p>Les boutons sous l’écran permettent de régler le signal modulant:</p>
+<ul class="simple">
+<li><p>‘’ permet de régler la fréquence du signal modulant (<em>pavé numérique + unité sous l’écran ou molette</em>).</p></li>
+<li><p>‘’ permet de régler <em>directement</em> le taux de modulation: on règle <span class="math notranslate nohighlight">\(m\)</span> en pourcentage (<span class="math notranslate nohighlight">\(m=1\)</span> correspond à 100%, vous pouvez monter au dessus de 100% pour observer une surmodulation).</p></li>
+<li><p>une forme du signal s’affiche à l’écran, mais <strong>vérifier toujours les caractéristiques du signal par acquisition sur l’oscilloscope ou FOXY</strong>. Pour ce TP, on privilégiera l’oscilloscope pour s’entraîner à son utilisation.</p></li>
+</ul>
+</li>
 <li><p>Observer le signal modulé en amplitude à l’oscilloscope.</p></li>
-<li><p>Pour mieux synchroniser, vous pouvez observer le signal modulant (plus précisément l’enveloppe) avec la sortie <code class="docutils literal notranslate"><span class="pre">OUT</span> <span class="pre">MOD</span></code> situé <strong>à l’arrière du GBF</strong>.</p></li>
 </ol>
+<!-- 6. Pour mieux synchroniser, vous pouvez observer le signal modulant (plus précisément l'enveloppe) avec la sortie `OUT MOD` situé __à l'arrière du GBF__. -->
 </div>
 </div>
 </div>
@@ -615,27 +609,16 @@
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="modul_preliminaire.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>(Travail) Etude préliminaire</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="modul_preliminaire.html" title="previous page"><span class="section-number">4. </span>(Travail) Etude préliminaire</a>
+    <a class='right-next' id="next-link" href="demod_preliminaire.html" title="next page"><span class="section-number">6. </span>(Travail) Etude préliminaire</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="demod_preliminaire.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>(Travail) Etude préliminaire</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -651,7 +634,8 @@
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>

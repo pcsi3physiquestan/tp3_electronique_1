@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3. (TP) Caractéristique d’une diode. &#8212; TP Electrocinétique</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,36 +31,33 @@
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/fam_manip.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. (Travail) Etude préliminaire" href="modul_preliminaire.html" />
     <link rel="prev" title="2. (Travail) Préparation des protocoles" href="fam_preliminaire_2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
+    <meta name="docsearch:language" content="en" />
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -78,14 +75,13 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
-      
       <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -94,7 +90,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Familiarisation avec le matériel
  </span>
@@ -116,7 +112,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Création d'un signal modulé en amplitude
  </span>
@@ -133,7 +129,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Démodulation d'un signal
  </span>
@@ -150,7 +146,7 @@
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Plus d'initiatives
  </span>
@@ -255,7 +251,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#caracteristique-statique-d-une-diode-1h30">
@@ -359,7 +355,7 @@
               <div>
                 
   <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
-<div class="tex2jax_ignore mathjax_ignore section" id="tp-caracteristique-d-une-diode">
+<div class="section" id="tp-caracteristique-d-une-diode">
 <h1><span class="section-number">3. </span>(TP) Caractéristique d’une diode.<a class="headerlink" href="#tp-caracteristique-d-une-diode" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="caracteristique-statique-d-une-diode-1h30">
 <h2><span class="section-number">3.1. </span>Caractéristique statique d’une diode. (1h30)<a class="headerlink" href="#caracteristique-statique-d-une-diode-1h30" title="Permalink to this headline">¶</a></h2>
@@ -573,17 +569,17 @@ f_e &gt; 2 f_{\max}
 </div>
 <div class="section" id="synchronisation">
 <h3><span class="section-number">3.2.4. </span>Synchronisation<a class="headerlink" href="#synchronisation" title="Permalink to this headline">¶</a></h3>
-<p>Utiliser le second GBF à disposition pour délivrée un signal sinusoïdal de fréquence 1960Hz et d’amplitude 3V et le brancher sur une autre voie de la carte d’acquisition.</p>
+<p>Utiliser la seconde sortie du GBF à disposition pour délivrée un signal sinusoïdal de fréquence 1960Hz et d’amplitude 3V et le brancher sur une autre voie de la carte d’acquisition.</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
 <ol class="simple">
 <li><p>Activer l’acquisition continue et lancer l’acquistion des deux signaux simultanément (vérifier que la durée d’acquisition et la fréquence d’échantillonnage permettent de visualiser les deux signaux correctement).</p></li>
 <li><p>Activer la synchronisation (Onglet synchronisation dans le menu associé à l’horloge) et choisir :</p>
 <ol class="simple">
-<li><p>Une synchronisation sur la voie du premier GBF avec une pente montante et une tension de 1V.</p></li>
-<li><p>Une synchronisation sur la voie du premier GBF avec une pente descendante et une tension de 1V.</p></li>
-<li><p>Une synchronisation sur la voie du premier GBF avec une pente montante et une tension de 4V.</p></li>
-<li><p>Une synchronisation sur la voie du second GBF avec une pente montante et une tension de 1V.</p></li>
+<li><p>Une synchronisation sur la première voie du GBF avec une pente montante et une tension de 1V.</p></li>
+<li><p>Une synchronisation sur la première voie du GBF avec une pente descendante et une tension de 1V.</p></li>
+<li><p>Une synchronisation sur la première voie du GBF avec une pente montante et une tension de 4V.</p></li>
+<li><p>Une synchronisation sur la seconde voie du GBF avec une pente montante et une tension de 1V.</p></li>
 </ol>
 </li>
 <li><p>Commenter ce que vous observez à chaque fois et en déduire une explication du rôle :</p>
@@ -632,8 +628,8 @@ f_e &gt; 2 f_{\max}
 <p>Ce n’est pas vrai pour tous les dipôles. La caractéristiques dynamique d’un condensateur sera toujours très différente de sa caractéristique statique.</p>
 </div>
 <div class="topic">
-<p class="topic-title first">Utilisation d’un oscilloscope</p>
-<p>On a vu que les bornes des voies d’acquisition reliées à la Terre, combinées à la borne du GBF reliée à la Terre posait des problèmes de court-circuit. Une telle étude dynamique serait possible en itnercalant un dispositif appelé <strong>transformateur d’isolement</strong>. Son fonctionnement sera expliqué plus tard.</p>
+<p class="topic-title">Utilisation d’un oscilloscope</p>
+<p>On a vu que les bornes des voies d’acquisition reliées à la Terre, combinées à la borne du GBF reliée à la Terre posait des problèmes de court-circuit. Une telle étude dynamique serait possible en intercalant un dispositif appelé <strong>transformateur d’isolement</strong>. Son fonctionnement sera expliqué plus tard.</p>
 </div>
 </div>
 </div>
@@ -739,27 +735,16 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
               </div>
               
         
-            <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="fam_preliminaire_2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>(Travail) Préparation des protocoles</p>
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="fam_preliminaire_2.html" title="previous page"><span class="section-number">2. </span>(Travail) Préparation des protocoles</a>
+    <a class='right-next' id="next-link" href="modul_preliminaire.html" title="next page"><span class="section-number">4. </span>(Travail) Etude préliminaire</a>
+
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="modul_preliminaire.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>(Travail) Etude préliminaire</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         
@@ -775,7 +760,8 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
 
+  
   </body>
 </html>
