@@ -44,19 +44,22 @@ On dispose pour ce faire de plusieurs éléments :
 * plusieurs résistances permettant de former un montage sommateur donné [ci-après](sommateur)
 * d'un oscilloscope pour observer les différentes tensions.
 
-````{panels}
+`````{grid}
+````{grid-item}
 ```{figure} ./images/multiplieur.png
 :name: multiplieur
 :align: center
 Représentation d'un multiplieur
 ```
----
+````
+````{grid-item}
 ```{figure} ./images/sommateur.jpg
 :name: sommateur
 :align: center
 Montage sommateur
 ```
 ````
+`````
 
 ## Etude théorique du sommateur
 

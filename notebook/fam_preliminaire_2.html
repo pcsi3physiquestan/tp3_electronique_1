@@ -545,6 +545,22 @@ title="Print to PDF"
 <p class="sidebar-title"></p>
 <p>Attention la caractéristique donnée est en convention récepteur <strong>avec i dans le sens donnée sur le symbole ci-dessus</strong>. Dans le cas des dipôles polarisés, le sens de <span class="math notranslate nohighlight">\(i\)</span> (et de <span class="math notranslate nohighlight">\(u\)</span>) a une influence sur l’allure de la caractéristique.</p>
 </div>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<div class="figure align-center" id="diode-carac">
+<img alt="../_images/diode_carac.png" src="../_images/diode_carac.png" />
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Caractéristique d’une diode</span><a class="headerlink" href="#diode-carac" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<div class="figure align-center" id="diode-symbole">
+<a class="reference internal image-reference" href="../_images/diode_symbole.png"><img alt="../_images/diode_symbole.png" src="../_images/diode_symbole.png" style="width: 25%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Symbole d’une diode</span><a class="headerlink" href="#diode-symbole" title="Permalink to this image">#</a></p>
+</div>
+</div>
+</div>
+</div>
 <p>On distingue deux modélisations :</p>
 <ul class="simple">
 <li><p>Modélisation précise (en rouge sur le graphique) : la relation <span class="math notranslate nohighlight">\(i(u)\)</span> est alors modélisée par une relation exponentielle. On n’utilisera pas cette modélisation en TP.</p></li>
@@ -560,13 +576,13 @@ title="Print to PDF"
 <p>Utiliser l’<a class="reference internal" href="#diode-extrait-1"><span class="std std-ref">extrait de la fiche technique</span></a> de la diode 1N4148 ci-après pour obtenir un ordre de grandeur de la tension <span class="math notranslate nohighlight">\(U_D\)</span>.</p>
 <div class="figure align-default" id="diode-extrait-1">
 <img alt="../_images/diode_sheet_2.jpg" src="../_images/diode_sheet_2.jpg" />
-<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Extrait n°1 de la fiche technique d’une diode 1N4148</span><a class="headerlink" href="#diode-extrait-1" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Extrait n°1 de la fiche technique d’une diode 1N4148</span><a class="headerlink" href="#diode-extrait-1" title="Permalink to this image">#</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="protection-d-une-diode">
 <h3><span class="section-number">2.1.3. </span>Protection d’une diode<a class="headerlink" href="#protection-d-une-diode" title="Permalink to this headline">#</a></h3>
-<p>La <span class="xref myst">caractéristique</span> montre qu’imposer une tension supérieure à <span class="math notranslate nohighlight">\(U_D\)</span> aux bornes de la diodes va dramatiquement augmenter l’intensité qui y circule et <em>risquer de détériorer la diode.</em> Pour protéger la diode, on utilise <strong>une résistance qu’on place en série avec la diode</strong> et qui va servir à limiter le courant qui circule dans la diode.</p>
+<p>La <a class="reference internal" href="#diode-carac"><span class="std std-ref">caractéristique</span></a> montre qu’imposer une tension supérieure à <span class="math notranslate nohighlight">\(U_D\)</span> aux bornes de la diodes va dramatiquement augmenter l’intensité qui y circule et <em>risquer de détériorer la diode.</em> Pour protéger la diode, on utilise <strong>une résistance qu’on place en série avec la diode</strong> et qui va servir à limiter le courant qui circule dans la diode.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercice : Protection d’une diode</p>
 <ol class="simple">
@@ -575,7 +591,7 @@ title="Print to PDF"
 </ol>
 <div class="figure align-default" id="diode-extrait-2">
 <img alt="../_images/diode_sheet_1.jpg" src="../_images/diode_sheet_1.jpg" />
-<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Extrait n°2 de la fiche technique d’une diode 1N4148</span><a class="headerlink" href="#diode-extrait-2" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Extrait n°2 de la fiche technique d’une diode 1N4148</span><a class="headerlink" href="#diode-extrait-2" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="margin sidebar">
@@ -600,7 +616,7 @@ title="Print to PDF"
 <p>Le premier montage est donné. On réalise le <a class="reference internal" href="#montage-diode"><span class="std std-ref">montage suivant</span></a> (la source de tension sera le GBF).</p>
 <div class="figure align-center" id="montage-diode">
 <img alt="../_images/diode_montage_simple.png" src="../_images/diode_montage_simple.png" />
-<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Montage à réaliser</span><a class="headerlink" href="#montage-diode" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Montage à réaliser</span><a class="headerlink" href="#montage-diode" title="Permalink to this image">#</a></p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Préparation</p>
@@ -620,7 +636,23 @@ title="Print to PDF"
 </div>
 <div class="section" id="utilisation-des-instruments-de-mesure">
 <h3><span class="section-number">2.2.2. </span>Utilisation des instruments de mesure.<a class="headerlink" href="#utilisation-des-instruments-de-mesure" title="Permalink to this headline">#</a></h3>
-<p>Puisqu’on réalise des études en régime indépendant du temps, l’utilisation des multimètres peut suffire. On donne la représentation schématique d’un <span class="xref myst">voltmètre</span> et d’un <span class="xref myst">ampèremètre</span>.</p>
+<p>Puisqu’on réalise des études en régime indépendant du temps, l’utilisation des multimètres peut suffire. On donne la représentation schématique d’un <a class="reference internal" href="#voltmetre"><span class="std std-ref">voltmètre</span></a> et d’un <a class="reference internal" href="#amperemetre"><span class="std std-ref">ampèremètre</span></a>.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-column docutils">
+<div class="figure align-center" id="voltmetre">
+<img alt="../_images/voltmetre.png" src="../_images/voltmetre.png" />
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Voltmètre. Le tension est mesurée dans le sens où est représentée Uc.</span><a class="headerlink" href="#voltmetre" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="sd-col sd-d-flex-column docutils">
+<div class="figure align-center" id="amperemetre">
+<img alt="../_images/amperemetre.png" src="../_images/amperemetre.png" />
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Ampèremètre. L’intensité est mesurée dans le sens entrant par la borne +.</span><a class="headerlink" href="#amperemetre" title="Permalink to this image">#</a></p>
+</div>
+</div>
+</div>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">Exercice.</p>
 <ol class="simple">
@@ -679,7 +711,7 @@ title="Print to PDF"
 <p>On voudrait faire la même étude avec un oscilloscope. Le but de cette étude préliminaire est de comprendre pourquoi ce n’est pas possible. Un oscilloscope (ceux des TPs) possède deux voies d’acquisition (Voie 1 et Voie 2). Donc la représentation est donnée <a class="reference internal" href="#oscillo"><span class="std std-ref">ci-dessous</span></a> :</p>
 <div class="figure align-center" id="oscillo">
 <img alt="../_images/oscillo.png" src="../_images/oscillo.png" />
-<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Schématisation des branchements de l’oscilloscope.</span><a class="headerlink" href="#oscillo" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Schématisation des branchements de l’oscilloscope.</span><a class="headerlink" href="#oscillo" title="Permalink to this image">#</a></p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercice.</p>
