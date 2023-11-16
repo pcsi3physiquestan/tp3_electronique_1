@@ -29,7 +29,7 @@ La page ci-présente existe en version notebook téléchargeable grâce au bouto
 * Réaliser le montage proposé dans votre protocole et réaliser les mesures de tension et d'intensité voulue pour une tension du GBF de 5V.
 * Faire un bilan des incertitudes et les estimer pour chaque source. Commenter le caractère prépondérant ou non de chaque source.
 
-Les données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles [ici](https://stanislas.edunao.com/pluginfile.php/24681/mod_resource/content/0/fluke_287_289.pdf) (connexion au site nécessaire). Une explication de l'utilisation de ces domaines se trouve [ici](https://stanislas.edunao.com/mod/page/view.php?id=13269).
+Les données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles [ici](https://moodlecpge.stanislas.fr/mod/resource/view.php?id=45) (connexion au site nécessaire). Une explication de l'utilisation de ces domaines se trouve [ici](https://moodlecpge.stanislas.fr/mod/page/view.php?id=44).
 ```
 
 __Par la suite, et _pour simplifier l'étude_, on considèrera qu'il n'y a qu'une seule source d'incertitude pour chaque mesurande : celle qui est la plus importante par les précédentes.__ Attention, en réalité, ça n'est pas vrai pour toutes les mesures à venir.

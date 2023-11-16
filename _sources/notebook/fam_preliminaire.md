@@ -137,7 +137,7 @@ Ces calibres sont parfois représentés pas un `~` (AC) ou un `=` (DC, le trait 
 
 
 #### Incertitudes et multimètre
-Une présentation des sources d'incertitude avec les multimètre est données [ici](https://stanislas.edunao.com/mod/page/view.php?id=13269).
+Une présentation des sources d'incertitude avec les multimètre est données [ici](https://moodlecpge.stanislas.fr/mod/page/view.php?id=44).
 +++
 
 ### Suivre l'évolution d'un signal : la carte d'acquisition
