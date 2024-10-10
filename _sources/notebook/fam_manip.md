@@ -27,12 +27,12 @@ La page ci-présente existe en version notebook téléchargeable grâce au bouto
 ```{admonition} Mesure unique et incertitude
 :class: tip
 * Réaliser le montage proposé dans votre protocole et réaliser les mesures de tension et d'intensité voulue pour une tension du GBF de 5V.
-* Faire un bilan des incertitudes et les estimer pour chaque source. Commenter le caractère prépondérant ou non de chaque source.
+* Faire un bilan des incertitudes __sans les estimer__.
 
-Les données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles [ici](https://moodlecpge.stanislas.fr/mod/resource/view.php?id=45) (connexion au site nécessaire). Une explication de l'utilisation de ces domaines se trouve [ici](https://moodlecpge.stanislas.fr/mod/page/view.php?id=44).
+Même si les incertitudes ne sont pas à estimer ici, des données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles [ici](https://moodlecpge.stanislas.fr/mod/resource/view.php?id=45) (connexion au site nécessaire). Une explication de l'utilisation de ces domaines se trouve [ici](https://moodlecpge.stanislas.fr/mod/page/view.php?id=44).
 ```
 
-__Par la suite, et _pour simplifier l'étude_, on considèrera qu'il n'y a qu'une seule source d'incertitude pour chaque mesurande : celle qui est la plus importante par les précédentes.__ Attention, en réalité, ça n'est pas vrai pour toutes les mesures à venir.
+__Par la suite, et _pour simplifier l'étude_, on considèrera qu'il n'y a qu'une seule source d'incertitude pour chaque mesurande : celle associée à la lecture (fluctuations ou résolution de l'affichage).__ Attention, en réalité, ça n'est pas vrai pour toutes les mesures à venir.
 
 ```{admonition} Manipulation
 :class: tip
@@ -85,7 +85,7 @@ Vous devez estimer un intervalle dans lequel la tension seuil va se trouver et e
 ud_min, ud_max = -1, 0  # LIGNE A MODIFIER. Le programme cherchera la valeur seuil dans l'intervale.
 
 def eval_ud(u, i, ud_min, ud_max):
-    """Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental
+    """Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental. NE PAS MODIFIER
     u : Vecteur contenu les mesures de tension
     i : Vecteur contenu les mesures d'intensité
     ud_min, ud_max : Flottant délimitant l'intervalle dans lequel on recherche UD
@@ -116,7 +116,7 @@ f.suptitle("Mettre un titre")
 ax.set_xlabel("Légender les X")
 ax.set_ylabel("Légender les Y")
 ax.errorbar(u, i, xerr=uu, yerr=ui, label="Légender la courbe", linestyle="", color="black")
-ax.plot([-5, ud_estim, ud_estim], [0, 0, 5], label="Légender la courbe", linestyle="-",color="red")
+ax.plot([-min(u), ud_estim, ud_estim], [0, 0, max(i)], label="Légender la courbe", linestyle="-",color="red")
 ax.grid()
 ax.legend()
 plt.show()
@@ -146,7 +146,7 @@ Avant de chercher à obtenir la caractéristique dynamique d'une diode grâce à
     * Nombre de points
     * Onglet Synchronisation.
 
-### Nombre de points et fréquence d'échantillonnage
+### Nombre de points et fréquence d'échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)
 _Pour l'instant, décocher l'option `Acquisition continue` et désactiver la Synchronisation (dans l'onglet du même nom) s'ils sont activés._
 
 On va voir l'influence du nombre de points de sur le signal obtenu ou plus précisément de la __fréquence d'échantillonnage__ c'est-à-dire le nombre de points de mesure réalisés par seconde.
@@ -189,7 +189,7 @@ $$
 En pratique, __on se placera à une fréquence d'échantillonnage bien plus grande que la limite du critère de Shannon-Nyqvist__ pour obtenir un visuel acceptable.
 ````
 
-### Acquisition unique ou continue ?
+### Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)
 ```{admonition} Question
 :class: tip
 * Dans quel cas une acquisition unique est-elle obligatoire ?
@@ -197,7 +197,7 @@ En pratique, __on se placera à une fréquence d'échantillonnage bien plus gran
 * Revenir à une fréquence d'échantillonage acceptable et activer l'acquisition continue. Quel problème rencontre-t-on. La __synchronisation__ va permettre de résoudre ce problème.
 ```
 
-### Synchronisation
+### Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)
 Utiliser la seconde sortie du GBF à disposition pour délivrée un signal sinusoïdal de fréquence 1960Hz et d'amplitude 3V et le brancher sur une autre voie de la carte d'acquisition.
 
 ````{admonition} Manipulation
@@ -218,6 +218,13 @@ Utiliser la seconde sortie du GBF à disposition pour délivrée un signal sinus
 Avec un oscilloscope, la synchronisation est toujours nécessaire. Souvent les réglages automatiques suffisent mais si le signal n'est pas stable, il faut penser à la régler.
 ```
 
+
+````{admonition} Principe de la synchronisation
+:class: important
+Lorsqu'on fait l'acquisition d'un signal périodique en continu, il est nécessaire de stabiliser l'affichage en redémarrant ce dernier à un intervalle correspondant à un nombre entier de période. Cette variant et n'étant pas toujours un nombre clairement défini, on ne modifie pas la durée d'acqusition mais on utilise __la synchronisation.__
+
+Quand la synchronisation est activée, l'affichage de la tension mesurée ne recommence que quand le signal __de la voie de synchronisation__ atteint un __niveau de déclenchement__ (valeur de tension) avec une __pente donnée__ (croissante ou décroissante).
+````
 +++
 
 ## Caractéristique dynamique d'une diode (1h)

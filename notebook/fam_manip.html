@@ -338,9 +338,9 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-numerique-d-un-signal-30-minutes">3.2. Acquisition numérique d’un signal. (30 minutes)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reglages-generaux">3.2.1. Réglages généraux.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-points-et-frequence-d-echantillonnage">3.2.2. Nombre de points et fréquence d’échantillonnage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-unique-ou-continue">3.2.3. Acquisition unique ou continue ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronisation">3.2.4. Synchronisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir">3.2.2. Nombre de points et fréquence d’échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-unique-ou-continue-fait-par-le-professeur">3.2.3. Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir">3.2.4. Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-dynamique-d-une-diode-1h">3.3. Caractéristique dynamique d’une diode (1h)</a><ul class="nav section-nav flex-column">
@@ -378,11 +378,11 @@ document.write(`
 <p class="admonition-title">Mesure unique et incertitude</p>
 <ul class="simple">
 <li><p>Réaliser le montage proposé dans votre protocole et réaliser les mesures de tension et d’intensité voulue pour une tension du GBF de 5V.</p></li>
-<li><p>Faire un bilan des incertitudes et les estimer pour chaque source. Commenter le caractère prépondérant ou non de chaque source.</p></li>
+<li><p>Faire un bilan des incertitudes <strong>sans les estimer</strong>.</p></li>
 </ul>
-<p>Les données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles <a class="reference external" href="https://moodlecpge.stanislas.fr/mod/resource/view.php?id=45">ici</a> (connexion au site nécessaire). Une explication de l’utilisation de ces domaines se trouve <a class="reference external" href="https://moodlecpge.stanislas.fr/mod/page/view.php?id=44">ici</a>.</p>
+<p>Même si les incertitudes ne sont pas à estimer ici, des données sur les incertitudes de mesure associées aux mesures données par les multimètres Fluke sont disponibles <a class="reference external" href="https://moodlecpge.stanislas.fr/mod/resource/view.php?id=45">ici</a> (connexion au site nécessaire). Une explication de l’utilisation de ces domaines se trouve <a class="reference external" href="https://moodlecpge.stanislas.fr/mod/page/view.php?id=44">ici</a>.</p>
 </div>
-<p><strong>Par la suite, et <em>pour simplifier l’étude</em>, on considèrera qu’il n’y a qu’une seule source d’incertitude pour chaque mesurande : celle qui est la plus importante par les précédentes.</strong> Attention, en réalité, ça n’est pas vrai pour toutes les mesures à venir.</p>
+<p><strong>Par la suite, et <em>pour simplifier l’étude</em>, on considèrera qu’il n’y a qu’une seule source d’incertitude pour chaque mesurande : celle associée à la lecture (fluctuations ou résolution de l’affichage).</strong> Attention, en réalité, ça n’est pas vrai pour toutes les mesures à venir.</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
 <p>Réaliser le montage proposé dans votre protocole et tracer la caractéristique statique de la diode. Vous utiliserez la cellule de code ci-dessous pour tracer la caractéristique statique.</p>
@@ -445,7 +445,7 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER. Le programme cherchera la valeur seuil dans l&#39;intervale.</span>
 
 <span class="k">def</span> <span class="nf">eval_ud</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental. NE PAS MODIFIER</span>
 <span class="sd">    u : Vecteur contenu les mesures de tension</span>
 <span class="sd">    i : Vecteur contenu les mesures d&#39;intensité</span>
 <span class="sd">    ud_min, ud_max : Flottant délimitant l&#39;intervalle dans lequel on recherche UD</span>
@@ -476,7 +476,7 @@ document.write(`
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Légender les X&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Légender les Y&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">xerr</span><span class="o">=</span><span class="n">uu</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">ui</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Légender la courbe&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="n">ud_estim</span><span class="p">,</span> <span class="n">ud_estim</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Légender la courbe&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">u</span><span class="p">),</span> <span class="n">ud_estim</span><span class="p">,</span> <span class="n">ud_estim</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="p">)],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Légender la courbe&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -519,8 +519,8 @@ document.write(`
 </li>
 </ul>
 </section>
-<section id="nombre-de-points-et-frequence-d-echantillonnage">
-<h3><span class="section-number">3.2.2. </span>Nombre de points et fréquence d’échantillonnage<a class="headerlink" href="#nombre-de-points-et-frequence-d-echantillonnage" title="Permalink to this heading">#</a></h3>
+<section id="nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir">
+<h3><span class="section-number">3.2.2. </span>Nombre de points et fréquence d’échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)<a class="headerlink" href="#nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir" title="Permalink to this heading">#</a></h3>
 <p><em>Pour l’instant, décocher l’option <code class="docutils literal notranslate"><span class="pre">Acquisition</span> <span class="pre">continue</span></code> et désactiver la Synchronisation (dans l’onglet du même nom) s’ils sont activés.</em></p>
 <p>On va voir l’influence du nombre de points de sur le signal obtenu ou plus précisément de la <strong>fréquence d’échantillonnage</strong> c’est-à-dire le nombre de points de mesure réalisés par seconde.</p>
 <div class="tip admonition">
@@ -581,8 +581,8 @@ f_e &gt; 2 f_{\max}
 <p>En pratique, <strong>on se placera à une fréquence d’échantillonnage bien plus grande que la limite du critère de Shannon-Nyqvist</strong> pour obtenir un visuel acceptable.</p>
 </div>
 </section>
-<section id="acquisition-unique-ou-continue">
-<h3><span class="section-number">3.2.3. </span>Acquisition unique ou continue ?<a class="headerlink" href="#acquisition-unique-ou-continue" title="Permalink to this heading">#</a></h3>
+<section id="acquisition-unique-ou-continue-fait-par-le-professeur">
+<h3><span class="section-number">3.2.3. </span>Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)<a class="headerlink" href="#acquisition-unique-ou-continue-fait-par-le-professeur" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Question</p>
 <ul class="simple">
@@ -592,8 +592,8 @@ f_e &gt; 2 f_{\max}
 </ul>
 </div>
 </section>
-<section id="synchronisation">
-<h3><span class="section-number">3.2.4. </span>Synchronisation<a class="headerlink" href="#synchronisation" title="Permalink to this heading">#</a></h3>
+<section id="synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir">
+<h3><span class="section-number">3.2.4. </span>Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)<a class="headerlink" href="#synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir" title="Permalink to this heading">#</a></h3>
 <p>Utiliser la seconde sortie du GBF à disposition pour délivrée un signal sinusoïdal de fréquence 1960Hz et d’amplitude 3V et le brancher sur une autre voie de la carte d’acquisition.</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
@@ -620,6 +620,11 @@ f_e &gt; 2 f_{\max}
 <p class="sidebar-title"></p>
 <p>Avec un oscilloscope, la synchronisation est toujours nécessaire. Souvent les réglages automatiques suffisent mais si le signal n’est pas stable, il faut penser à la régler.</p>
 </aside>
+<div class="important admonition">
+<p class="admonition-title">Principe de la synchronisation</p>
+<p>Lorsqu’on fait l’acquisition d’un signal périodique en continu, il est nécessaire de stabiliser l’affichage en redémarrant ce dernier à un intervalle correspondant à un nombre entier de période. Cette variant et n’étant pas toujours un nombre clairement défini, on ne modifie pas la durée d’acqusition mais on utilise <strong>la synchronisation.</strong></p>
+<p>Quand la synchronisation est activée, l’affichage de la tension mesurée ne recommence que quand le signal <strong>de la voie de synchronisation</strong> atteint un <strong>niveau de déclenchement</strong> (valeur de tension) avec une <strong>pente donnée</strong> (croissante ou décroissante).</p>
+</div>
 </section>
 </section>
 <section id="caracteristique-dynamique-d-une-diode-1h">
@@ -814,9 +819,9 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-numerique-d-un-signal-30-minutes">3.2. Acquisition numérique d’un signal. (30 minutes)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reglages-generaux">3.2.1. Réglages généraux.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-points-et-frequence-d-echantillonnage">3.2.2. Nombre de points et fréquence d’échantillonnage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-unique-ou-continue">3.2.3. Acquisition unique ou continue ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronisation">3.2.4. Synchronisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir">3.2.2. Nombre de points et fréquence d’échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-unique-ou-continue-fait-par-le-professeur">3.2.3. Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir">3.2.4. Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-dynamique-d-une-diode-1h">3.3. Caractéristique dynamique d’une diode (1h)</a><ul class="nav section-nav flex-column">
