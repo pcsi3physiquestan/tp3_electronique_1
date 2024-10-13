@@ -55,7 +55,7 @@ Pour tester le montage, on prendra comme signaux d'entrée les signaux porteur e
 :class: tip
 1. Réaliser le montage pour obtenir les deux tensions d'entrée et la tension de sortie sur FOXY. Vérifier alors visuellement que le signal de sortie est bien la somme des deux signaux d'entrée.
 2. Les signaux sont sinusoïdaux. Quelles grandeurs mesurer pour mesurer expérimentalement $\alpha$ à partir des signaux précédents ?
-3. Réaliser des mesures de $\alpha$ pour plusieurs valeurs d'amplitude des tensions d'entrée (on fera 5 mesures). __Pensez à estimer les incertitudes pour chaque mesure__ (Vous êtes autorisésà ne conservé que la plus grande incertitude de mesure pour chaque mesure pour simplifier l'étude).
+3. Réaliser des mesures de $\alpha$ pour plusieurs valeurs d'amplitude des tensions d'entrée (on fera 5 mesures). __Pensez à estimer les incertitudes pour chaque mesure__ (Vous êtes autorisés à ne conserver que la plus grande incertitude de mesure pour chaque mesure _pour simplifier l'étude_ mais réfléchir néanmoins aux différentes sources).
 4. Utiliser la cellule ci-dessous pour estimer l'incertitude sur $\alpha$ à partir des mesures précédentes. Les parties à modifier sont précisées.
 ````
 

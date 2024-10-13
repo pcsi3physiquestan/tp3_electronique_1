@@ -1,60 +1,47 @@
 
-
 <!DOCTYPE html>
 
-
-<html lang="en" >
-
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1. (Travail) Matériel en électrocinétique &#8212; TP Electrocinétique</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -64,97 +51,57 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/fam_preliminaire';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/fam_preliminaire.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. (Travail) Préparation des protocoles" href="fam_preliminaire_2.html" />
     <link rel="prev" title="Introduction" href="../tp3_elec.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
+    
+    <div class="container-fluid" id="banner"></div>
 
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    
 
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../tp3_elec.html">
-  
-  
-  
-  
-  
-    <p class="title logo__title">TP Electrocinétique</p>
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      
+      <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -163,218 +110,484 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Familiarisation avec le matériel</span></p>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Familiarisation avec le matériel
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. (Travail) Matériel en électrocinétique</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fam_preliminaire_2.html">2. (Travail) Préparation des protocoles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fam_manip.html">3. (TP) Caractéristique d’une diode.</a></li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. (Travail) Matériel en électrocinétique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_preliminaire_2.html">
+   2. (Travail) Préparation des protocoles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_manip.html">
+   3. (TP) Caractéristique d’une diode.
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Création d'un signal modulé en amplitude</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Création d'un signal modulé en amplitude
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="modul_preliminaire.html">4. (Travail) Etude préliminaire</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_manip.html">5. (TP) Création du signal</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modul_preliminaire.html">
+   4. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mod_manip.html">
+   5. (TP) Création du signal
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Démodulation d'un signal</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Démodulation d'un signal
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="demod_preliminaire.html">6. (Travail) Etude préliminaire</a></li>
-<li class="toctree-l1"><a class="reference internal" href="demod_manip.html">7. (TP) Démodulation</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="demod_preliminaire.html">
+   6. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="demod_manip.html">
+   7. (TP) Démodulation
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plus d'initiatives</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Plus d'initiatives
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u_seuil_exp.html">8. Complément : Détermination de la tension seuil</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elec_supplement.html">9. Etude du régime transitoire (Ordre 2)</a></li>
-
+ <li class="toctree-l1">
+  <a class="reference internal" href="u_seuil_exp.html">
+   8. Complément : Détermination de la tension seuil
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html">
+   9. Etude du régime transitoire (Ordre 2)
+  </a>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/notebook/fam_preliminaire.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
+          
 
 
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/fam_preliminaire.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebook/fam_preliminaire.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>(Travail) Matériel en électrocinétique</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#position-du-probleme">1.1. Position du problème.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumentation-electrique">1.2. Instrumentation électrique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumentation-diverse">1.2.1. Instrumentation diverse</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-cables-bnc">1.2.2. Les câbles BNC</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#presentation-et-branchement">1.2.2.1. Présentation et branchement</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bnc-et-terre">1.2.2.2. BNC et Terre</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-un-signal-electrique">1.2.3. Créer un signal électrique.</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-gbf-etapes-de-reglage">1.2.3.1. Le GBF : Etapes de réglage</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesurer-une-valeur-unique-le-multimetre">1.2.4. Mesurer une valeur unique : le multimètre</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#amperemetre-et-voltmetre">1.2.4.1. Ampèremètre et voltmètre</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calibre-ac-et-dc">1.2.4.2. Calibre AC et DC</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#incertitudes-et-multimetre">1.2.4.3. Incertitudes et multimètre</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-la-carte-d-acquisition">1.2.5. Suivre l’évolution d’un signal : la carte d’acquisition</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reglage-des-cartes-d-acquisition">1.2.5.1. Réglage des cartes d’acquisition</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#choix-des-parametres">1.2.5.2. Choix des paramètres</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-l-oscilloscope">1.2.6. Suivre l’évolution d’un signal : l’oscilloscope</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-de-reglages">1.2.6.1. Etapes de réglages.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/notebook/fam_preliminaire.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#position-du-probleme">
+   1.1. Position du problème.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrumentation-electrique">
+   1.2. Instrumentation électrique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instrumentation-diverse">
+     1.2.1. Instrumentation diverse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-cables-bnc">
+     1.2.2. Les câbles BNC
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#presentation-et-branchement">
+       1.2.2.1. Présentation et branchement
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bnc-et-terre">
+       1.2.2.2. BNC et Terre
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creer-un-signal-electrique">
+     1.2.3. Créer un signal électrique.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#le-gbf-etapes-de-reglage">
+       1.2.3.1. Le GBF : Etapes de réglage
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mesurer-une-valeur-unique-le-multimetre">
+     1.2.4. Mesurer une valeur unique : le multimètre
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#amperemetre-et-voltmetre">
+       1.2.4.1. Ampèremètre et voltmètre
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#calibre-ac-et-dc">
+       1.2.4.2. Calibre AC et DC
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#incertitudes-et-multimetre">
+       1.2.4.3. Incertitudes et multimètre
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-la-carte-d-acquisition">
+     1.2.5. Suivre l’évolution d’un signal : la carte d’acquisition
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reglage-des-cartes-d-acquisition">
+       1.2.5.1. Réglage des cartes d’acquisition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#choix-des-parametres">
+       1.2.5.2. Choix des paramètres
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-l-oscilloscope">
+     1.2.6. Suivre l’évolution d’un signal : l’oscilloscope
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#etapes-de-reglages">
+       1.2.6.1. Etapes de réglages.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>(Travail) Matériel en électrocinétique</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#position-du-probleme">
+   1.1. Position du problème.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrumentation-electrique">
+   1.2. Instrumentation électrique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instrumentation-diverse">
+     1.2.1. Instrumentation diverse
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#les-cables-bnc">
+     1.2.2. Les câbles BNC
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#presentation-et-branchement">
+       1.2.2.1. Présentation et branchement
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bnc-et-terre">
+       1.2.2.2. BNC et Terre
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creer-un-signal-electrique">
+     1.2.3. Créer un signal électrique.
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#le-gbf-etapes-de-reglage">
+       1.2.3.1. Le GBF : Etapes de réglage
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mesurer-une-valeur-unique-le-multimetre">
+     1.2.4. Mesurer une valeur unique : le multimètre
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#amperemetre-et-voltmetre">
+       1.2.4.1. Ampèremètre et voltmètre
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#calibre-ac-et-dc">
+       1.2.4.2. Calibre AC et DC
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#incertitudes-et-multimetre">
+       1.2.4.3. Incertitudes et multimètre
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-la-carte-d-acquisition">
+     1.2.5. Suivre l’évolution d’un signal : la carte d’acquisition
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reglage-des-cartes-d-acquisition">
+       1.2.5.1. Réglage des cartes d’acquisition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#choix-des-parametres">
+       1.2.5.2. Choix des paramètres
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-l-oscilloscope">
+     1.2.6. Suivre l’évolution d’un signal : l’oscilloscope
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#etapes-de-reglages">
+       1.2.6.1. Etapes de réglages.
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
+              <div>
+                
   <p>Vous allez commencer par préparer la séance de familiarisation. L’étude préliminéaire est à réaliser par écrit au début du compte-rendu que vous rendrez à la fin des séances de TPs.</p>
-<section class="tex2jax_ignore mathjax_ignore" id="travail-materiel-en-electrocinetique">
-<h1><span class="section-number">1. </span>(Travail) Matériel en électrocinétique<a class="headerlink" href="#travail-materiel-en-electrocinetique" title="Permalink to this heading">#</a></h1>
-<section id="position-du-probleme">
-<h2><span class="section-number">1.1. </span>Position du problème.<a class="headerlink" href="#position-du-probleme" title="Permalink to this heading">#</a></h2>
+<div class="tex2jax_ignore mathjax_ignore section" id="travail-materiel-en-electrocinetique">
+<h1><span class="section-number">1. </span>(Travail) Matériel en électrocinétique<a class="headerlink" href="#travail-materiel-en-electrocinetique" title="Permalink to this headline">#</a></h1>
+<div class="section" id="position-du-probleme">
+<h2><span class="section-number">1.1. </span>Position du problème.<a class="headerlink" href="#position-du-probleme" title="Permalink to this headline">#</a></h2>
 <p>On va se concentrer dans cette partie sur l’étude d’un dipôle en régime statique - on cherchera à tracer sa caractéristique statique - puis en régime dynamique - en traçant <span class="math notranslate nohighlight">\((u(t); i(t))\)</span>. On pourra ainsi voir si son comportement est le même en régime indépendant du temps et en régime variable avant de l’utiliser dans des montages. Cette étude va amener à se poser plusieurs questions :</p>
 <ul class="simple">
 <li><p>Quel instrument utiliser pour étudier un point de fonctionnement d’un dipôle en régime statique ? Comment le régler et l’utiliser ?</p></li>
@@ -383,11 +596,11 @@ document.write(`
 <li><p>Comment créer un signal de tension variable pour étudier le régime dynamique ? Comment régler la forme et les caractéristiques voulues pour le signal.</p></li>
 <li><p>Quelles sont les contraintes liées à une acquisition numérique d’un signal ?</p></li>
 </ul>
-</section>
-<section id="instrumentation-electrique">
-<h2><span class="section-number">1.2. </span>Instrumentation électrique<a class="headerlink" href="#instrumentation-electrique" title="Permalink to this heading">#</a></h2>
-<section id="instrumentation-diverse">
-<h3><span class="section-number">1.2.1. </span>Instrumentation diverse<a class="headerlink" href="#instrumentation-diverse" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="instrumentation-electrique">
+<h2><span class="section-number">1.2. </span>Instrumentation électrique<a class="headerlink" href="#instrumentation-electrique" title="Permalink to this headline">#</a></h2>
+<div class="section" id="instrumentation-diverse">
+<h3><span class="section-number">1.2.1. </span>Instrumentation diverse<a class="headerlink" href="#instrumentation-diverse" title="Permalink to this headline">#</a></h3>
 <p>Sans être exhaustif, citons :</p>
 <ul class="simple">
 <li><p>les câbles simples qui matérialisent un fil de connection.</p></li>
@@ -400,20 +613,20 @@ document.write(`
 <p class="admonition-title">Attention</p>
 <p>Les boites à décade ne peuvent être utilisées que comme un seul composant. <strong>Vous ne pouvez utiliser la même boite pour créer deux composants.</strong></p>
 </div>
-</section>
-<section id="les-cables-bnc">
-<h3><span class="section-number">1.2.2. </span>Les câbles BNC<a class="headerlink" href="#les-cables-bnc" title="Permalink to this heading">#</a></h3>
-<section id="presentation-et-branchement">
-<h4><span class="section-number">1.2.2.1. </span>Présentation et branchement<a class="headerlink" href="#presentation-et-branchement" title="Permalink to this heading">#</a></h4>
-<aside class="margin sidebar">
+</div>
+<div class="section" id="les-cables-bnc">
+<h3><span class="section-number">1.2.2. </span>Les câbles BNC<a class="headerlink" href="#les-cables-bnc" title="Permalink to this headline">#</a></h3>
+<div class="section" id="presentation-et-branchement">
+<h4><span class="section-number">1.2.2.1. </span>Présentation et branchement<a class="headerlink" href="#presentation-et-branchement" title="Permalink to this headline">#</a></h4>
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>C’est le même principe sur les écouteurs et casque (prise Jack): un seul cable contenant 2 ou 3 fils.</p>
-</aside>
+</div>
 <p>Les câbles BNC sont des câbles particuliers car contrairement aux câbles simples, assimilables à des fils de connection, les câbles BNC contiennent <strong>2 fils de connection</strong>: un fil au milieu du câble (l’âme) et un tressage autour (la gaine), les deux fils étant isolés l’un de l’autre par un isolant plastique. Ces fils ont ne nombreux avantages en terme de proection du bruit. Leur utilisation est un peu particulière.</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Il existe un autre type de BNC-simple où le câble se sépare en deux connections rouge et noire.</p>
-</aside>
+</div>
 <p>On distingue deux cas:</p>
 <ul class="simple">
 <li><p>Les câbles dits BNC-BNC où les deux connection sont des entrées/sorties BNC (cas du haut). Elles servent principalement pour nous à relier directement le GBF et l’oscilloscope. <strong>Comme sur la photo, un seul câble suffit brancher les DEUX bornes du GBF aux DEUX bornes de l’oscilloscope.</strong></p></li>
@@ -423,30 +636,28 @@ document.write(`
 </ul>
 </li>
 </ul>
-<figure class="align-center" id="branch-bnc">
+<div class="figure align-center" id="branch-bnc">
 <img alt="../_images/branchement_bnc.png" src="../_images/branchement_bnc.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Types de branchement des BNC</span><a class="headerlink" href="#branch-bnc" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="bnc-et-terre">
-<h4><span class="section-number">1.2.2.2. </span>BNC et Terre<a class="headerlink" href="#bnc-et-terre" title="Permalink to this heading">#</a></h4>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Types de branchement des BNC</span><a class="headerlink" href="#branch-bnc" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="bnc-et-terre">
+<h4><span class="section-number">1.2.2.2. </span>BNC et Terre<a class="headerlink" href="#bnc-et-terre" title="Permalink to this headline">#</a></h4>
 <p><strong>La majorité des GBF et oscilloscopes possèdent une de leur borne reliée à la Terre.</strong></p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Ou la connectique noire pour les câbles séparés en rouge et noir.</p>
-</aside>
+</div>
 <p>Lorsqu’on branche un BNC-simple, il est important de savoir où elle se trouve car on va imposer un point de Terre dans le circuit. <strong>La borne de Terre est toujours reliée à la gaine du BNC (branché à un GBF ou un oscilloscope) soit en sortie d’un BNC-simple l’excroissance du câble.</strong></p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Unicité de la Terre
 La borne de Terre est une borne physique dont le potentiel est imposé. Il ne peut donc y en avoir qu’une seule dans un circuit. <strong>CELA SIGNIFIE que toutes les bornes de Terre des GBF et oscilloscope doivent être reliés <em>au même point de potentiel dans un circuit</em>.</strong> Cela peut entrainer des contraintes dans la réalisation d’un circuit.</p>
 </div>
-</section>
-</section>
-<section id="creer-un-signal-electrique">
-<h3><span class="section-number">1.2.3. </span>Créer un signal électrique.<a class="headerlink" href="#creer-un-signal-electrique" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="creer-un-signal-electrique">
+<h3><span class="section-number">1.2.3. </span>Créer un signal électrique.<a class="headerlink" href="#creer-un-signal-electrique" title="Permalink to this headline">#</a></h3>
 <p>On distingue trois types de sources :</p>
 <ul class="simple">
 <li><p>Les alimentations stabilisées. Elles permettent de créer une tension continue et délivrer une puissance assez importante. On les utilisera peu et le cas échéant, leur fonctionnement sera précisé.
@@ -454,25 +665,25 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
 <li><p>Les <em>alimentations symétriques</em>. Elles sont constituées de <em>trois</em> branchements correspondant à des potentiels : <span class="math notranslate nohighlight">\(-15V, 0V, 15V\)</span>. On les utilise surtout pour alimenter les ALI (les 3 bornes sont alors à brancher).</p></li>
 <li><p>Les <strong>générateurs basse fréquence</strong>. Ils permettent de générer des signaux de forment varier (possiblement continu mais aussi sinusoïdaux, créneaux ou plus complexe). Ils seront très utilisés et on va s’attarder sur leurs réglages.</p></li>
 </ul>
-<section id="le-gbf-etapes-de-reglage">
-<h4><span class="section-number">1.2.3.1. </span>Le GBF : Etapes de réglage<a class="headerlink" href="#le-gbf-etapes-de-reglage" title="Permalink to this heading">#</a></h4>
+<div class="section" id="le-gbf-etapes-de-reglage">
+<h4><span class="section-number">1.2.3.1. </span>Le GBF : Etapes de réglage<a class="headerlink" href="#le-gbf-etapes-de-reglage" title="Permalink to this headline">#</a></h4>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Avant de commencer à toucher aux boutons du GBF, il est <strong>obligatoire</strong> de réfléchir aux caractéristiques du signal qu’on veut déliver…</p>
 </div>
 <p>La présentation du premier GBF utilisé et le protocole de réglage est présenté <a class="reference external" href="https://github.com/pcsi3physiquestan/donnees_exp/blob/main/poster_gbf.pdf?raw=true">ici</a>. Attention, le protocole est <strong>général</strong> mais les boutons sont spécifiques au GBF présenté.</p>
-</section>
-</section>
-<section id="mesurer-une-valeur-unique-le-multimetre">
-<h3><span class="section-number">1.2.4. </span>Mesurer une valeur unique : le multimètre<a class="headerlink" href="#mesurer-une-valeur-unique-le-multimetre" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="mesurer-une-valeur-unique-le-multimetre">
+<h3><span class="section-number">1.2.4. </span>Mesurer une valeur unique : le multimètre<a class="headerlink" href="#mesurer-une-valeur-unique-le-multimetre" title="Permalink to this headline">#</a></h3>
 <p>Un multimètre renvoie une valeur correspondant au type de mesure qu’on veut réaliser :</p>
 <ul class="simple">
 <li><p>ampèremètre : pour mesurer un courant</p></li>
 <li><p>voltmètre : pour mesurer une tension</p></li>
 <li><p>ohmètre : pour mesurer une résistance</p></li>
 </ul>
-<section id="amperemetre-et-voltmetre">
-<h4><span class="section-number">1.2.4.1. </span>Ampèremètre et voltmètre<a class="headerlink" href="#amperemetre-et-voltmetre" title="Permalink to this heading">#</a></h4>
+<div class="section" id="amperemetre-et-voltmetre">
+<h4><span class="section-number">1.2.4.1. </span>Ampèremètre et voltmètre<a class="headerlink" href="#amperemetre-et-voltmetre" title="Permalink to this headline">#</a></h4>
 <p>On rappelle :</p>
 <ul class="simple">
 <li><p>qu’un ampèremètre doit être <em>branché en série</em> avec le dipôle dont on veut mesurer l’intensité qui le traverse.</p></li>
@@ -480,9 +691,9 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
 <li><p>que dans les deux cas, la mesure est polarisée. La bornes <code class="docutils literal notranslate"><span class="pre">COM</span></code> correspond à la borne <code class="docutils literal notranslate"><span class="pre">-</span></code> des représentations : la queue de la flèche de tension (voltmètre) ou la sortie du dipôle en terme d’intensité (ampèremètre).</p></li>
 <li><p>que l’autre branchement est en général différent pour l’ampèremètre et le voltmètre.</p></li>
 </ul>
-</section>
-<section id="calibre-ac-et-dc">
-<h4><span class="section-number">1.2.4.2. </span>Calibre AC et DC<a class="headerlink" href="#calibre-ac-et-dc" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="calibre-ac-et-dc">
+<h4><span class="section-number">1.2.4.2. </span>Calibre AC et DC<a class="headerlink" href="#calibre-ac-et-dc" title="Permalink to this headline">#</a></h4>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <ul class="simple">
@@ -493,16 +704,16 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
 <p>Ces calibres sont parfois représentés pas un <code class="docutils literal notranslate"><span class="pre">~</span></code> (AC) ou un <code class="docutils literal notranslate"><span class="pre">=</span></code> (DC, le trait inférieur peut-être en pointillés).</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercice: quel calibre ?</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>On veut étudier le point de fonctionnement de la diode en régime indépendant du temps.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Pour une tension continue de valeur <span class="math notranslate nohighlight">\(U_0\)</span>. Que vaut sa valeur moyenne ?</p></li>
 <li><p>Pour une tension continue de valeur <span class="math notranslate nohighlight">\(U_0\)</span>. Que vaut sa valeur efficace ?</p></li>
 <li><p>Vaut-il mieux régler le multimètre en DC ou en AC ?</p></li>
 </ol>
 </li>
 <li><p>On veut étudier le gain entrée/sortie d’un système électrique en régime sinusoïdal.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Pour une tension sinusoïdal d’amplitude <span class="math notranslate nohighlight">\(U_m\)</span>. Que vaut sa valeur moyenne ?</p></li>
 <li><p>Pour une tension sinusoïdal d’amplitude <span class="math notranslate nohighlight">\(U_m\)</span>. Que vaut sa valeur efficace ?</p></li>
 <li><p>Vaut-il mieux régler le multimètre sur DC ou AC pour mesurer le rapport des amplitudes de deux tensions sinusoidales ?</p></li>
@@ -510,14 +721,14 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
 </li>
 </ol>
 </div>
-</section>
-<section id="incertitudes-et-multimetre">
-<h4><span class="section-number">1.2.4.3. </span>Incertitudes et multimètre<a class="headerlink" href="#incertitudes-et-multimetre" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="incertitudes-et-multimetre">
+<h4><span class="section-number">1.2.4.3. </span>Incertitudes et multimètre<a class="headerlink" href="#incertitudes-et-multimetre" title="Permalink to this headline">#</a></h4>
 <p>Une présentation des sources d’incertitude avec les multimètre est données <a class="reference external" href="https://moodlecpge.stanislas.fr/mod/page/view.php?id=44">ici</a>.</p>
-</section>
-</section>
-<section id="suivre-l-evolution-d-un-signal-la-carte-d-acquisition">
-<h3><span class="section-number">1.2.5. </span>Suivre l’évolution d’un signal : la carte d’acquisition<a class="headerlink" href="#suivre-l-evolution-d-un-signal-la-carte-d-acquisition" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="suivre-l-evolution-d-un-signal-la-carte-d-acquisition">
+<h3><span class="section-number">1.2.5. </span>Suivre l’évolution d’un signal : la carte d’acquisition<a class="headerlink" href="#suivre-l-evolution-d-un-signal-la-carte-d-acquisition" title="Permalink to this headline">#</a></h3>
 <p>Une carte d’acquisition est un dispositif permettant de mesurer des <strong>tensions</strong> et envoyer des mesures à intervalles régulières à un ordinateur. Une logiciel récupère alors les données et affiche l’allure des signaux. L’interface graphique du logiciel (ici <code class="docutils literal notranslate"><span class="pre">Atelier</span> <span class="pre">scientifique</span></code>) permet de régler les paramètres d’acquisition de la carte pour obtenir les données voulues. L’affichage d’un suivi nécessite en effet un paramétrage adapté :</p>
 <ul class="simple">
 <li><p>l’acquisition doit suivre le signal voulu.</p></li>
@@ -526,12 +737,12 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
 <li><p>les mesures ne doivent pas “saturer”(en général, la carte est réglée pour mesurer des tensions entre 2 valeurs extrêmes)</p></li>
 <li><p>le nombre de points (d’échantillons) doit être suffisant pour pouvoir suivre les variations du signal.</p></li>
 </ul>
-<section id="reglage-des-cartes-d-acquisition">
-<h4><span class="section-number">1.2.5.1. </span>Réglage des cartes d’acquisition<a class="headerlink" href="#reglage-des-cartes-d-acquisition" title="Permalink to this heading">#</a></h4>
+<div class="section" id="reglage-des-cartes-d-acquisition">
+<h4><span class="section-number">1.2.5.1. </span>Réglage des cartes d’acquisition<a class="headerlink" href="#reglage-des-cartes-d-acquisition" title="Permalink to this headline">#</a></h4>
 <p><em>Affichez les étapes de réglages grâce à la croix à droite.</em></p>
 <div class="toggle docutils container">
 <p>On se base sur la carte FOXY utilisée au laboratoire.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Alimenter la carte et la brancher (USB) à l’ordinateur. Une interface se lance automatiquement. Choisir <strong>Généraliste</strong>.</p></li>
 <li><p>Réaliser les branchements au circuit.</p></li>
 <li><p>Choisir <code class="docutils literal notranslate"><span class="pre">Acquisition</span></code> dans les menus. Une fenêtre s’affiche à gauche pour les réglages.</p></li>
@@ -539,13 +750,13 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
 <li><p><strong>Régler les paramètres de chaque voie</strong> En cliquant sur la voie choisie, un menu avec des onglets s’affiche. Visiter les onglets pour modifier les réglages. Le réglage <strong>indispensable</strong> est le <strong>calibre</strong>. Le reste correspond à des réglages de forme.</p></li>
 <li><p><strong>Choisir une abscisse temporelle</strong> Faire un glisser-déplacer de l’horloge vers l’axe des abscisses.</p></li>
 </ol>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Même si vous compter plus tard mettre en abscisses une autre grandeur (pour avoir <span class="math notranslate nohighlight">\((u(t), i(t))\)</span> par exemple), choisissez TOUJOURS le temps en abscisses pour pouvoir régler les paramètres d’acquisition.</p>
-</aside>
-<ol class="arabic simple" start="7">
+</div>
+<ol class="simple">
 <li><p><strong>Régler les paramètres temporels.</strong> Il faut avoir réfléchi au phénomène que vous voulez observer. Il faut circuler dans les onglets généralement.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p><strong>Durée d’acquisition</strong>.</p></li>
 <li><p><strong>Nombre de points</strong> On reviendra sur cette notion plus tard. Par défaut, le choisir au maximum (16000 points) <em>en pensant à sauvegarder régulièrement.</em></p></li>
 <li><p><strong>Acquisition continue</strong>. Il est souvent préférable de l’activer mais vous devrez déciser sur vous voulez une acquisition unique ou rafraichier régulièrement l’acquisition du signal.</p></li>
@@ -556,13 +767,13 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
 <li><p>Lancer l’acquisition (bouton vert).</p></li>
 </ol>
 </div>
-</section>
-<section id="choix-des-parametres">
-<h4><span class="section-number">1.2.5.2. </span>Choix des paramètres<a class="headerlink" href="#choix-des-parametres" title="Permalink to this heading">#</a></h4>
+</div>
+<div class="section" id="choix-des-parametres">
+<h4><span class="section-number">1.2.5.2. </span>Choix des paramètres<a class="headerlink" href="#choix-des-parametres" title="Permalink to this headline">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exercice : Paramètres d’acquisition</p>
 <p>Par la suite, on voudra tester le comportement de la diode pour différents types de signaux :</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Un signal sinusoïdale de fréquence 1kHz, d’amplitude 10V et de valeur moyenne nulle</p></li>
 <li><p>Un signal sinusoïdale de fréquence 20kHz, d’amplitude 3V et de valeur moyenne 1V</p></li>
 <li><p>Un signal triangulaire de fréquence 3kHz, d’amplitude 3V, de valeur basse -2V</p></li>
@@ -577,15 +788,15 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
 </ul>
 <p>Note : Les calibres possibles sont <code class="docutils literal notranslate"><span class="pre">-0.25V/+0.25V</span></code>, <code class="docutils literal notranslate"><span class="pre">-5V/+5V</span></code>, <code class="docutils literal notranslate"><span class="pre">-15V/+15V</span></code>, <code class="docutils literal notranslate"><span class="pre">-30V/+30V</span></code></p>
 </div>
-</section>
-</section>
-<section id="suivre-l-evolution-d-un-signal-l-oscilloscope">
-<h3><span class="section-number">1.2.6. </span>Suivre l’évolution d’un signal : l’oscilloscope<a class="headerlink" href="#suivre-l-evolution-d-un-signal-l-oscilloscope" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="suivre-l-evolution-d-un-signal-l-oscilloscope">
+<h3><span class="section-number">1.2.6. </span>Suivre l’évolution d’un signal : l’oscilloscope<a class="headerlink" href="#suivre-l-evolution-d-un-signal-l-oscilloscope" title="Permalink to this headline">#</a></h3>
 <p>Un oscilloscope est un instrument de suivi temporel de tension. Il embarque le système de mesure et l’affichage. Il existe deux types d’oscilloscopes : les oscilloscopes analogiques (la trace est obtenue par déviation d’un faisceau d’électron) et les oscilloscopes numériques (un écran - généralement LCD - affiche les données mesurées après traitement numérique). On travaillera principalement sur le second type d’oscilloscope.</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Il existe aussi des oscilloscopes hybride analogique-numérique permettant de passer d’un fonctionnement à l’autre.</p>
-</aside>
+</div>
 <p>Le principe de réglage est à peu près le même que pour la carte d’acquisition à ceci près qu’on ne règle pas le nombre de points de mesure. La différence réside dans la position des boutons de réglages.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
@@ -593,8 +804,8 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
 <p>Il faut toujours <strong>prévoir la durée d’acquisition nécessaire</strong> et le <strong>calibre vertical adpaté</strong> <strong>en fonction du phénomène qu’on veut observer.</strong></p>
 <p><em>On ne réglera visuellement le signal que dans un second temps quand on a déjà un signal à peu près propre (affiner la qualité d’affichage).</em></p>
 </div>
-<section id="etapes-de-reglages">
-<h4><span class="section-number">1.2.6.1. </span>Etapes de réglages.<a class="headerlink" href="#etapes-de-reglages" title="Permalink to this heading">#</a></h4>
+<div class="section" id="etapes-de-reglages">
+<h4><span class="section-number">1.2.6.1. </span>Etapes de réglages.<a class="headerlink" href="#etapes-de-reglages" title="Permalink to this headline">#</a></h4>
 <p>La vidéo ci-après présente les boutons pour le FI32052 utilisé en TP et un poster regroupant la méthode de mesure est donné <a class="reference external" href="https://github.com/pcsi3physiquestan/donnees_exp/blob/main/poster_oscillo.pdf?raw=true">ici</a>.</p>
 <p>Observer la vidéo ci-dessous pour voir les étapes de réglages.</p>
 <div class="cell tag_remove-input docutils container">
@@ -603,10 +814,10 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
       Your browser does not support the <code>video</code> element.
     </video></div></div>
 </div>
-</section>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -620,7 +831,7 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -628,129 +839,50 @@ La borne de Terre est une borne physique dont le potentiel est imposé. Il ne pe
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="../tp3_elec.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../tp3_elec.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="fam_preliminaire_2.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="fam_preliminaire_2.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">2. </span>(Travail) Préparation des protocoles</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#position-du-probleme">1.1. Position du problème.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumentation-electrique">1.2. Instrumentation électrique</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumentation-diverse">1.2.1. Instrumentation diverse</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-cables-bnc">1.2.2. Les câbles BNC</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#presentation-et-branchement">1.2.2.1. Présentation et branchement</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bnc-et-terre">1.2.2.2. BNC et Terre</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creer-un-signal-electrique">1.2.3. Créer un signal électrique.</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#le-gbf-etapes-de-reglage">1.2.3.1. Le GBF : Etapes de réglage</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesurer-une-valeur-unique-le-multimetre">1.2.4. Mesurer une valeur unique : le multimètre</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#amperemetre-et-voltmetre">1.2.4.1. Ampèremètre et voltmètre</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#calibre-ac-et-dc">1.2.4.2. Calibre AC et DC</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#incertitudes-et-multimetre">1.2.4.3. Incertitudes et multimètre</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-la-carte-d-acquisition">1.2.5. Suivre l’évolution d’un signal : la carte d’acquisition</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#reglage-des-cartes-d-acquisition">1.2.5.1. Réglage des cartes d’acquisition</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#choix-des-parametres">1.2.5.2. Choix des paramètres</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#suivre-l-evolution-d-un-signal-l-oscilloscope">1.2.6. Suivre l’évolution d’un signal : l’oscilloscope</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#etapes-de-reglages">1.2.6.1. Etapes de réglages.</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By C. Lacpatia
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2021.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
+            </footer>
+        </div>
     </div>
-  </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By C. Lacpatia<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>

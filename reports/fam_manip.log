@@ -1,45 +1,47 @@
 Traceback (most recent call last):
-  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+  File "D:\cedri\anaconda3\envs\prepa\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
     executenb(
-  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/client.py", line 1112, in execute
+  File "D:\cedri\anaconda3\envs\prepa\lib\site-packages\nbclient\client.py", line 1204, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/util.py", line 74, in wrapped
+  File "D:\cedri\anaconda3\envs\prepa\lib\site-packages\nbclient\util.py", line 84, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/util.py", line 53, in just_run
+  File "D:\cedri\anaconda3\envs\prepa\lib\site-packages\nbclient\util.py", line 62, in just_run
     return loop.run_until_complete(coro)
-  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+  File "D:\cedri\anaconda3\envs\prepa\lib\asyncio\base_events.py", line 647, in run_until_complete
     return future.result()
-  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/client.py", line 553, in async_execute
+  File "D:\cedri\anaconda3\envs\prepa\lib\site-packages\nbclient\client.py", line 663, in async_execute
     await self.async_execute_cell(
-  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/client.py", line 857, in async_execute_cell
-    self._check_raise_for_error(cell, exec_reply)
-  File "/home/ubuntu/miniconda3/envs/prepa/lib/python3.9/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+  File "D:\cedri\anaconda3\envs\prepa\lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "D:\cedri\anaconda3\envs\prepa\lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-def estim_ud(u, i, E0, RP):
-  """Fonction qui renvoie une estimation de Ud en calculant la moyenne des tensions pour lesquelles
-  i est supérieure ) E0/RP
-  u  : vecteur numpy contenant les valeurs de tension
-  i  : vecteur numpy contenant les valeurs d'intensité
-  E0 : Valeur de E0 (flottant)
-  RP : Valeur de RP (flottant)
-  """
-  imin = 0  # LIGNE A MODIFIER
+ud_min, ud_max = -1, 0  # LIGNE A MODIFIER. Le programme cherchera la valeur seuil dans l'intervale.
 
-  u_verif = []  # Liste qui contiendra les valeurs acceptées.
-  N = 0  # LIGNE A MODIFIER
-  for j in range(N):
-    if i[j] >= imin:
-      u.append([])  # LIGNE A MODIFIER
+def eval_ud(u, i, ud_min, ud_max):
+    """Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental. NE PAS MODIFIER
+    u : Vecteur contenu les mesures de tension
+    i : Vecteur contenu les mesures d'intensité
+    ud_min, ud_max : Flottant délimitant l'intervalle dans lequel on recherche UD
 
-  u_verif = np.array(u_verif)  # Transformation en vecteur numpy pour calculer la moyenne simplement.
-  ud = np.mean(u_verif)
-  return ud
+    Renvoie : un flottant correspondant à la valeur de ud optimale
+    """
+    N = 1000  # Nombre de valeur de ud qui seront testée entre 0 et 1 V
+    n = len(u)
+    ud = np.linspace(ud_min, ud_max, N)  # Valeurs de ud testées
+    dud = np.zeros(N)  # On stocke l'estimateur qui permettra de décider quelle valeur de ud est la meilleure
+    for k in range(N):  # Calcul de l'estimateur
+        ds = 0
+        for j in range(n):
+            d = min(abs(u[j]-ud[k]), i[j])
+            ds = ds + d ** 2
+        dud[k] = ds
+    return ud[np.argmin(dud)]
 
 """Ecrire ci-dessous l'instruction qui va enregistrer dans la variable ud_estim l'estimation de ud
 avec la méthode précdente"""
-ud_estim = 0  # LIGNE A MODIFIER
+ud_estim = 0  # LIGNE A MODIFIER en appelant eval_ud
 
 
 """Ajout du modèle sur le graphique.
@@ -48,8 +50,8 @@ f,ax = plt.subplots()
 f.suptitle("Mettre un titre")
 ax.set_xlabel("Légender les X")
 ax.set_ylabel("Légender les Y")
-ax.errorbar(u, i, xerr=uu, yerr=ui, legend="Légender la courbe", linestyle="", color="black")
-ax.plot([-5, ud_estim, ud_estim], [0, 0, 5]legend="Légender la courbe", linestyle="-",color="red")
+ax.errorbar(u, i, xerr=uu, yerr=ui, label="Légender la courbe", linestyle="", color="black")
+ax.plot([-min(u), ud_estim, ud_estim], [0, 0, max(i)], label="Légender la courbe", linestyle="-",color="red")
 ax.grid()
 ax.legend()
 plt.show()
@@ -59,13 +61,17 @@ plt.show()
 (dans le répertoire où se trouve le notebook). Vous pourrez l'insérer dans votre compte-rendu.
 """
 f.savefig("caracteristique_diode.png")
-
 ------------------
 
-[0;36m  File [0;32m"<ipython-input-2-6e16eb0175aa>"[0;36m, line [0;32m33[0m
-[0;31m    ax.plot([-5, ud_estim, ud_estim], [0, 0, 5]legend="Légender la courbe", linestyle="-",color="red")[0m
-[0m                                               ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mValueError[0m                                Traceback (most recent call last)
+Cell [1;32mIn [2], line 35[0m
+[0;32m     33[0m ax[38;5;241m.[39mset_ylabel([38;5;124m"[39m[38;5;124mLégender les Y[39m[38;5;124m"[39m)
+[0;32m     34[0m ax[38;5;241m.[39merrorbar(u, i, xerr[38;5;241m=[39muu, yerr[38;5;241m=[39mui, label[38;5;241m=[39m[38;5;124m"[39m[38;5;124mLégender la courbe[39m[38;5;124m"[39m, linestyle[38;5;241m=[39m[38;5;124m"[39m[38;5;124m"[39m, color[38;5;241m=[39m[38;5;124m"[39m[38;5;124mblack[39m[38;5;124m"[39m)
+[1;32m---> 35[0m ax[38;5;241m.[39mplot([[38;5;241m-[39m[38;5;28;43mmin[39;49m[43m([49m[43mu[49m[43m)[49m, ud_estim, ud_estim], [[38;5;241m0[39m, [38;5;241m0[39m, [38;5;28mmax[39m(i)], label[38;5;241m=[39m[38;5;124m"[39m[38;5;124mLégender la courbe[39m[38;5;124m"[39m, linestyle[38;5;241m=[39m[38;5;124m"[39m[38;5;124m-[39m[38;5;124m"[39m,color[38;5;241m=[39m[38;5;124m"[39m[38;5;124mred[39m[38;5;124m"[39m)
+[0;32m     36[0m ax[38;5;241m.[39mgrid()
+[0;32m     37[0m ax[38;5;241m.[39mlegend()
 
-SyntaxError: invalid syntax (<ipython-input-2-6e16eb0175aa>, line 33)
+[1;31mValueError[0m: min() arg is an empty sequence
+ValueError: min() arg is an empty sequence
 
