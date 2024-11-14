@@ -1,47 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5. (TP) Création du signal &#8212; TP Electrocinétique</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>5. (TP) Création du signal &#8212; TP Electrocinétique</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -51,57 +64,97 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/mod_manip';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/mod_manip.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6. (Travail) Etude préliminaire" href="demod_preliminaire.html" />
     <link rel="prev" title="4. (Travail) Etude préliminaire" href="modul_preliminaire.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../tp3_elec.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">TP Electrocinétique</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -110,400 +163,203 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Familiarisation avec le matériel
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Familiarisation avec le matériel</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="fam_preliminaire.html">
-   1. (Travail) Matériel en électrocinétique
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="fam_preliminaire_2.html">
-   2. (Travail) Préparation des protocoles
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="fam_manip.html">
-   3. (TP) Caractéristique d’une diode.
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="fam_preliminaire.html">1. (Travail) Matériel en électrocinétique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fam_preliminaire_2.html">2. (Travail) Préparation des protocoles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fam_manip.html">3. (TP) Caractéristique d’une diode.</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Création d'un signal modulé en amplitude
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Création d'un signal modulé en amplitude</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="modul_preliminaire.html">
-   4. (Travail) Etude préliminaire
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   5. (TP) Création du signal
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="modul_preliminaire.html">4. (Travail) Etude préliminaire</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. (TP) Création du signal</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Démodulation d'un signal
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Démodulation d'un signal</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="demod_preliminaire.html">
-   6. (Travail) Etude préliminaire
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="demod_manip.html">
-   7. (TP) Démodulation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="demod_preliminaire.html">6. (Travail) Etude préliminaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demod_manip.html">7. (TP) Démodulation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Plus d'initiatives
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plus d'initiatives</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="u_seuil_exp.html">
-   8. Complément : Détermination de la tension seuil
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="elec_supplement.html">
-   9. Etude du régime transitoire (Ordre 2)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="u_seuil_exp.html">8. Complément : Détermination de la tension seuil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elec_supplement.html">9. Etude du régime transitoire (Ordre 2)</a></li>
+
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/mod_manip.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebook/mod_manip.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/notebook/mod_manip.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../_sources/notebook/mod_manip.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-multiplieur-30-minutes">
-   5.1. Le multiplieur (30 minutes)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-sommateur-2h">
-   5.2. Le sommateur (2h)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sommateur-seul">
-     5.2.1. Sommateur seul.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ajout-du-montage-avec-ali">
-     5.2.2. Ajout du montage avec ALI
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#etude-prelimineaire-sur-l-ali">
-       5.2.2.1. Etude préliminéaire sur l’ALI
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#association-au-sommateur">
-       5.2.2.2. Association au sommateur
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#montage-complet-1h">
-   5.3. Montage complet. (1h)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analyse-temporelle-et-frequentielle">
-     5.3.1. Analyse temporelle et fréquentielle
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#utilisation-de-l-oscilloscope">
-     5.3.2. Utilisation de l’oscilloscope
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#signal-module-au-gbf-30-minutes">
-   5.4. Signal modulé au GBF (30 minutes)
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>(TP) Création du signal</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-multiplieur-30-minutes">
-   5.1. Le multiplieur (30 minutes)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#le-sommateur-2h">
-   5.2. Le sommateur (2h)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sommateur-seul">
-     5.2.1. Sommateur seul.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ajout-du-montage-avec-ali">
-     5.2.2. Ajout du montage avec ALI
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#etude-prelimineaire-sur-l-ali">
-       5.2.2.1. Etude préliminéaire sur l’ALI
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#association-au-sommateur">
-       5.2.2.2. Association au sommateur
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#montage-complet-1h">
-   5.3. Montage complet. (1h)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#analyse-temporelle-et-frequentielle">
-     5.3.1. Analyse temporelle et fréquentielle
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#utilisation-de-l-oscilloscope">
-     5.3.2. Utilisation de l’oscilloscope
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#signal-module-au-gbf-30-minutes">
-   5.4. Signal modulé au GBF (30 minutes)
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>(TP) Création du signal</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-multiplieur-30-minutes">5.1. Le multiplieur (30 minutes)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-sommateur-2h">5.2. Le sommateur (2h)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sommateur-seul">5.2.1. Sommateur seul.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ajout-du-montage-avec-ali">5.2.2. Ajout du montage avec ALI</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-prelimineaire-sur-l-ali">5.2.2.1. Etude préliminéaire sur l’ALI</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#association-au-sommateur">5.2.2.2. Association au sommateur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#montage-complet-1h">5.3. Montage complet. (1h)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-temporelle-et-frequentielle">5.3.1. Analyse temporelle et fréquentielle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation-de-l-oscilloscope">5.3.2. Utilisation de l’oscilloscope</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signal-module-au-gbf-30-minutes">5.4. Signal modulé au GBF (30 minutes)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
-<div class="tex2jax_ignore mathjax_ignore section" id="tp-creation-du-signal">
-<h1><span class="section-number">5. </span>(TP) Création du signal<a class="headerlink" href="#tp-creation-du-signal" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="tp-creation-du-signal">
+<h1><span class="section-number">5. </span>(TP) Création du signal<a class="headerlink" href="#tp-creation-du-signal" title="Permalink to this heading">#</a></h1>
 <p>Nous n’allons pas réaliser le montage complet directement mais nous allons étudié séparément chaque étage du montage au préalable. Cela permettra de mieux comprendre le fonctionnement de chaque élément et de mettre en lumière certaines pratiques en électrocinétique. C’est de plus une pratique <strong>vivement</strong> conseillée quand on doit construire un système complexe de tester chaque partie avant de les assembler.</p>
 <p>Pour le compte-rendu, vous devrez rendre compte de l’analyse de chaque étage avant de présenter l’étude complète.</p>
 <p>Dimensionnement pour les tests :</p>
@@ -512,8 +368,8 @@ title="Print to PDF"
 <li><p>Fréquence du signal modulant : <span class="math notranslate nohighlight">\(f_m = 500Hz\)</span></p></li>
 <li><p>Amplitude des deux signaux : 10V initialement. On modifiera par la suite l’amplitude des signaux.</p></li>
 </ul>
-<div class="section" id="le-multiplieur-30-minutes">
-<h2><span class="section-number">5.1. </span>Le multiplieur (30 minutes)<a class="headerlink" href="#le-multiplieur-30-minutes" title="Permalink to this headline">#</a></h2>
+<section id="le-multiplieur-30-minutes">
+<h2><span class="section-number">5.1. </span>Le multiplieur (30 minutes)<a class="headerlink" href="#le-multiplieur-30-minutes" title="Permalink to this heading">#</a></h2>
 <p>Nous allons :</p>
 <ul class="simple">
 <li><p>Tester son fonctionnement</p></li>
@@ -522,19 +378,19 @@ title="Print to PDF"
 </ul>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Alimenter le multiplieur et lui envoyer les deux signaux porteur et modulant. Observer avec la carte d’acquisition FOXY le signal sortant (quels réglages pour l’Atelier scientifique ?)</p></li>
 <li><p>Utiliser le tracé temporel pour déterminer la fréquence des signaux porteur et modulant. Estimer l’incertitude sur les deux fréquences. Vérifier la cohérence avec les valeurs réglées sur les GBF.</p></li>
 <li><p>Obtenir le tracé du spectre (Traitement des données, Transformée de Fourier) du signal et analyser les valeurs des fréquences. On vérifiera sommairement la cohérence avec les valeurs attendues sans chercher à estimer un écart normalisé.</p></li>
 <li><p>Expliquer pourquoi l’analyse seule du spectre permet de savoir que le système est non linéaire.</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="le-sommateur-2h">
-<h2><span class="section-number">5.2. </span>Le sommateur (2h)<a class="headerlink" href="#le-sommateur-2h" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="le-sommateur-2h">
+<h2><span class="section-number">5.2. </span>Le sommateur (2h)<a class="headerlink" href="#le-sommateur-2h" title="Permalink to this heading">#</a></h2>
 <p>On prendra <span class="math notranslate nohighlight">\(R_1 = 8k \Omega\)</span> et <span class="math notranslate nohighlight">\(R_2 = 1k \Omega\)</span></p>
-<div class="section" id="sommateur-seul">
-<h3><span class="section-number">5.2.1. </span>Sommateur seul.<a class="headerlink" href="#sommateur-seul" title="Permalink to this headline">#</a></h3>
+<section id="sommateur-seul">
+<h3><span class="section-number">5.2.1. </span>Sommateur seul.<a class="headerlink" href="#sommateur-seul" title="Permalink to this heading">#</a></h3>
 <p>On veut vérifier :</p>
 <ul class="simple">
 <li><p>visuellement que le signal sortie correspond bien à la somme des signaux d’entrée.</p></li>
@@ -543,7 +399,7 @@ title="Print to PDF"
 <p>Pour tester le montage, on prendra comme signaux d’entrée les signaux porteur et modulant, même si ce ne sont pas les signaux qui entreront réellement dans le système complet.</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Réaliser le montage pour obtenir les deux tensions d’entrée et la tension de sortie sur FOXY. Vérifier alors visuellement que le signal de sortie est bien la somme des deux signaux d’entrée.</p></li>
 <li><p>Les signaux sont sinusoïdaux. Quelles grandeurs mesurer pour mesurer expérimentalement <span class="math notranslate nohighlight">\(\alpha\)</span> à partir des signaux précédents ?</p></li>
 <li><p>Réaliser des mesures de <span class="math notranslate nohighlight">\(\alpha\)</span> pour plusieurs valeurs d’amplitude des tensions d’entrée (on fera 5 mesures). <strong>Pensez à estimer les incertitudes pour chaque mesure</strong> (Vous êtes autorisés à ne conserver que la plus grande incertitude de mesure pour chaque mesure <em>pour simplifier l’étude</em> mais réfléchir néanmoins aux différentes sources).</p></li>
@@ -551,6 +407,11 @@ title="Print to PDF"
 </ol>
 </div>
 <div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Importation les bibliothèques scientifiques nécessaires :  numpy, matplotlib.pyplot, numpy.random&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -674,45 +535,46 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exploitation</p>
 <p>Utiliser les résulats précédents pour comparer la valeur mesurée de <span class="math notranslate nohighlight">\(\alpha\)</span> avec sa valeur théorique.</p>
 </div>
-</div>
-<div class="section" id="ajout-du-montage-avec-ali">
-<h3><span class="section-number">5.2.2. </span>Ajout du montage avec ALI<a class="headerlink" href="#ajout-du-montage-avec-ali" title="Permalink to this headline">#</a></h3>
-<div class="section" id="etude-prelimineaire-sur-l-ali">
-<h4><span class="section-number">5.2.2.1. </span>Etude préliminéaire sur l’ALI<a class="headerlink" href="#etude-prelimineaire-sur-l-ali" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="ajout-du-montage-avec-ali">
+<h3><span class="section-number">5.2.2. </span>Ajout du montage avec ALI<a class="headerlink" href="#ajout-du-montage-avec-ali" title="Permalink to this heading">#</a></h3>
+<section id="etude-prelimineaire-sur-l-ali">
+<h4><span class="section-number">5.2.2.1. </span>Etude préliminéaire sur l’ALI<a class="headerlink" href="#etude-prelimineaire-sur-l-ali" title="Permalink to this heading">#</a></h4>
 <p>Avant d’utilise le montage choisi, nous allons observer quelques caractéristiques du montage <strong>amplificateur non inverseur</strong>. On choisira les résistances du montage pour avoir un gain de 10. (<strong>Prendre une résistance variable pour la résistance réalisant la rétroaction</strong>).</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Vérifier <strong>sommairement</strong> que le montage réalise bien un amplificateur non inverseur dont le gain est proche de celui attendu.</p></li>
 <li><p>Que se passe-t-il lorsqu’on augmente trop la tension d’entrée (en valeur positive ou négative) ? On parle de <strong>saturation en tension</strong>. Si l’on observe par la suite une saturation en tension, quelle méthode pour la faire disparaître ?</p></li>
 <li><p>Réaliser le même montage mais en inversant les bornes <code class="docutils literal notranslate"><span class="pre">+</span></code> et <code class="docutils literal notranslate"><span class="pre">-</span></code> de l’ALI. Qu’observe-t-on ? Conclure quant à la nécessite d’une boucle de rétroaction <strong>négative</strong> pour observer un fonctionnement linéaire.</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="association-au-sommateur">
-<h4><span class="section-number">5.2.2.2. </span>Association au sommateur<a class="headerlink" href="#association-au-sommateur" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="association-au-sommateur">
+<h4><span class="section-number">5.2.2.2. </span>Association au sommateur<a class="headerlink" href="#association-au-sommateur" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Réaliser maintenant le montage avec ALI choisi dans l’étude préliminaire. Choisir des résistances (dont une variable) aux valeurs adaptées en fonction de votre étude préliminaire. L’associer au montage sommateur.</p></li>
 <li><p>Ajuster la valeur de la résistance variable de manière à avoir la relation <span class="math notranslate nohighlight">\(v_s = v_1 + v_2\)</span>. On pensera à rendre compte de la réalisation de ce montage en précisant les valeurs des résistances choisies.</p></li>
 </ol>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="montage-complet-1h">
-<h2><span class="section-number">5.3. </span>Montage complet. (1h)<a class="headerlink" href="#montage-complet-1h" title="Permalink to this headline">#</a></h2>
-<div class="section" id="analyse-temporelle-et-frequentielle">
-<h3><span class="section-number">5.3.1. </span>Analyse temporelle et fréquentielle<a class="headerlink" href="#analyse-temporelle-et-frequentielle" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+</section>
+<section id="montage-complet-1h">
+<h2><span class="section-number">5.3. </span>Montage complet. (1h)<a class="headerlink" href="#montage-complet-1h" title="Permalink to this heading">#</a></h2>
+<section id="analyse-temporelle-et-frequentielle">
+<h3><span class="section-number">5.3.1. </span>Analyse temporelle et fréquentielle<a class="headerlink" href="#analyse-temporelle-et-frequentielle" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Réaliser le montage complet pour obtenir le signal modulé en amplitude complet. L’observer avec la carte d’acquisition FOXY.</p></li>
 <li><p>Mesurer expérimentalement le taux de modulation <span class="math notranslate nohighlight">\(m\)</span> et le comparer à sa valeur attendue.</p></li>
 <li><p>Tracer le spectre signal. Vérifier la présence des fréquences attendues (on ne demande pas de calcul d’écart normalisé mais on se demandera quelle est l’incertitude de mesure sur les fréquences du signal).</p></li>
@@ -720,13 +582,13 @@ title="Print to PDF"
 <li><p>Rendre compte de la réalisation du montage complet et de l’analyse du signal modulé.</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="utilisation-de-l-oscilloscope">
-<h3><span class="section-number">5.3.2. </span>Utilisation de l’oscilloscope<a class="headerlink" href="#utilisation-de-l-oscilloscope" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="utilisation-de-l-oscilloscope">
+<h3><span class="section-number">5.3.2. </span>Utilisation de l’oscilloscope<a class="headerlink" href="#utilisation-de-l-oscilloscope" title="Permalink to this heading">#</a></h3>
 <p>Vous allez vous entrainer à utiliser l’oscilloscope pour observer un signal plus complexe.</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Vérifier qu’il n’y a pas de problème de Terre pour pouvoir observer le signal de sortie à l’oscilloscope.</p></li>
 <li><p>Méthode 1 - Observation du signal seul : Réfléchir aux réglages de base de temps et de synchronisation le plus adapté pour observer le signal de manière à peu près stable.</p></li>
 <li><p>Méthode 2 - Synchronisation sur un signal annexe : Sur quel autre signal peut-on synchroniser pour observer l’enveloppe du signal modulé de manière stable. Réaliser la manipulation. Mesurer à nouveau le taux de modulation (sans calcul d’incertitude cette fois).</p></li>
@@ -735,22 +597,22 @@ title="Print to PDF"
 <div class="tip admonition">
 <p class="admonition-title">Compte-rendu</p>
 <p>Rendre-compte :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Du montage complet choisi pour la création du signal modulé</p></li>
 <li><p>De l’étude du multiplieur</p></li>
 <li><p>De l’étude du sommateur puis de son association avec l’ALI</p></li>
 <li><p>Des observations réalisées sur le montage complet</p></li>
 </ol>
 </div>
-</div>
-</div>
-<div class="section" id="signal-module-au-gbf-30-minutes">
-<h2><span class="section-number">5.4. </span>Signal modulé au GBF (30 minutes)<a class="headerlink" href="#signal-module-au-gbf-30-minutes" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="signal-module-au-gbf-30-minutes">
+<h2><span class="section-number">5.4. </span>Signal modulé au GBF (30 minutes)<a class="headerlink" href="#signal-module-au-gbf-30-minutes" title="Permalink to this heading">#</a></h2>
 <p>On peut utiliser les fonctions des GBF (certains) pour réaliser directement un signal modulé en amplitude. Vous allez apprendre à utiliser ce système pour ne pas avoir à refaire le montage précédent pour étudier la démodulation.</p>
 <p><strong>La présentation des réglages est propre aux GBF utilisés dans cette salle (SDGXXXXX). Elled evra être adaptée à l’utilisation d’un autre GBF.</strong></p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Réaliser le signal porteur à l’aide des réglages classiques sur la sortie voulue (1 ou  2) (forme, fréquence, amplitude, offset).</p></li>
 <li><p>Activer la modulation d’amplitude avec le bouton <code class="docutils literal notranslate"><span class="pre">Mod</span></code> (<em>il doit s’éclairer - un deuxième appui permet de désactiver la modulation</em>).</p></li>
 <li><p>Les boutons sous l’écran permettent de régler le signal modulant:</p>
@@ -767,8 +629,8 @@ title="Print to PDF"
 <li><p>Note : Pour mieux synchroniser, vous pouvez observer un signal de même fréquence que le signal modulant composé de “Pulse” avec la sortie <code class="docutils literal notranslate"><span class="pre">Aux</span> <span class="pre">In/Out</span></code> situé <strong>à l’arrière du GBF</strong>. Il faut l’activer dans le menu ‘Utility &gt; Sync &gt; State : On’ + ‘Channel : CH1-MOD’.</p></li>
 </ol>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -782,7 +644,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -790,50 +652,116 @@ title="Print to PDF"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="modul_preliminaire.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">4. </span>(Travail) Etude préliminaire</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="modul_preliminaire.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>(Travail) Etude préliminaire</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="demod_preliminaire.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="demod_preliminaire.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">6. </span>(Travail) Etude préliminaire</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-multiplieur-30-minutes">5.1. Le multiplieur (30 minutes)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-sommateur-2h">5.2. Le sommateur (2h)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sommateur-seul">5.2.1. Sommateur seul.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ajout-du-montage-avec-ali">5.2.2. Ajout du montage avec ALI</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-prelimineaire-sur-l-ali">5.2.2.1. Etude préliminéaire sur l’ALI</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#association-au-sommateur">5.2.2.2. Association au sommateur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#montage-complet-1h">5.3. Montage complet. (1h)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-temporelle-et-frequentielle">5.3.1. Analyse temporelle et fréquentielle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation-de-l-oscilloscope">5.3.2. Utilisation de l’oscilloscope</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#signal-module-au-gbf-30-minutes">5.4. Signal modulé au GBF (30 minutes)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By C. Lacpatia<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By C. Lacpatia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

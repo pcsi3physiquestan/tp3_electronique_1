@@ -1,47 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. (TP) Caractéristique d’une diode. &#8212; TP Electrocinétique</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>3. (TP) Caractéristique d’une diode. &#8212; TP Electrocinétique</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -51,57 +64,97 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/fam_manip';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/fam_manip.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="4. (Travail) Etude préliminaire" href="modul_preliminaire.html" />
     <link rel="prev" title="2. (Travail) Préparation des protocoles" href="fam_preliminaire_2.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../tp3_elec.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">TP Electrocinétique</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -110,472 +163,217 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Familiarisation avec le matériel
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Familiarisation avec le matériel</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="fam_preliminaire.html">
-   1. (Travail) Matériel en électrocinétique
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="fam_preliminaire_2.html">
-   2. (Travail) Préparation des protocoles
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   3. (TP) Caractéristique d’une diode.
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="fam_preliminaire.html">1. (Travail) Matériel en électrocinétique</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fam_preliminaire_2.html">2. (Travail) Préparation des protocoles</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. (TP) Caractéristique d’une diode.</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Création d'un signal modulé en amplitude
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Création d'un signal modulé en amplitude</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="modul_preliminaire.html">
-   4. (Travail) Etude préliminaire
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="mod_manip.html">
-   5. (TP) Création du signal
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="modul_preliminaire.html">4. (Travail) Etude préliminaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mod_manip.html">5. (TP) Création du signal</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Démodulation d'un signal
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Démodulation d'un signal</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="demod_preliminaire.html">
-   6. (Travail) Etude préliminaire
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="demod_manip.html">
-   7. (TP) Démodulation
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="demod_preliminaire.html">6. (Travail) Etude préliminaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demod_manip.html">7. (TP) Démodulation</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Plus d'initiatives
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plus d'initiatives</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="u_seuil_exp.html">
-   8. Complément : Détermination de la tension seuil
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="elec_supplement.html">
-   9. Etude du régime transitoire (Ordre 2)
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="u_seuil_exp.html">8. Complément : Détermination de la tension seuil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="elec_supplement.html">9. Etude du régime transitoire (Ordre 2)</a></li>
+
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/fam_manip.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebook/fam_manip.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/notebook/fam_manip.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../_sources/notebook/fam_manip.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#caracteristique-statique-d-une-diode-1h30">
-   3.1. Caractéristique statique d’une diode. (1h30)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#manipulations">
-     3.1.1. Manipulations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#trace-de-la-courbe">
-     3.1.2. Tracé de la courbe
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#estimation-de-la-tension-seuil">
-     3.1.3. Estimation de la tension seuil
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acquisition-numerique-d-un-signal-30-minutes">
-   3.2. Acquisition numérique d’un signal. (30 minutes)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reglages-generaux">
-     3.2.1. Réglages généraux.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir">
-     3.2.2. Nombre de points et fréquence d’échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acquisition-unique-ou-continue-fait-par-le-professeur">
-     3.2.3. Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir">
-     3.2.4. Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#caracteristique-dynamique-d-une-diode-1h">
-   3.3. Caractéristique dynamique d’une diode (1h)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#utilisation-de-foxy">
-     3.3.1. Utilisation de FOXY
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#manipulation">
-       3.3.1.1. Manipulation
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exploitation">
-       3.3.1.2. Exploitation
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#impedance-de-sortie-du-gbf-1h">
-   3.4. Impédance de sortie du GBF (1h)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#influence-de-l-impedance-de-sortie">
-     3.4.1. Influence de l’impédance de sortie.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mesure-de-l-impedance-de-sortie-point-de-fonctionnement">
-     3.4.2. Mesure de l’impédance de sortie. Point de fonctionnement
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>(TP) Caractéristique d’une diode.</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#caracteristique-statique-d-une-diode-1h30">
-   3.1. Caractéristique statique d’une diode. (1h30)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#manipulations">
-     3.1.1. Manipulations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#trace-de-la-courbe">
-     3.1.2. Tracé de la courbe
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#estimation-de-la-tension-seuil">
-     3.1.3. Estimation de la tension seuil
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acquisition-numerique-d-un-signal-30-minutes">
-   3.2. Acquisition numérique d’un signal. (30 minutes)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reglages-generaux">
-     3.2.1. Réglages généraux.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir">
-     3.2.2. Nombre de points et fréquence d’échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acquisition-unique-ou-continue-fait-par-le-professeur">
-     3.2.3. Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir">
-     3.2.4. Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#caracteristique-dynamique-d-une-diode-1h">
-   3.3. Caractéristique dynamique d’une diode (1h)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#utilisation-de-foxy">
-     3.3.1. Utilisation de FOXY
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#manipulation">
-       3.3.1.1. Manipulation
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#exploitation">
-       3.3.1.2. Exploitation
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#impedance-de-sortie-du-gbf-1h">
-   3.4. Impédance de sortie du GBF (1h)
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#influence-de-l-impedance-de-sortie">
-     3.4.1. Influence de l’impédance de sortie.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mesure-de-l-impedance-de-sortie-point-de-fonctionnement">
-     3.4.2. Mesure de l’impédance de sortie. Point de fonctionnement
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>(TP) Caractéristique d’une diode.</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-statique-d-une-diode-1h30">3.1. Caractéristique statique d’une diode. (1h30)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulations">3.1.1. Manipulations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trace-de-la-courbe">3.1.2. Tracé de la courbe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-de-la-tension-seuil">3.1.3. Estimation de la tension seuil</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-numerique-d-un-signal-30-minutes">3.2. Acquisition numérique d’un signal. (30 minutes)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reglages-generaux">3.2.1. Réglages généraux.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir">3.2.2. Nombre de points et fréquence d’échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-unique-ou-continue-fait-par-le-professeur">3.2.3. Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir">3.2.4. Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-dynamique-d-une-diode-1h">3.3. Caractéristique dynamique d’une diode (1h)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation-de-foxy">3.3.1. Utilisation de FOXY</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulation">3.3.1.1. Manipulation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation">3.3.1.2. Exploitation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impedance-de-sortie-du-gbf-1h">3.4. Impédance de sortie du GBF (1h)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-de-l-impedance-de-sortie">3.4.1. Influence de l’impédance de sortie.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-de-l-impedance-de-sortie-point-de-fonctionnement">3.4.2. Mesure de l’impédance de sortie. Point de fonctionnement</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <p>La page ci-présente existe en version notebook téléchargeable grâce au bouton <img alt="Bouton" src="../_images/bouton_tl.png" /> (choisir le format <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>). On rappelle qu’l faut ensuite l’enregistrer dans un répertoire adéquat sur votre ordinateur (<code class="docutils literal notranslate"><span class="pre">tp3</span></code> par exemple dans votre répertoire personnel) puis lancer Jupyter Notebook depuis Anaconda pour accéder au notebook, le modifier et exécutez les cellules de code adéquates.</p>
-<div class="tex2jax_ignore mathjax_ignore section" id="tp-caracteristique-d-une-diode">
-<h1><span class="section-number">3. </span>(TP) Caractéristique d’une diode.<a class="headerlink" href="#tp-caracteristique-d-une-diode" title="Permalink to this headline">#</a></h1>
-<div class="section" id="caracteristique-statique-d-une-diode-1h30">
-<h2><span class="section-number">3.1. </span>Caractéristique statique d’une diode. (1h30)<a class="headerlink" href="#caracteristique-statique-d-une-diode-1h30" title="Permalink to this headline">#</a></h2>
-<div class="section" id="manipulations">
-<h3><span class="section-number">3.1.1. </span>Manipulations<a class="headerlink" href="#manipulations" title="Permalink to this headline">#</a></h3>
+<section class="tex2jax_ignore mathjax_ignore" id="tp-caracteristique-d-une-diode">
+<h1><span class="section-number">3. </span>(TP) Caractéristique d’une diode.<a class="headerlink" href="#tp-caracteristique-d-une-diode" title="Permalink to this heading">#</a></h1>
+<section id="caracteristique-statique-d-une-diode-1h30">
+<h2><span class="section-number">3.1. </span>Caractéristique statique d’une diode. (1h30)<a class="headerlink" href="#caracteristique-statique-d-une-diode-1h30" title="Permalink to this heading">#</a></h2>
+<section id="manipulations">
+<h3><span class="section-number">3.1.1. </span>Manipulations<a class="headerlink" href="#manipulations" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Mesure unique et incertitude</p>
 <ul class="simple">
@@ -589,10 +387,15 @@ title="Print to PDF"
 <p class="admonition-title">Manipulation</p>
 <p>Réaliser le montage proposé dans votre protocole et tracer la caractéristique statique de la diode. Vous utiliserez la cellule de code ci-dessous pour tracer la caractéristique statique.</p>
 </div>
-</div>
-<div class="section" id="trace-de-la-courbe">
-<h3><span class="section-number">3.1.2. </span>Tracé de la courbe<a class="headerlink" href="#trace-de-la-courbe" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="trace-de-la-courbe">
+<h3><span class="section-number">3.1.2. </span>Tracé de la courbe<a class="headerlink" href="#trace-de-la-courbe" title="Permalink to this heading">#</a></h3>
 <div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; On importe pour vous les bibliothèques scientifiques utiles.&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -625,18 +428,24 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-</div>
-<div class="section" id="estimation-de-la-tension-seuil">
-<h3><span class="section-number">3.1.3. </span>Estimation de la tension seuil<a class="headerlink" href="#estimation-de-la-tension-seuil" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="estimation-de-la-tension-seuil">
+<h3><span class="section-number">3.1.3. </span>Estimation de la tension seuil<a class="headerlink" href="#estimation-de-la-tension-seuil" title="Permalink to this heading">#</a></h3>
 <p>On va estimer la tension seuil par une méthode d’optimisation basée sur la minimisation des écarts entre les points de mesure et la courbe (droites par morceaux ici) pour une valeur de <span class="math notranslate nohighlight">\(U_d\)</span>. Vous pouvez obtenir <a class="reference internal" href="u_seuil_exp.html#u-seuil"><span class="std std-ref">des explications sur la méthode d’optimisation</span></a> mais la méthode n’est pas à connaître.</p>
 <p>Vous devez estimer un intervalle dans lequel la tension seuil va se trouver et entrer ces valeurs pour <code class="docutils literal notranslate"><span class="pre">ud_min,</span> <span class="pre">ud_max</span></code>. La fonction <code class="docutils literal notranslate"><span class="pre">eval_ud</span></code> cherchera la tension dans cet intervalle. Les seules lignes à modifier sont précisées dans le code.</p>
 <div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>  <span class="c1"># LIGNE A MODIFIER. Le programme cherchera la valeur seuil dans l&#39;intervale.</span>
 
 <span class="k">def</span> <span class="nf">eval_ud</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">ud_min</span><span class="p">,</span> <span class="n">ud_max</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental. NE PAS MODIFIER</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fonction qui évalue la tension seuil la plus adaptée au tracé expérimental. NE PAS MODIFIER</span>
 <span class="sd">    u : Vecteur contenu les mesures de tension</span>
 <span class="sd">    i : Vecteur contenu les mesures d&#39;intensité</span>
 <span class="sd">    ud_min, ud_max : Flottant délimitant l&#39;intervalle dans lequel on recherche UD</span>
@@ -667,7 +476,7 @@ title="Print to PDF"
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Légender les X&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Légender les Y&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">xerr</span><span class="o">=</span><span class="n">uu</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">ui</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Légender la courbe&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="nb">min</span><span class="p">(</span><span class="n">u</span><span class="p">),</span> <span class="n">ud_estim</span><span class="p">,</span> <span class="n">ud_estim</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="p">)],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Légender la courbe&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="nb">min</span><span class="p">(</span><span class="n">u</span><span class="p">),</span> <span class="n">ud_estim</span><span class="p">,</span> <span class="n">ud_estim</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">i</span><span class="p">)],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Légender la courbe&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -680,18 +489,19 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exploitation</p>
 <p>Vous devez maintenant analyser sur votre compte-rendu votre caractéristique statique (correspond-elle aux attentes ?) et l’estimation de votre tension seuil (il s’agit d’une estimation très grossière qui ne servira pas de manière quantitative par la suite, on ne cherchera donc pas à estimer l’incertitude sur <span class="math notranslate nohighlight">\(U_d\)</span>).</p>
 </div>
-</div>
-</div>
-<div class="section" id="acquisition-numerique-d-un-signal-30-minutes">
-<h2><span class="section-number">3.2. </span>Acquisition numérique d’un signal. (30 minutes)<a class="headerlink" href="#acquisition-numerique-d-un-signal-30-minutes" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="acquisition-numerique-d-un-signal-30-minutes">
+<h2><span class="section-number">3.2. </span>Acquisition numérique d’un signal. (30 minutes)<a class="headerlink" href="#acquisition-numerique-d-un-signal-30-minutes" title="Permalink to this heading">#</a></h2>
 <p>Avant de chercher à obtenir la caractéristique dynamique d’une diode grâce à une carte d’acquisition, il est important de comprendre certains points clés d’une acquisition numérique en lien avec les paramètres d’acquisition. La partie sur la <em>synchronisation</em> sera encore valable quand on utilise un oscilloscope.</p>
-<div class="section" id="reglages-generaux">
-<h3><span class="section-number">3.2.1. </span>Réglages généraux.<a class="headerlink" href="#reglages-generaux" title="Permalink to this headline">#</a></h3>
+<section id="reglages-generaux">
+<h3><span class="section-number">3.2.1. </span>Réglages généraux.<a class="headerlink" href="#reglages-generaux" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>On commencera par brancher directement le GBF sur la carte d’acquisition FOXY. Sélectionner alors la voie à acquérir en ordonnée en fonction de vos branchements et l’horloge (base de temps) en abscisse.</p></li>
 <li><p>On va pour l’instant étudier un signal de fréquence 960Hz et d’amplitude 3V.</p>
@@ -708,14 +518,14 @@ title="Print to PDF"
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir">
-<h3><span class="section-number">3.2.2. </span>Nombre de points et fréquence d’échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)<a class="headerlink" href="#nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir">
+<h3><span class="section-number">3.2.2. </span>Nombre de points et fréquence d’échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)<a class="headerlink" href="#nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir" title="Permalink to this heading">#</a></h3>
 <p><em>Pour l’instant, décocher l’option <code class="docutils literal notranslate"><span class="pre">Acquisition</span> <span class="pre">continue</span></code> et désactiver la Synchronisation (dans l’onglet du même nom) s’ils sont activés.</em></p>
 <p>On va voir l’influence du nombre de points de sur le signal obtenu ou plus précisément de la <strong>fréquence d’échantillonnage</strong> c’est-à-dire le nombre de points de mesure réalisés par seconde.</p>
 <div class="tip admonition">
 <p class="admonition-title">Influence de la fréquence d’échantillonnage</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Pensez à régler le GBF pour qu’il délivre la tension voulue (<em>ne pas oublier d’activer le GBF avec le bouton <code class="docutils literal notranslate"><span class="pre">ON</span></code></em>)</p></li>
 <li><p>Comment obtenir la fréquence d’échantillonnage à partir de la durée d’acquisition et du nombre de points de mesure ? En déduire le nombre de points nécessaire pour obtenir une fréquence d’échantillonnage de 100kHz puis de 10kHz pour une durée d’acquisition de 10ms.</p></li>
 <li><p>Régler le nombre de points adéquats puis observer le signal acquis pour les deux fréquence d’échantillonnage précédentes. Mesurer alors (rapidement) la période du signal et la comparer à la valeur attendue.</p></li>
@@ -727,40 +537,40 @@ title="Print to PDF"
 <p>Un clic-droit sur le graphique permet d’obtenir un menu où vous pouvez choisir de mesurer des valeurs.</p>
 </div>
 <p>Vous rendrez compte de vos observations dans un tableau comme ci-dessous:</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Fréquence d’échantillonnage</p></th>
-<th class="text-align:center head"><p>100kHz</p></th>
-<th class="text-align:center head"><p>10kHz</p></th>
-<th class="text-align:center head"><p>1kHz</p></th>
+<tr class="row-odd"><th class="head text-left"><p>Fréquence d’échantillonnage</p></th>
+<th class="head text-center"><p>100kHz</p></th>
+<th class="head text-center"><p>10kHz</p></th>
+<th class="head text-center"><p>1kHz</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p>Durée d’acquisition</p></td>
-<td class="text-align:center"><p>10ms</p></td>
-<td class="text-align:center"><p>10ms</p></td>
-<td class="text-align:center"><p>?</p></td>
+<tr class="row-even"><td class="text-left"><p>Durée d’acquisition</p></td>
+<td class="text-center"><p>10ms</p></td>
+<td class="text-center"><p>10ms</p></td>
+<td class="text-center"><p>?</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>Fréquence du signal attendue</p></td>
-<td class="text-align:center"><p>960Hz</p></td>
-<td class="text-align:center"><p>960Hz</p></td>
-<td class="text-align:center"><p>960Hz</p></td>
+<tr class="row-odd"><td class="text-left"><p>Fréquence du signal attendue</p></td>
+<td class="text-center"><p>960Hz</p></td>
+<td class="text-center"><p>960Hz</p></td>
+<td class="text-center"><p>960Hz</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>Fréquence du signal mesurée</p></td>
-<td class="text-align:center"><p>?</p></td>
-<td class="text-align:center"><p>?</p></td>
-<td class="text-align:center"><p>?</p></td>
+<tr class="row-even"><td class="text-left"><p>Fréquence du signal mesurée</p></td>
+<td class="text-center"><p>?</p></td>
+<td class="text-center"><p>?</p></td>
+<td class="text-center"><p>?</p></td>
 </tr>
 </tbody>
 </table>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">En pratique</p>
 <ul class="simple">
 <li><p>Les consoles FOXY en TP sont limités à 16000 points et une fréquence d’échantillonage de 10MHz. Ce sera suffisant pour nous.</p></li>
 <li><p>Un oscilloscope règle lui même sa fréquence d’échantillonnage en fonction de ses limites. On ne peut jouer que sur la durée d’acquisition pour éviter d’acquérir sur un temps trop long.</p></li>
 </ul>
 <p>Des explications plus visuelles sur des simulations seront données lors du traitement des capacités numériques.</p>
-</div>
+</aside>
 <div class="important admonition">
 <p class="admonition-title">Critère de Shannon-Nyqvist</p>
 <p>Lorsqu’on fait l’acquisition d’un signal dont la fréquence maximale <span class="math notranslate nohighlight">\(f_{\max}\)</span> (dans son spectre), il est nécessaire que la fréquence d’échantillonnage <span class="math notranslate nohighlight">\(f_e\)</span> soit __au moins deux fois supérieure  à <span class="math notranslate nohighlight">\(f_{\max}\)</span> :</p>
@@ -770,9 +580,9 @@ f_e &gt; 2 f_{\max}
 \]</div>
 <p>En pratique, <strong>on se placera à une fréquence d’échantillonnage bien plus grande que la limite du critère de Shannon-Nyqvist</strong> pour obtenir un visuel acceptable.</p>
 </div>
-</div>
-<div class="section" id="acquisition-unique-ou-continue-fait-par-le-professeur">
-<h3><span class="section-number">3.2.3. </span>Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)<a class="headerlink" href="#acquisition-unique-ou-continue-fait-par-le-professeur" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="acquisition-unique-ou-continue-fait-par-le-professeur">
+<h3><span class="section-number">3.2.3. </span>Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)<a class="headerlink" href="#acquisition-unique-ou-continue-fait-par-le-professeur" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Question</p>
 <ul class="simple">
@@ -781,16 +591,16 @@ f_e &gt; 2 f_{\max}
 <li><p>Revenir à une fréquence d’échantillonage acceptable et activer l’acquisition continue. Quel problème rencontre-t-on. La <strong>synchronisation</strong> va permettre de résoudre ce problème.</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir">
-<h3><span class="section-number">3.2.4. </span>Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)<a class="headerlink" href="#synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir">
+<h3><span class="section-number">3.2.4. </span>Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)<a class="headerlink" href="#synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir" title="Permalink to this heading">#</a></h3>
 <p>Utiliser la seconde sortie du GBF à disposition pour délivrée un signal sinusoïdal de fréquence 1960Hz et d’amplitude 3V et le brancher sur une autre voie de la carte d’acquisition.</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Activer l’acquisition continue et lancer l’acquistion des deux signaux simultanément (vérifier que la durée d’acquisition et la fréquence d’échantillonnage permettent de visualiser les deux signaux correctement).</p></li>
 <li><p>Activer la synchronisation (Onglet synchronisation dans le menu associé à l’horloge) et choisir :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Une synchronisation sur la première voie du GBF avec une pente montante et une tension de 1V.</p></li>
 <li><p>Une synchronisation sur la première voie du GBF avec une pente descendante et une tension de 1V.</p></li>
 <li><p>Une synchronisation sur la première voie du GBF avec une pente montante et une tension de 4V.</p></li>
@@ -798,7 +608,7 @@ f_e &gt; 2 f_{\max}
 </ol>
 </li>
 <li><p>Commenter ce que vous observez à chaque fois et en déduire une explication du rôle :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>De la voie de synchronisation</p></li>
 <li><p>Du niveau de synchronisation</p></li>
 <li><p>De la pente de synchronisation</p></li>
@@ -806,25 +616,25 @@ f_e &gt; 2 f_{\max}
 </li>
 </ol>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Avec un oscilloscope, la synchronisation est toujours nécessaire. Souvent les réglages automatiques suffisent mais si le signal n’est pas stable, il faut penser à la régler.</p>
-</div>
+</aside>
 <div class="important admonition">
 <p class="admonition-title">Principe de la synchronisation</p>
 <p>Lorsqu’on fait l’acquisition d’un signal périodique en continu, il est nécessaire de stabiliser l’affichage en redémarrant ce dernier à un intervalle correspondant à un nombre entier de période. Cette variant et n’étant pas toujours un nombre clairement défini, on ne modifie pas la durée d’acqusition mais on utilise <strong>la synchronisation.</strong></p>
 <p>Quand la synchronisation est activée, l’affichage de la tension mesurée ne recommence que quand le signal <strong>de la voie de synchronisation</strong> atteint un <strong>niveau de déclenchement</strong> (valeur de tension) avec une <strong>pente donnée</strong> (croissante ou décroissante).</p>
 </div>
-</div>
-</div>
-<div class="section" id="caracteristique-dynamique-d-une-diode-1h">
-<h2><span class="section-number">3.3. </span>Caractéristique dynamique d’une diode (1h)<a class="headerlink" href="#caracteristique-dynamique-d-une-diode-1h" title="Permalink to this headline">#</a></h2>
-<div class="section" id="utilisation-de-foxy">
-<h3><span class="section-number">3.3.1. </span>Utilisation de FOXY<a class="headerlink" href="#utilisation-de-foxy" title="Permalink to this headline">#</a></h3>
-<div class="section" id="manipulation">
-<h4><span class="section-number">3.3.1.1. </span>Manipulation<a class="headerlink" href="#manipulation" title="Permalink to this headline">#</a></h4>
+</section>
+</section>
+<section id="caracteristique-dynamique-d-une-diode-1h">
+<h2><span class="section-number">3.3. </span>Caractéristique dynamique d’une diode (1h)<a class="headerlink" href="#caracteristique-dynamique-d-une-diode-1h" title="Permalink to this heading">#</a></h2>
+<section id="utilisation-de-foxy">
+<h3><span class="section-number">3.3.1. </span>Utilisation de FOXY<a class="headerlink" href="#utilisation-de-foxy" title="Permalink to this heading">#</a></h3>
+<section id="manipulation">
+<h4><span class="section-number">3.3.1.1. </span>Manipulation<a class="headerlink" href="#manipulation" title="Permalink to this heading">#</a></h4>
 <p>Réaliser le montage proposé dans votre protocole pour visualiser la caractéristique dynamique de la diode. Observer alors les caractéristiques de la diode pour les tensions suivantes :</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Un signal sinusoïdale de fréquence 1kHz, d’amplitude 10V et de valeur moyenne nulle</p></li>
 <li><p>Un signal sinusoïdale de fréquence 20kHz, d’amplitude 3V et de valeur moyenne 1V</p></li>
 <li><p>Un signal triangulaire de fréquence 3kHz, d’amplitude 3V, de valeur basse -2V</p></li>
@@ -836,38 +646,38 @@ f_e &gt; 2 f_{\max}
 <p class="admonition-title">Attention</p>
 <p>On pensera bien à réfléchir aux paramètres d’acquisition <strong>avant de lancer l’acquisition</strong>.</p>
 </div>
-</div>
-<div class="section" id="exploitation">
-<h4><span class="section-number">3.3.1.2. </span>Exploitation<a class="headerlink" href="#exploitation" title="Permalink to this headline">#</a></h4>
+</section>
+<section id="exploitation">
+<h4><span class="section-number">3.3.1.2. </span>Exploitation<a class="headerlink" href="#exploitation" title="Permalink to this heading">#</a></h4>
 <div class="tip admonition">
 <p class="admonition-title">Exploitation</p>
 <p>Comparer les caractéristiques dynamiques à la caractéristique statique et préciser dans quels cas on pourra analyser le comportement de la diode grâce à sa caractéristique statique, même quand le régime est variable.</p>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Ce n’est pas vrai pour tous les dipôles. La caractéristiques dynamique d’un condensateur sera toujours très différente de sa caractéristique statique.</p>
-</div>
-<div class="topic">
+</aside>
+<aside class="topic">
 <p class="topic-title">Utilisation d’un oscilloscope</p>
 <p>On a vu que les bornes des voies d’acquisition reliées à la Terre, combinées à la borne du GBF reliée à la Terre posait des problèmes de court-circuit. Une telle étude dynamique serait possible en intercalant un dispositif appelé <strong>transformateur d’isolement</strong>. Son fonctionnement sera expliqué plus tard.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="impedance-de-sortie-du-gbf-1h">
-<h2><span class="section-number">3.4. </span>Impédance de sortie du GBF (1h)<a class="headerlink" href="#impedance-de-sortie-du-gbf-1h" title="Permalink to this headline">#</a></h2>
+</aside>
+</section>
+</section>
+</section>
+<section id="impedance-de-sortie-du-gbf-1h">
+<h2><span class="section-number">3.4. </span>Impédance de sortie du GBF (1h)<a class="headerlink" href="#impedance-de-sortie-du-gbf-1h" title="Permalink to this heading">#</a></h2>
 <p>Cette partie est complètement indépendante des précédente. Elle préparer aux raisonnements sur les associations d’impédance du prochain TP.</p>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Observer sur le GBF (ou ses menus) l’impédance de sortie du GBF. On se propose de la mesurer expérimentalement.</p></li>
 </ol>
 </div>
-<div class="section" id="influence-de-l-impedance-de-sortie">
-<h3><span class="section-number">3.4.1. </span>Influence de l’impédance de sortie.<a class="headerlink" href="#influence-de-l-impedance-de-sortie" title="Permalink to this headline">#</a></h3>
+<section id="influence-de-l-impedance-de-sortie">
+<h3><span class="section-number">3.4.1. </span>Influence de l’impédance de sortie.<a class="headerlink" href="#influence-de-l-impedance-de-sortie" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Brancher aux bornes du GBF une résistances <span class="math notranslate nohighlight">\(R\)</span> du même ordre de grandeur que la résistance de sortie <span class="math notranslate nohighlight">\(R_S\)</span>. Délivrer une tension continue. Mesurer la tension aux bornes du GBF. Qu’observe-t-on ? Expliquer théoriquement pourquoi on obtient ce problème ?</p></li>
 <li><p>Reprendre la même manipulation avec une tension sinusoïdale.</p></li>
 </ol>
@@ -878,17 +688,22 @@ f_e &gt; 2 f_{\max}
 On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus négligeable</strong>, le signal qu’il délivre <strong>n’est plus le signal demandé par l’utilisateur</strong>. C’est une façon de repérer si l’impédance de sorti du GBF n’est plus négligeable.</p>
 <p>Quelle solution pour la rendre négligeable ?</p>
 </div>
-</div>
-<div class="section" id="mesure-de-l-impedance-de-sortie-point-de-fonctionnement">
-<h3><span class="section-number">3.4.2. </span>Mesure de l’impédance de sortie. Point de fonctionnement<a class="headerlink" href="#mesure-de-l-impedance-de-sortie-point-de-fonctionnement" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="mesure-de-l-impedance-de-sortie-point-de-fonctionnement">
+<h3><span class="section-number">3.4.2. </span>Mesure de l’impédance de sortie. Point de fonctionnement<a class="headerlink" href="#mesure-de-l-impedance-de-sortie-point-de-fonctionnement" title="Permalink to this heading">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Manipulation</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Reprendre le montage précédent avec une tension continue et mesurer (aux multimètres) la tension aux bornes du GBF et l’intensité qui circule dans le circuit. Estimer l’incertitude sur ces deux mesures.</p></li>
 <li><p>La tension de commande est, dans une modélisation de Thévenin du GBF, la tension de la source idéale de tension. En déduire une méthode pour calculer <span class="math notranslate nohighlight">\(R_S\)</span> grâce aux mesures précédentes. Utiliser la cellule ci-dessous pour estimer <span class="math notranslate nohighlight">\(R_S\)</span> et son incertitude-type grâce à une méthode de Monte-Carlo.</p></li>
 </ol>
 </div>
 <div class="cell tag_remove-output tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;On importe pour vous la bibliothèque numpy.random&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">numpy.random</span> <span class="k">as</span> <span class="nn">rd</span>
@@ -919,18 +734,19 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Compte-rendu</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Présenter dans votre compte-rendu le protocole de cette manipulation.</p></li>
 <li><p>Présenter les résultats de mesure (U, I et <span class="math notranslate nohighlight">\(R_S\)</span>) avec leurs incertitudes de mesure.</p></li>
 <li><p>Exploiter l’écart normalisé pour discuter de la compatibilité avec la valeur donnée par le constructeur.</p></li>
 </ol>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -944,7 +760,7 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -952,50 +768,126 @@ On retiendra que lorsque <strong>l’impédance de sortie du GBF n’est plus n�
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="fam_preliminaire_2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>(Travail) Préparation des protocoles</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="fam_preliminaire_2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>(Travail) Préparation des protocoles</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="modul_preliminaire.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="modul_preliminaire.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">4. </span>(Travail) Etude préliminaire</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-statique-d-une-diode-1h30">3.1. Caractéristique statique d’une diode. (1h30)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulations">3.1.1. Manipulations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#trace-de-la-courbe">3.1.2. Tracé de la courbe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-de-la-tension-seuil">3.1.3. Estimation de la tension seuil</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-numerique-d-un-signal-30-minutes">3.2. Acquisition numérique d’un signal. (30 minutes)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reglages-generaux">3.2.1. Réglages généraux.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nombre-de-points-et-frequence-d-echantillonnage-fait-par-le-professeur-critere-de-shannon-nyquist-a-retenir">3.2.2. Nombre de points et fréquence d’échantillonnage (FAIT PAR LE PROFESSEUR - Critère de Shannon-Nyquist à retenir)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition-unique-ou-continue-fait-par-le-professeur">3.2.3. Acquisition unique ou continue ? (FAIT PAR LE PROFESSEUR)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synchronisation-fait-par-le-professeur-principe-de-la-synchronisation-a-retenir">3.2.4. Synchronisation (FAIT PAR LE PROFESSEUR - Principe de la synchronisation à retenir)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-dynamique-d-une-diode-1h">3.3. Caractéristique dynamique d’une diode (1h)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation-de-foxy">3.3.1. Utilisation de FOXY</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulation">3.3.1.1. Manipulation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation">3.3.1.2. Exploitation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impedance-de-sortie-du-gbf-1h">3.4. Impédance de sortie du GBF (1h)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#influence-de-l-impedance-de-sortie">3.4.1. Influence de l’impédance de sortie.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-de-l-impedance-de-sortie-point-de-fonctionnement">3.4.2. Mesure de l’impédance de sortie. Point de fonctionnement</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By C. Lacpatia<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By C. Lacpatia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
