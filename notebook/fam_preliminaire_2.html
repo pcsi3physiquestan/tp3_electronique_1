@@ -1,60 +1,47 @@
 
-
 <!DOCTYPE html>
 
-
-<html lang="en" >
-
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>2. (Travail) Préparation des protocoles &#8212; TP Electrocinétique</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -64,97 +51,57 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/fam_preliminaire_2';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp2_optique/notebook/fam_preliminaire_2.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. (TP) Caractéristique d’une diode." href="fam_manip.html" />
     <link rel="prev" title="1. (Travail) Matériel en électrocinétique" href="fam_preliminaire.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
+    
+    <div class="container-fluid" id="banner"></div>
 
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    
 
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../tp3_elec.html">
-  
-  
-  
-  
-  
-    <p class="title logo__title">TP Electrocinétique</p>
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      
+      <h1 class="site-logo" id="site-title">TP Electrocinétique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -163,243 +110,454 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Familiarisation avec le matériel</span></p>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Familiarisation avec le matériel
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="fam_preliminaire.html">1. (Travail) Matériel en électrocinétique</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. (Travail) Préparation des protocoles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fam_manip.html">3. (TP) Caractéristique d’une diode.</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_preliminaire.html">
+   1. (Travail) Matériel en électrocinétique
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. (Travail) Préparation des protocoles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fam_manip.html">
+   3. (TP) Caractéristique d’une diode.
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Création d'un signal modulé en amplitude</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Création d'un signal modulé en amplitude
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="modul_preliminaire.html">4. (Travail) Etude préliminaire</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mod_manip.html">5. (TP) Création du signal</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="modul_preliminaire.html">
+   4. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="mod_manip.html">
+   5. (TP) Création du signal
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Démodulation d'un signal</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Démodulation d'un signal
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="demod_preliminaire.html">6. (Travail) Etude préliminaire</a></li>
-<li class="toctree-l1"><a class="reference internal" href="demod_manip.html">7. (TP) Démodulation</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="demod_preliminaire.html">
+   6. (Travail) Etude préliminaire
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="demod_manip.html">
+   7. (TP) Démodulation
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Plus d'initiatives</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Plus d'initiatives
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u_seuil_exp.html">8. Complément : Détermination de la tension seuil</a></li>
-<li class="toctree-l1"><a class="reference internal" href="elec_supplement.html">9. Etude du régime transitoire (Ordre 2)</a></li>
-
+ <li class="toctree-l1">
+  <a class="reference internal" href="u_seuil_exp.html">
+   8. Complément : Détermination de la tension seuil
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="elec_supplement.html">
+   9. Etude du régime transitoire (Ordre 2)
+  </a>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
-
-
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
-
-<div class="sbt-scroll-pixel-helper"></div>
-
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
-  
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
-    </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/notebook/fam_preliminaire_2.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
+          
 
 
-<button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/fam_preliminaire_2.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebook/fam_preliminaire_2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>(Travail) Préparation des protocoles</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dipole-etudie">2.1. Dipôle étudié.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generalites">2.1.1. Généralités</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-et-modelisation">2.1.2. Caractéristique et modélisation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protection-d-une-diode">2.1.3. Protection d’une diode</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristiques-statiques-d-une-diode">2.2. Caractéristiques statiques d’une diode.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#montage-sans-les-instruments-de-mesure">2.2.1. Montage sans les instruments de mesure.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation-des-instruments-de-mesure">2.2.2. Utilisation des instruments de mesure.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#redaction-du-protocole">2.2.3. Rédaction du protocole</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#squelette-de-protocole">2.2.3.1. Squelette de protocole</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-dynamique-de-la-diode">2.3. Caractéristique dynamique de la diode.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-place-du-protocole-experimental">2.3.1. Mise en place du protocole expérimental</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probleme-de-terre">2.3.2. Problème de Terre</a></li>
-</ul>
-</li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/notebook/fam_preliminaire_2.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dipole-etudie">
+   2.1. Dipôle étudié.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generalites">
+     2.1.1. Généralités
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#caracteristique-et-modelisation">
+     2.1.2. Caractéristique et modélisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#protection-d-une-diode">
+     2.1.3. Protection d’une diode
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristiques-statiques-d-une-diode">
+   2.2. Caractéristiques statiques d’une diode.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#montage-sans-les-instruments-de-mesure">
+     2.2.1. Montage sans les instruments de mesure.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utilisation-des-instruments-de-mesure">
+     2.2.2. Utilisation des instruments de mesure.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redaction-du-protocole">
+     2.2.3. Rédaction du protocole
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#squelette-de-protocole">
+       2.2.3.1. Squelette de protocole
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristique-dynamique-de-la-diode">
+   2.3. Caractéristique dynamique de la diode.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mise-en-place-du-protocole-experimental">
+     2.3.1. Mise en place du protocole expérimental
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probleme-de-terre">
+     2.3.2. Problème de Terre
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>(Travail) Préparation des protocoles</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dipole-etudie">
+   2.1. Dipôle étudié.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#generalites">
+     2.1.1. Généralités
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#caracteristique-et-modelisation">
+     2.1.2. Caractéristique et modélisation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#protection-d-une-diode">
+     2.1.3. Protection d’une diode
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristiques-statiques-d-une-diode">
+   2.2. Caractéristiques statiques d’une diode.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#montage-sans-les-instruments-de-mesure">
+     2.2.1. Montage sans les instruments de mesure.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utilisation-des-instruments-de-mesure">
+     2.2.2. Utilisation des instruments de mesure.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#redaction-du-protocole">
+     2.2.3. Rédaction du protocole
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#squelette-de-protocole">
+       2.2.3.1. Squelette de protocole
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caracteristique-dynamique-de-la-diode">
+   2.3. Caractéristique dynamique de la diode.
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mise-en-place-du-protocole-experimental">
+     2.3.1. Mise en place du protocole expérimental
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probleme-de-terre">
+     2.3.2. Problème de Terre
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
+              <div>
+                
   <p>Avant de commencer le TP, vous aller préparer les protocoles. Vous allez apprendre les spécificités des protocoles en électrocinétique.</p>
-<section class="tex2jax_ignore mathjax_ignore" id="travail-preparation-des-protocoles">
-<h1><span class="section-number">2. </span>(Travail) Préparation des protocoles<a class="headerlink" href="#travail-preparation-des-protocoles" title="Permalink to this heading">#</a></h1>
-<section id="dipole-etudie">
-<h2><span class="section-number">2.1. </span>Dipôle étudié.<a class="headerlink" href="#dipole-etudie" title="Permalink to this heading">#</a></h2>
-<section id="generalites">
-<h3><span class="section-number">2.1.1. </span>Généralités<a class="headerlink" href="#generalites" title="Permalink to this heading">#</a></h3>
+<div class="tex2jax_ignore mathjax_ignore section" id="travail-preparation-des-protocoles">
+<h1><span class="section-number">2. </span>(Travail) Préparation des protocoles<a class="headerlink" href="#travail-preparation-des-protocoles" title="Permalink to this headline">#</a></h1>
+<div class="section" id="dipole-etudie">
+<h2><span class="section-number">2.1. </span>Dipôle étudié.<a class="headerlink" href="#dipole-etudie" title="Permalink to this headline">#</a></h2>
+<div class="section" id="generalites">
+<h3><span class="section-number">2.1.1. </span>Généralités<a class="headerlink" href="#generalites" title="Permalink to this headline">#</a></h3>
 <p>On va étudier un dipôle non linéaire : la diode. Un diode classique est composée de matériaux semi-conducteur (de deux types, l’un appelé N et l’autre appelé P). Leur association (on parle de jonction… P-N) permet de créer un dipôle (la diode donc… ) qui ne laisse passer le courant que dans un sens. La diode est un dipôle polarisé.</p>
-<figure class="align-center" id="diode-photo">
+<div class="figure align-center" id="diode-photo">
 <a class="reference internal image-reference" href="../_images/diode_photos.jpg"><img alt="../_images/diode_photos.jpg" src="../_images/diode_photos.jpg" style="width: 50%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Exemples de diodes</span><a class="headerlink" href="#diode-photo" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="caracteristique-et-modelisation">
-<h3><span class="section-number">2.1.2. </span>Caractéristique et modélisation<a class="headerlink" href="#caracteristique-et-modelisation" title="Permalink to this heading">#</a></h3>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Exemples de diodes</span><a class="headerlink" href="#diode-photo" title="Permalink to this image">#</a></p>
+</div>
+</div>
+<div class="section" id="caracteristique-et-modelisation">
+<h3><span class="section-number">2.1.2. </span>Caractéristique et modélisation<a class="headerlink" href="#caracteristique-et-modelisation" title="Permalink to this headline">#</a></h3>
 <p>La diode possède une caractéristique <strong>statique</strong> qui a l’allure suivante.</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Attention la caractéristique donnée est en convention récepteur <strong>avec i dans le sens donnée sur le symbole ci-dessus</strong>. Dans le cas des dipôles polarisés, le sens de <span class="math notranslate nohighlight">\(i\)</span> (et de <span class="math notranslate nohighlight">\(u\)</span>) a une influence sur l’allure de la caractéristique.</p>
-</aside>
+</div>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row docutils">
 <div class="sd-col sd-d-flex-column docutils">
-<figure class="align-center" id="diode-carac">
+<div class="figure align-center" id="diode-carac">
 <img alt="../_images/diode_carac.png" src="../_images/diode_carac.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Caractéristique d’une diode</span><a class="headerlink" href="#diode-carac" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Caractéristique d’une diode</span><a class="headerlink" href="#diode-carac" title="Permalink to this image">#</a></p>
+</div>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
-<figure class="align-center" id="diode-symbole">
+<div class="figure align-center" id="diode-symbole">
 <a class="reference internal image-reference" href="../_images/diode_symbole.png"><img alt="../_images/diode_symbole.png" src="../_images/diode_symbole.png" style="width: 25%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Symbole d’une diode</span><a class="headerlink" href="#diode-symbole" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Symbole d’une diode</span><a class="headerlink" href="#diode-symbole" title="Permalink to this image">#</a></p>
+</div>
 </div>
 </div>
 </div>
@@ -416,38 +574,34 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Exercice : Tension seuil</p>
 <p>Utiliser l’<a class="reference internal" href="#diode-extrait-1"><span class="std std-ref">extrait de la fiche technique</span></a> de la diode 1N4148 ci-après pour obtenir un ordre de grandeur de la tension <span class="math notranslate nohighlight">\(U_D\)</span>.</p>
-<figure class="align-default" id="diode-extrait-1">
+<div class="figure align-default" id="diode-extrait-1">
 <img alt="../_images/diode_sheet_2.jpg" src="../_images/diode_sheet_2.jpg" />
-<figcaption>
-<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Extrait n°1 de la fiche technique d’une diode 1N4148</span><a class="headerlink" href="#diode-extrait-1" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Extrait n°1 de la fiche technique d’une diode 1N4148</span><a class="headerlink" href="#diode-extrait-1" title="Permalink to this image">#</a></p>
 </div>
-</section>
-<section id="protection-d-une-diode">
-<h3><span class="section-number">2.1.3. </span>Protection d’une diode<a class="headerlink" href="#protection-d-une-diode" title="Permalink to this heading">#</a></h3>
+</div>
+</div>
+<div class="section" id="protection-d-une-diode">
+<h3><span class="section-number">2.1.3. </span>Protection d’une diode<a class="headerlink" href="#protection-d-une-diode" title="Permalink to this headline">#</a></h3>
 <p>La <a class="reference internal" href="#diode-carac"><span class="std std-ref">caractéristique</span></a> montre qu’imposer une tension supérieure à <span class="math notranslate nohighlight">\(U_D\)</span> aux bornes de la diodes va dramatiquement augmenter l’intensité qui y circule et <em>risquer de détériorer la diode.</em> Pour protéger la diode, on utilise <strong>une résistance qu’on place en série avec la diode</strong> et qui va servir à limiter le courant qui circule dans la diode.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercice : Protection d’une diode</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>On considère une diode de tension seuil <span class="math notranslate nohighlight">\(U_D\)</span> protégée par une résistance <span class="math notranslate nohighlight">\(R_P\)</span>, l’ensemble étant soumis à une tension <span class="math notranslate nohighlight">\(E\)</span>. Estimer l’intensité <span class="math notranslate nohighlight">\(I\)</span> qui circule dans la branche (résistance + diode).</p></li>
 <li><p>Utiliser l’extrait suivant pour obtenir l’intensité maximale qu’on peut faire passer dans la diode en régime indépendant du temps. Choisir, avec une marge, la résistance <span class="math notranslate nohighlight">\(R_P\)</span> de protection sachant que les tensions ne dépasseront pas 10V en TP.</p></li>
 </ol>
-<figure class="align-default" id="diode-extrait-2">
+<div class="figure align-default" id="diode-extrait-2">
 <img alt="../_images/diode_sheet_1.jpg" src="../_images/diode_sheet_1.jpg" />
-<figcaption>
-<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Extrait n°2 de la fiche technique d’une diode 1N4148</span><a class="headerlink" href="#diode-extrait-2" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Extrait n°2 de la fiche technique d’une diode 1N4148</span><a class="headerlink" href="#diode-extrait-2" title="Permalink to this image">#</a></p>
 </div>
-<aside class="margin sidebar">
+</div>
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Même si ce n’est pas précisé, il <strong>faudra protéger une diode par une résistance de protection</strong>. Bien sûr, si une résistance suffisante est déjà présente en série, il n’est pas nécessaire d’en ajouter une !.</p>
-</aside>
-</section>
-</section>
-<section id="caracteristiques-statiques-d-une-diode">
-<h2><span class="section-number">2.2. </span>Caractéristiques statiques d’une diode.<a class="headerlink" href="#caracteristiques-statiques-d-une-diode" title="Permalink to this heading">#</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="caracteristiques-statiques-d-une-diode">
+<h2><span class="section-number">2.2. </span>Caractéristiques statiques d’une diode.<a class="headerlink" href="#caracteristiques-statiques-d-une-diode" title="Permalink to this headline">#</a></h2>
 <p>Le but est d’obtenir les points <span class="math notranslate nohighlight">\((U,I)\)</span> de fonctionnement d’une diode en régime indépendant du temps. On dispose</p>
 <ul class="simple">
 <li><p>de la diode d’étude</p></li>
@@ -457,18 +611,16 @@ document.write(`
 <li><p>d’un oscilloscope (deux voies de mesure)</p></li>
 <li><p>d’une carte d’acquisition</p></li>
 </ul>
-<section id="montage-sans-les-instruments-de-mesure">
-<h3><span class="section-number">2.2.1. </span>Montage sans les instruments de mesure.<a class="headerlink" href="#montage-sans-les-instruments-de-mesure" title="Permalink to this heading">#</a></h3>
+<div class="section" id="montage-sans-les-instruments-de-mesure">
+<h3><span class="section-number">2.2.1. </span>Montage sans les instruments de mesure.<a class="headerlink" href="#montage-sans-les-instruments-de-mesure" title="Permalink to this headline">#</a></h3>
 <p>Le premier montage est donné. On réalise le <a class="reference internal" href="#montage-diode"><span class="std std-ref">montage suivant</span></a> (la source de tension sera le GBF).</p>
-<figure class="align-center" id="montage-diode">
+<div class="figure align-center" id="montage-diode">
 <img alt="../_images/diode_montage_simple.png" src="../_images/diode_montage_simple.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Montage à réaliser</span><a class="headerlink" href="#montage-diode" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Montage à réaliser</span><a class="headerlink" href="#montage-diode" title="Permalink to this image">#</a></p>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">Préparation</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Rappeler la valeur de <span class="math notranslate nohighlight">\(R_p\)</span></p></li>
 <li><p>Pour étudier la caractéristiques statiques, quelle forme choisir pour la tension <span class="math notranslate nohighlight">\(V(t)\)</span>.</p></li>
 <li><p>Représenter sur le graphique de la caractéristique statique de la diode, la caractéristique statique du dipôle <span class="math notranslate nohighlight">\(V + R_p\)</span>. Où est le point de fonctionnement du circuit ?</p></li>
@@ -481,33 +633,29 @@ document.write(`
 </li>
 </ol>
 </div>
-</section>
-<section id="utilisation-des-instruments-de-mesure">
-<h3><span class="section-number">2.2.2. </span>Utilisation des instruments de mesure.<a class="headerlink" href="#utilisation-des-instruments-de-mesure" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="utilisation-des-instruments-de-mesure">
+<h3><span class="section-number">2.2.2. </span>Utilisation des instruments de mesure.<a class="headerlink" href="#utilisation-des-instruments-de-mesure" title="Permalink to this headline">#</a></h3>
 <p>Puisqu’on réalise des études en régime indépendant du temps, l’utilisation des multimètres peut suffire. On donne la représentation schématique d’un <a class="reference internal" href="#voltmetre"><span class="std std-ref">voltmètre</span></a> et d’un <a class="reference internal" href="#amperemetre"><span class="std std-ref">ampèremètre</span></a>.</p>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row docutils">
 <div class="sd-col sd-d-flex-column docutils">
-<figure class="align-center" id="voltmetre">
+<div class="figure align-center" id="voltmetre">
 <img alt="../_images/voltmetre.png" src="../_images/voltmetre.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Voltmètre. Le tension est mesurée dans le sens où est représentée Uc.</span><a class="headerlink" href="#voltmetre" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">Voltmètre. Le tension est mesurée dans le sens où est représentée Uc.</span><a class="headerlink" href="#voltmetre" title="Permalink to this image">#</a></p>
+</div>
 </div>
 <div class="sd-col sd-d-flex-column docutils">
-<figure class="align-center" id="amperemetre">
+<div class="figure align-center" id="amperemetre">
 <img alt="../_images/amperemetre.png" src="../_images/amperemetre.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Ampèremètre. L’intensité est mesurée dans le sens entrant par la borne +.</span><a class="headerlink" href="#amperemetre" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">Ampèremètre. L’intensité est mesurée dans le sens entrant par la borne +.</span><a class="headerlink" href="#amperemetre" title="Permalink to this image">#</a></p>
+</div>
 </div>
 </div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Exercice.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Quel calibre choisir pour les deux multimètre ? AC ou DC ?</p></li>
 <li><p>Reprendre le <a class="reference internal" href="#montage-diode"><span class="std std-ref">schéma de montage précédent</span></a> et y faire figurer les deux instruments de mesure en faisant attention à leur orientation.</p></li>
 </ol>
@@ -516,30 +664,30 @@ document.write(`
 <p class="admonition-title">Important</p>
 <p>Le schéma que vous obtenez est le schéma qui doit apparaître dans la présentation du protocole expérimental.</p>
 </div>
-</section>
-<section id="redaction-du-protocole">
-<h3><span class="section-number">2.2.3. </span>Rédaction du protocole<a class="headerlink" href="#redaction-du-protocole" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="redaction-du-protocole">
+<h3><span class="section-number">2.2.3. </span>Rédaction du protocole<a class="headerlink" href="#redaction-du-protocole" title="Permalink to this headline">#</a></h3>
 <div class="tip admonition">
 <p class="admonition-title">Mise en place du protocole</p>
 <p>A vous de rédiger le protocole. Pour vous aider pour cette première fois, un squelette est donné dans la ci-après.</p>
 </div>
-<section id="squelette-de-protocole">
-<h4><span class="section-number">2.2.3.1. </span>Squelette de protocole<a class="headerlink" href="#squelette-de-protocole" title="Permalink to this heading">#</a></h4>
+<div class="section" id="squelette-de-protocole">
+<h4><span class="section-number">2.2.3.1. </span>Squelette de protocole<a class="headerlink" href="#squelette-de-protocole" title="Permalink to this headline">#</a></h4>
 <p><strong>But :</strong> …………</p>
 <p><strong>Principe théorique :</strong> <em>…S’aider du raisonnement sur le point de fonctionnement…</em></p>
 <p><strong>Mode opératoire :</strong></p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p><em>…Préciser le montage à réaliser…</em></p></li>
 <li><p><em>…Préciser les valeurs des composants et le type de tension qu’on va envoyer…</em></p></li>
 <li><p><em>…Préciser les mesures directes réalisées et ce que vous allez en faire…</em></p></li>
 </ol>
-</section>
-</section>
-</section>
-<section id="caracteristique-dynamique-de-la-diode">
-<h2><span class="section-number">2.3. </span>Caractéristique dynamique de la diode.<a class="headerlink" href="#caracteristique-dynamique-de-la-diode" title="Permalink to this heading">#</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="caracteristique-dynamique-de-la-diode">
+<h2><span class="section-number">2.3. </span>Caractéristique dynamique de la diode.<a class="headerlink" href="#caracteristique-dynamique-de-la-diode" title="Permalink to this headline">#</a></h2>
 <p>On veut maintenant obtenir le tracé de la caractéristique dynamique <span class="math notranslate nohighlight">\((u(t), i(t))\)</span> de la diode pour les différents signaux ci-dessous.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Un signal sinusoïdale de fréquence 1kHz, d’amplitude 10V et de valeur moyenne nulle</p></li>
 <li><p>Un signal sinusoïdale de fréquence 20kHz, d’amplitude 3V et de valeur moyenne 1V</p></li>
 <li><p>Un signal triangulaire de fréquence 3kHz, d’amplitude 3V, de valeur basse -2V</p></li>
@@ -547,34 +695,32 @@ document.write(`
 <li><p>Un signal créneau de fréquence 30kHz, de valeur basse 0V et de valeur haute 6V.</p></li>
 <li><p>Un signal modulé en amplitude <span class="math notranslate nohighlight">\(s = k v \times e\)</span> avec e<span class="math notranslate nohighlight">\(,\)</span> un signal sinusoïdal de fréquence 10kHz modulé et d’amplitude 4V et <span class="math notranslate nohighlight">\(v\)</span> un signal sinusoïdal de fréquence 500Hz et d’amplitude 4V. On donne <span class="math notranslate nohighlight">\(k = 0.1\)</span>.</p></li>
 </ol>
-<section id="mise-en-place-du-protocole-experimental">
-<h3><span class="section-number">2.3.1. </span>Mise en place du protocole expérimental<a class="headerlink" href="#mise-en-place-du-protocole-experimental" title="Permalink to this heading">#</a></h3>
+<div class="section" id="mise-en-place-du-protocole-experimental">
+<h3><span class="section-number">2.3.1. </span>Mise en place du protocole expérimental<a class="headerlink" href="#mise-en-place-du-protocole-experimental" title="Permalink to this headline">#</a></h3>
 <p>On va utiliser la carte d’acquisition FOXY déjà utilisée au premier TP. Chaque voie d’acquisition (il y en a 4) peut être représentée par un voltmètre.  <strong>On ne peut mesurer que des tensions à l’aide de FOXY.</strong></p>
 <div class="tip admonition">
 <p class="admonition-title">Exercice.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Sachant qu’on ne peut mesurer que des tensions, proposer une méthode permettant d’obtenir l’intensité (ou presque) circulant dans le circuit. Proposer un schéma de montage à intégrer dans le protocole expérimental.</p></li>
 <li><p>Rédiger alors le protocole expérimental (on ne détaillera pas les types de signaux à envoyer mais simplement leur caractère variable).</p></li>
 </ol>
 </div>
-</section>
-<section id="probleme-de-terre">
-<h3><span class="section-number">2.3.2. </span>Problème de Terre<a class="headerlink" href="#probleme-de-terre" title="Permalink to this heading">#</a></h3>
+</div>
+<div class="section" id="probleme-de-terre">
+<h3><span class="section-number">2.3.2. </span>Problème de Terre<a class="headerlink" href="#probleme-de-terre" title="Permalink to this headline">#</a></h3>
 <p>On voudrait faire la même étude avec un oscilloscope. Le but de cette étude préliminaire est de comprendre pourquoi ce n’est pas possible. Un oscilloscope (ceux des TPs) possède deux voies d’acquisition (Voie 1 et Voie 2). Donc la représentation est donnée <a class="reference internal" href="#oscillo"><span class="std std-ref">ci-dessous</span></a> :</p>
-<figure class="align-center" id="oscillo">
+<div class="figure align-center" id="oscillo">
 <img alt="../_images/oscillo.png" src="../_images/oscillo.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Schématisation des branchements de l’oscilloscope.</span><a class="headerlink" href="#oscillo" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Schématisation des branchements de l’oscilloscope.</span><a class="headerlink" href="#oscillo" title="Permalink to this image">#</a></p>
+</div>
 <div class="tip admonition">
 <p class="admonition-title">Exercice.</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Que signifie le symbole suivant ?</p></li>
 </ol>
-<figure class="align-center" id="masse">
+<div class="figure align-center" id="masse">
 <img alt="../_images/masse.png" src="../_images/masse.png" />
-</figure>
+</div>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 Important<div class="sd-summary-down docutils">
@@ -584,14 +730,14 @@ Important<div class="sd-summary-down docutils">
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">C’est une caractéristique générale des oscilloscopes. Les deux voies ont une borne commune : la Terre !</p>
 </div>
-</details><ol class="arabic simple" start="2">
+</details><ol class="simple">
 <li><p>Puisque les deux voies ont une borne commune, où faut-il la placer si on veut mesurer les deux tensions aux bornes de la diode et de la résistance sur le <a class="reference internal" href="#montage-diode"><span class="std std-ref">schéma</span></a> ? Représenter alors le schéma (GBF+résistance+diode) avec les branchements nécessaires de l’oscilloscope. Sachant que le GBF a aussi <strong>une borne reliée à la Terre</strong> (visible sur le <a class="reference internal" href="#montage-diode"><span class="std std-ref">schéma</span></a>), quelle problème va-t-il se poser ?</p></li>
 </ol>
 </div>
 <p>Pour s’affranchir de ce problème, il faut utiliser <em>un transformateur d’isolement</em>.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -605,7 +751,7 @@ Important<div class="sd-summary-down docutils">
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -613,120 +759,50 @@ Important<div class="sd-summary-down docutils">
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="fam_preliminaire.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>(Travail) Matériel en électrocinétique</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="fam_preliminaire.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>(Travail) Matériel en électrocinétique</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="fam_manip.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="fam_manip.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">3. </span>(TP) Caractéristique d’une diode.</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dipole-etudie">2.1. Dipôle étudié.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generalites">2.1.1. Généralités</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-et-modelisation">2.1.2. Caractéristique et modélisation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protection-d-une-diode">2.1.3. Protection d’une diode</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristiques-statiques-d-une-diode">2.2. Caractéristiques statiques d’une diode.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#montage-sans-les-instruments-de-mesure">2.2.1. Montage sans les instruments de mesure.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation-des-instruments-de-mesure">2.2.2. Utilisation des instruments de mesure.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#redaction-du-protocole">2.2.3. Rédaction du protocole</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#squelette-de-protocole">2.2.3.1. Squelette de protocole</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#caracteristique-dynamique-de-la-diode">2.3. Caractéristique dynamique de la diode.</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mise-en-place-du-protocole-experimental">2.3.1. Mise en place du protocole expérimental</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probleme-de-terre">2.3.2. Problème de Terre</a></li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By C. Lacpatia
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2021.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div>
-          </footer>
-        
-
-      </main>
+            </footer>
+        </div>
     </div>
-  </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By C. Lacpatia<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>

@@ -135,7 +135,7 @@ Filtre passe-bas actif du second ordre.
 :class: tip
 1. Justifier rapidement que ce filtre est un passe-bas puis exprimer sa fonction de transfert. On montrera que $\omega_0 = \frac{1}{RC}$ et $Q = \frac{1}{2}$.
 2. Observe-t-on une résonance ? La fréquence de coupure est ici $\omega_c = \sqrt{\sqrt{2}-1} \omega_0$ (on pourra s'entraîner à le démontrer).
-3. On veut que le gain à $f_p$ soit de $10^{-2}$, en déduire le choix de la fréquence de coupure $f_p \approx 3 f_0$.
+3. On veut que le gain à $f_p$ soit de $10^{-2}$, en déduire le choix de la fréquence de coupure telle que $f_p \approx 3 f_c$.
 4. Que vaut alors le gain pour la fréquence $f_m$ sachant que $f_p = 100 f_m$. En déduire que ce filtre devrait remplir sa fonction en choisissant $f_c$ comme décidé précédemment. Quelle sera alors l'allure du signal de sortie ? Quelle est la différence avec la détection d'enveloppe ?
 ````
 
