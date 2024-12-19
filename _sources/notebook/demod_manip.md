@@ -63,7 +63,7 @@ Etude d'un circuit RC.
 1. Réaliser le montage et brancher la console FOXY. 
 2. Le régime étant unique, il est __impératif de bien régler les paramètres d'acquisition (durée et synchronisation notamment)__. Régler les paramètres d'acquisition pour observer le régime libre quand on basculera l'interrupteur (il y a un onglet `Mesure` dans le menu de la voie d'acquisition qui montre la valeur actuelle de la tension, cette information peut-être utile pour les réglage de synchronisation.)
 3. Obtenir une estimation du temps caractéristique de trois manières :
-	* Ordonnée à l'origine
+	* Tangente à l'origine
 	* Temps de réponse à 63%
 	* Modélisation de l'exponentielle (chercher dans les menus)
 4. Pour les deux premières méthodes, on estimera l'incertitude sur $\tau$ et on s'en servira pour comparer les deux valeurs entre elle et avec la valeur attendue (par les données constructeurs).
